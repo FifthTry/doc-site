@@ -1,0 +1,49 @@
+-- import: index as ft
+
+
+
+
+
+-- ft.toc:
+$processor$: toc
+
+- index.html
+  Introduction
+- ch00-00-quickstart/
+  Quickstart
+- ch00-00-quickstart/
+  Getting started
+  - ch00-01-getting-started/
+    Deploy 
+
+-- ft.header-toc:
+$processor$: toc
+
+- quickstart/
+  Quickstart
+- https://github.com/FifthTry/fpm-book/generate/
+  Use this template
+
+/-- ftd.row:
+width: fill
+background-color: #1F5E6B
+
+/-- ftd.text: FPM BOOK
+style: bold
+size: 35
+
+
+-- ft.doc-page:
+toc: $ft.toc
+
+-- ft.h1: Quickstart
+
+The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the total amount of memory, in bytes, that the String has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
+When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 4-2.
+
+-- ftd.image:
+src: static/picture1.jpeg
+width: 600
+
+
+
