@@ -25,7 +25,7 @@ jobs:
       - name: Build the pages with fpm
         id: build
         continue-on-error: false
-        run: fpm build --base=/Forest-theme
+        run: fpm build --base=/Forest-Theme
       - uses: actions/upload-artifact@master
         with:
           name: SSR_BUILD
