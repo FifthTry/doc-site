@@ -1,4 +1,4 @@
 -- import: fpm
 
--- fpm.package: fifthtry.github.io/Forest-theme
+-- fpm.package: fifthtry.github.io/Forest-Theme
 zip: github.com/fifthtry/Forest-theme/archive/refs/heads/main.zip
