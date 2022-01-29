@@ -17,6 +17,8 @@
 -- string header-light-color: #1F5E6B
 -- string sidebar-dark-color: #082b32
 -- string sidebar-light-color: #FFFBEF
+-- string code-bg-light: #2b303b
+-- string code-bg-dark: #2b303b
 
 
 
