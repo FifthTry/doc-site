@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"><base href="/Forest-theme">
+        <meta charset="UTF-8"><base href="/Forest-Theme">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <title>index.ftd</title>
         <script type="ftd" id="ftd-data">{}</script>
@@ -144,7 +144,12 @@ ul {
 }
 
 body.fpm-dark .ft_md code {
-    color: black;
+    color: #f9f9f9;
+    background-color: rgba(255 255 255 0.12);
+}
+
+.ft_md pre {
+    background-color: rgba(255 255 255 0.32);
 }
 </style>
     </head>
@@ -451,6 +456,13 @@ let ftd_utils = {
         }
     },
 
+    is_equal_condition: function (value, condition) {
+        return ((value === condition)
+            || (condition === "$IsNull$" && value.trim().length === 0)
+            || (condition === "$IsNotNull$" && value.trim().length !== 0)
+        );
+    },
+
     handle_action: function (id, target, value, data, ftd_external_children) {
         data[target].value = value.toString();
 
@@ -480,10 +492,7 @@ let ftd_utils = {
                     }
                 } else if (json_dependency.dependency_type === "Visible") {
                     let display = "none";
-                    if ((data[target].value === json_dependency.condition)
-                        || (json_dependency.condition === "$IsNull$" && data[target].value.trim().length === 0)
-                        || (json_dependency.condition === "$IsNotNull$" && data[target].value.trim().length !== 0)
-                    ) {
+                    if (ftd_utils.is_equal_condition(data[target].value, json_dependency.condition)) {
                         let is_flex = !!document.querySelector(`[data-id="${dependency}:${id}"]`).style.flexDirection.length;
                         let is_grid = !!document.querySelector(`[data-id="${dependency}:${id}"]`).style.gridTemplateAreas.length;
                         let is_webkit = !!document.querySelector(`[data-id="${dependency}:${id}"]`).style.webkitLineClamp.length;
@@ -500,11 +509,30 @@ let ftd_utils = {
                     document.querySelector(`[data-id="${dependency}:${id}"]`).style.display = display;
                     ftd_utils.first_child_styling(`${dependency}:${id}`);
 
-                } else if (json_dependency.dependency_type === "Style") {
-                    if (data[target].value === json_dependency.condition) {
+                } else if (json_dependency.dependency_type === "Variable") {
+                    if (ftd_utils.is_equal_condition(data[target].value, json_dependency.condition)) {
                         for (const parameter in json_dependency.parameters) {
-                            let value = json_dependency.parameters[`${parameter}`].value.value;
-                            let important = json_dependency.parameters[`${parameter}`].value.important;
+                            if (data[parameter] !== undefined) {
+                                let value = json_dependency.parameters[parameter].value.value;
+                                ftd_utils.handle_action(id, parameter, value, data, ftd_external_children)
+                            }
+                        }
+                    } else {
+                        for (const parameter in json_dependency.parameters) {
+                            if (data[parameter] !== undefined) {
+                                let default_value = json_dependency.parameters[parameter].default;
+                                if (default_value === null) {
+                                    continue;
+                                }
+                                ftd_utils.handle_action(id, parameter, default_value.value, data, ftd_external_children)
+                            }
+                        }
+                    }
+                } else if (json_dependency.dependency_type === "Style") {
+                    if (ftd_utils.is_equal_condition(data[target].value, json_dependency.condition)) {
+                        for (const parameter in json_dependency.parameters) {
+                            let value = json_dependency.parameters[parameter].value.value;
+                            let important = json_dependency.parameters[parameter].value.important;
                             ftd_utils.set_style(parameter, `${dependency}:${id}`, value, important);
                             if (!styles_edited.includes(parameter)) {
                                 styles_edited.push(parameter);
@@ -512,7 +540,7 @@ let ftd_utils = {
                         }
                     } else {
                         for (const parameter in json_dependency.parameters) {
-                            let default_value = json_dependency.parameters[`${parameter}`].default;
+                            let default_value = json_dependency.parameters[parameter].default;
                             if (!styles_edited.includes(parameter)) {
                                 if (default_value === null) {
                                     if (["border-left-width", "border-right-width", "border-top-width", "border-bottom-width"].includes(parameter)) {
@@ -854,6 +882,7 @@ function console_print(id, data) {
             (function () {
     const FPM_MOBILE = "fpm#mobile";
     const FPM_DARK_MODE = "fpm#dark-mode"
+    const SYSTEM_DARK_MODE = "fpm#system-dark-mode"
     const FPM_FOLLOW_SYSTEM_DARK_MODE = "fpm#follow-system-dark-mode"
     const DARK_MODE_COOKIE = "fpm-dark-mode";
     const COOKIE_SYSTEM_LIGHT = "system-light";
@@ -953,6 +982,7 @@ function console_print(id, data) {
         //       update
         window.ftd.set_bool_for_all(FPM_DARK_MODE, true);
         window.ftd.set_bool_for_all(FPM_FOLLOW_SYSTEM_DARK_MODE, false);
+        window.ftd.set_bool_for_all(SYSTEM_DARK_MODE, system_dark_mode());
         document.body.classList.add(DARK_MODE_CLASS);
         set_cookie(DARK_MODE_COOKIE, COOKIE_DARK_MODE);
     }
@@ -962,6 +992,7 @@ function console_print(id, data) {
         //       update
         window.ftd.set_bool_for_all(FPM_DARK_MODE, false);
         window.ftd.set_bool_for_all(FPM_FOLLOW_SYSTEM_DARK_MODE, false);
+        window.ftd.set_bool_for_all(SYSTEM_DARK_MODE, system_dark_mode());
         document.body.classList.remove(DARK_MODE_CLASS);
         set_cookie(DARK_MODE_COOKIE, COOKIE_LIGHT_MODE);
     }
@@ -970,6 +1001,7 @@ function console_print(id, data) {
         // TODO: coalesce the two set_bool-s into one so there is only one DOM
         //       update
         window.ftd.set_bool_for_all(FPM_FOLLOW_SYSTEM_DARK_MODE, true);
+        window.ftd.set_bool_for_all(SYSTEM_DARK_MODE, system_dark_mode());
         if (system_dark_mode()) {
             window.ftd.set_bool_for_all(FPM_DARK_MODE, true);
             document.body.classList.add(DARK_MODE_CLASS);
