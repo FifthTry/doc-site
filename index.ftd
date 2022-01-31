@@ -928,7 +928,7 @@ border-top-radius: 4
 font: Open sans
 
 --- ftd.code:
-if: $caption is not null
+if: $fpm.dark-mode
 text: $body
 lang: $lang
 color: #4D4D4D
@@ -940,11 +940,14 @@ padding-left: 20
 padding-bottom: 10
 padding-right: 20
 background-color: #2b303b
+border-top-radius if $caption is null: 4
 border-bottom-radius: 4
+border-width: 1
 overflow-x: auto
 
 --- ftd.code:
-if: $caption is null
+if: not $fpm.dark-mode
+theme: InspiredGitHub
 text: $body
 lang: $lang
 color: #4D4D4D
@@ -955,9 +958,11 @@ padding-top: 10
 padding-left: 20
 padding-bottom: 10
 padding-right: 20
-background-color: #2b303b
-border-bottom-radius: 4
-border-top-radius: 4
+background-color: white
+border-top-radius if $caption is null: 4
+border-bottom-radius if $caption is null: 4
+border-color: grey
+border-width: 1
 overflow-x: auto
 
 
