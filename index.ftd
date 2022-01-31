@@ -672,7 +672,7 @@ padding-top: 15
 padding-right: 20
 padding-bottom: 40
 border-right: 1
-border-color: #1F5E6B
+border-color: rgba(31, 94, 107, 0.13)
 border-color if $fpm.dark-mode: #32616a
 background-color if $fpm.dark-mode: $sidebar-dark-color
 background-color:  $sidebar-light-color
