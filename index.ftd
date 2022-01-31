@@ -2,6 +2,7 @@
 
 -- boolean sidebar-open: false
 
+
 -- string neutral: #fff
 /-- string neutral-200: #e5e5e5
 -- string neutral-200: #EDEDED
@@ -17,15 +18,15 @@
 -- string header-light-color: #1F5E6B
 -- string sidebar-dark-color: #082b32
 -- string sidebar-light-color: #FFFBEF
--- string code-bg-light: #2b303b
--- string code-bg-dark: #2b303b
+-- string code-bg-light: #0A1A1F
+-- string code-bg-dark: #0A1A1F
 
 
 
 -- integer content-padding: 150
 -- integer max-width: 1000
 -- string github: NA
--- string site-name: NA
+-- optional string site-name:
 -- string site-icon: NA
 -- string site-url: NA
 
@@ -299,6 +300,7 @@ height: 32
 width: auto
 
 --- site-link: $site-name
+if: $site-name is not null
 
 /--- container: left-side
 
@@ -400,6 +402,7 @@ width: auto
 
 
 --- site-link: $site-name
+if: $site-name is not null
 
 --- container: left-side
 
