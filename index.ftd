@@ -401,6 +401,7 @@ width: auto
 
 
 --- site-link: $site-name
+if: $site-name is not null
 
 --- container: left-side
 
