@@ -28,6 +28,7 @@
 -- string github: NA
 -- optional string site-name:
 -- string site-icon: NA
+-- string site-icon-mobile: NA
 -- string site-url: NA
 
 
@@ -296,8 +297,10 @@ link: $site-url
 
 --- ftd.image:
 src: $site-icon
-width: fill
-max-height: 50
+width: 113
+height: 47
+width if $fpm.mobile: 78
+height if $fpm.mobile: 32
 
 --- site-link: $site-name
 if: $site-name is not null
@@ -396,7 +399,10 @@ link: $site-url
 
 --- ftd.image:
 src: $site-icon
-width: fill
+width: 113
+height: 47
+width if $fpm.mobile: 78
+height if $fpm.mobile: 32
 
 
 --- site-link: $site-name
