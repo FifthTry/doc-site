@@ -296,8 +296,8 @@ link: $site-url
 
 --- ftd.image:
 src: $site-icon
-height: 32
-width: auto
+width: fill
+max-height: 50
 
 --- site-link: $site-name
 if: $site-name is not null
@@ -396,8 +396,7 @@ link: $site-url
 
 --- ftd.image:
 src: $site-icon
-height: 32
-width: auto
+width: fill
 
 
 --- site-link: $site-name
