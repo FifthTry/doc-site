@@ -23,6 +23,8 @@
 
 
 
+-- string toc-sidebar-width: 300
+-- string toc-mobile-sidebar-width: percent 70
 -- integer content-padding: 150
 -- integer max-width: 1000
 -- string github: NA
@@ -676,7 +678,7 @@ sticky: true
 top: 0
 height: calc 100vh - 0px
 overflow-y: auto
-width: 300
+width: $toc-sidebar-width
 align: top-left
 padding-left: 10
 padding-top: 15
@@ -698,7 +700,7 @@ toc-item list toc-obj:
 sticky: true
 height: calc 100vh - 0px
 overflow-y: auto
-width: percent 70
+width: $toc-mobile-sidebar-width
 align: top-left
 padding-left: 10
 padding-top: 15
