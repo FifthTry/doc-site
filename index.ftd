@@ -251,6 +251,7 @@ color if $fpm.dark-mode: $neutral
 link: $link
 line-height: 22
 align: center
+white-space: nowrap
 
 
 -- ftd.column h0:
