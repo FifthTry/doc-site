@@ -2,3 +2,5 @@
 
 -- fpm.package: fifthtry.github.io/Forest-Theme
 zip: github.com/fifthtry/Forest-theme/archive/refs/heads/main.zip
+
+-- fpm.dependency: fifthtry.github.io/code-block as cb
