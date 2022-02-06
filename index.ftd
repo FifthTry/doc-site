@@ -92,6 +92,7 @@ width: fill
 --- container: ftd.main
 
 --- footer:
+if: $footer-toc is not empty
 footer-toc: $footer-toc
 
 
@@ -186,6 +187,7 @@ padding-vertical: 20
 --- container: ftd.main
 
 --- footer:
+if: $footer-toc is not empty
 footer-toc: $footer-toc
 
 -- ftd.column doc-page-mobile:
@@ -232,6 +234,7 @@ padding-vertical: 20
 --- container: ftd.main
 
 --- footer:
+if: $footer-toc is not empty
 footer-toc: $footer-toc
 
 -- ftd.text site-link: $title
@@ -417,7 +420,7 @@ if: $site-name is not null
 
 --- container: ftd.main
 
---- ftd.column: 
+--- ftd.column:
 width: fill
 position: center
 
