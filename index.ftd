@@ -927,7 +927,6 @@ string lang:
 width: fill
 
 --- cb.code:
-if: $caption is not null
 caption: $caption
 lang: $lang
 
