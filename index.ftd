@@ -1349,3 +1349,39 @@ style: medium
 caption title:
 color if $fpm.dark-mode: yellow
 background-color if not $fpm.dark-mode: yellow
+
+-- ftd.row tip:
+optional caption title:
+optional body body:
+border-radius: 3
+width: fill
+background-color: rgb(0, 49, 0)
+color: rgb(230, 246, 230)
+
+--- ftd.column:
+width: 5
+height: percent 100
+open: false
+background-color: red
+
+--- ftd.column:
+width: fill
+padding: 10
+id: m
+spacing: 10
+
+--- ftd.row:
+spacing: 5
+
+--- ftd.text: Tip
+style: bold
+
+--- ftd.text: $title
+if: $title is not null
+
+--- container: m
+
+--- ftd.text:
+if: $body is not null
+
+$body
