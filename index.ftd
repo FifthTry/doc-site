@@ -899,6 +899,11 @@ border-color: rgba(250, 242, 220, 1)
 border-color if $fpm.dark-mode: rgb(17, 64, 74)
 move-left: 25
 margin-bottom: 30
+$event-click$: toggle $open
+
+--- ftd.row:
+width: fill
+spacing: 20
 
 --- ftd.text:
 caption $title:
@@ -911,12 +916,26 @@ color if $fpm.dark-mode: $neutral
 style: bold
 padding-bottom: 8
 font: apple-system
-$event-click$: toggle $open
+
+--- ftd.text: Click To Expand
+color: $neutral
+color if $fpm.dark-mode: $neutral-800
+background-color: $neutral-700
+background-color if $fpm.dark-mode: $neutral
+size: 12
+border-radius: 4
+padding: 5
+align: center
+if: not $open
+
+--- container: ftd.main
 
 --- ftd.column:
 id: inner
 if: $open
 width: fill
+$event-click$: stop-propagation
+cursor: default
 
 --- markdown:
 if: $body is not null
