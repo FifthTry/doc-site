@@ -35,20 +35,34 @@
 -- string site-url: NA
 
 
+
+
+
+
+
 -- record toc-item:
 caption title:
 string url:
 toc-item list children:
 
+
+
+
+
 -- record footer-item:
 caption label:
 toc-item list children:
 
+
+
+
 -- toc-item list header-toc:
-
 -- toc-item list toc:
-
 -- footer-item list footer-toc:
+
+
+
+
 
 
 
@@ -97,6 +111,13 @@ if: $footer-toc is not empty
 footer-toc: $footer-toc
 
 
+
+
+
+
+
+
+
 -- ftd.column create-section:
 width: fill
 open: true
@@ -118,6 +139,12 @@ width: fill
 align: center
 padding-horizontal if $fpm.mobile: 20
 id:  content-container
+
+
+
+
+
+
 
 
 -- ftd.column content:
@@ -143,12 +170,18 @@ padding-horizontal if $fpm.mobile: 20
 id:  content-container
 
 
+
+
+
+
+
+
+
 -- ftd.column doc-page:
 toc-item list toc: $toc
 width: fill
 open: true
 append-at: main-container
-
 
 --- doc-page-desktop:
 if: not $fpm.mobile
@@ -162,6 +195,15 @@ if: $fpm.mobile
 id: main-container
 toc: $toc
 
+
+
+
+
+
+
+
+
+
 -- ftd.column doc-page-desktop:
 toc-item list toc: $toc
 width: fill
@@ -169,7 +211,6 @@ open: true
 append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
-
 
 --- header:
 
@@ -195,6 +236,14 @@ padding-vertical: 20
 if: $footer-toc is not empty
 footer-toc: $footer-toc
 
+
+
+
+
+
+
+
+
 -- ftd.column doc-page-mobile:
 toc-item list toc: $toc
 width: fill
@@ -202,7 +251,6 @@ open: true
 append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
-
 
 --- ftd.column:
 if: $sidebar-open
@@ -220,7 +268,6 @@ $event-click$: toggle $sidebar-open
 --- render-toc-mobile:
 if: $sidebar-open
 toc-obj: $toc
-
 
 --- container: ftd.main
 
@@ -243,6 +290,13 @@ padding-vertical: 20
 if: $footer-toc is not empty
 footer-toc: $footer-toc
 
+
+
+
+
+
+
+
 -- ftd.text site-link: $title
 caption title:
 size: 16
@@ -252,6 +306,10 @@ color: white
 color if $fpm.dark-mode: $neutral
 line-height: 22
 align: center
+
+
+
+
 
 
 -- ftd.text header-link: $title
@@ -267,24 +325,13 @@ align: center
 white-space: nowrap
 
 
--- ftd.column h0:
-caption title:
-optional body body:
-width: fill
-padding-horizontal: 90
 
---- ftd.text:
-text: $title
-size: 40
-color: black
-color if $fpm.dark-mode: $neutral
-style: bold
-padding-bottom: 24
-font: apple-system
 
---- markdown:
-if: $body is not null
-body: $body
+
+
+
+
+
 
 
 
@@ -324,7 +371,6 @@ if: $site-name is not null
 $loop$: $header-toc as $obj
 link: $obj.url
 
-
 --- container: ftd.main
 
 --- ftd.column:
@@ -337,11 +383,9 @@ spacing: 30
 width: auto
 id: action-container
 
-
 --- header-link: $obj.title
 $loop$: $header-toc as $obj
 link: $obj.url
-
 
 --- ftd.image:
 if: not $fpm.dark-mode
@@ -383,6 +427,10 @@ align: center
 
 
 
+
+
+
+
 -- ftd.row header-mobile:
 width: fill
 background-color: $header-light-color
@@ -417,12 +465,10 @@ height: 47
 width if $fpm.mobile: 78
 height if $fpm.mobile: 32
 
-
 --- site-link: $site-name
 if: $site-name is not null
 
 --- container: left-side
-
 
 --- container: ftd.main
 
@@ -434,8 +480,6 @@ position: center
 position: right
 spacing: 30
 width: auto
-
-
 
 --- ftd.image:
 /src: https://res.cloudinary.com/dphj6havg/image/upload/v1640938143/github-dark_xeu6ot.svg
@@ -456,6 +500,8 @@ align: center
 
 
 
+
+
 -- ftd.text footer-link:
 string url:
 caption title:
@@ -469,6 +515,12 @@ padding-top: 6
 padding-bottom: 6
 font: apple-system
 color: $neutral
+
+
+
+
+
+
 
 -- ftd.column footer-instance:
 footer-item footer-toc:
@@ -503,6 +555,12 @@ container: ftd.main
 --- footer-mobile:
 if: $fpm.mobile
 footer-toc: $footer-toc
+
+
+
+
+
+
 
 
 -- ftd.row footer-desktop:
@@ -827,7 +885,7 @@ style: bold
 padding-bottom: 16
 padding-top: 8
 font: apple-system
-$event-click$: toggle $open
+$event-click$ if $open: toggle $open
 
 --- ftd.column:
 id: inner
@@ -844,7 +902,7 @@ body: $body
 
 
 
--- ftd.column subtitle:
+-- ftd.column sub-title:
 caption title:
 optional body body:
 width: fill
@@ -1121,6 +1179,13 @@ lang: $lang
 $body
 
 
+
+
+
+
+
+
+
 -- ftd.row feature-list:
 width: fill
 open: true
@@ -1147,6 +1212,12 @@ padding-bottom: 40
 id: main-container
 
 
+
+
+
+
+
+
 -- ftd.column feature:
 caption title:
 string image:
@@ -1156,7 +1227,6 @@ width if $fpm.mobile: fill
 spacing: 15
 padding-top: 60
 align: left
-
 
 --- ftd.image:
 src: $image
@@ -1173,7 +1243,6 @@ width: fill
 text-align: center
 style: bold
 color if $fpm.dark-mode: $neutral
-
 
 --- ftd.text:
 text: $body
@@ -1211,6 +1280,12 @@ spacing: space-around
 wrap: true
 padding-bottom: 40
 id: main-container
+
+
+
+
+
+
 
 -- ftd.column testimony:
 caption title:
@@ -1256,6 +1331,13 @@ text-align: center
 color if $fpm.dark-mode: $neutral
 
 
+
+
+
+
+
+
+
 -- ftd.iframe iframe:
 string src:
 src: $src
@@ -1264,12 +1346,24 @@ width: fill
 margin-bottom: 34
 
 
+
+
+
+
+
+
 -- ftd.iframe youtube:
 string id:
 youtube: $id
 height: 400
 width: fill
 margin-bottom: 34
+
+
+
+
+
+
 
 -- ftd.column container:
 optional string id:
@@ -1280,6 +1374,11 @@ padding-top: 15
 padding-left: 100
 padding-bottom: 60
 align: top
+
+
+
+
+
 
 -- ftd.column output:
 caption caption: Output
@@ -1310,6 +1409,12 @@ padding-left: 20
 padding-right: 20
 border-radius: 2
 background-color: #f6faff
+
+
+
+
+
+
 
 
 -- ftd.column image:
@@ -1347,6 +1452,13 @@ if: $body is not null
 body: $body
 
 
+
+
+
+
+
+
+
 -- ftd.column template-list:
 width: fill
 open: true
@@ -1375,6 +1487,13 @@ spacing: space-between
 wrap: true
 padding-bottom: 40
 id: main-container
+
+
+
+
+
+
+
 
 
 -- ftd.column template:
@@ -1438,6 +1557,14 @@ padding-vertical: 5
 padding-horizontal: 20
 
 
+
+
+
+
+
+
+
+
 -- ftd.column theme:
 caption title:
 string image:
@@ -1499,6 +1626,14 @@ padding-vertical: 5
 padding-horizontal: 20
 
 
+
+
+
+
+
+
+
+
 -- ftd.row bread-crumb:
 padding-vertical: 20
 open: true
@@ -1507,6 +1642,14 @@ append-at: main-container
 --- ftd.row:
 spacing: 20
 id: main-container
+
+
+
+
+
+
+
+
 
 
 -- ftd.row crumb:
@@ -1538,10 +1681,24 @@ font: apple-system
 style: medium
 
 
+
+
+
+
+
+
+
 -- ftd.text highlight: $title
 caption title:
 color if $fpm.dark-mode: yellow
 background-color if not $fpm.dark-mode: yellow
+
+
+
+
+
+
+
 
 -- ftd.row tip:
 optional caption title:
