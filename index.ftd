@@ -56,7 +56,8 @@ toc-item list children:
 width: fill
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
-open: content-container
+open: true
+append-at: content-container
 
 --- ftd.column:
 if: $sidebar-open
@@ -98,7 +99,8 @@ footer-toc: $footer-toc
 
 -- ftd.column create-section:
 width: fill
-open: content-container
+open: true
+append-at: content-container
 padding-vertical: 30
 
 --- ftd.column:
@@ -120,7 +122,8 @@ id:  content-container
 
 -- ftd.column content:
 width: fill
-open: content-container
+open: true
+append-at: content-container
 padding-vertical: 30
 
 --- ftd.column:
@@ -143,7 +146,8 @@ id:  content-container
 -- ftd.column doc-page:
 toc-item list toc: $toc
 width: fill
-open: main-container
+open: true
+append-at: main-container
 
 
 --- doc-page-desktop:
@@ -161,7 +165,8 @@ toc: $toc
 -- ftd.column doc-page-desktop:
 toc-item list toc: $toc
 width: fill
-open: main-container
+open: true
+append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 
@@ -193,7 +198,8 @@ footer-toc: $footer-toc
 -- ftd.column doc-page-mobile:
 toc-item list toc: $toc
 width: fill
-open: main-container
+open: true
+append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 
@@ -529,7 +535,8 @@ footer-toc: $obj
 -- ftd.column hero:
 caption title:
 string image:
-open: main-container
+open: true
+append-at: main-container
 
 --- hero-desktop: $title
 if: not $fpm.mobile
@@ -555,7 +562,8 @@ background-color: #2b3136
 padding-horizontal: $content-padding
 padding-vertical: 50
 spacing: 40
-open: desktop-action-container
+open: true
+append-at: desktop-action-container
 
 --- ftd.row:
 width: fill
@@ -593,7 +601,8 @@ background-color: #2b3136
 padding-horizontal: 20
 padding-vertical: 50
 spacing: 30
-open: mobile-action-container
+open: true
+append-at: mobile-action-container
 
 --- ftd.image:
 src: $image
@@ -935,7 +944,8 @@ $body
 
 -- ftd.row feature-list:
 width: fill
-open: main-container
+open: true
+append-at: main-container
 
 --- ftd.row:
 width: fill
@@ -1000,7 +1010,8 @@ color if $fpm.dark-mode: $neutral
 width: fill
 background-color: #f5f6f7
 background-color if $fpm.dark-mode: #2b3136
-open: main-container
+open: true
+append-at: main-container
 
 --- ftd.row:
 width: fill
@@ -1094,7 +1105,8 @@ align: top
 -- ftd.column output:
 caption caption: Output
 width: fill
-open: output-container
+open: true
+append-at: output-container
 padding-top: 12
 
 --- ftd.text: $caption
@@ -1158,7 +1170,8 @@ body: $body
 
 -- ftd.column template-list:
 width: fill
-open: main-container
+open: true
+append-at: main-container
 padding-top: 20
 
 --- ftd.row:
@@ -1309,7 +1322,8 @@ padding-horizontal: 20
 
 -- ftd.row bread-crumb:
 padding-vertical: 20
-open: main-container
+open: true
+append-at: main-container
 
 --- ftd.row:
 spacing: 20

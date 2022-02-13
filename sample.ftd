@@ -7,22 +7,17 @@
 -- ft.toc:
 $processor$: toc
 
-- index.html
-  Introduction
-- ch00-00-quickstart/
-  Quickstart
-- ch00-00-quickstart/
-  Getting started
-  - ch00-01-getting-started/
-    Deploy 
+- Introduction: index.html
+- Quickstart: ch00-00-quickstart/
+- Getting started: ch00-00-quickstart/
+  - Deploy: ch00-01-getting-started/
 
 -- ft.header-toc:
 $processor$: toc
 
-- quickstart/
-  Quickstart
-- https://github.com/FifthTry/fpm-book/generate/
-  Use this template
+- Quickstart: quickstart/
+- Use this template: https://github.com/FifthTry/fpm-book/generate/
+
 
 /-- ftd.row:
 width: fill
