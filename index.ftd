@@ -918,15 +918,17 @@ padding-bottom: 8
 font: apple-system
 
 --- ftd.text: Click To Expand
+if: not $open
 color: $neutral
 color if $fpm.dark-mode: $neutral-800
 background-color: $neutral-700
 background-color if $fpm.dark-mode: $neutral
-size: 12
-border-radius: 4
-padding: 5
+size: 10
+border-radius: 3
+padding: 3
 align: center
-if: not $open
+text-align: center
+move-up: 2
 
 --- container: ftd.main
 
