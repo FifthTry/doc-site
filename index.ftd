@@ -518,6 +518,11 @@ spacing: space-between
 $loop$: $footer-toc as $obj
 footer-toc: $obj
 
+
+
+
+
+
 -- ftd.column footer-mobile:
 footer-item list footer-toc:
 width: fill
@@ -530,6 +535,13 @@ position: left
 --- footer-instance:
 $loop$: $footer-toc as $obj
 footer-toc: $obj
+
+
+
+
+
+
+
 
 
 -- ftd.column hero:
@@ -549,6 +561,8 @@ image: $image
 if: $fpm.mobile
 id: main-container
 image: $image
+
+
 
 
 
@@ -591,6 +605,9 @@ spacing: 40
 
 
 
+
+
+
 -- ftd.column hero-mobile:
 caption title:
 string image:
@@ -630,6 +647,8 @@ spacing: 30
 
 
 
+
+
 -- ftd.text action-button:
 caption title:
 string url:
@@ -647,6 +666,9 @@ size: 20
 style: semi-bold
 
 
+
+
+
 -- ftd.text banner:
 caption title:
 text: $title
@@ -658,6 +680,11 @@ color: #25c19f
 background-color: #20232a
 width: fill
 font: apple-system
+
+
+
+
+
 
 
 
@@ -685,6 +712,12 @@ color if $fpm.dark-mode: $neutral-200
 $loop$: $toc.children as $obj
 toc: $obj
 
+
+
+
+
+
+
 -- ftd.column render-toc:
 toc-item list toc-obj:
 sticky: true
@@ -706,6 +739,12 @@ background-color:  $sidebar-light-color
 --- toc-instance:
 $loop$: $toc-obj as $obj
 toc: $obj
+
+
+
+
+
+
 
 
 -- ftd.column render-toc-mobile:
@@ -739,6 +778,12 @@ $loop$: $toc-obj as $obj
 toc: $obj
 
 
+
+
+
+
+
+
 -- ftd.text markdown:
 body body:
 optional boolean collapsed:
@@ -754,12 +799,20 @@ font: apple-system
 
 
 
+
+
+
+
+
+
 -- ftd.column h0:
 caption title:
 optional body body:
 width: fill
 region: h0
 padding-bottom: 12
+boolean open: true
+append-at: inner
 
 --- ftd.text:
 text: $title
@@ -774,10 +827,22 @@ style: bold
 padding-bottom: 16
 padding-top: 8
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 --- markdown:
 if: $body is not null
 body: $body
+
+
+
+
+
+
 
 -- ftd.column subtitle:
 caption title:
@@ -785,6 +850,8 @@ optional body body:
 width: fill
 region: h1
 padding-bottom: 12
+boolean open: true
+append-at: inner
 
 --- ftd.text:
 text: $title
@@ -799,18 +866,40 @@ style: italic
 padding-bottom: 8
 padding-top: 16
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 --- markdown:
 if: $body is not null
 body: $body
 
 
+
+
+
+
+
+
+
+
 -- ftd.column h1:
 caption title:
 optional body body:
+boolean open: true
+append-at: inner
 width: fill
 region: h1
 padding-bottom: 12
+padding-left: 20
+border-left: 5
+border-color: rgb(255, 251, 239)
+border-color if $fpm.dark-mode: rgb(17, 64, 74)
+move-left: 25
+margin-bottom: 30
 
 --- ftd.text:
 caption $title:
@@ -824,10 +913,21 @@ style: bold
 padding-bottom: 8
 padding-top: 16
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 --- markdown:
 if: $body is not null
 body: $body
+
+
+
+
+
 
 
 -- ftd.column h2:
@@ -836,6 +936,8 @@ optional body body:
 width: fill
 region: h2
 padding-bottom: 12
+boolean open: true
+append-at: inner
 
 --- ftd.text:
 caption $title:
@@ -849,10 +951,22 @@ style: bold
 padding-bottom: 8
 padding-top: 16
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 --- markdown:
 if: $body is not null
 body: $body
+
+
+
+
+
+
 
 
 -- ftd.column h3:
@@ -861,6 +975,8 @@ optional body body:
 width: fill
 region: h3
 padding-bottom: 12
+boolean open: true
+append-at: inner
 
 --- ftd.text:
 caption $title:
@@ -874,6 +990,12 @@ style: bold
 padding-bottom: 8
 padding-top: 16
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 
 --- markdown:
@@ -881,11 +1003,20 @@ if: $body is not null
 body: $body
 
 
+
+
+
+
+
+
+
 -- ftd.column h4:
 caption title:
 optional body body:
 width: fill
 region: h4
+boolean open: true
+append-at: inner
 
 --- ftd.text:
 caption $title:
@@ -899,16 +1030,33 @@ style: bold
 padding-bottom: 12
 padding-top: 34
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 --- markdown:
 if: $body is not null
 body: $body
+
+
+
+
+
+
+
+
+
 
 -- ftd.column h5:
 caption title:
 optional body body:
 width: fill
 region: h5
+boolean open: true
+append-at: inner
 
 --- ftd.text:
 caption $title:
@@ -922,10 +1070,22 @@ style: bold
 padding-bottom: 12
 padding-top: 34
 font: apple-system
+$event-click$: toggle $open
+
+--- ftd.column:
+id: inner
+if: $open
+width: fill
 
 --- markdown:
 if: $body is not null
 body: $body
+
+
+
+
+
+
 
 
 
