@@ -996,6 +996,7 @@ if: $open
 width: fill
 $event-click$: stop-propagation
 cursor: default
+spacing: 20
 
 --- markdown:
 if: $body is not null
