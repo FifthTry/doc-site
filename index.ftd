@@ -896,7 +896,7 @@ region: h1
 padding-bottom: 12
 padding-left: 20
 border-left: 5
-border-color: rgb(255, 251, 239)
+border-color: rgba(31, 94, 107, 0.13)
 border-color if $fpm.dark-mode: rgb(17, 64, 74)
 move-left: 25
 margin-bottom: 30
