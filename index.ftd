@@ -1,6 +1,3 @@
--- import: fpm
--- import: cb
-
 -- boolean sidebar-open: false
 
 
@@ -43,8 +40,11 @@
 
 
 -- fpm.toc-item list header-toc:
+-- fpm.toc-item list header-left:
+-- fpm.toc-item list header-right:
 -- fpm.toc-item list toc:
 -- fpm.toc-item list footer-toc:
+
 
 
 
@@ -79,9 +79,15 @@ toc-obj: $header-toc
 
 --- container: ftd.main
 
---- header:
-if: not $fpm.mobile
-header-toc: $header-toc
+--- h.header:
+toc-top-right: $header-toc
+toc-bottom-left: $header-left
+toc-bottom-right: $header-right
+site-logo: https://fpm.dev/static/images/logo.svg
+background: $header-dark-color
+text-color: white
+menu-right: 0
+menu-left: -88
 
 --- container: ftd.main
 
@@ -168,6 +174,8 @@ id:  content-container
 -- ftd.column doc-page:
 fpm.toc-item list toc: $toc
 fpm.toc-item list header-toc: $header-toc
+fpm.toc-item list header-left: $header-left
+fpm.toc-item list header-right: $header-right
 fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
@@ -179,6 +187,8 @@ id: main-container
 toc: $toc
 footer-toc: $footer-toc
 header-toc: $header-toc
+header-left: $header-left
+header-right: $header-right
 
 --- container: ftd.main
 
@@ -199,6 +209,8 @@ footer-toc: $footer-toc
 -- ftd.column doc-page-desktop:
 fpm.toc-item list toc: $toc
 fpm.toc-item list header-toc:
+fpm.toc-item list header-left:
+fpm.toc-item list header-right:
 fpm.toc-item list footer-toc:
 width: fill
 open: true
@@ -206,8 +218,15 @@ append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 
---- header:
-header-toc: $header-toc
+--- h.header:
+toc-top-right: $header-toc
+toc-bottom-left: $header-left
+toc-bottom-right: $header-right
+site-logo: https://fpm.dev/static/images/logo.svg
+background: $header-dark-color
+text-color: white
+menu-right: 0
+menu-left: -88
 
 --- ftd.row:
 width: fill

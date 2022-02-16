@@ -3,7 +3,6 @@
 
 
 
-
 -- ft.toc:
 $processor$: toc
 
@@ -19,13 +18,20 @@ $processor$: toc
 - Use this template: https://github.com/FifthTry/fpm-book/generate/
 
 
-/-- ftd.row:
-width: fill
-background-color: #1F5E6B
+-- ft.header-left:
+$processor$: toc
 
-/-- ftd.text: FPM BOOK
-style: bold
-size: 35
+- Left 1: quickstart/
+- Left 2: https://github.com/FifthTry/fpm-book/generate/
+
+-- ft.header-right:
+$processor$: toc
+
+- Right 1: quickstart/
+- Right 2: https://github.com/FifthTry/fpm-book/generate/
+
+
+
 
 
 -- ft.doc-page:
