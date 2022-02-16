@@ -40,25 +40,11 @@
 
 
 
--- record toc-item:
-caption title:
-string url:
-toc-item list children:
 
 
-
-
-
--- record footer-item:
-caption label:
-toc-item list children:
-
-
-
-
--- toc-item list header-toc:
--- toc-item list toc:
--- footer-item list footer-toc:
+-- fpm.toc-item list header-toc:
+-- fpm.toc-item list toc:
+-- fpm.toc-item list footer-toc:
 
 
 
@@ -72,6 +58,7 @@ background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 open: true
 append-at: content-container
+fpm.toc-item list header-toc: $header-toc
 
 --- ftd.column:
 if: $sidebar-open
@@ -94,6 +81,7 @@ toc-obj: $header-toc
 
 --- header:
 if: not $fpm.mobile
+header-toc: $header-toc
 
 --- container: ftd.main
 
@@ -178,7 +166,9 @@ id:  content-container
 
 
 -- ftd.column doc-page:
-toc-item list toc: $toc
+fpm.toc-item list toc: $toc
+fpm.toc-item list header-toc: $header-toc
+fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
 append-at: main-container
@@ -187,6 +177,8 @@ append-at: main-container
 if: not $fpm.mobile
 id: main-container
 toc: $toc
+footer-toc: $footer-toc
+header-toc: $header-toc
 
 --- container: ftd.main
 
@@ -194,7 +186,7 @@ toc: $toc
 if: $fpm.mobile
 id: main-container
 toc: $toc
-
+footer-toc: $footer-toc
 
 
 
@@ -205,7 +197,9 @@ toc: $toc
 
 
 -- ftd.column doc-page-desktop:
-toc-item list toc: $toc
+fpm.toc-item list toc: $toc
+fpm.toc-item list header-toc:
+fpm.toc-item list footer-toc:
 width: fill
 open: true
 append-at: main-container
@@ -213,6 +207,7 @@ background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 
 --- header:
+header-toc: $header-toc
 
 --- ftd.row:
 width: fill
@@ -245,7 +240,8 @@ footer-toc: $footer-toc
 
 
 -- ftd.column doc-page-mobile:
-toc-item list toc: $toc
+fpm.toc-item list toc: $toc
+fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
 append-at: main-container
@@ -336,6 +332,7 @@ white-space: nowrap
 
 
 -- ftd.row header:
+fpm.toc-item list header-toc:
 width: fill
 background-color: $header-light-color
 background-color if $fpm.dark-mode: $header-dark-color
@@ -523,10 +520,10 @@ color: $neutral
 
 
 -- ftd.column footer-instance:
-footer-item footer-toc:
+fpm.toc-item footer-toc:
 min-width: portion 1
 
---- ftd.text: $footer-toc.label
+--- ftd.text: $footer-toc.title
 size: 15
 line-height: 40
 min-width: fit-content
@@ -543,7 +540,7 @@ url: $obj.url
 
 
 -- ftd.row footer:
-footer-item list footer-toc:
+fpm.toc-item list footer-toc:
 width: fill
 
 --- footer-desktop:
@@ -564,7 +561,7 @@ footer-toc: $footer-toc
 
 
 -- ftd.row footer-desktop:
-footer-item list footer-toc:
+fpm.toc-item list footer-toc:
 width: fill
 background-color: #2b3136
 background-color if $fpm.dark-mode: #242424
@@ -582,7 +579,7 @@ footer-toc: $obj
 
 
 -- ftd.column footer-mobile:
-footer-item list footer-toc:
+fpm.toc-item list footer-toc:
 width: fill
 background-color: #2b3136
 background-color if $fpm.dark-mode: #242424
@@ -747,13 +744,12 @@ font: apple-system
 
 
 -- ftd.column toc-instance:
-toc-item toc:
+fpm.toc-item toc:
 padding-left: 10
 padding-top: 2
 padding-bottom: 2
 
 --- ftd.text:
-toc-item toc:
 link: $toc.url
 text: $toc.title
 size: 15
@@ -777,7 +773,7 @@ toc: $obj
 
 
 -- ftd.column render-toc:
-toc-item list toc-obj:
+fpm.toc-item list toc-obj:
 sticky: true
 top: 0
 height: calc 100vh - 0px
@@ -806,7 +802,7 @@ toc: $obj
 
 
 -- ftd.column render-toc-mobile:
-toc-item list toc-obj:
+fpm.toc-item list toc-obj:
 sticky: true
 height: calc 100vh - 0px
 overflow-y: auto
