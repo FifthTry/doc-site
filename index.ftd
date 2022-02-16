@@ -40,25 +40,10 @@
 
 
 
--- record toc-item:
-caption title:
-string url:
-toc-item list children:
 
-
-
-
-
--- record footer-item:
-caption label:
-toc-item list children:
-
-
-
-
--- toc-item list header-toc:
--- toc-item list toc:
--- footer-item list footer-toc:
+-- fpm.toc-item list header-toc:
+-- fpm.toc-item list toc:
+-- fpm.toc-item list footer-toc:
 
 
 
@@ -178,7 +163,7 @@ id:  content-container
 
 
 -- ftd.column doc-page:
-toc-item list toc: $toc
+fpm.toc-item list toc: $toc
 width: fill
 open: true
 append-at: main-container
@@ -205,7 +190,7 @@ toc: $toc
 
 
 -- ftd.column doc-page-desktop:
-toc-item list toc: $toc
+fpm.toc-item list toc: $toc
 width: fill
 open: true
 append-at: main-container
@@ -245,7 +230,7 @@ footer-toc: $footer-toc
 
 
 -- ftd.column doc-page-mobile:
-toc-item list toc: $toc
+fpm.toc-item list toc: $toc
 width: fill
 open: true
 append-at: main-container
@@ -747,13 +732,13 @@ font: apple-system
 
 
 -- ftd.column toc-instance:
-toc-item toc:
+fpm.toc-item toc:
 padding-left: 10
 padding-top: 2
 padding-bottom: 2
 
 --- ftd.text:
-toc-item toc:
+fpm.toc-item toc:
 link: $toc.url
 text: $toc.title
 size: 15
@@ -777,7 +762,7 @@ toc: $obj
 
 
 -- ftd.column render-toc:
-toc-item list toc-obj:
+fpm.toc-item list toc-obj:
 sticky: true
 top: 0
 height: calc 100vh - 0px
@@ -806,7 +791,7 @@ toc: $obj
 
 
 -- ftd.column render-toc-mobile:
-toc-item list toc-obj:
+fpm.toc-item list toc-obj:
 sticky: true
 height: calc 100vh - 0px
 overflow-y: auto
