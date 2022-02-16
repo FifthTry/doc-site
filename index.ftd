@@ -40,10 +40,6 @@
 
 
 
--- record toc-item:
-caption title:
-string url:
-toc-item list children:
 
 
 
@@ -73,38 +69,20 @@ background-color if $fpm.dark-mode: $neutral-700
 open: true
 append-at: content-container
 
---- ftd.column:
-if: $sidebar-open
-anchor: window
-top: 0
-bottom: 0
-left: 0
-right: 0
-background-color:  rgba (0, 0, 0, 0.5)
-z-index: 1
-$event-click$: toggle $sidebar-open
-
---- container: ftd.main
-
---- render-toc-mobile:
-if: $sidebar-open
-toc-obj: $header-toc
-
---- container: ftd.main
-
---- header:
-if: not $fpm.mobile
-
---- container: ftd.main
-
---- header-mobile:
-if:  $fpm.mobile
+--- header.header:
+site-logo: logo-text.png
+site-url: /
+toc-top-right: $header-toc
+toc-bottom-left: $toc-bottom-left
+toc-bottom-right: $toc-bottom-right
+link-style: bold
+menu-right: 0
+menu-left: -88
 
 --- ftd.column:
 id: content-container
 width: fill
-
---- container: ftd.main
+open: false
 
 --- footer:
 if: $footer-toc is not empty
