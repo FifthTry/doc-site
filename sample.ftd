@@ -21,8 +21,8 @@ $processor$: toc
 -- ft.header-left:
 $processor$: toc
 
-- Home: /
-- About: /about/
+- Home: /quickstart/
+- About: https://github.com/FifthTry/fpm-book/generate/
   - About Author: /sample/
   - About Team: /sample/
   - About Org: /sample/
