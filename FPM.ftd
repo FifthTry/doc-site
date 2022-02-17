@@ -3,4 +3,10 @@
 -- fpm.package: fifthtry.github.io/Forest-Theme
 zip: github.com/fifthtry/Forest-theme/archive/refs/heads/main.zip
 
--- fpm.dependency: fifthtry.github.io/code-block as cb
+-- fpm.dependency: fifthtry.github.io/code-block
+
+-- fpm.dependency: fifthtry.github.io/header
+
+-- fpm.auto-import: fpm
+-- fpm.auto-import: fifthtry.github.io/code-block as cb
+-- fpm.auto-import: fifthtry.github.io/header as h
