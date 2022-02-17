@@ -58,7 +58,6 @@ background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 open: true
 append-at: content-container
-fpm.toc-item list header-toc: $header-toc
 
 --- ftd.column:
 if: $sidebar-open
@@ -173,10 +172,6 @@ id:  content-container
 
 -- ftd.column doc-page:
 fpm.toc-item list toc: $toc
-fpm.toc-item list header-toc: $header-toc
-fpm.toc-item list header-left: $header-left
-fpm.toc-item list header-right: $header-right
-fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
 append-at: main-container
@@ -185,10 +180,6 @@ append-at: main-container
 if: not $fpm.mobile
 id: main-container
 toc: $toc
-footer-toc: $footer-toc
-header-toc: $header-toc
-header-left: $header-left
-header-right: $header-right
 
 --- container: ftd.main
 
@@ -196,7 +187,6 @@ header-right: $header-right
 if: $fpm.mobile
 id: main-container
 toc: $toc
-footer-toc: $footer-toc
 
 
 
@@ -208,10 +198,6 @@ footer-toc: $footer-toc
 
 -- ftd.column doc-page-desktop:
 fpm.toc-item list toc: $toc
-fpm.toc-item list header-toc:
-fpm.toc-item list header-left:
-fpm.toc-item list header-right:
-fpm.toc-item list footer-toc:
 width: fill
 open: true
 append-at: main-container
@@ -260,7 +246,6 @@ footer-toc: $footer-toc
 
 -- ftd.column doc-page-mobile:
 fpm.toc-item list toc: $toc
-fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
 append-at: main-container
@@ -351,7 +336,6 @@ white-space: nowrap
 
 
 -- ftd.row header:
-fpm.toc-item list header-toc:
 width: fill
 background-color: $header-light-color
 background-color if $fpm.dark-mode: $header-dark-color
