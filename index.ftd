@@ -60,22 +60,6 @@ open: true
 append-at: content-container
 fpm.toc-item list header-toc: $header-toc
 
---- ftd.column:
-if: $sidebar-open
-anchor: window
-top: 0
-bottom: 0
-left: 0
-right: 0
-background-color:  rgba (0, 0, 0, 0.5)
-z-index: 1
-$event-click$: toggle $sidebar-open
-
---- container: ftd.main
-
---- render-toc-mobile:
-if: $sidebar-open
-toc-obj: $header-toc
 
 --- container: ftd.main
 
@@ -284,13 +268,13 @@ $event-click$: toggle $sidebar-open
 
 --- container: ftd.main
 
---- render-toc-mobile:
-if: $sidebar-open
+/--- render-toc-mobile:
+/if: $sidebar-open
 toc-obj: $toc
 
 --- container: ftd.main
 
---- header-mobile:
+/--- header-mobile:
 
 --- ftd.row:
 width: fill
@@ -354,96 +338,6 @@ white-space: nowrap
 
 
 
--- ftd.row header:
-fpm.toc-item list header-toc:
-width: fill
-background-color: $header-light-color
-background-color if $fpm.dark-mode: $header-dark-color
-padding-horizontal: 20
-padding-vertical: 10
-color: white
-border-bottom: 1
-border-color: #e1e1e1
-border-color if $fpm.dark-mode: #50656B
-
---- ftd.row:
-position: left
-spacing: 25
-id: left-side
-
---- ftd.row:
-spacing: 10
-link: $site-url
-
---- ftd.image:
-src: $site-icon
-width: 113
-height: 47
-width if $fpm.mobile: 78
-height if $fpm.mobile: 32
-
---- site-link: $site-name
-if: $site-name is not null
-
-/--- container: left-side
-
-/--- header-link: $obj.title
-$loop$: $header-toc as $obj
-link: $obj.url
-
---- container: ftd.main
-
---- ftd.column:
-width: fill
-position: center
-
---- ftd.row:
-position: right
-spacing: 30
-width: auto
-id: action-container
-
---- header-link: $obj.title
-$loop$: $header-toc as $obj
-link: $obj.url
-
---- ftd.image:
-if: not $fpm.dark-mode
-/src: https://res.cloudinary.com/dphj6havg/image/upload/v1640938143/github-dark_xeu6ot.svg
-src: https://res.cloudinary.com/dphj6havg/image/upload/v1640938143/github-light_thra25.svg
-width: 20
-min-width: 20
-link: $github
-align: center
-
---- container: action-container
-
---- ftd.image:
-if:  $fpm.dark-mode
-src: https://res.cloudinary.com/dphj6havg/image/upload/v1640938143/github-light_thra25.svg
-width: 20
-min-width: 20
-link: $github
-align: center
-
---- container: action-container
-
---- ftd.image:
-if: not $fpm.dark-mode
-/src: https://res.cloudinary.com/dphj6havg/image/upload/v1640938217/dark-mode_mfy9hd.svg
-src: https://res.cloudinary.com/dphj6havg/image/upload/v1641367492/light-mode_o0zne7.svg
-height: 18
-$event-click$: message-host enable-dark-mode
-align: center
-
---- container: action-container
-
---- ftd.image:
-if:  $fpm.dark-mode
-src: https://res.cloudinary.com/dphj6havg/image/upload/v1641367492/light-mode_o0zne7.svg
-height: 18
-$event-click$: message-host enable-light-mode
-align: center
 
 
 
@@ -824,7 +718,7 @@ toc: $obj
 
 
 
--- ftd.column render-toc-mobile:
+/-- ftd.column render-toc-mobile:
 fpm.toc-item list toc-obj:
 sticky: true
 height: calc 100vh - 0px
@@ -850,7 +744,7 @@ shadow-blur: 10
 shadow-color: rgba (0, 0, 0, 0.05)
 z-index: 4
 
---- toc-instance:
+/--- toc-instance:
 $loop$: $toc-obj as $obj
 toc: $obj
 
