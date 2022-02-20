@@ -53,7 +53,9 @@ When we assign s1 to s2, the String data is copied, meaning we copy the pointer,
 
 -- ftd.image:
 src: static/picture1.jpeg
-width: 600
+width: fill
+
+
 
 
 
