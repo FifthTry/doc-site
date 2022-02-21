@@ -56,7 +56,7 @@ toc-top-right: $header-toc
 toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: https://fpm.dev/static/images/logo.svg
-site-url: /
+site-url: /Forest-Theme/sample/
 background: $header-dark-color
 text-color: white
 active-text-color: $neutral
