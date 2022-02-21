@@ -6,38 +6,38 @@
 -- ft.toc:
 $processor$: toc
 
-- Introduction: index.html
-- Quickstart: ch00-00-quickstart/
-- Getting started: ch00-00-quickstart/
-  - Deploy: ch00-01-getting-started/
+- Introduction: /Forest-Theme/sample/
+- Quickstart: /Forest-Theme/sample/
+- Getting started: /Forest-Theme/sample/
+  - Deploy: /Forest-Theme/sample/
 
 -- ft.header-toc:
 $processor$: toc
 
-- Quickstart: quickstart/
+- Quickstart: /Forest-Theme/sample/
 - Use this template: https://github.com/FifthTry/fpm-book/generate/
 
 
 -- ft.header-left:
 $processor$: toc
 
-- Home: /quickstart/
+- Home: /Forest-Theme/sample/
 - About: https://github.com/FifthTry/fpm-book/generate/
-  - About Author: /sample/
-  - About Team: /sample/
-  - About Org: /sample/
-  - Social Network: /sample/
-  - Charity: /sample/
-- Publications: https://github.com/FifthTry/fpm-book/generate/
+  - About Author: /Forest-Theme/sample/
+  - About Team: /Forest-Theme/sample/
+  - About Org: /Forest-Theme/sample/
+  - Social Network: /Forest-Theme/sample/
+  - Charity: /Forest-Theme/sample/
+- Publications: /Forest-Theme/sample/
 
 -- ft.header-right:
 $processor$: toc
 
-- Latest Publications: quickstart/
-  - Santa Maria: /quickstart/
-  - Bina Recoz: /quickstart/
-  - A Day in the Dark: /quickstart/
-- Author Diary: https://github.com/FifthTry/fpm-book/generate/
+- Latest Publications: /Forest-Theme/sample/
+  - Santa Maria: /Forest-Theme/sample/
+  - Bina Recoz: /Forest-Theme/sample/
+  - A Day in the Dark: /Forest-Theme/sample/
+- Author Diary: /Forest-Theme/sample/
 
 
 
@@ -52,7 +52,7 @@ The length is how much memory, in bytes, the contents of the String is currently
 When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 4-2.
 
 -- ftd.image:
-src: static/picture1.jpeg
+src: /Forest-Theme/static/picture1.jpeg
 width: fill
 
 
