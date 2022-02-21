@@ -22,7 +22,7 @@ $processor$: toc
 $processor$: toc
 
 - Home: /Forest-Theme/sample/
-- About: https://github.com/FifthTry/fpm-book/generate/
+- About: /Forest-Theme/sample/
   - About Author: /Forest-Theme/sample/
   - About Team: /Forest-Theme/sample/
   - About Org: /Forest-Theme/sample/
