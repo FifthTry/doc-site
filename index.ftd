@@ -932,13 +932,10 @@ body: $body
 
 
 
--- ftd.column code:
+-- cb.code code:
 optional caption caption:
 body body:
 string lang:
-width: fill
-
---- cb.code:
 caption: $caption
 lang: $lang
 
