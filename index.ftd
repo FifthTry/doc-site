@@ -26,7 +26,7 @@
 -- optional string site-name:
 -- string site-icon: NA
 -- string site-icon-mobile: NA
-/-- string site-url: /Forest-Theme/sample/
+-- string site-url: /Forest-Theme/sample/
 
 -- fpm.toc-item list header-toc:
 -- fpm.toc-item list header-left:
@@ -56,7 +56,7 @@ toc-top-right: $header-toc
 toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: https://fpm.dev/static/images/logo.svg
-site-url: /Forest-Theme/sample/
+site-url: Forest-Theme/sample/
 background: $header-dark-color
 text-color: white
 active-text-color: $neutral
@@ -64,6 +64,8 @@ menu-right: 0
 menu-left: -88
 current-url: /home/
 menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
+
+
 
 
 --- container: ftd.main
