@@ -230,6 +230,7 @@ max-width: 1104
 align: top
 padding-horizontal: 92
 padding-vertical: 20
+width: fill
 
 --- container: ftd.main
 
