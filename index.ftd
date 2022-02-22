@@ -173,6 +173,9 @@ if: $fpm.mobile
 id: main-container
 toc: $toc
 footer-toc: $footer-toc
+header-toc: $header-toc
+header-left: $header-left
+header-right: $header-right
 
 
 
@@ -193,6 +196,22 @@ open: true
 append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
+
+
+--- h.header:
+toc-top-right: $header-toc
+toc-bottom-left: $header-left
+toc-bottom-right: $header-right
+site-logo: https://fpm.dev/static/images/logo.svg
+site-url: Forest-Theme/sample/
+background: $header-dark-color
+text-color: white
+active-text-color: $neutral
+menu-right: 0
+menu-left: -88
+current-url: /home/
+menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
+
 
 --- ftd.row:
 width: fill
@@ -226,6 +245,10 @@ footer-toc: $footer-toc
 
 -- ftd.column doc-page-mobile:
 fpm.toc-item list toc: $toc
+fpm.toc-item list header-toc:
+fpm.toc-item list header-left:
+fpm.toc-item list header-right:
+fpm.toc-item list footer-toc:
 fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
@@ -233,6 +256,21 @@ append-at: main-container
 background-color: $neutral
 background-color if $fpm.dark-mode: $neutral-700
 
+
+
+--- h.header:
+toc-top-right: $header-toc
+toc-bottom-left: $header-left
+toc-bottom-right: $header-right
+site-logo: https://fpm.dev/static/images/logo.svg
+site-url: Forest-Theme/sample/
+background: $header-dark-color
+text-color: white
+active-text-color: $neutral
+menu-right: 0
+menu-left: -88
+current-url: /home/
+menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
 
 --- container: ftd.main
 
