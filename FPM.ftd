@@ -2,11 +2,19 @@
 
 -- fpm.package: fifthtry.github.io/Forest-Theme
 zip: github.com/fifthtry/Forest-theme/archive/refs/heads/main.zip
+language: English
+translation: hi.fpm.dev
 
 -- fpm.dependency: fifthtry.github.io/code-block
 
 -- fpm.dependency: fifthtry.github.io/header
 
+-- fpm.dependency: fifthtry.github.io/fpm-info as info
+
+-- fpm.dependency: fifthtry.github.io/typography
+
+
 -- fpm.auto-import: fpm
+-- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 -- fpm.auto-import: fifthtry.github.io/header as h
