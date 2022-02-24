@@ -62,6 +62,10 @@ text-color: white
 active-text-color: $neutral
 menu-right: 0
 menu-left: -88
+menu-bg: #EEEEEE 
+menu-hover-bg: #F8f8f8
+menu-link: #1F3E48
+menu-link-active: #1F3E48 
 logo-height: 38
 current-url: /home/
 menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
@@ -208,6 +212,10 @@ site-url: Forest-Theme/sample/
 background: $header-dark-color
 text-color: white
 active-text-color: $neutral
+menu-bg: #EEEEEE 
+menu-hover-bg: #F8f8f8
+menu-link: #1F3E48
+menu-link-active: #1F3E48 
 logo-height: 38
 menu-right: 0
 menu-left: -88
@@ -270,6 +278,10 @@ site-url: Forest-Theme/sample/
 background: $header-dark-color
 text-color: white
 active-text-color: $neutral
+menu-bg: #EEEEEE 
+menu-hover-bg: #F8f8f8
+menu-link: #1F3E48
+menu-link-active: #1F3E48 
 logo-height: 38
 menu-right: 0
 menu-left: -88
