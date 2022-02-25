@@ -24,8 +24,8 @@
 -- integer max-width: 1000
 -- string github: NA
 -- optional string site-name:
--- string site-icon: NA
--- string site-icon-mobile: NA
+-- string site-icon: /Forest-Theme/static/ftd-logo-desktop.png
+-- string site-icon-mobile: /Forest-Theme/static/ftd-logo-mobile.png
 -- string site-url: /Forest-Theme/sample/
 
 -- fpm.toc-item list header-toc:
