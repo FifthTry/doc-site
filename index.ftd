@@ -638,7 +638,7 @@ style: italic
 padding-bottom: 8
 padding-top: 16
 font: apple-system
-$event-click$: toggle $open
+$on-click$: toggle $open
 
 --- ftd.column:
 id: inner
