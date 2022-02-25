@@ -290,7 +290,6 @@ menu-right: 0
 menu-left: -88
 current-url: /home/
 menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
-font-family: apple-system
 
 
 --- container: ftd.main
