@@ -28,6 +28,7 @@
 -- string site-icon-mobile: /Forest-Theme/static/ftd-logo-mobile.png
 -- string site-url: /Forest-Theme/sample/
 
+
 -- fpm.toc-item list header-toc:
 -- fpm.toc-item list header-left:
 -- fpm.toc-item list header-right:
