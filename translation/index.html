@@ -540,9 +540,10 @@ let ftd_utils = {
     },
 
     is_equal_condition: function (value, condition) {
-        return ((value === condition)
-            || (condition === "$IsNull$" && (value.trim().length === 0 || value === "null"))
-            || (condition === "$IsNotNull$" && (value.trim().length !== 0 && value !== "null"))
+        let val = value.replaceAll("\"", "");
+        return ((val === condition)
+            || (condition === "$IsNull$" && (val.trim().length === 0 || val === "null"))
+            || (condition === "$IsNotNull$" && (val.trim().length !== 0 && val !== "null"))
         );
     },
 
@@ -1016,8 +1017,8 @@ function console_print(id, data) {
         // we would then rename this function to detect_device() which will
         // return one of "desktop", "tablet", "mobile". and also maybe have
         // another function detect_orientation(), "landscape" and "portrait" etc,
-        // and instead of setting `fpm-ui#mobile: boolean` we set `fpm-ui#device`
-        // and `fpm-ui#view-port-orientation` etc.
+        // and instead of setting `fpm#mobile: boolean` we set `fpm-ui#device`
+        // and `fpm#view-port-orientation` etc.
         let breakpoint = parseInt(window.ftd.get_value("main", FPM_MOBILE_BREAKPOINT));
         return width <= breakpoint;
     }
@@ -1033,21 +1034,21 @@ function console_print(id, data) {
     }
 
     /*
-        fpm-ui.dark-mode behaviour:
+        fpm.dark-mode behaviour:
 
-        fpm-ui.dark-mode is a boolean, default false, it tells the UI to show
+        fpm.dark-mode is a boolean, default false, it tells the UI to show
         the UI in dark or light mode. Themes should use this variable to decide
         which mode to show in UI.
 
-        fpm-ui.dark-mode-follow-system, boolean, default true, keeps track if
+        fpm.dark-mode-follow-system, boolean, default true, keeps track if
         we are reading the value of `dark-mode` from system preference, or user
         has overridden the system preference.
 
         These two variables must not be set by ftd code directly, but they must
-        use `$event-click$: message-host enable-dark-mode`, to ignore system
-        preference and use dark mode. `$event-click$: message-host
+        use `$on-click$: message-host enable-dark-mode`, to ignore system
+        preference and use dark mode. `$on-click$: message-host
         disable-dark-mode` to ignore system preference and use light mode and
-        `$event-click$: message-host follow-system-dark-mode` to ignore user
+        `$on-click$: message-host follow-system-dark-mode` to ignore user
         preference and start following system preference.
 
         we use a cookie: `fpm-dark-mode` to store the preference. The cookie can
