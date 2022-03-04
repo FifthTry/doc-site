@@ -1,0 +1,42 @@
+-- import: fpm
+-- import: fpm-lib
+-- import: fifthtry.github.io/Forest-Theme/index as ft
+-- import: fifthtry.github.io/Forest-Theme/design-doc as doc
+
+-- ftd.column translation-status-page:
+width: fill
+height: fill
+
+--- ft.doc-page:
+toc: $ft.toc
+
+--- doc.page-title: $fpm.ui.language-detail-page
+icon: true
+light-icon-path: /Forest-Theme/static/translation-icons/light/large/translations-title-default.png
+dark-icon-path: /Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
+
+
+--- doc.title: $fpm.package-title
+subtitle: doc.key-value-small: Last modified on:
+> value: $fpm.last-modified-on
+> default: Never synced
+
+$fpm.ui.language-detail-page-body
+
+--- doc.key-value: $fpm.ui.total-number-of-documents
+value: $fpm.number-of-documents
+default: Not known
+
+--- doc.translation-status:
+
+
+--- doc.translation-missing:
+
+
+--- doc.translation-nevermarked:
+
+
+--- doc.translation-outdated:
+
+
+--- doc.translation-uptodate:
