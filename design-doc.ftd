@@ -725,7 +725,6 @@ width: fill
 
 
 --- ftd.row:
-if: $count is not null
 position: left
 width: fill
 
@@ -769,7 +768,6 @@ margin-left: 15
 --- container: ftd.main
 
 --- ftd.row:
-if: $count is not null
 position: right
 width: percent 20
 
@@ -840,10 +838,9 @@ margin-top: 20
 boolean open: false
 optional string group-type:
 
---- icon-title: 
+--- icon-title:
 title: $fpm.ui.missing
 title-color: #FA6C6C
-count: 6
 icon: true
 icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-missing.png
 icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-missing.png
@@ -884,11 +881,10 @@ boolean open: false
 optional string group-type:
 
 
---- icon-title: 
+--- icon-title:
 /if: $group-type 'nevermarked'
 title: $fpm.ui.never-marked
 title-color: #F48D0C
-count: 4
 icon: true
 icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-info.png
 icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-info.png
@@ -926,11 +922,10 @@ boolean open: false
 optional string group-type:
 
 
---- icon-title: 
+--- icon-title:
 /if: $group-type 'outdated'
 title: $fpm.ui.out-dated
 title-color: #FAD345
-count: 2
 icon: true
 icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-time.png
 icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-time.png
@@ -970,11 +965,10 @@ boolean open: false
 optional string group-type:
 
 
---- icon-title: 
+--- icon-title:
 /if: $group-type 'uptodate'
 title: $fpm.ui.upto-date
 title-color: #58C802
-count: 1
 icon: true
 icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-success.png
 icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-success.png
