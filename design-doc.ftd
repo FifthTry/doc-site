@@ -837,6 +837,7 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
+if: $fpm.missing-files is not empty
 
 --- icon-title:
 title: $fpm.ui.missing
@@ -879,6 +880,7 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
+if: $fpm.never-marked-files is not empty
 
 
 --- icon-title:
@@ -920,6 +922,7 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
+if: $fpm.outdated-files is not empty
 
 
 --- icon-title:
@@ -963,6 +966,7 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
+if: $fpm.upto-date-files is not empty
 
 
 --- icon-title:
