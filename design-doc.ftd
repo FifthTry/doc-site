@@ -2,19 +2,19 @@
 
 
 
--- header-sticky-title  uptodate: Upto date
-boolean icon: true
-optional string light-icon-path: -/fifthtry.github.-/iofifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-success.png
-optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-sucess.png
+-- header-sticky-title uptodate: Upto date
+icon: true
+light-icon-path: -/fifthtry.github.-/iofifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-success.png
+dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-sucess.png
 
 
 
 
 
--- header-sticky-title  missing: Missing
-boolean icon: true
-optional string light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-missing.png
-optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-missing.png
+-- header-sticky-title missing: Missing
+icon: true
+light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-missing.png
+dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-missing.png
 
 
 $fpm.ui.translation-not-available
@@ -23,12 +23,12 @@ $fpm.ui.translation-not-available
 
 
 
--- header-sticky-title  nevermarked: Never marked
-boolean icon: true
-optional string button-text: View out of date Hindi version
-optional string button-link: /hi
-optional string light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-info.png
-optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-info.png
+-- header-sticky-title nevermarked: Never marked
+icon: true
+button-text-main: $fpm.ui.show-unapproved-version
+button-text-fallback: $fpm.ui.show-latest-version
+light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-info.png
+dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-info.png
 
 
 $fpm.ui.unapproved-heading
@@ -42,19 +42,18 @@ $fpm.ui.unapproved-heading
 
 
 -- header-sticky-title outdated: Outdated
-boolean icon: true
-boolean open: false
-optional string button-text: View out of date Hindi version
-optional string button-link: /hi
-optional string link-text: View changes
-optional string green-title: $fpm.ui.out-dated-heading
-optional string light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-title-default.png
-optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
+icon: true
+button-text-main: $fpm.ui.show-latest-version
+button-text-fallback: $fpm.ui.show-outdated-version
+link-text: View changes
+green-title: $fpm.ui.out-dated-heading
+light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-title-default.png
+dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
 
 $fpm.ui.out-dated-body
 
 --- code-block: The following changes has been made in English edition since last modification
-if: $open
+if: $fpm.translation-diff-open
 
 $fpm.diff
 
@@ -90,7 +89,7 @@ color $fpm.dark-mode: #FFFFFF
 
 
 --- code:
-lang: ftd
+lang: diff
 
 $body
 
@@ -123,8 +122,8 @@ $body
 caption title:
 boolean icon: true
 optional body body:
-optional string button-text:
-optional string button-link:
+optional string button-text-main:
+optional string button-text-fallback:
 optional string green-title:
 optional string light-icon-path:
 optional string dark-icon-path:
@@ -134,11 +133,10 @@ width: fill
 padding-vertical: 20
 padding-horizontal: 50
 border-bottom-radius: 20
-margin-top: -20 
+margin-top: -20
 margin-bottom: 20
 background-color: #C5C5C5
 background-color if $fpm.dark-mode: #3B4B50
-boolean open: false
 
 --- ftd.row:
 
@@ -160,11 +158,7 @@ margin-right: 20
 margin-top: 4
 
 --- ftd.text: $title
-link: $button-link
-text: $title
-caption $title:
 region: title
-text: $title
 color: #000000
 color if $fpm.dark-mode: #FFFFFF
 font: apple-system
@@ -196,12 +190,16 @@ font: apple-system
 --- container: ftd.main
 
 --- ftd.row:
-if: $button-text is not null
+if: $button-text-main is not null
 width: fill
 spacing: 40
 margin-top: 20
 
---- ftd.text: $button-text
+--- ftd.text: $button-text-main
+if: not $fpm.is-fallback
+$on-click$: message-host show_fallback
+$on-click$: stop-propagation
+$on-click$: prevent-default
 border-width: 1
 border-radius: 6
 border-color: #F09523
@@ -215,7 +213,25 @@ color: #FFFFFF
 color if $fpm.dark-mode: #FFFFFF
 background-color: #3B4B50
 background-color $fpm.dark-mode: #3B4B50
-link: $button-link
+
+--- ftd.text: $button-text-fallback
+if: $fpm.is-fallback
+$on-click$: message-host show_main
+$on-click$: stop-propagation
+$on-click$: prevent-default
+border-width: 1
+border-radius: 6
+border-color: #F09523
+padding-vertical: 10
+padding-horizontal: 25
+size: 19
+style: bold
+line-height: 22
+font: apple-system
+color: #FFFFFF
+color if $fpm.dark-mode: #FFFFFF
+background-color: #3B4B50
+background-color $fpm.dark-mode: #3B4B50
 
 
 --- ftd.text: $link-text
@@ -226,7 +242,7 @@ font: apple-system
 padding-top: 10
 color: #000000
 color if $fpm.dark-mode: #F09523
-$on-click$: toggle $open
+$on-click$: message-host toggle-translation-diff
 
 
 
