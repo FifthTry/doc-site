@@ -1,3 +1,5 @@
+-- import: fifthtry.github.io/Forest-Theme/design-doc as doc
+
 -- fpm.theme-color: #1F5E6B
 -- boolean sidebar-open: false
 -- string neutral: #fff
@@ -163,6 +165,25 @@ fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
 append-at: main-container
+
+--- ftd.column:
+width: fill
+height: fill
+if: $fpm.translation-status is not null
+
+--- doc.uptodate:
+if: $fpm.translation-status == UptoDate
+
+--- doc.missing:
+if: $fpm.translation-status == Missing
+
+--- doc.nevermarked:
+if: $fpm.translation-status == NeverMarked
+
+--- doc.outdated:
+if: $fpm.translation-status == Outdated
+
+--- container: ftd.main
 
 --- doc-page-desktop:
 if: not $fpm.mobile

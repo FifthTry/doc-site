@@ -1,12 +1,11 @@
--- import: fifthtry.github.io/Forest-Theme/index as ft
 -- import: fpm
 
 
 
 -- header-sticky-title  uptodate: Upto date
 boolean icon: true
-optional string light-icon-path: /Forest-Theme/static/translation-icons/light/large/translations-success.png
-optional string dark-icon-path: /Forest-Theme/static/translation-icons/dark/large/translations-sucess.png
+optional string light-icon-path: -/fifthtry.github.-/iofifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-success.png
+optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-sucess.png
 
 
 
@@ -14,12 +13,11 @@ optional string dark-icon-path: /Forest-Theme/static/translation-icons/dark/larg
 
 -- header-sticky-title  missing: Missing
 boolean icon: true
-optional string light-icon-path: /Forest-Theme/static/translation-icons/light/large/translations-missing.png
-optional string dark-icon-path: /Forest-Theme/static/translation-icons/dark/large/translations-missing.png
+optional string light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-missing.png
+optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-missing.png
 
 
-English version of this document was last updated on 21st Mar 2021, but you are 
-viewing Hindi version that was updated on 10th Feb 2021.
+$fpm.ui.translation-not-available
 
 
 
@@ -29,12 +27,11 @@ viewing Hindi version that was updated on 10th Feb 2021.
 boolean icon: true
 optional string button-text: View out of date Hindi version
 optional string button-link: /hi
-optional string light-icon-path: /Forest-Theme/static/translation-icons/light/large/translations-info.png
-optional string dark-icon-path: /Forest-Theme/static/translation-icons/dark/large/translations-info.png
+optional string light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-info.png
+optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-info.png
 
 
-English version of this document was last updated on 21st Mar 2021, but you are 
-viewing Hindi version that was updated on 10th Feb 2021.
+$fpm.ui.unapproved-heading
 
 
 
@@ -50,31 +47,16 @@ boolean open: false
 optional string button-text: View out of date Hindi version
 optional string button-link: /hi
 optional string link-text: View changes
-optional string green-title: You are currently viewing updated English version.
-optional string light-icon-path: /Forest-Theme/static/translation-icons/light/large/translations-title-default.png
-optional string dark-icon-path: /Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
+optional string green-title: $fpm.ui.out-dated-heading
+optional string light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-title-default.png
+optional string dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
 
-English version of this document was last updated on 21st Mar 2021, but you are 
-viewing Hindi version that was updated on 10th Feb 2021.
+$fpm.ui.out-dated-body
 
 --- code-block: The following changes has been made in English edition since last modification
 if: $open
 
-\-- fpm.toc-item list empty-toc:
-
-\-- fpm.toc-item list toc-top-right:
-$processor$: toc
-
-- Roadmap: /roadmap/
-- Journal: 
-  - Home Index: /index/
-  - Docs: /index/
-  - Articles: /index/
-  - Home Pictures: /index/
-
-/-- never-marked: 
-/-- missing:
-/-- upto-date:
+$fpm.diff
 
 
 
@@ -107,8 +89,20 @@ color: #FFFFFF
 color $fpm.dark-mode: #FFFFFF
 
 
---- ft.code:
+--- code:
 lang: ftd
+
+$body
+
+
+
+
+-- cb.code code:
+optional caption caption:
+body body:
+string lang:
+caption: $caption
+lang: $lang
 
 $body
 
@@ -569,31 +563,31 @@ column-width: percent 15
 --- icon-title-cell: 
 title: Missing
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/translations-missing.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-missing.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/translations-missing.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-missing.png
 column-width: percent 15
 
 --- icon-title-cell: 
 title: Never marked
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/translations-info.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-info.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/translations-info.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-info.png
 column-width: percent 22
 
 
 --- icon-title-cell: 
 title: Out-dated
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/translations-time.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-time.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/translations-time.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-time.png
 column-width: percent 20
 
 
 --- icon-title-cell: 
 title: Up-to Date
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/translations-success.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-success.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/translations-success.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-success.png
 column-width: percent 20
 
 
@@ -843,8 +837,8 @@ if: $fpm.missing-files is not empty
 title: $fpm.ui.missing
 title-color: #FA6C6C
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-missing.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-missing.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-missing.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/35x26/translations-missing.png
 font-size: 24
 margin-right: 20
 open: $open
@@ -888,8 +882,8 @@ if: $fpm.never-marked-files is not empty
 title: $fpm.ui.never-marked
 title-color: #F48D0C
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-info.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-info.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-info.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/35x26/translations-info.png
 font-size: 24
 margin-right: 20
 open: $open
@@ -930,8 +924,8 @@ if: $fpm.outdated-files is not empty
 title: $fpm.ui.out-dated
 title-color: #FAD345
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-time.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-time.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-time.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/35x26/translations-time.png
 font-size: 24
 margin-right: 20
 open: $open
@@ -974,8 +968,8 @@ if: $fpm.upto-date-files is not empty
 title: $fpm.ui.upto-date
 title-color: #58C802
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/light/35x26/translations-success.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/35x26/translations-success.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-success.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/35x26/translations-success.png
 font-size: 24
 margin-right: 20
 open: $open
@@ -1078,31 +1072,31 @@ column-width: percent 15
 --- icon-title-cell-home: 
 title: Missing
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/dark/translations-missing.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-missing.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-missing.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-missing.png
 column-width: percent 15
 
 --- icon-title-cell-home: 
 title: Never marked
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/dark/translations-info.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-info.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-info.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-info.png
 column-width: percent 22
 
 
 --- icon-title-cell-home: 
 title: Out-dated
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/dark/translations-time.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-time.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-time.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-time.png
 column-width: percent 20
 
 
 --- icon-title-cell-home: 
 title: Up-to Date
 icon: true
-icon-path-light: /Forest-Theme/static/translation-icons/dark/translations-success.png
-icon-path-dark: /Forest-Theme/static/translation-icons/dark/translations-success.png
+icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-success.png
+icon-path-dark: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/translations-success.png
 column-width: percent 20
 
 
