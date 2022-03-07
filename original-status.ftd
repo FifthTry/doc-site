@@ -11,8 +11,8 @@ toc: $ft.toc
 
 --- doc.page-title: $fpm.ui.language-detail-page
 icon: true
-light-icon-path: /Forest-Theme/static/translation-icons/light/large/translations-title-default.png
-dark-icon-path: /Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
+light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-title-default.png
+dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
 
 
 --- doc.title: $fpm.package-title
