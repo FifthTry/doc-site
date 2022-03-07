@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/Forest-Theme/design-doc as doc
+-- import: doc
 
 -- fpm.theme-color: #1F5E6B
 -- boolean sidebar-open: false
@@ -151,22 +151,7 @@ id:  content-container
 
 
 
-
-
-
-
-
--- ftd.column doc-page:
-fpm.toc-item list toc: $toc
-fpm.toc-item list header-toc: $header-toc
-fpm.toc-item list header-left: $header-left
-fpm.toc-item list header-right: $header-right
-fpm.toc-item list footer-toc: $footer-toc
-width: fill
-open: true
-append-at: main-container
-
---- ftd.column:
+-- ftd.column translation-banner:
 width: fill
 height: fill
 if: $fpm.translation-status is not null
@@ -182,6 +167,27 @@ if: $fpm.translation-status == NeverMarked
 
 --- doc.outdated:
 if: $fpm.translation-status == Outdated
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column doc-page:
+fpm.toc-item list toc: $toc
+fpm.toc-item list header-toc: $header-toc
+fpm.toc-item list header-left: $header-left
+fpm.toc-item list header-right: $header-right
+fpm.toc-item list footer-toc: $footer-toc
+width: fill
+open: true
+append-at: main-container
 
 --- container: ftd.main
 
@@ -263,6 +269,8 @@ padding-horizontal: 92
 padding-vertical: 20
 width: fill
 
+--- translation-banner:
+
 --- container: ftd.main
 
 --- footer:
@@ -324,6 +332,8 @@ width: fill
 align: top
 padding-horizontal: 20
 padding-vertical: 20
+
+--- translation-banner:
 
 --- container: ftd.main
 
