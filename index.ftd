@@ -151,26 +151,6 @@ id:  content-container
 
 
 
--- ftd.column translation-banner:
-width: fill
-height: fill
-if: $fpm.translation-status is not null
-
---- doc.uptodate:
-if: $fpm.translation-status == UptoDate
-
---- doc.missing:
-if: $fpm.translation-status == Missing
-
---- doc.nevermarked:
-if: $fpm.translation-status == NeverMarked
-
---- doc.outdated:
-if: $fpm.translation-status == Outdated
-
-
-
-
 
 
 
@@ -269,7 +249,7 @@ padding-horizontal: 92
 padding-vertical: 20
 width: fill
 
---- translation-banner:
+--- doc.translation-banner:
 
 --- container: ftd.main
 
@@ -333,7 +313,7 @@ align: top
 padding-horizontal: 20
 padding-vertical: 20
 
---- translation-banner:
+--- doc.translation-banner:
 
 --- container: ftd.main
 
