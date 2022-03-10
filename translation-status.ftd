@@ -10,7 +10,7 @@ height: fill
 --- ft.doc-page:
 toc: $ft.toc
 
---- doc.page-title: $fpm.ui.language-detail-page
+--- doc.page-title: $fpm.i18n.language-detail-page
 icon: true
 light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-title-default.png
 dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
@@ -21,9 +21,9 @@ subtitle: doc.key-value-small: Last modified on:
 > value: $fpm.last-modified-on
 > default: Never synced
 
-$fpm.ui.language-detail-page-body
+$fpm.i18n.language-detail-page-body
 
---- doc.key-value: $fpm.ui.total-number-of-documents
+--- doc.key-value: $fpm.i18n.total-number-of-documents
 value: $fpm.number-of-documents
 default: Not known
 
@@ -33,10 +33,10 @@ default: Not known
 --- doc.translation-missing:
 
 
---- doc.translation-nevermarked:
+--- doc.translation-never-marked:
 
 
 --- doc.translation-outdated:
 
 
---- doc.translation-uptodate:
+--- doc.translation-upto-date:

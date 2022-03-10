@@ -2,7 +2,7 @@
 
 
 
--- header-sticky-title uptodate: Upto date
+-- header-sticky-title upto-date: Upto date
 icon: true
 light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-success.png
 dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-sucess.png
@@ -17,21 +17,21 @@ light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/ligh
 dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-missing.png
 
 
-$fpm.ui.translation-not-available
+$fpm.i18n.translation-not-available
 
 
 
 
 
--- header-sticky-title nevermarked: Never marked
+-- header-sticky-title never-marked: Never marked
 icon: true
-button-text-main: $fpm.ui.show-unapproved-version
-button-text-fallback: $fpm.ui.show-latest-version
+button-text-main: $fpm.i18n.show-unapproved-version
+button-text-fallback: $fpm.i18n.show-latest-version
 light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-info.png
 dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-info.png
 
 
-$fpm.ui.unapproved-heading
+$fpm.i18n.unapproved-heading
 
 
 
@@ -43,14 +43,14 @@ $fpm.ui.unapproved-heading
 
 -- header-sticky-title outdated: Outdated
 icon: true
-button-text-main: $fpm.ui.show-latest-version
-button-text-fallback: $fpm.ui.show-outdated-version
+button-text-main: $fpm.i18n.show-latest-version
+button-text-fallback: $fpm.i18n.show-outdated-version
 link-text: View changes
-green-title: $fpm.ui.out-dated-heading
+green-title: $fpm.i18n.out-dated-heading
 light-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/large/translations-title-default.png
 dark-icon-path: -/fifthtry.github.io/Forest-Theme/static/translation-icons/dark/large/translations-title-default.png
 
-$fpm.ui.out-dated-body
+$fpm.i18n.out-dated-body
 
 --- code-block: The following changes has been made in English edition since last modification
 if: $fpm.translation-diff-open
@@ -850,7 +850,7 @@ optional string group-type:
 if: $fpm.missing-files is not empty
 
 --- icon-title:
-title: $fpm.ui.missing
+title: $fpm.i18n.missing
 title-color: #FA6C6C
 icon: true
 icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-missing.png
@@ -878,7 +878,7 @@ $loop$: $fpm.missing-files as $obj
 
 
 
--- ftd.column translation-nevermarked:
+-- ftd.column translation-never-marked:
 width: fill
 max-width: 1000
 border-radius: 5
@@ -895,7 +895,7 @@ if: $fpm.never-marked-files is not empty
 
 --- icon-title:
 /if: $group-type 'nevermarked'
-title: $fpm.ui.never-marked
+title: $fpm.i18n.never-marked
 title-color: #F48D0C
 icon: true
 icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-info.png
@@ -937,7 +937,7 @@ if: $fpm.outdated-files is not empty
 
 --- icon-title:
 /if: $group-type 'outdated'
-title: $fpm.ui.out-dated
+title: $fpm.i18n.out-dated
 title-color: #FAD345
 icon: true
 icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-time.png
@@ -964,7 +964,7 @@ $loop$: $fpm.outdated-files as $obj
 
 
 
--- ftd.column translation-uptodate:
+-- ftd.column translation-upto-date:
 width: fill
 max-width: 1000
 border-radius: 5
@@ -981,7 +981,7 @@ if: $fpm.upto-date-files is not empty
 
 --- icon-title:
 /if: $group-type 'uptodate'
-title: $fpm.ui.upto-date
+title: $fpm.i18n.upto-date
 title-color: #58C802
 icon: true
 icon-path-light: -/fifthtry.github.io/Forest-Theme/static/translation-icons/light/35x26/translations-success.png
