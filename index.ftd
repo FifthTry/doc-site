@@ -262,12 +262,12 @@ toc-bottom-right: $header-right
 site-logo: $site-icon
 site-url: $site-url
 background: $header-dark-color
-text-color: white
+text-color: #FFFFFF
 active-text-color: $neutral
-menu-bg: #EEEEEE 
-menu-hover-bg: #F8f8f8
 menu-link: #1F3E48
 menu-link-active: #1F3E48 
+menu-link: #FFFFFF
+menu-link-active: #F48D0C 
 logo-height: 38
 menu-right: 0
 menu-left: -88
