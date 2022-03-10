@@ -1,4 +1,5 @@
 -- import: doc
+-- import: fifthtry.github.io/roboto/assets as roboto-assets
 
 -- fpm.theme-color: #1F5E6B
 -- boolean sidebar-open: false
@@ -312,7 +313,7 @@ min-width: fit-content
 padding-left: 10
 padding-top: 6
 padding-bottom: 6
-font: Roboto
+font: $roboto-assets.fonts.Roboto
 color: $neutral
 
 
@@ -332,7 +333,7 @@ min-width: fit-content
 padding-left: 10
 padding-top: 3
 padding-bottom: 8
-font: Roboto
+font: $roboto-assets.fonts.Roboto
 color: $neutral
 style: semi-bold
 
@@ -420,7 +421,7 @@ min-width: fit-content
 padding-left: 10
 padding-top: 3
 padding-bottom: 3
-font: Roboto
+font: $roboto-assets.fonts.Roboto
 color: $neutral-700
 color if $fpm.dark-mode: $neutral-200
 
@@ -485,7 +486,7 @@ color if $fpm.dark-mode: $neutral
 style: italic
 padding-bottom: 8
 padding-top: 16
-font: Roboto
+font: $roboto-assets.fonts.Roboto
 $on-click$: toggle $open
 
 --- ftd.column:
