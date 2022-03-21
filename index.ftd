@@ -1,25 +1,8 @@
 -- import: doc
--- import: fifthtry.github.io/roboto/assets as roboto-assets
+-- import: fifthtry.github.io/Forest-Theme/assets
 
 -- fpm.theme-color: #1F5E6B
 -- boolean sidebar-open: false
--- string neutral: #fff
-/-- string neutral-200: #e5e5e5
--- string neutral-200: #EDEDED
--- string neutral-300: #F9F9F9
--- string neutral-400: #E1E1E1
--- string neutral-500: #323546
--- string neutral-600: #3E4155
-/-- string neutral-700: #18191a
--- string neutral-700: #0A1A1F
-/-- string neutral-800: #000
--- string neutral-800: #0A1A1F
--- string header-dark-color: #11404a
--- string header-light-color: #1F5E6B
--- string sidebar-dark-color: #082b32
--- string sidebar-light-color: #FFFBEF
--- string code-bg-light: #0A1A1F
--- string code-bg-dark: #0A1A1F
 
 
 -- string toc-sidebar-width: 300
@@ -28,8 +11,13 @@
 -- integer max-width: 1000
 -- string github: NA
 -- optional string site-name:
--- string site-icon: /Forest-Theme/static/ftd-logo-desktop.png
--- string site-icon-mobile: /Forest-Theme/static/ftd-logo-mobile.png
+
+
+/-- ftd.image-src site-icon: $assets.files.static.forest-theme.ftd-logo-desktop.png
+/-- ftd.image-src site-icon-mobile: $assets.files.static.forest-theme.ftd-logo-mobile.png
+
+
+
 -- string site-url: /Forest-Theme/sample/
 
 
@@ -47,8 +35,7 @@
 
 -- ftd.column page:
 width: fill
-background-color: $neutral
-background-color if $fpm.dark-mode: $neutral-700
+background-color: $fpm.design.color.brand.on-region
 open: true
 append-at: content-container
 fpm.toc-item list header-toc: $header-toc
@@ -60,20 +47,19 @@ fpm.toc-item list header-toc: $header-toc
 toc-top-right: $header-toc
 toc-bottom-left: $header-left
 toc-bottom-right: $header-right
-site-logo: $site-icon
+site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-background: $header-dark-color
-text-color: white
-active-text-color: $neutral
+background: $fpm.design.color.brand.region
+text-color: $fpm.design.color.brand.on-region
+active-text-color: $fpm.design.color.brand.on-region
 menu-right: 0
 menu-left: -88
-menu-bg: #EEEEEE 
-menu-hover-bg: #F8f8f8
-menu-link: #1F3E48
-menu-link-active: #1F3E48 
+menu-bg: $fpm.design.color.brand.region 
+menu-hover-bg: $fpm.design.color.brand.region
+menu-link: $fpm.design.color.brand.on-region
+menu-link-active: $fpm.design.color.brand.on-region 
 logo-height: 38
 current-url: /home/
-menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
 
 
 
@@ -183,28 +169,26 @@ fpm.toc-item list footer-toc:
 width: fill
 open: true
 append-at: main-container
-background-color: $neutral
-background-color if $fpm.dark-mode: $neutral-700
-
+background-color: $fpm.design.color.brand.region
 
 --- h.header:
 toc-top-right: $header-toc
 toc-bottom-left: $header-left
 toc-bottom-right: $header-right
-site-logo: $site-icon
+site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-background: $header-dark-color
-text-color: white
-active-text-color: $neutral
-menu-bg: #EEEEEE 
-menu-hover-bg: #F8f8f8
-menu-link: #1F3E48
-menu-link-active: #1F3E48 
+background: $fpm.design.color.brand.region
+text-color: $fpm.design.color.brand.on-region
+active-text-color: $fpm.design.color.brand.on-region
+menu-bg: $fpm.design.color.brand.on-region
+menu-hover-bg: $fpm.design.color.brand.on-region
+menu-link: $fpm.design.color.brand.on-region
+menu-link-active: $fpm.design.color.brand.on-region 
 logo-height: 38
 menu-right: 0
 menu-left: -88
 current-url: /home/
-menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
+menu-icon: $assets.files.static.header.hamburger.png
 
 
 --- ftd.row:
@@ -250,31 +234,25 @@ fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
 append-at: main-container
-background-color: $neutral
-background-color if $fpm.dark-mode: $neutral-700
-
-
+background-color: $fpm.design.color.brand.region
 
 --- h.header:
 toc-top-right: $header-toc
 toc-bottom-left: $header-left
 toc-bottom-right: $header-right
-site-logo: $site-icon
+site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
 site-url: $site-url
-background: $header-dark-color
-text-color: #FFFFFF
-active-text-color: $neutral
-menu-link: #1F3E48
-menu-link-active: #1F3E48 
-menu-link: #FFFFFF
-menu-link-active: #F48D0C 
+background: $fpm.design.color.brand.region
+text-color: $fpm.design.color.brand.on-region
+active-text-color: $fpm.design.color.brand.on-region
+menu-link: $fpm.design.color.brand.on-region
+menu-link-active: $fpm.design.color.brand.on-region 
 logo-height: 38
 menu-right: 0
 menu-left: -88
 current-url: /home/
-menu-icon: https://res.cloudinary.com/datvlgpxl/image/upload/v1642751099/hamburger_ks2zcc.png
-toc: tt.toc:
-> toc-obj: $toc
+menu-icon: $assets.files.static.header.hamburger.png
+
 
 --- container: ftd.main
 
@@ -308,14 +286,12 @@ string url:
 caption title:
 link: $url
 text: $title
-size: 15
-line-height: 22
+role: $fpm.design.type.label-large
 min-width: fit-content
 padding-left: 10
 padding-top: 6
 padding-bottom: 6
-font: $roboto-assets.fonts.Roboto
-color: $neutral
+color: $fpm.design.color.brand.on-region
 
 
 
@@ -328,15 +304,12 @@ fpm.toc-item footer-toc:
 min-width: portion 1
 
 --- ftd.text: $footer-toc.title
-size: 15
-line-height: 40
 min-width: fit-content
 padding-left: 10
 padding-top: 3
 padding-bottom: 8
-font: $roboto-assets.fonts.Roboto
-color: $neutral
-style: semi-bold
+color: $fpm.design.color.brand.on-region
+role: $fpm.design.type.label-large
 
 --- footer-link: $obj.title
 $loop$: $footer-toc.children as $obj
@@ -367,8 +340,7 @@ footer-toc: $footer-toc
 -- ftd.row footer-desktop:
 fpm.toc-item list footer-toc:
 width: fill
-background-color: #2b3136
-background-color if $fpm.dark-mode: #242424
+background-color: $fpm.design.color.brand.region
 padding-horizontal: 150
 padding-vertical: 50
 spacing: space-between
@@ -385,8 +357,7 @@ footer-toc: $obj
 -- ftd.column footer-mobile:
 fpm.toc-item list footer-toc:
 width: fill
-background-color: #2b3136
-background-color if $fpm.dark-mode: #242424
+background-color: $fpm.design.color.brand.region
 padding-horizontal: 20
 padding-vertical: 50
 position: left
@@ -416,15 +387,12 @@ padding-bottom: 2
 --- ftd.text:
 link: $toc.url
 text: $toc.title
-size: 15
-line-height: 22
+role: $fpm.design.type.label-large
 min-width: fit-content
 padding-left: 10
 padding-top: 3
 padding-bottom: 3
-font: $roboto-assets.fonts.Roboto
-color: $neutral-700
-color if $fpm.dark-mode: $neutral-200
+color: $fpm.design.color.brand.on-region
 
 --- toc-instance:
 $loop$: $toc.children as $obj
@@ -449,10 +417,8 @@ padding-top: 15
 padding-right: 20
 padding-bottom: 40
 border-right: 1
-border-color: rgba(31, 94, 107, 0.13)
-border-color if $fpm.dark-mode: #32616a
-background-color if $fpm.dark-mode: $sidebar-dark-color
-background-color:  $sidebar-light-color
+border-color: $fpm.design.color.brand.on-region
+background-color:  $fpm.design.color.brand.region
 
 --- toc-instance:
 $loop$: $toc-obj as $obj
@@ -480,14 +446,10 @@ text: $title
 caption $title:
 region: title
 text: $title
-size: 19
-line-height: 24
-color: $neutral-800
-color if $fpm.dark-mode: $neutral
-style: italic
+role: $fpm.design.type.headline-medium
+color: $fpm.design.color.brand.on-region
 padding-bottom: 8
 padding-top: 16
-font: $roboto-assets.fonts.Roboto
 $on-click$: toggle $open
 
 --- ftd.column:
@@ -539,23 +501,9 @@ $body
 
 
 
--- tf.h4 h4: $title
-caption title:
-optional body body:
-
-$body
 
 
 
-
-
-
-
--- tf.h5 h5: $title
-caption title:
-optional body body:
-
-$body
 
 
 
@@ -643,19 +591,18 @@ append-at: output-container
 padding-top: 12
 
 --- ftd.text: $caption
-color: white
-background-color: #aed581
+color: $fpm.design.color.brand.on-region
+background-color: $fpm.design.color.brand.region
 border-top-radius: 2
 padding-top: 3
 padding-bottom: 3
 padding-left: 10
 padding-right: 10
-size: 12
-font: Open sans
+role: $fpm.design.type.label-large
 
 --- ftd.column:
 border-width: 1
-border-color: #ddedff
+border-color: $fpm.design.color.brand.on-region
 width: fill
 id: output-container
 padding-top: 30
@@ -663,7 +610,7 @@ padding-bottom: 30
 padding-left: 20
 padding-right: 20
 border-radius: 2
-background-color: #f6faff
+background-color: $fpm.design.color.brand.region
 
 
 
@@ -673,7 +620,7 @@ background-color: #f6faff
 
 
 -- ftd.column image:
-string src:
+ftd.image-src src:
 optional caption caption:
 optional body body:
 optional string link:
@@ -694,13 +641,10 @@ align: $align
 --- ftd.text:
 if: $caption is not null
 text: $caption
-color: $neutral-800
-color if $fpm.dark-mode: $neutral
+color: $fpm.design.color.brand.on-region
 align: center
 width: fill
-size: 17
-style: italic
-font: Open sans
+role: $fpm.design.type.label-large
 
 --- markdown:
 if: $body is not null
@@ -723,8 +667,6 @@ body: $body
 
 -- ftd.text highlight: $title
 caption title:
-color if $fpm.dark-mode: yellow
-background-color if not $fpm.dark-mode: yellow
 
 
 
@@ -738,14 +680,14 @@ optional caption title:
 optional body body:
 border-radius: 3
 width: fill
-background-color: rgb(0, 49, 0)
-color: rgb(230, 246, 230)
+background-color: $fpm.design.color.brand.region
+color: $fpm.design.color.brand.on-region
 
 --- ftd.column:
 width: 5
 height: percent 100
 open: false
-background-color: red
+background-color: $fpm.design.color.brand.region
 
 --- ftd.column:
 width: fill
@@ -757,14 +699,16 @@ spacing: 10
 spacing: 5
 
 --- ftd.text: Tip
-style: bold
+role: $fpm.design.type.label-large
 
 --- ftd.text: $title
 if: $title is not null
+role. $fpm.design.type.label-large
 
 --- container: m
 
 --- ftd.text:
 if: $body is not null
+role: $fpm.design.type.body-large
 
 $body
