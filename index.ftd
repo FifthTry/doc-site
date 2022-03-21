@@ -13,10 +13,6 @@
 -- optional string site-name:
 
 
-/-- ftd.image-src site-icon: $assets.files.static.forest-theme.ftd-logo-desktop.png
-/-- ftd.image-src site-icon-mobile: $assets.files.static.forest-theme.ftd-logo-mobile.png
-
-
 
 -- string site-url: /Forest-Theme/sample/
 
