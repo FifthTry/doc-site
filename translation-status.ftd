@@ -8,7 +8,7 @@
 width: fill
 height: fill
 
---- ft.doc-page:
+--- ft.page-with-toc: 
 toc: $ft.toc
 
 --- doc.page-title: $fpm.i18n.language-detail-page

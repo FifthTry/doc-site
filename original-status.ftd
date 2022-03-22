@@ -8,7 +8,7 @@
 -- ftd.column original-status-page:
 width: fill
 
---- ft.doc-page:
+--- ft.page-with-toc: Translation Status
 toc: $ft.toc
 
 --- doc.page-title: $fpm.i18n.language-detail-page
