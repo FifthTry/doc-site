@@ -30,6 +30,7 @@
 
 
 -- ftd.column page:
+optional caption title:
 width: fill
 background-color: $fpm.design.color.brand.on-region
 open: true
@@ -65,6 +66,10 @@ current-url: /home/
 --- ftd.column:
 id: content-container
 width: fill
+
+
+--- tf.h0: $title
+if: $title is not null
 
 --- container: ftd.main
 
