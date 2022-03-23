@@ -599,14 +599,14 @@ width: $column-width
 if: $icon
 
 --- ftd.image:
-if: not $fpm.dark-mode
+if: not $ftd.dark-mode
 src: $icon-path-light
 move-down: 7
 move-left: 2
 margin-right: $margin-right
 
 --- ftd.image:
-if: $fpm.dark-mode
+if: $ftd.dark-mode
 src: $icon-path-dark
 move-down: 7
 move-left: 2
@@ -914,7 +914,7 @@ string size: 14
 string lightcolor: #000000
 string darkcolor: #FFFFFF
 color: $lightcolor
-color if $fpm.dark-mode: $darkcolor
+color if $ftd.dark-mode: $darkcolor
 size: $size
 width: fill
 
