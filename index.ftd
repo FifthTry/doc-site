@@ -25,7 +25,10 @@
 
 
 
+-- boolean is-mobile: false
 
+-- is-mobile: true
+if: $ftd.device == mobile
 
 
 
@@ -95,7 +98,7 @@ append-at: content-container
 padding-vertical: 30
 
 --- ftd.column:
-if: not $fpm.mobile
+if: not $is-mobile
 max-width: 1200
 width: fill
 align: center
@@ -104,10 +107,10 @@ id:  content-container
 --- container: ftd.main
 
 --- ftd.column:
-if: $fpm.mobile
+if: $is-mobile
 width: fill
 align: center
-padding-horizontal if $fpm.mobile: 20
+padding-horizontal if $is-mobile: 20
 id:  content-container
 
 
@@ -135,7 +138,7 @@ append-at: main-container
 --- container: ftd.main
 
 --- doc-page-desktop: $title
-if: not $fpm.mobile
+if: not $is-mobile
 id: main-container
 toc: $toc
 footer-toc: $footer-toc
@@ -146,7 +149,7 @@ header-right: $header-right
 --- container: ftd.main
 
 --- doc-page-mobile: $title
-if: $fpm.mobile
+if: $is-mobile
 id: main-container
 toc: $toc
 footer-toc: $footer-toc
@@ -332,13 +335,13 @@ fpm.toc-item list footer-toc:
 width: fill
 
 --- footer-desktop:
-if: not $fpm.mobile
+if: not $is-mobile
 footer-toc: $footer-toc
 
 container: ftd.main
 
 --- footer-mobile:
-if: $fpm.mobile
+if: $is-mobile
 footer-toc: $footer-toc
 
 
