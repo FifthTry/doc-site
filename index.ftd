@@ -35,7 +35,7 @@ if: $ftd.device == mobile
 -- ftd.column page:
 optional caption title:
 width: fill
-background-color: $fpm.design.color.brand.on-region
+background-color: $fpm.design.color.brand.region
 open: true
 append-at: content-container
 fpm.toc-item list header-toc: $header-toc
@@ -49,12 +49,12 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-background: $fpm.design.color.brand.region
-text-color: $fpm.design.color.brand.on-region
+background: $fpm.design.color.brand.on-region
+text-color: $fpm.design.color.brand.region
 active-text-color: $fpm.design.color.brand.on-region
 menu-right: 0
 menu-left: -88
-menu-bg: $fpm.design.color.brand.region 
+menu-bg: $fpm.design.color.brand.region
 menu-hover-bg: $fpm.design.color.brand.region
 menu-link: $fpm.design.color.brand.on-region
 menu-link-active: $fpm.design.color.brand.on-region 
@@ -183,10 +183,10 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-background: $fpm.design.color.brand.region
-text-color: $fpm.design.color.brand.on-region
+background: $fpm.design.color.brand.on-region
+text-color: $fpm.design.color.brand.region
 active-text-color: $fpm.design.color.brand.on-region
-menu-bg: $fpm.design.color.brand.on-region
+menu-bg: $fpm.design.color.brand.region
 menu-hover-bg: $fpm.design.color.brand.on-region
 menu-link: $fpm.design.color.brand.on-region
 menu-link-active: $fpm.design.color.brand.on-region 
@@ -253,8 +253,8 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
 site-url: $site-url
-background: $fpm.design.color.brand.region
-text-color: $fpm.design.color.brand.on-region
+background: $fpm.design.color.brand.on-region
+text-color: $fpm.design.color.brand.region
 active-text-color: $fpm.design.color.brand.on-region
 menu-link: $fpm.design.color.brand.on-region
 menu-link-active: $fpm.design.color.brand.on-region 
