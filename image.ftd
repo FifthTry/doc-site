@@ -1,4 +1,6 @@
--- ftd.image image-page:
+-- ft.page-with-toc image-page: $file-name
 caption file-name:
 ftd.image-src src:
+
+-- ft.image:
 src: $src

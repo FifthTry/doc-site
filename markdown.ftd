@@ -1,4 +1,4 @@
--- ftd.text markdown-page:
+-- ft.page-with-toc markdown-page:
 caption file-name:
 optional body content:
 if: $content is not null
