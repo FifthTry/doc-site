@@ -1,6 +1,11 @@
+-- import: fifthtry.github.io/Forest-Theme as ft
+
 -- ft.page-with-toc image-page: $file-name
 caption file-name:
-ftd.image-src src:
+ftd.image-src src: 
 
--- ft.image:
+
+
+
+--- ft.image:
 src: $src
