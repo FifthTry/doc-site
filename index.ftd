@@ -99,7 +99,7 @@ padding-vertical: 30
 
 --- ftd.column:
 if: not $is-mobile
-max-width: 1200
+max-width: 1104
 width: fill
 align: center
 id:  content-container
