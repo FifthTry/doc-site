@@ -35,7 +35,7 @@ if: $ftd.device == mobile
 -- ftd.column page:
 optional caption title:
 width: fill
-background-color: $fpm.color.main.text
+background-color: $fpm.color.main.background.base
 open: true
 append-at: content-container
 fpm.toc-item list header-toc: $header-toc
