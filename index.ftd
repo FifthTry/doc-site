@@ -666,7 +666,6 @@ optional string height:
 ftd.image-src src:
 width: fill
 height: fill
-padding-bottom: 20
 
 --- ftd.image:
 src: $src
@@ -682,16 +681,23 @@ align: center
 width: fill
 role: $fpm.type.label-large
 border-bottom-radius: 5
-background-color: $fpm.color.main.background.step-2
+background-color: $fpm.color.main.background.step-1
 padding-vertical: 8
 padding-horizontal: 20
 text-align: center
 
---- markdown:
+--- ftd.column:
 if: $body is not null
+margin-top: 20
+
+--- markdown:
 body: $body
 
+--- container: ftd.main
 
+--- ftd.column:
+if: $body is null
+margin-top: 20
 
 
 
