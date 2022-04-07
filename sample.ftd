@@ -55,13 +55,6 @@ width: fill
 
 
 
--- ft.h1:  sample heading
-
-this is heading body
-
--- ft.image: this is image caption
-src: $assets.files.static.picture1.jpeg
-
 
 
 
