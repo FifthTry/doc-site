@@ -50,7 +50,7 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-background: $fpm.color.main.background.base
+background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
 menu-right: 0
@@ -195,7 +195,7 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-background: $fpm.color.main.background.base
+background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
 menu-bg: $fpm.color.main.text
@@ -270,7 +270,7 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
 site-url: $site-url
-background: $fpm.color.main.background.base
+background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
 menu-link: $fpm.color.main.text
