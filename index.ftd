@@ -670,7 +670,6 @@ padding-bottom: 20
 
 --- ftd.image:
 src: $src
-padding-bottom: 15
 width: $width
 height: $height
 align: $align
@@ -682,6 +681,11 @@ color: $fpm.color.main.text
 align: center
 width: fill
 role: $fpm.type.label-large
+border-bottom-radius: 5
+background-color: $fpm.color.main.background.step-2
+padding-vertical: 8
+padding-horizontal: 20
+text-align: center
 
 --- markdown:
 if: $body is not null
