@@ -34,6 +34,7 @@ if: $ftd.device == mobile
 
 -- ftd.column page:
 optional caption title:
+optional body body:
 width: fill
 background-color: $fpm.color.main.background.base
 open: true
@@ -62,8 +63,6 @@ logo-height: 38
 current-url: /home/
 
 
-
-
 --- container: ftd.main
 
 --- ftd.column:
@@ -73,6 +72,13 @@ width: fill
 
 --- tf.h0: $title
 if: $title is not null
+
+
+--- tf.markdown:
+if: $body is not null
+
+$body
+
 
 --- container: ftd.main
 
@@ -126,6 +132,7 @@ id:  content-container
 
 -- ftd.column page-with-toc:
 optional caption title:
+optional body body:
 fpm.toc-item list toc: $toc
 fpm.toc-item list header-toc: $header-toc
 fpm.toc-item list header-left: $header-left
@@ -145,6 +152,8 @@ footer-toc: $footer-toc
 header-toc: $header-toc
 header-left: $header-left
 header-right: $header-right
+body: $body
+
 
 --- container: ftd.main
 
@@ -156,6 +165,7 @@ footer-toc: $footer-toc
 header-toc: $header-toc
 header-left: $header-left
 header-right: $header-right
+body: $body
 
 
 
@@ -167,6 +177,7 @@ header-right: $header-right
 
 -- ftd.column doc-page-desktop:
 optional caption title:
+optional body body:
 fpm.toc-item list toc: $toc
 fpm.toc-item list header-toc:
 fpm.toc-item list header-left:
@@ -176,6 +187,7 @@ width: fill
 open: true
 append-at: main-container
 background-color: $fpm.color.main.background.base
+
 
 --- h.header:
 toc-top-right: $header-toc
@@ -218,6 +230,11 @@ width: fill
 if: $title is not null
 
 
+--- tf.markdown:
+if: $body is not null
+
+$body
+
 --- doc.translation-banner:
 
 --- container: ftd.main
@@ -235,6 +252,7 @@ footer-toc: $footer-toc
 
 -- ftd.column doc-page-mobile:
 optional caption title:
+optional body body:
 fpm.toc-item list toc: $toc
 fpm.toc-item list header-toc:
 fpm.toc-item list header-left:
@@ -279,6 +297,12 @@ padding-vertical: 20
 
 --- tf.h0: $title
 if: $title is not null
+
+
+--- tf.markdown:
+if: $body is not null
+
+$body
 
 --- doc.translation-banner:
 
