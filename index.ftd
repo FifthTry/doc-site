@@ -1,6 +1,91 @@
 -- import: doc
 -- import: fifthtry.github.io/Forest-Theme/assets
 
+
+-- import: fifthtry.github.io/Forest-Theme/assets
+
+
+
+
+-- toc:
+$processor$: toc
+
+- Introduction: /Forest-Theme/sample/
+- Quickstart: /Forest-Theme/sample/
+- Getting started: /Forest-Theme/sample/
+  - Deploy: /Forest-Theme/sample/
+
+-- header-toc:
+$processor$: toc
+
+- Quickstart: /Forest-Theme/sample/
+- Use this template: https://github.com/FifthTry/fpm-book/generate/
+
+
+-- header-left:
+$processor$: toc
+
+- Home: /Forest-Theme/sample/
+- About: /Forest-Theme/sample/
+  - About Author: /Forest-Theme/sample/
+  - About Team: /Forest-Theme/sample/
+  - About Org: /Forest-Theme/sample/
+  - Social Network: /Forest-Theme/sample/
+  - Charity: /Forest-Theme/sample/
+- Publications: /Forest-Theme/sample/
+
+-- header-right:
+$processor$: toc
+
+- Latest Publications: /Forest-Theme/sample/
+  - Santa Maria: /Forest-Theme/sample/
+  - Bina Recoz: /Forest-Theme/sample/
+  - A Day in the Dark: /Forest-Theme/sample/
+- Author Diary: /Forest-Theme/sample/
+
+
+
+
+-- page-with-toc: Quickstart
+toc: $toc
+
+The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the total amount of memory, in bytes, that the String has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
+When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 4-2.
+
+-- image:
+src: $assets.files.static.picture1.jpeg
+width: fill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- fpm.theme-color: #1F5E6B
 -- boolean sidebar-open: false
 
