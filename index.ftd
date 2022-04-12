@@ -100,7 +100,7 @@ width: fill
 
 
 
--- string site-url: /Forest-Theme/sample/
+-- string site-url: index.html
 
 
 -- fpm.toc-item list header-toc:
