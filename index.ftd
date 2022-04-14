@@ -99,7 +99,7 @@ width: fill
 -- integer content-padding: 150
 -- integer max-width: 1000
 -- string github: NA
--- optional string site-title: 
+-- optional string site-name: 
 /-- optional ftd.image-src site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 
 
@@ -140,7 +140,7 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 /site-logo: $site-logo
 site-url: $site-url
-site-title: $site-title
+site-name: $site-name
 background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
@@ -286,7 +286,7 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 /site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
-site-title: $site-title
+site-name: $site-name
 background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
@@ -362,7 +362,7 @@ toc-bottom-left: $header-left
 toc-bottom-right: $header-right
 /site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
 site-url: $site-url
-site-title: $site-title
+site-name: $site-name
 background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
