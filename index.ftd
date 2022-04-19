@@ -362,6 +362,7 @@ background-color: $fpm.color.main.background.base
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
+toc: $toc
 /site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
 site-url: $site-url
 site-name: $site-name
