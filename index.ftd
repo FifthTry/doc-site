@@ -44,9 +44,9 @@ $processor$: toc
 
 -- page-with-toc: Quickstart
 toc: $sample-toc
-header-left: $sample-left
-header-right: $sample-right
-header-toc: $sample-header
+sub-sections: $sample-left
+extra: $sample-right
+sections: $sample-header
 
 The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
 total amount of memory, in bytes, that the String has received from the allocator. The difference between 
@@ -107,9 +107,9 @@ width: fill
 -- string site-url: index.html
 
 
--- fpm.toc-item list header-toc:
--- fpm.toc-item list header-left:
--- fpm.toc-item list header-right:
+-- fpm.toc-item list sections:
+-- fpm.toc-item list sub-sections:
+-- fpm.toc-item list extra:
 -- fpm.toc-item list toc:
 -- fpm.toc-item list footer-toc:
 
@@ -129,15 +129,15 @@ width: fill
 background-color: $fpm.color.main.background.base
 open: true
 append-at: content-container
-fpm.toc-item list header-toc: $header-toc
+fpm.toc-item list sections: $sections
 
 
 --- container: ftd.main
 
 --- h.header:
-sections: $header-toc
-sub-sections: $header-left
-extra: $header-right
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
 /site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
@@ -225,9 +225,9 @@ id:  content-container
 optional caption title:
 optional body body:
 fpm.toc-item list toc: $toc
-fpm.toc-item list header-toc: $header-toc
-fpm.toc-item list header-left: $header-left
-fpm.toc-item list header-right: $header-right
+fpm.toc-item list sections: $sections
+fpm.toc-item list sub-sections: $sub-sections
+fpm.toc-item list extra: $extra
 fpm.toc-item list footer-toc: $footer-toc
 width: fill
 open: true
@@ -240,9 +240,9 @@ if: not $is-mobile
 id: main-container
 toc: $toc
 footer-toc: $footer-toc
-header-toc: $header-toc
-header-left: $header-left
-header-right: $header-right
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
 body: $body
 
 
@@ -253,9 +253,9 @@ if: $is-mobile
 id: main-container
 toc: $toc
 footer-toc: $footer-toc
-header-toc: $header-toc
-header-left: $header-left
-header-right: $header-right
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
 body: $body
 
 
@@ -270,9 +270,9 @@ body: $body
 optional caption title:
 optional body body:
 fpm.toc-item list toc: $toc
-fpm.toc-item list header-toc:
-fpm.toc-item list header-left:
-fpm.toc-item list header-right:
+fpm.toc-item list sections:
+fpm.toc-item list sub-sections:
+fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
 width: fill
 open: true
@@ -281,9 +281,9 @@ background-color: $fpm.color.main.background.base
 
 
 --- h.header:
-sections: $header-toc
-sub-sections: $header-left
-extra: $header-right
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
 /site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
 site-url: $site-url
 site-name: $site-name
@@ -346,9 +346,9 @@ footer-toc: $footer-toc
 optional caption title:
 optional body body:
 fpm.toc-item list toc: $toc
-fpm.toc-item list header-toc:
-fpm.toc-item list header-left:
-fpm.toc-item list header-right:
+fpm.toc-item list sections:
+fpm.toc-item list sub-sections:
+fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
 fpm.toc-item list footer-toc: $footer-toc
 width: fill
@@ -357,9 +357,9 @@ append-at: main-container
 background-color: $fpm.color.main.background.base
 
 --- h.header:
-sections: $header-toc
-sub-sections: $header-left
-extra: $header-right
+sections: $sections
+sub-sections: $sub-sections
+extra: $extra
 /site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
 site-url: $site-url
 site-name: $site-name
