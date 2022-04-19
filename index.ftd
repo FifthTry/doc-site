@@ -130,7 +130,9 @@ background-color: $fpm.color.main.background.base
 open: true
 append-at: content-container
 fpm.toc-item list sections: $sections
-
+fpm.toc-item list sub-sections: $sub-sections
+fpm.toc-item list extra: $extra
+fpm.toc-item list toc: $toc
 
 --- container: ftd.main
 
@@ -152,7 +154,7 @@ menu-link: $fpm.color.main.text
 menu-link-active: $fpm.color.main.text 
 logo-height: 38
 current-url: /home/
-
+toc: $toc
 
 --- container: ftd.main
 
