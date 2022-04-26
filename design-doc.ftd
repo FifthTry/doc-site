@@ -79,7 +79,7 @@ boolean open: false
 
 --- ftd.text: $title
 padding-vertical: 10
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 --- code:
@@ -147,7 +147,7 @@ margin-top: 4
 --- ftd.text: $title
 region: title
 color: $fpm.color.main.text
-role: $fpm.type.headline-medium
+role: $fpm.type.heading-medium
 
 --- container: ftd.main
 
@@ -165,7 +165,7 @@ body: $body
 --- ftd.text: $green-title
 margin-top: -10
 color: $fpm.color.main.text
-role: $fpm.type.headline-small
+role: $fpm.type.heading-small
 
 
 --- container: ftd.main
@@ -186,7 +186,7 @@ border-radius: 6
 padding-vertical: 10
 padding-horizontal: 25
 border-color: $fpm.color.main.cta-primary.base
-role: $fpm.type.label-medium
+role: $fpm.type.label-small
 color: $fpm.color.main.cta-primary.text
 background-color: $fpm.color.main.cta-primary.base
 
@@ -200,13 +200,13 @@ border-radius: 6
 padding-vertical: 10
 padding-horizontal: 25
 border-color: $fpm.color.main.cta-secondary.base
-role: $fpm.type.label-medium
+role: $fpm.type.label-small
 color: $fpm.color.main.cta-secondary.text
 background-color: $fpm.color.main.cta-secondary.base
 
 
 --- ftd.text: $link-text
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 padding-top: 10
 color: $fpm.color.main.text
 $on-click$: message-host toggle-translation-diff
@@ -250,7 +250,7 @@ text: $title
 caption $title:
 region: title
 text: $title
-role: $fpm.type.display-medium
+role: $fpm.type.heading-medium
 
 --- container: ftd.main
 
@@ -262,7 +262,7 @@ text: $title
 caption $title:
 region: title
 text: $title
-role: $fpm.type.display-medium
+role: $fpm.type.heading-medium
 
 
 
@@ -279,17 +279,17 @@ margin-bottom: 25
 spacing: 2
 
 --- ftd.text: $key
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 --- ftd.text: $value
 if: $value is not null
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 --- ftd.text: $default
 if: $value is null
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 
@@ -313,7 +313,7 @@ width: fill
 
 
 --- ftd.text: $key
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
 --- ftd.column:
@@ -321,12 +321,12 @@ width: fill
 
 --- ftd.text: $value
 if: $value is not null
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
 --- ftd.text: $default
 if: $value is null
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
 
@@ -349,7 +349,7 @@ width: fill
 
 --- ftd.text: $title
 region: title
-role: $fpm.type.headline-medium
+role: $fpm.type.heading-medium
 color: $fpm.color.main.text
 align: center
 link: $fpm.home-url
@@ -362,7 +362,7 @@ padding-vertical: 5
 padding-horizontal: 10
 align: center
 background-color: $fpm.color.main.background.base
-role: $fpm.type.headline-medium
+role: $fpm.type.heading-medium
 color: $fpm.color.main.text
 
 
@@ -400,7 +400,7 @@ region: h0
 --- ftd.text:
 text: $title
 region: title
-role: $fpm.type.headline-large
+role: $fpm.type.heading-large
 text: $title
 color: $fpm.color.main.text
 padding-bottom: 24
@@ -435,31 +435,31 @@ link: $data.url
 width: percent 15
 padding: 5
 text-align: left
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer:  $data.missing
 width: percent 15
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer: $data.never-marked
 width: percent 22
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer: $data.out-dated
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer: $data.upto-date
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.text: $data.last-modified-on
 if: $data.last-modified-on is not null
@@ -467,7 +467,7 @@ link: $data.url
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.text: Never Synced
 if: $data.last-modified-on is null
@@ -475,7 +475,7 @@ link: $data.url
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 
 
@@ -576,7 +576,7 @@ margin-right: $margin-right
 --- ftd.text: $title
 padding: 5
 text-align: left
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
 
@@ -617,7 +617,7 @@ margin-right: $margin-right
 --- ftd.text: $title
 padding: 5
 text-align: left
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
 
@@ -657,13 +657,13 @@ margin-right: $margin-right
 padding: 5
 padding if $count is not null: 0
 text-align: left
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 color: $title-color
 
 --- ftd.text: $count
 if: $count is not null
 text-align: left
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 margin-left: 15
 
@@ -678,7 +678,7 @@ text-align: right
 width: fill
 margin-top: 5
 margin-right: 10
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 /--- ftd.text: ︿
@@ -686,7 +686,7 @@ text-align: right
 width: fill
 margin-top: 5
 margin-right: 10
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 
@@ -707,7 +707,7 @@ width: fill
 padding-vertical: 10
 
 --- ftd.text: $title
-role: $fpm.type.body-medium
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 
 
@@ -893,7 +893,7 @@ body body:
 text: $body
 padding-bottom: 10
 padding-top: 50
-role: $fpm.type.body-large
+role: $fpm.type.copy-large
 color: $fpm.color.main.text
 
 
@@ -1025,31 +1025,31 @@ link: $data.url
 width: percent 15
 padding: 5
 text-align: left
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer:  $data.missing
 width: percent 15
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer: $data.never-marked
 width: percent 22
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer: $data.out-dated
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.integer: $data.upto-date
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.text: $data.last-modified-on
 if: $data.last-modified-on is not null
@@ -1057,14 +1057,14 @@ link: $data.url
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 --- ftd.text: Never Synced
 if: $data.last-modified-on is null
 link: $data.url
 width: percent 20
 padding: 5
-role: $fpm.type.body-small
+role: $fpm.type.copy-tight
 
 
 

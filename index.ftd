@@ -419,7 +419,7 @@ string url:
 caption title:
 link: $url
 text: $title
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 min-width: fit-content
 padding-left: 10
 padding-top: 6
@@ -442,7 +442,7 @@ padding-left: 10
 padding-top: 3
 padding-bottom: 8
 color: $fpm.color.main.text
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 
 --- footer-link: $obj.title
 $loop$: $footer-toc.children as $obj
@@ -520,7 +520,7 @@ padding-bottom: 2
 --- ftd.text:
 link: $toc.url
 text: $toc.title
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 min-width: fit-content
 padding-left: 10
 padding-top: 3
@@ -579,7 +579,7 @@ text: $title
 caption $title:
 region: title
 text: $title
-role: $fpm.type.headline-medium
+role: $fpm.type.heading-medium
 color: $fpm.color.main.text
 padding-bottom: 8
 padding-top: 16
@@ -731,7 +731,7 @@ padding-top: 3
 padding-bottom: 3
 padding-left: 10
 padding-right: 10
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 
 --- ftd.column:
 border-width: 1
@@ -775,7 +775,7 @@ text: $caption
 color: $fpm.color.main.text
 align: center
 width: fill
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 border-bottom-radius: 5
 background-color: $fpm.color.main.background.step-1
 padding-vertical: 8
@@ -842,16 +842,16 @@ spacing: 10
 spacing: 5
 
 --- ftd.text: Tip
-role: $fpm.type.label-large
+role: $fpm.type.label-big
 
 --- ftd.text: $title
 if: $title is not null
-role. $fpm.type.label-large
+role. $fpm.type.label-big
 
 --- container: m
 
 --- ftd.text:
 if: $body is not null
-role: $fpm.type.body-large
+role: $fpm.type.copy-large
 
 $body

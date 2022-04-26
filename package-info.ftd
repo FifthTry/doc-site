@@ -11,7 +11,7 @@ padding: 40
 $fpm.i18n.welcome-fpm-page-subtitle
 
 --- ftd.text: $fpm.package-name
-role: $fpm.type.headline-large
+role: $fpm.type.heading-large
 
 --- fpm-lib.key-value-without-default: Built with `fpm-cli` version
 value: $fpm.info.cli-version
