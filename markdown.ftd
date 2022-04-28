@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/Forest-Theme as ft
+-- import: fifthtry.github.io/doc-site as ft
 
 -- ft.page-with-toc markdown-page:
 caption file-name:

@@ -1,9 +1,8 @@
 -- import: fpm
 
--- fpm.package: fifthtry.github.io/Forest-Theme
-zip: github.com/fifthtry/Forest-theme/archive/refs/heads/main.zip
-language: English
-translation: hi.fpm.dev
+-- fpm.package: fifthtry.github.io/doc-site
+zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
+
 
 -- fpm.dependency: fifthtry.github.io/code-block
 
