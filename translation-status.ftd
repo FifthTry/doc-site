@@ -1,8 +1,8 @@
 -- import: fpm
 -- import: fpm-lib
--- import: fifthtry.github.io/Forest-Theme/index as ft
--- import: fifthtry.github.io/Forest-Theme/design-doc as doc
--- import: fifthtry.github.io/Forest-Theme/assets
+-- import: fifthtry.github.io/doc-site/index as ft
+-- import: fifthtry.github.io/doc-site/design-doc as doc
+-- import: fifthtry.github.io/doc-site/assets
 
 -- ftd.column translation-status-page:
 width: fill

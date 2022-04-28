@@ -1,43 +1,43 @@
 -- import: doc
--- import: fifthtry.github.io/Forest-Theme/assets
+-- import: fifthtry.github.io/doc-site/assets
 
 
 
 -- fpm.toc-item list sample-toc:
 $processor$: toc
 
-- Introduction: /Forest-Theme/sample/
-- Quickstart: /Forest-Theme/sample/
-- Getting started: /Forest-Theme/sample/
-  - Deploy: /Forest-Theme/sample/
+- Introduction: /doc-site/sample/
+- Quickstart: /doc-site/sample/
+- Getting started: /doc-site/sample/
+  - Deploy: /doc-site/sample/
 
 -- fpm.toc-item list sample-header:
 $processor$: toc
 
-- Quickstart: /Forest-Theme/sample/
+- Quickstart: /doc-site/sample/
 - Use this template: https://github.com/FifthTry/fpm-book/generate/
 
 
 -- fpm.toc-item list sample-left:
 $processor$: toc
 
-- Home: /Forest-Theme/sample/
-- About: /Forest-Theme/sample/
-  - About Author: /Forest-Theme/sample/
-  - About Team: /Forest-Theme/sample/
-  - About Org: /Forest-Theme/sample/
-  - Social Network: /Forest-Theme/sample/
-  - Charity: /Forest-Theme/sample/
-- Publications: /Forest-Theme/sample/
+- Home: /doc-site/sample/
+- About: /doc-site/sample/
+  - About Author: /doc-site/sample/
+  - About Team: /doc-site/sample/
+  - About Org: /doc-site/sample/
+  - Social Network: /doc-site/sample/
+  - Charity: /doc-site/sample/
+- Publications: /doc-site/sample/
 
 -- fpm.toc-item list sample-right:
 $processor$: toc
 
-- Latest Publications: /Forest-Theme/sample/
-  - Santa Maria: /Forest-Theme/sample/
-  - Bina Recoz: /Forest-Theme/sample/
-  - A Day in the Dark: /Forest-Theme/sample/
-- Author Diary: /Forest-Theme/sample/
+- Latest Publications: /doc-site/sample/
+  - Santa Maria: /doc-site/sample/
+  - Bina Recoz: /doc-site/sample/
+  - A Day in the Dark: /doc-site/sample/
+- Author Diary: /doc-site/sample/
 
 
 
