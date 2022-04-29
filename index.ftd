@@ -126,7 +126,6 @@ if: $ftd.device == mobile
 optional caption title:
 optional body body:
 width: fill
-min-height: fill
 background-color: $fpm.color.main.background.base
 open: true
 append-at: content-container
@@ -162,7 +161,9 @@ toc: $toc
 --- ftd.column:
 id: content-container
 width: fill
-
+max-width: 1104
+align: center
+min-height: calc 100vh
 
 --- tf.h0: $title
 if: $title is not null
@@ -233,7 +234,6 @@ fpm.toc-item list sub-sections: $sub-sections
 fpm.toc-item list extra: $extra
 fpm.toc-item list footer-toc: $footer-toc
 width: fill
-min-height: fill
 open: true
 append-at: main-container
 
@@ -279,7 +279,6 @@ fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
 width: fill
-min-height: fill
 open: true
 append-at: main-container
 background-color: $fpm.color.main.background.base
@@ -357,7 +356,6 @@ fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
 fpm.toc-item list footer-toc: $footer-toc
 width: fill
-min-height: fill
 open: true
 append-at: main-container
 background-color: $fpm.color.main.background.base
