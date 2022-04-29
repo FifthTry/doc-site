@@ -6,38 +6,38 @@
 -- fpm.toc-item list sample-toc:
 $processor$: toc
 
-- Introduction: /doc-site/sample/
-- Quickstart: /doc-site/sample/
-- Getting started: /doc-site/sample/
-  - Deploy: /doc-site/sample/
+- Introduction: 
+- Quickstart: 
+- Getting started: 
+  - Deploy: /
 
 -- fpm.toc-item list sample-header:
 $processor$: toc
 
-- Quickstart: /doc-site/sample/
+- Quickstart: /
 - Use this template: https://github.com/FifthTry/fpm-book/generate/
 
 
 -- fpm.toc-item list sample-left:
 $processor$: toc
 
-- Home: /doc-site/sample/
-- About: /doc-site/sample/
-  - About Author: /doc-site/sample/
-  - About Team: /doc-site/sample/
-  - About Org: /doc-site/sample/
-  - Social Network: /doc-site/sample/
-  - Charity: /doc-site/sample/
-- Publications: /doc-site/sample/
+- Home: /
+- About: /
+  - About Author: /
+  - About Team: /
+  - About Org: /
+  - Social Network: /
+  - Charity: /
+- Publications: /
 
 -- fpm.toc-item list sample-right:
 $processor$: toc
 
-- Latest Publications: /doc-site/sample/
-  - Santa Maria: /doc-site/sample/
-  - Bina Recoz: /doc-site/sample/
-  - A Day in the Dark: /doc-site/sample/
-- Author Diary: /doc-site/sample/
+- Latest Publications: 
+  - Santa Maria: /
+  - Bina Recoz: /
+  - A Day in the Dark: /
+- Author Diary: /
 
 
 
@@ -149,10 +149,10 @@ text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
 menu-right: 0
 menu-left: -88
-menu-bg: $fpm.color.main.background.base 
-menu-hover-bg: $fpm.color.main.background.base
+menu-bg: $fpm.color.main.background.step-1
+menu-hover-bg: $fpm.color.main.background.step-2
 menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text 
+menu-link-active: $fpm.color.main.text-strong
 logo-height: 38
 current-url: /home/
 toc: $toc
@@ -297,10 +297,10 @@ site-name: $site-name
 background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
-menu-bg: $fpm.color.main.text
-menu-hover-bg: $fpm.color.main.text
+menu-bg: $fpm.color.main.background.step-1
+menu-hover-bg: $fpm.color.main.background.step-2
 menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text 
+menu-link-active: $fpm.color.main.text-strong
 logo-height: 38
 menu-right: 0
 menu-left: -88
@@ -374,9 +374,9 @@ site-url: $site-url
 site-name: $site-name
 background: $fpm.color.main.background.step-1
 text-color: $fpm.color.main.text
-active-text-color: $fpm.color.main.text
+active-text-color: $fpm.color.main.text-strong
 menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text 
+menu-link-active: $fpm.color.main.text-strong
 logo-height: 38
 menu-right: 0
 menu-left: -88
@@ -522,8 +522,10 @@ fpm.toc-item toc:
 padding-left: 10
 padding-top: 2
 padding-bottom: 2
+id: toc-instance
 
 --- ftd.text:
+if: $toc.url is not null
 link: $toc.url
 text: $toc.title
 role: $fpm.type.label-big
@@ -532,6 +534,16 @@ padding-left: 10
 padding-top: 3
 padding-bottom: 3
 color: $fpm.color.main.text
+
+--- ftd.text:
+if: $toc.url is null
+text: $toc.title
+role: $fpm.type.label-big
+min-width: fit-content
+padding-left: 10
+padding-top: 3
+padding-bottom: 3
+color: $fpm.color.main.background.step-2
 
 --- toc-instance:
 $loop$: $toc.children as $obj
