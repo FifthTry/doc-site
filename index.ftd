@@ -165,6 +165,7 @@ width: fill
 max-width: 1104
 align: center
 min-height: calc 100vh
+padding-vertical: 40
 
 --- tf.h0: $title
 if: $title is not null
