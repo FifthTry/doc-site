@@ -1,7 +1,7 @@
 -- import: doc
 -- import: fifthtry.github.io/doc-site/assets
 
-
+-- boolean show-brand: false
 
 -- fpm.toc-item list sample-toc:
 $processor$: toc
@@ -137,6 +137,7 @@ fpm.toc-item list toc: $toc
 --- container: ftd.main
 
 --- h.header:
+show-brand: $show-brand
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
@@ -285,6 +286,7 @@ background-color: $fpm.color.main.background.base
 
 
 --- h.header:
+show-brand: $show-brand
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
@@ -361,6 +363,7 @@ append-at: main-container
 background-color: $fpm.color.main.background.base
 
 --- h.header:
+show-brand: $show-brand
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
