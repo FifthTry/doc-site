@@ -100,7 +100,7 @@ width: fill
 -- integer max-width: 1000
 -- string github: NA
 -- optional string site-name: 
-/-- optional ftd.image-src site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
+-- optional ftd.image-src site-logo:
 
 
 
@@ -141,7 +141,7 @@ show-brand: $show-brand
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
-/site-logo: $site-logo
+site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $fpm.color.main.background.step-1
@@ -291,7 +291,7 @@ show-brand: $show-brand
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
-/site-logo: $assets.files.static.forest-theme.ftd-logo-desktop.png
+site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $fpm.color.main.background.step-1
@@ -369,7 +369,7 @@ sections: $sections
 sub-sections: $sub-sections
 extra: $extra
 toc: $toc
-/site-logo: $assets.files.static.forest-theme.ftd-logo-mobile.png
+site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $fpm.color.main.background.step-1
