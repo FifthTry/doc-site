@@ -3,6 +3,11 @@
 
 -- boolean show-brand: false
 
+-- ftd.color header-bg:
+light: rgba(45, 212, 143, 0.05)
+dark: rgba(45, 212, 143, 0.05)
+
+
 -- fpm.toc-item list sample-toc:
 $processor$: toc
 
@@ -144,15 +149,15 @@ extra: $extra
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
-background: $fpm.color.main.background.step-1
-text-color: $fpm.color.main.text
+background: $header-bg
+text-color: $fpm.color.main.cta-primary.focused
 active-text-color: $fpm.color.main.text
 menu-right: 0
 menu-left: -88
 menu-bg: $fpm.color.main.background.step-1
 menu-hover-bg: $fpm.color.main.background.step-2
-menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text-strong
+menu-link: $fpm.color.main.cta-primary.focused
+menu-link-active: $fpm.color.main.cta-primary.focused
 logo-height: 38
 current-url: /home/
 toc: $toc
@@ -294,13 +299,13 @@ extra: $extra
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
-background: $fpm.color.main.background.step-1
-text-color: $fpm.color.main.text
-active-text-color: $fpm.color.main.text
+background: $header-bg
+text-color: $fpm.color.main.cta-primary.focused
+active-text-color: $fpm.color.main.cta-primary.hover
 menu-bg: $fpm.color.main.background.step-1
 menu-hover-bg: $fpm.color.main.background.step-2
-menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text-strong
+menu-link: $fpm.color.main.cta-primary.focused
+menu-link-active: $fpm.color.main.cta-primary.focused
 logo-height: 38
 menu-right: 0
 menu-left: -88
@@ -372,11 +377,11 @@ toc: $toc
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
-background: $fpm.color.main.background.step-1
-text-color: $fpm.color.main.text
-active-text-color: $fpm.color.main.text-strong
-menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text-strong
+background: $header-bg
+text-color: $fpm.color.main.cta-primary.focused
+active-text-color: $fpm.color.main.cta-primary.hover
+menu-link: $fpm.color.main.cta-primary.focused
+menu-link-active: $fpm.color.main.cta-primary.focused
 logo-height: 38
 menu-right: 0
 menu-left: -88
