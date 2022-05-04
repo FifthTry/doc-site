@@ -568,7 +568,7 @@ height: calc 100vh - 0px
 overflow-y: auto
 width: $toc-sidebar-width
 align: top-left
-padding-left: 10
+padding-left: 38
 padding-top: 15
 padding-right: 20
 padding-bottom: 40
