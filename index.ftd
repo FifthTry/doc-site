@@ -49,6 +49,7 @@ $processor$: toc
 
 
 -- page-with-toc: Quickstart
+
 toc: $sample-toc
 sub-sections: $sample-left
 extra: $sample-right
@@ -148,6 +149,10 @@ fpm.toc-item list sections: $sections
 fpm.toc-item list sub-sections: $sub-sections
 fpm.toc-item list extra: $extra
 fpm.toc-item list toc: $toc
+optional string nav-title: 
+optional string nav-title-url:
+optional string nav-sub-title:
+optional string nav-sub-title-url:
 
 --- container: ftd.main
 
@@ -171,6 +176,10 @@ menu-link-active: $fpm.color.main.cta-primary.focused
 logo-height: 38
 current-url: /home/
 toc: $toc
+nav-title: $nav-title
+nav-title-url: $nav-title-url
+nav-sub-title: $nav-sub-title
+nav-sub-title-url: $nav-sub-title-url
 
 --- container: ftd.main
 
@@ -267,6 +276,10 @@ toc: $toc
 footer-toc: $footer-toc
 sections: $sections
 sub-sections: $sub-sections
+nav-title: $nav-title 
+nav-title-url: $nav-title-url
+nav-sub-title: $nav-sub-title
+nav-sub-title-url: $nav-sub-title-url
 extra: $extra
 body: $body
 
@@ -299,6 +312,10 @@ fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
+optional string nav-title: 
+optional string nav-title-url:
+optional string nav-sub-title:
+optional string nav-sub-title-url:
 width: fill
 open: true
 append-at: main-container
@@ -324,6 +341,10 @@ menu-right: 0
 menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.png
+nav-title: $nav-title
+nav-title-url: $nav-title-url
+nav-sub-title: $nav-sub-title
+nav-sub-title-url: $nav-sub-title-url
 
 
 --- ftd.row:
