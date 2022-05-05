@@ -1,4 +1,5 @@
 -- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/assets
 
 -- ft.page-with-toc image-page: $file-name
 caption file-name:
@@ -7,5 +8,5 @@ ftd.image-src src:
 
 
 
---- ft.image:
-src: $src
+-- ft.image: This is the image with caption
+src:  $assets.files.static.picture1.jpeg
