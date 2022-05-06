@@ -566,6 +566,7 @@ footer-toc: $obj
 fpm.toc-item toc:
 id: toc-instance
 
+
 --- ftd.text:
 if: $toc.url is not null
 link: $toc.url
@@ -582,10 +583,34 @@ role: $cta
 min-width: fit-content
 margin-bottom: 16
 color: $fpm.color.main.text
+padding-left: 10
 
---- toc-instance:
+
+--- childrens:
 $loop$: $toc.children as $obj
 toc: $obj
+
+
+
+
+
+
+
+-- ftd.column childrens:
+fpm.toc-item toc:
+
+--- ftd.text: 
+link: $toc.url
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
+
+
+
+
 
 
 
