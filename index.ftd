@@ -191,6 +191,7 @@ max-width: 1104
 align: center
 min-height: calc 100vh
 padding-vertical: 40
+padding-horizontal if $is-mobile: 20
 
 --- tf.h0: $title
 if: $title is not null
@@ -238,7 +239,7 @@ id:  content-container
 if: $is-mobile
 width: fill
 align: center
-padding-horizontal if $is-mobile: 20
+padding-horizontal: 20
 id:  content-container
 
 
