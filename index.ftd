@@ -367,6 +367,7 @@ toc-obj: $toc
 id: main-container
 max-width: 800
 align: top
+min-height: calc 100vh
 padding-horizontal: 34
 padding-vertical: 25
 width: fill
@@ -440,6 +441,7 @@ id: main-row
 id: main-container
 width: fill
 align: top
+min-height: calc 100vh
 padding-horizontal: 20
 padding-vertical: 20
 
