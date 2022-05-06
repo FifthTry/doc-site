@@ -573,8 +573,7 @@ text: $toc.title
 role: $cta
 min-width: fit-content
 margin-bottom: 16
-padding-left: 10
-color: $fpm.color.main.cta-primary.base
+color: $fpm.color.main.text
 
 --- ftd.text:
 if: $toc.url is null
@@ -598,14 +597,14 @@ toc: $obj
 fpm.toc-item list toc-obj:
 sticky: true
 top: 0
-left: 32
+left: 24
 height: calc 100vh - 0px
 overflow-y: auto
 width: $toc-sidebar-width
 align: top-left
 background-color:  $fpm.color.main.background.step-1
 border-radius: 8
-padding-left: 16
+padding-left: 24
 padding-top: 16
 padding-right: 16
 padding-bottom: 32
