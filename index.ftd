@@ -3,6 +3,8 @@
 
 -- boolean show-brand: false
 
+-- boolean login-button: false
+
 -- ftd.color header-bg:
 light: rgba(45, 212, 143, 0.05)
 dark: rgba(45, 212, 143, 0.05)
@@ -46,6 +48,7 @@ $processor$: toc
 -- page-with-toc: Quickstart
 toc: $sample-toc
 sub-sections: $sample-left
+login-button: $login-button
 /extra: $sample-right
 sections: $sample-header
 nav-title: Blog
@@ -149,11 +152,13 @@ optional string nav-title:
 optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
+boolean login-button: $login-button
 
 --- container: ftd.main
 
 --- h.header:
 show-brand: $show-brand
+login-button: $login-button
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
@@ -251,6 +256,7 @@ id:  content-container
 optional caption title:
 optional body body:
 fpm.toc-item list toc: $toc
+boolean login-button: $login-button
 fpm.toc-item list sections: $sections
 fpm.toc-item list sub-sections: $sub-sections
 fpm.toc-item list extra: $extra
@@ -269,6 +275,7 @@ append-at: main-container
 if: not $is-mobile
 id: main-container
 toc: $toc
+login-button: $login-button
 footer-toc: $footer-toc
 sections: $sections
 sub-sections: $sub-sections
@@ -312,6 +319,7 @@ optional string nav-title:
 optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
+boolean login-button:
 width: fill
 open: true
 append-at: main-container
@@ -319,6 +327,7 @@ background-color: $fpm.color.main.background.base
 
 --- h.header:
 show-brand: $show-brand
+login-button: $login-button
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
