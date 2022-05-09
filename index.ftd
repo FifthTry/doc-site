@@ -166,14 +166,14 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.cta-primary.focused
+text-color: $fpm.color.main.text
 active-text-color: $fpm.color.main.text
 menu-right: 0
 menu-left: -88
 menu-bg: $fpm.color.main.background.step-1
 menu-hover-bg: $fpm.color.main.background.step-2
-menu-link: $fpm.color.main.cta-primary.focused
-menu-link-active: $fpm.color.main.cta-primary.focused
+menu-link: $fpm.color.main.text
+menu-link-active: $fpm.color.main.text
 logo-height: 38
 current-url: /home/
 toc: $toc
@@ -191,6 +191,7 @@ max-width: 1104
 align: center
 min-height: calc 100vh
 padding-vertical: 40
+padding-horizontal if $is-mobile: 20
 
 --- tf.h0: $title
 if: $title is not null
@@ -238,7 +239,7 @@ id:  content-container
 if: $is-mobile
 width: fill
 align: center
-padding-horizontal if $is-mobile: 20
+padding-horizontal: 20
 id:  content-container
 
 
@@ -366,6 +367,7 @@ toc-obj: $toc
 id: main-container
 max-width: 800
 align: top
+min-height: calc 100vh
 padding-horizontal: 34
 padding-vertical: 25
 width: fill
@@ -418,10 +420,10 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.cta-primary.focused
-active-text-color: $fpm.color.main.cta-primary.hover
-menu-link: $fpm.color.main.cta-primary.focused
-menu-link-active: $fpm.color.main.cta-primary.focused
+text-color: $fpm.color.main.text
+active-text-color: $fpm.color.main.text
+menu-link: $fpm.color.main.text
+menu-link-active: $fpm.color.main.text
 logo-height: 38
 menu-right: 0
 menu-left: -88
@@ -439,6 +441,7 @@ id: main-row
 id: main-container
 width: fill
 align: top
+min-height: calc 100vh
 padding-horizontal: 20
 padding-vertical: 20
 
@@ -566,6 +569,7 @@ footer-toc: $obj
 fpm.toc-item toc:
 id: toc-instance
 
+
 --- ftd.text:
 if: $toc.url is not null
 link: $toc.url
@@ -582,10 +586,34 @@ role: $cta
 min-width: fit-content
 margin-bottom: 16
 color: $fpm.color.main.text
+padding-left: 10
 
---- toc-instance:
+
+--- childrens:
 $loop$: $toc.children as $obj
 toc: $obj
+
+
+
+
+
+
+
+-- ftd.column childrens:
+fpm.toc-item toc:
+
+--- ftd.text: 
+link: $toc.url
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
+
+
+
+
 
 
 
