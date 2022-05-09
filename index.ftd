@@ -153,6 +153,8 @@ optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
 boolean login-button: $login-button
+optional string login-btn-txt: Login
+optional string sign-in-txt: Sign up
 
 --- container: ftd.main
 
@@ -181,6 +183,8 @@ nav-title: $nav-title
 nav-title-url: $nav-title-url
 nav-sub-title: $nav-sub-title
 nav-sub-title-url: $nav-sub-title-url
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt
 
 --- container: ftd.main
 
@@ -320,6 +324,8 @@ optional string nav-title:
 optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
+optional string login-btn-txt: Login
+optional string sign-in-txt: Sign up
 boolean login-button:
 width: fill
 open: true
@@ -329,6 +335,8 @@ background-color: $fpm.color.main.background.base
 --- h.header:
 show-brand: $show-brand
 login-button: $login-button
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt 
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
