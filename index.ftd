@@ -166,8 +166,8 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.text
-active-text-color: $fpm.color.main.text
+text-color: $fpm.color.main.cta-primary.base
+active-text-color: $fpm.color.main.cta-primary.base
 menu-right: 0
 menu-left: -88
 menu-bg: $fpm.color.main.background.step-1
@@ -336,8 +336,8 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.cta-primary.focused
-active-text-color: $fpm.color.main.cta-primary.hover
+text-color: $fpm.color.main.cta-primary.base
+active-text-color: $fpm.color.main.cta-primary.base
 menu-bg: $fpm.color.main.background.step-1
 menu-hover-bg: $fpm.color.main.background.step-2
 menu-link: $fpm.color.main.cta-primary.focused
@@ -420,8 +420,8 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.text
-active-text-color: $fpm.color.main.text
+text-color: $fpm.color.main.cta-primary.base
+active-text-color: $fpm.color.main.cta-primary.base
 menu-link: $fpm.color.main.text
 menu-link-active: $fpm.color.main.text
 logo-height: 38
