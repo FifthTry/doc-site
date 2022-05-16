@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/doc-site/assets
 
--- ft.page-with-toc image-page: $file-name
+-- ft.page image-page: $file-name
 caption file-name:
 ftd.image-src src: 
 

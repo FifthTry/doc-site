@@ -1,6 +1,6 @@
 -- import: fifthtry.github.io/doc-site as ft
 
--- ft.page-with-toc markdown-page:
+-- ft.page markdown-page:
 caption file-name:
 optional body content:
 if: $content is not null

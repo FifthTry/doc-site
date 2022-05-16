@@ -10,6 +10,10 @@ light: rgba(45, 212, 143, 0.05)
 dark: rgba(45, 212, 143, 0.05)
 
 
+-- fpm.sitemap-data sitemap:
+$processor$: get-sitemap
+
+
 -- fpm.toc-item list sample-toc:
 $processor$: toc
 
@@ -45,7 +49,7 @@ $processor$: toc
 
 
 
--- page-with-toc: Quickstart
+-- page: Quickstart
 toc: $sample-toc
 sub-sections: $sample-left
 login-button: $login-button
@@ -137,17 +141,17 @@ if: $ftd.device == mobile
 
 
 
--- ftd.column page:
+/-- ftd.column page_:
 optional caption title:
 optional body body:
 width: fill
 background-color: $fpm.color.main.background.base
 open: true
 append-at: content-container
-fpm.toc-item list sections: $sections
-fpm.toc-item list sub-sections: $sub-sections
+fpm.toc-item list sections: $sitemap.sections
+fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list extra: $extra
-fpm.toc-item list toc: $toc
+fpm.toc-item list toc: $sitemap.toc
 optional string nav-title: 
 optional string nav-title-url:
 optional string nav-sub-title:
@@ -257,13 +261,13 @@ id:  content-container
 
 
 
--- ftd.column page-with-toc:
+-- ftd.column page:
 optional caption title:
 optional body body:
-fpm.toc-item list toc: $toc
+fpm.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
-fpm.toc-item list sections: $sections
-fpm.toc-item list sub-sections: $sub-sections
+fpm.toc-item list sections: $sitemap.sections
+fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list extra: $extra
 fpm.toc-item list footer-toc: $footer-toc
 optional string nav-title: 
@@ -367,13 +371,19 @@ id: main-row
 spacing: 48
 
 --- render-toc:
+if: $toc is not empty
 toc-obj: $toc
 
 --- container: main-row
 
 --- ftd.column:
+width: fill
+
+--- ftd.column:
 id: main-container
+max-width if $toc is empty: 1104
 max-width: 800
+align if $toc is empty: center
 align: top
 min-height: calc 100vh
 padding-horizontal: 34
