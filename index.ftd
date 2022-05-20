@@ -11,7 +11,7 @@ dark: rgba(45, 212, 143, 0.05)
 
 
 -- fpm.sitemap-data sitemap:
-$processor$: get-sitemap
+$processor$: sitemap
 
 
 -- fpm.toc-item list sample-toc:
