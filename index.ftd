@@ -616,6 +616,7 @@ role: $cta
 min-width: fit-content
 margin-bottom: 16
 color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
 
 --- ftd.text:
 if: $toc.url is null
@@ -624,6 +625,7 @@ role: $cta
 min-width: fit-content
 margin-bottom: 16
 color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
 padding-left: 10
 
 
@@ -648,6 +650,7 @@ min-width: fit-content
 margin-bottom: 16
 color: $fpm.color.main.text
 margin-left: $fpm.space.space-3
+color if $toc.is-active: $fpm.color.main.cta-primary.base
 
 
 
