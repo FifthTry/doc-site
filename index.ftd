@@ -374,7 +374,7 @@ logo-height: 38
 menu-right: 0
 menu-left: -88
 current-url: /home/
-menu-icon: $assets.files.static.header.hamburger.png
+menu-icon: $assets.files.static.header.hamburger.svg
 
 
 
@@ -466,7 +466,7 @@ logo-height: 38
 menu-right: 0
 menu-left: -88
 current-url: /home/
-menu-icon: $assets.files.static.header.hamburger.png
+menu-icon: $assets.files.static.header.hamburger.svg
 
 
 --- container: ftd.main
