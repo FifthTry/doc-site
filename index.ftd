@@ -364,7 +364,7 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.cta-primary.base
+text-color: $fpm.color.main.text-strong
 active-text-color: $fpm.color.main.cta-primary.base
 menu-bg: $fpm.color.main.background.step-1
 menu-hover-bg: $fpm.color.main.background.step-2
@@ -458,7 +458,7 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 background: $header-bg
-text-color: $fpm.color.main.cta-primary.base
+text-color: $fpm.color.main.text-strong
 active-text-color: $fpm.color.main.cta-primary.base
 menu-link: $fpm.color.main.text
 menu-link-active: $fpm.color.main.text
