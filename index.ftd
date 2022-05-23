@@ -158,11 +158,11 @@ optional string nav-sub-title:
 optional string nav-sub-title-url:
 boolean login-button: $login-button
 optional string login-btn-txt: Login
-optional string sign-in-txt: Sign up
+optional string sign-in-txt: 
 
 --- container: ftd.main
 
---- h.header:
+/--- h.header:
 show-brand: $show-brand
 login-button: $login-button
 sections: $sections
@@ -342,7 +342,7 @@ optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
 optional string login-btn-txt: Login
-optional string sign-in-txt: Sign up
+optional string sign-in-txt: 
 boolean login-button:
 width: fill
 open: true
