@@ -268,6 +268,9 @@ fpm.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
+optional fpm.toc-item current-section: $sitemap.current-section
+optional fpm.toc-item current-subsection: $sitemap.current-subsection
+optional fpm.toc-item current-page: $sitemap.current-page
 fpm.toc-item list extra: $extra
 fpm.toc-item list footer-toc: $footer-toc
 optional string nav-title: 
@@ -287,6 +290,9 @@ toc: $toc
 login-button: $login-button
 footer-toc: $footer-toc
 sections: $sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
 sub-sections: $sub-sections
 nav-title: $nav-title 
 nav-title-url: $nav-title-url
@@ -304,7 +310,11 @@ id: main-container
 toc: $toc
 footer-toc: $footer-toc
 sections: $sections
+toc: $toc
 sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
 extra: $extra
 body: $body
 
@@ -324,6 +334,9 @@ fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
+optional fpm.toc-item current-section:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-subsection:
 optional string nav-title: 
 optional string nav-title-url:
 optional string nav-sub-title:
@@ -343,6 +356,9 @@ login-btn-txt: $login-btn-txt
 sign-in-txt: $sign-in-txt 
 sections: $sections
 sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
 extra: $extra
 site-logo: $site-logo
 site-url: $site-url
@@ -359,10 +375,7 @@ menu-right: 0
 menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.png
-nav-title: $nav-title
-nav-title-url: $nav-title-url
-nav-sub-title: $nav-sub-title
-nav-sub-title-url: $nav-sub-title-url
+
 
 
 --- ftd.row:
@@ -423,6 +436,10 @@ fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
 fpm.toc-item list footer-toc:
 fpm.toc-item list footer-toc: $footer-toc
+fpm.toc-item list toc: $toc
+optional fpm.toc-item current-section:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-subsection:
 width: fill
 open: true
 append-at: main-container
@@ -434,6 +451,9 @@ sections: $sections
 sub-sections: $sub-sections
 extra: $extra
 toc: $toc
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
