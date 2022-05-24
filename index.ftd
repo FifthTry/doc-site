@@ -5,6 +5,7 @@
 
 -- boolean login-button: false
 
+-- boolean pricing-cta: false
 
 -- boolean parent-brand: true
 
@@ -269,6 +270,7 @@ optional caption title:
 optional body body:
 fpm.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
+boolean pricing-cta: $pricing-cta
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 optional fpm.toc-item current-section: $sitemap.current-section
@@ -294,6 +296,7 @@ id: main-container
 toc: $toc
 login-button: $login-button
 footer-toc: $footer-toc
+pricing-cta: $pricing-cta
 sections: $sections
 current-section: $current-section
 current-subsection: $current-subsection
@@ -348,9 +351,11 @@ optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
 optional string login-btn-txt: Login
+boolean pricing-cta: 
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
+boolean pricing-cta:
 width: fill
 open: true
 append-at: main-container
@@ -359,6 +364,7 @@ background-color: $fpm.color.main.background.base
 --- h.header:
 show-brand: $show-brand
 login-button: $login-button
+pricing-cta: $pricing-cta
 login-btn-txt: $login-btn-txt
 sign-in-txt: $sign-in-txt 
 sections: $sections
