@@ -6,6 +6,9 @@
 -- boolean login-button: false
 
 
+-- boolean parent-brand: true
+
+
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
@@ -116,6 +119,10 @@ weight: 700
 -- string github: NA
 -- optional string site-name: 
 -- optional ftd.image-src site-logo:
+-- optional ftd.image-src brand-site-logo:
+-- optional string brand-site-name: 
+-- optional string brand-caption:
+-- optional string brand-site-url: index.html
 
 
 
@@ -450,12 +457,18 @@ current-subsection: $current-subsection
 current-page: $current-page
 site-logo: $site-logo
 site-url: $site-url
+brand-site-url: $brand-site-url
+brand-site-logo: $brand-site-logo
+brand-site-name: $brand-site-name
+brand-caption: $brand-caption
+brand-site-name:
 site-name: $site-name
 logo-height: 38
 menu-right: 0
 menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
+parent-brand: $parent-brand
 
 
 --- container: ftd.main
