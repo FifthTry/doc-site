@@ -5,10 +5,6 @@
 
 -- boolean login-button: false
 
--- ftd.color header-bg:
-light: rgba(45, 212, 143, 0.05)
-dark: rgba(45, 212, 143, 0.05)
-
 
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
@@ -279,7 +275,9 @@ optional string nav-sub-title:
 optional string nav-sub-title-url:
 width: fill
 open: true
+boolean widthfill: false
 append-at: main-container
+
 
 --- container: ftd.main
 
@@ -300,6 +298,7 @@ nav-sub-title: $nav-sub-title
 nav-sub-title-url: $nav-sub-title-url
 extra: $extra
 body: $body
+widthfill: $widthfill
 
 
 --- container: ftd.main
@@ -342,7 +341,8 @@ optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
 optional string login-btn-txt: Login
-optional string sign-in-txt: 
+optional string sign-in-txt:
+boolean widthfill: 
 boolean login-button:
 width: fill
 open: true
@@ -363,13 +363,6 @@ extra: $extra
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
-background: $header-bg
-text-color: $fpm.color.main.text-strong
-active-text-color: $fpm.color.main.cta-primary.base
-menu-bg: $fpm.color.main.background.step-1
-menu-hover-bg: $fpm.color.main.background.step-2
-menu-link: $fpm.color.main.cta-primary.focused
-menu-link-active: $fpm.color.main.cta-primary.focused
 logo-height: 38
 menu-right: 0
 menu-left: -88
@@ -395,12 +388,13 @@ width: fill
 --- ftd.column:
 id: main-container
 max-width if $toc is empty: 1104
+max-width if $widthfill: fill
 max-width: 800
 align if $toc is empty: center
 align: top
 min-height: calc 100vh
-padding-horizontal: 34
-padding-vertical: 25
+padding-horizontal if not $widthfill: 34
+padding-vertical if not $widthfill: 25
 width: fill
 
 --- tf.h0: $title
@@ -457,11 +451,6 @@ current-page: $current-page
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
-background: $header-bg
-text-color: $fpm.color.main.text-strong
-active-text-color: $fpm.color.main.cta-primary.base
-menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text
 logo-height: 38
 menu-right: 0
 menu-left: -88
