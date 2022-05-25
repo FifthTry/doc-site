@@ -2,6 +2,11 @@
 -- import: fifthtry.github.io/doc-site/assets
 
 
+-- ft.image image-page: $file-name
+caption file-name:
+ftd.image-src src:
+src: $src
+
 
 -- ft.page: Image with Caption
 
