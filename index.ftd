@@ -359,6 +359,8 @@ append-at: main-container
 background-color: $fpm.color.main.background.base
 
 --- h.header:
+brand-caption: $brand-caption
+parent-brand: $parent-brand
 login-button: $login-button
 pricing-cta: $pricing-cta
 login-btn-txt: $login-btn-txt
@@ -462,7 +464,6 @@ brand-site-url: $brand-site-url
 brand-site-logo: $brand-site-logo
 brand-site-name: $brand-site-name
 brand-caption: $brand-caption
-brand-site-name:
 site-name: $site-name
 logo-height: 38
 menu-right: 0
