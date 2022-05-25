@@ -1,12 +1,25 @@
 -- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/doc-site/assets
 
--- ft.page image-page: $file-name
-caption file-name:
-ftd.image-src src: 
+
+
+-- ft.page: Image with Caption
+
+--- ft.image: This is the image with caption
+if: not $ft.is-mobile
+src: $assets.files.static.picture1.jpeg
+
+--- ft.image: This is the image with caption
+if: $ft.is-mobile
+src: $assets.files.static.picture1.jpeg
+width: fill
 
 
 
 
--- ft.image: This is the image with caption
-src:  $assets.files.static.picture1.jpeg
+
+
+
+
+
+
