@@ -1,8 +1,6 @@
 -- import: doc
 -- import: fifthtry.github.io/doc-site/assets
 
--- boolean show-brand: false
-
 -- boolean login-button: false
 
 -- boolean pricing-cta: false
@@ -167,7 +165,6 @@ optional string sign-in-txt:
 --- container: ftd.main
 
 /--- h.header:
-show-brand: $show-brand
 login-button: $login-button
 sections: $sections
 sub-sections: $sub-sections
@@ -362,7 +359,6 @@ append-at: main-container
 background-color: $fpm.color.main.background.base
 
 --- h.header:
-show-brand: $show-brand
 login-button: $login-button
 pricing-cta: $pricing-cta
 login-btn-txt: $login-btn-txt
@@ -453,7 +449,6 @@ append-at: main-container
 background-color: $fpm.color.main.background.base
 
 --- h.header:
-show-brand: $show-brand
 sections: $sections
 sub-sections: $sub-sections
 extra: $extra
