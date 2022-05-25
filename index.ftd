@@ -943,7 +943,10 @@ margin-top: 20
 
 -- ftd.text highlight: $title
 caption title:
-color: $fpm.color.main.custom.two
+background-color: $fpm.color.main.custom.two
+color: $fpm.color.main.background.base
+padding: 3
+border-radius: 3
 
 
 
