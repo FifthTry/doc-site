@@ -5,6 +5,10 @@
 
 -- boolean login-button: false
 
+-- boolean pricing-cta: false
+
+-- boolean parent-brand: true
+
 
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
@@ -116,6 +120,10 @@ weight: 700
 -- string github: NA
 -- optional string site-name: 
 -- optional ftd.image-src site-logo:
+-- optional ftd.image-src brand-site-logo:
+-- optional string brand-site-name: 
+-- optional string brand-caption:
+-- optional string brand-site-url: index.html
 
 
 
@@ -262,6 +270,7 @@ optional caption title:
 optional body body:
 fpm.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
+boolean pricing-cta: $pricing-cta
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 optional fpm.toc-item current-section: $sitemap.current-section
@@ -287,6 +296,7 @@ id: main-container
 toc: $toc
 login-button: $login-button
 footer-toc: $footer-toc
+pricing-cta: $pricing-cta
 sections: $sections
 current-section: $current-section
 current-subsection: $current-subsection
@@ -341,9 +351,11 @@ optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
 optional string login-btn-txt: Login
+boolean pricing-cta: 
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
+boolean pricing-cta:
 width: fill
 open: true
 append-at: main-container
@@ -352,6 +364,7 @@ background-color: $fpm.color.main.background.base
 --- h.header:
 show-brand: $show-brand
 login-button: $login-button
+pricing-cta: $pricing-cta
 login-btn-txt: $login-btn-txt
 sign-in-txt: $sign-in-txt 
 sections: $sections
@@ -450,12 +463,18 @@ current-subsection: $current-subsection
 current-page: $current-page
 site-logo: $site-logo
 site-url: $site-url
+brand-site-url: $brand-site-url
+brand-site-logo: $brand-site-logo
+brand-site-name: $brand-site-name
+brand-caption: $brand-caption
+brand-site-name:
 site-name: $site-name
 logo-height: 38
 menu-right: 0
 menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
+parent-brand: $parent-brand
 
 
 --- container: ftd.main
