@@ -12,7 +12,7 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 
 -- fpm.dependency: fifthtry.github.io/typography
 
--- fpm.dependency: fifthtry.github.io/translation-components as doc
+/-- fpm.dependency: fifthtry.github.io/translation-components as doc
 
 
 -- fpm.auto-import: fpm
