@@ -1,4 +1,4 @@
-
+-- import: doc
 -- import: fifthtry.github.io/doc-site/assets
 
 -- boolean login-button: false
@@ -417,6 +417,7 @@ if: $body is not null
 
 $body
 
+--- doc.translation-banner:
 
 --- container: ftd.main
 
@@ -495,7 +496,7 @@ if: $body is not null
 
 $body
 
-
+--- doc.translation-banner:
 
 --- container: ftd.main
 
@@ -645,6 +646,7 @@ toc: $obj
 -- ftd.column childrens:
 fpm.toc-item toc:
 
+
 --- ftd.text: 
 link: $toc.url
 text: $toc.title
@@ -655,7 +657,12 @@ color: $fpm.color.main.text
 margin-left: $fpm.space.space-3
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
+--- ftd.column:
+margin-left: $fpm.space.space-3
 
+--- childrens:
+$loop$: $toc.children as $obj
+toc: $obj
 
 
 
