@@ -358,8 +358,6 @@ append-at: main-container
 background-color: $fpm.color.main.background.base
 
 --- h.header:
-brand-caption: $brand-caption
-parent-brand: $parent-brand
 login-button: $login-button
 pricing-cta: $pricing-cta
 login-btn-txt: $login-btn-txt
