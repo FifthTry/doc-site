@@ -12,6 +12,8 @@
 
 -- boolean show-cr-dd: false
 
+
+
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
@@ -66,7 +68,7 @@ data representation in memory looks like Figure 4-2.
 src: $assets.files.static.Information_example_page_300px.jpg
 width: 400
 
-
+-- open-close:
 
 
 
@@ -1513,13 +1515,33 @@ role: $fpm.type.label-small
 
 
 
+-- ftd.row open-close:
+border-radius: 25
+background-color: $fpm.color.main.text-strong
+boolean confirm: false
+boolean open: true
+spacing: 4
 
--- ftd.row crs-breadcrumb:
-caption title:
-optional string page:
-optional ftd.image-src arrow:
+--- ftd.text: Open
+$on-click$: $open = true
+$on-click$: $confirm = false
+padding-horizontal: 8
+padding-vertical: 8
+background-color if $open == true: $fpm.color.main.background.step-2
 width: fill
+border-left-radius: 25
+overflow-x: hidden
+role: $fpm.type.fine-print
 
 
---- ftd.text: $title
+--- container: ftd.main
 
+--- ftd.text: Close
+$on-click$: $open = false
+$on-click$: $confirm = true
+padding-horizontal: 8
+padding-vertical: 8
+background-color if $confirm == true: $fpm.color.main.background.step-2
+width: fill 
+border-right-radius: 25
+role: $fpm.type.fine-print
