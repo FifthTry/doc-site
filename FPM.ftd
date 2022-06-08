@@ -20,3 +20,23 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 -- fpm.auto-import: fifthtry.github.io/header as h
 -- fpm.auto-import: fifthtry.github.io/toc as tt
 
+-- fpm.sitemap:
+
+# Quickstart: /image/
+
+## Home: /image/
+
+- Image: /image/
+- markdown: /markdown/
+- Package-info: /package-info/
+- Translation: /translation-status/
+- Code: /code/
+- Design: /design-doc/
+
+
+# withbreadcum: /withbreadcum/
+
+
+
+
+# Use this template: https://github.com/FifthTry/fpm-book/generate/

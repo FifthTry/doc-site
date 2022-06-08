@@ -1,8 +1,14 @@
 -- import: fifthtry.github.io/doc-site as ft
 
--- ft.page markdown-page:
+-- ft.page markdown-page: 
 caption file-name:
 optional body content:
 if: $content is not null
 
 $content
+
+
+
+-- markdown-page: This is markdown page
+
+Some body text

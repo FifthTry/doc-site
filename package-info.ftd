@@ -1,4 +1,5 @@
 -- import: fpm
+-- import: fifthtry.github.io/doc-site as ft
 -- import: fpm-lib
 
 
@@ -33,3 +34,15 @@ value: $fpm.info.build-created-on
 
 --- fpm-lib.key-value-without-default: FTD version
 value: $fpm.info.ftd-version
+
+
+
+
+
+
+
+
+
+-- ft.page: Package-info page
+
+Add some package info here

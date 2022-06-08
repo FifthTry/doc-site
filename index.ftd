@@ -47,15 +47,7 @@ $processor$: toc
 
 
 -- page: Quickstart
-toc: $sample-toc
-sub-sections: $sample-left
 login-button: $login-button
-/extra: $sample-right
-sections: $sample-header
-nav-title: Blog
-nav-title-url: /log/
-nav-sub-title: This is article title
-nav-sub-title-url: /article/
 
 The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
 total amount of memory, in bytes, that the String has received from the allocator. The difference between 
@@ -70,10 +62,10 @@ src: $assets.files.static.Information_example_page_300px.jpg
 width: 400
 
 
-
-
-
-
+-- ftd.text: Without Breadcrumb
+link: without-breadcum/
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
 
 
 

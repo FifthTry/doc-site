@@ -1,4 +1,5 @@
 -- import: fpm
+-- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/code-block as cb
 -- import: fifthtry.github.io/doc-site/assets
 
@@ -1169,3 +1170,15 @@ if: $open
 
 --- key-item: $obj
 $loop$: $fpm.upto-date-files as $obj
+
+
+
+
+
+
+
+
+
+-- ft.page: Design page
+
+Add some Design here

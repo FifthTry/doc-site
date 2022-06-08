@@ -8,12 +8,13 @@
 width: fill
 height: fill
 
---- ft.page:
-toc: $ft.toc
+-- ft.page:
+
+some text
 
 --- doc.page-title: $fpm.i18n.language-detail-page
 icon: true
-light-icon-path: $assets.files.static.translation-icons.large.translations-title-default.png
+light-icon-path: $assets.files.static.translation-icons.large.translations-title-default.svg
 
 
 --- doc.title: $fpm.package-title
