@@ -38,9 +38,10 @@ lang: diff
 - you come across any other objects, please help us update
 - this page.
 
-+ While we love `fpm`, it is this `fpm` not the right tool for you. We document
-+ some of the reasons here. If you come across any other reasons why FPM should
-+ not be used, please help us update this page.
++ While we love `fpm`, it is this `fpm` not the right 
++ tool for you. We document some of the reasons here. If 
++ you come across any other reasons why FPM should not 
++ be used, please help us update this page.
 
 
 
@@ -51,11 +52,10 @@ align: right
 
 
 
---- ft.h2: How to
-
 --- ft.h1: How to
 
---- ft.h3: Creating new collection:
+
+--- ft.h2: Creating new collection:
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 

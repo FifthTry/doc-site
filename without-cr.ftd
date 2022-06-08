@@ -10,21 +10,24 @@
 
 -- ft.page: Without CR
 
---- cr.cr-toggle:
-if: $cr.enable-crmenu
-
---- cr.cr-wrapper: Some packge title here...
-if: $cr.toggle-cr-wrapper
-
-
-
-Change `ft.enable-crmenu` global variable with `true` in your package config,
+Change `cr.enable-crmenu` global variable with `true` in your package config,
 e.g. below:
 
---- ft.code: Example code:
+
+-- ft.code: Example code:
 lang: ftd
 
-\-- ft.enable-crmenu: true
+\--- cr.enable-crmenu: true
+
+
+
+
+-- cr.cr-toggle:
+if: $cr.enable-crmenu
+
+-- cr.cr-wrapper: Some packge title here...
+if: $cr.toggle-cr-wrapper
+
 
 
 
