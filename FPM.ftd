@@ -30,6 +30,7 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 
 - Without CR: /without-cr/
 - With CR: /with-cr/
+- All Change Requests: /CRs/
 - Image: /image/
 - Translation: /translation-status/
 
