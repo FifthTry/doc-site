@@ -1,13 +1,22 @@
 -- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/cr-doc as cr
 
--- ft.enable-crmenu: true
--- ft.toggle-cr-wrapper: true
+-- cr.enable-crmenu: true
+-- cr.toggle-cr-wrapper: true
 
 
 
 
 
 -- ft.page: Without CR
+
+--- cr.cr-toggle:
+if: $cr.enable-crmenu
+
+--- cr.cr-wrapper: Some packge title here...
+if: $cr.toggle-cr-wrapper
+
+
 
 Change `ft.enable-crmenu` global variable with `true` in your package config,
 e.g. below:

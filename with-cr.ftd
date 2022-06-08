@@ -1,15 +1,24 @@
 -- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/cr-doc as cr
 
 
--- ft.enable-crmenu: true
--- ft.toggle-cr-wrapper: true
--- ft.show-cr-dd: true
+-- cr.enable-crmenu: true
+-- cr.toggle-cr-wrapper: true
+-- cr.show-cr-dd: true
 
 
 
 -- ft.page: 
 
---- ft.cta-btn:
+--- cr.cr-toggle:
+if: $cr.enable-crmenu
+
+--- cr.cr-wrapper: Some packge title here...
+if: $cr.toggle-cr-wrapper
+
+
+
+--- cr.cta-btn:
 button-text: Merge
 align: right
 
@@ -35,7 +44,7 @@ lang: diff
 
 
 
---- ft.cta-btn:
+--- cr.cta-btn:
 button-text: ✏️  Edit
 align: right
 

@@ -1,7 +1,6 @@
 -- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/cr-doc as cr
 
--- ft.enable-crmenu: true
--- ft.toggle-cr-wrapper: true
 
 
 
@@ -11,10 +10,7 @@
 
 
 
-
---- ft.crs-breadcrumb: Package name
-page: &#8594; All Change Requests 
-
+-- cr.open-close:
 
 
 
