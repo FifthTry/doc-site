@@ -251,6 +251,7 @@ text: $title
 caption $title:
 region: title
 text: $title
+color: $fpm.color.main.text-strong
 role: $fpm.type.heading-medium
 
 --- container: ftd.main

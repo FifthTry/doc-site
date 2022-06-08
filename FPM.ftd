@@ -14,6 +14,8 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 
 
 
+
+
 -- fpm.auto-import: fpm
 -- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
@@ -22,21 +24,15 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 
 -- fpm.sitemap:
 
-# Quickstart: /image/
+# Package doc-site: /
 
-## Home: /image/
+## Home: /
 
+- Without CR: /without-cr/
+- With CR: /with-cr/
 - Image: /image/
-- markdown: /markdown/
-- Package-info: /package-info/
 - Translation: /translation-status/
-- Code: /code/
-- Design: /design-doc/
-
 
 # withbreadcum: /withbreadcum/
-
-
-
 
 # Use this template: https://github.com/FifthTry/fpm-book/generate/

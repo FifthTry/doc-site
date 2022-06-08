@@ -35,14 +35,3 @@ value: $fpm.info.build-created-on
 --- fpm-lib.key-value-without-default: FTD version
 value: $fpm.info.ftd-version
 
-
-
-
-
-
-
-
-
--- ft.page: Package-info page
-
-Add some package info here

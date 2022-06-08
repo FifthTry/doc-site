@@ -13,6 +13,7 @@ src: $src
 --- ft.image: This is the image with caption
 if: not $ft.is-mobile
 src: $assets.files.static.picture1.jpeg
+width: 800
 
 --- ft.image: This is the image with caption
 if: $ft.is-mobile

@@ -1,0 +1,27 @@
+-- import: fifthtry.github.io/doc-site as ft
+
+-- ft.enable-crmenu: true
+-- ft.toggle-cr-wrapper: true
+
+
+
+
+
+-- ft.page: Without CR
+
+Change `ft.enable-crmenu` global variable with `true` in your package config,
+e.g. below:
+
+--- ft.code: Example code:
+lang: ftd
+
+\-- ft.enable-crmenu: true
+
+
+
+
+
+
+
+
+
