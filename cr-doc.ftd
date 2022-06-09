@@ -773,7 +773,7 @@ role: $fpm.type.copy-relaxed
 
 
 --- ftd.text: $user-name
-role: $label-big-bold
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text-strong
 link: $user-link
 
