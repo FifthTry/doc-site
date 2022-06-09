@@ -679,7 +679,7 @@ optional string nav-sub-title:
 optional string nav-sub-title-url:
 optional string nav-sub-section-title:
 optional string nav-sub-section-title-url:
-optional boolean show-pr-button : false
+optional boolean show-pr-button: false
 margin-bottom: $fpm.space.space-8
 width: fill
 spacing: 8
@@ -693,34 +693,40 @@ spacing: 8
 if: $nav-title is not null
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
+color if $nav-title-url is null: $fpm.color.main.text-strong
 link: $nav-title-url
+color if $MOUSE-IN: $fpm.color.main.text-strong
 white-space: nowrap
 
 --- ftd.text: ->
-if: $nav-sub-title-url is not null
+if: $nav-sub-title is not null
 role: $fpm.type.label-small
 color: $fpm.color.main.text
 white-space: nowrap
 
 --- ftd.text:$nav-sub-title
-if: $nav-sub-title-url is not null
+if: $nav-sub-title is not null
 role: $fpm.type.label-small
 color: $fpm.color.main.text
+color if $nav-sub-title-url is null: $fpm.color.main.text-strong
+color if $MOUSE-IN: $fpm.color.main.text-strong
 link: $nav-sub-title-url
 white-space: nowrap
 
 --- ftd.text: ->
-if: $nav-sub-section-title-url is not null
+if: $nav-sub-section-title is not null
 role: $fpm.type.label-small
 color: $fpm.color.main.text
 white-space: nowrap
 
---- ftd.text:$nav-sub-section-title
-if: $nav-sub-section-title-url is not null
+--- ftd.text: $nav-sub-section-title
+if: $nav-sub-section-title is not null
 role: $fpm.type.label-small
 color: $fpm.color.main.text
+color if $nav-sub-section-title-url is null: $fpm.color.main.text-strong
 link: $nav-sub-title-url
 white-space: nowrap
+
 
 --- container: ftd.main
 
@@ -905,7 +911,7 @@ role: $fpm.type.copy-relaxed
 -- ftd.column page-title:
 caption title:
 prhistory list pr-history-list:
-margin-top: $fpm.space.space-5
+margin-top: $fpm.space.space-7
 spacing: 16
 width: fill
 
@@ -940,6 +946,7 @@ $loop$: $pr-history-list as $obj
 --- ftd.row:
 width: fill
 spacing: 16
+margin-top: $fpm.space.space-8
 
 --- cta-btn:
 button-text: Merge
@@ -968,5 +975,7 @@ padding-vertical: $fpm.space.space-1
 --- ftd.text: 
 text: $pr-item
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.copy-tight
 padding-top: $fpm.space.space-1
+link: $pr-item-url
+color if $MOUSE-IN: $fpm.color.main.text-strong

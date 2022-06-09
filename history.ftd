@@ -14,7 +14,7 @@
 nav-title: FifthTry User Manual
 nav-title-url: /history/
 nav-sub-title: History
-nav-sub-title-url: /history/
+
 
 -- history-loop:
 $loop$: $history-data as $obj
