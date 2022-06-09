@@ -1,6 +1,40 @@
 -- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/doc-site/cr-doc as cr
 
+-- cr.prhistory list pr-history-list:
+
+-- pr-history-list:
+index: 1
+pr-item: Fifthtry Collections and documents
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 2
+pr-item: Working Around change request
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 3
+pr-item: Permission mete
+pr-item-link: /
+
+-- pr-history-list:
+index: 4
+pr-item: History and switcher
+pr-item-link: /
+
+-- pr-history-list:
+index: 5
+pr-item: working on it
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 6
+pr-item: working
+pr-item-link: /
 
 
 -- ft.page:
@@ -27,4 +61,7 @@ wants to merge these changes
 switch-first: About Cr
 switch-middle: Proposed Changes
 switch-last: History Of Cr
+
+-- cr.page-title: History and switcher
+pr-history-list: $pr-history-list
 

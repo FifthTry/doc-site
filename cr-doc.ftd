@@ -15,6 +15,12 @@ mobile: $fpm.type.copy-relaxed.mobile
 xl: $fpm.type.copy-relaxed.xl
 weight: 700
 
+-- record prhistory:
+string pr-item:
+string pr-item-link:
+integer index:
+
+
 
 -- record PrRequest:
 string documentation-title:
@@ -61,7 +67,24 @@ timestamp-link: /index/
 
 
 
+-- prhistory list pr-history-list:
 
+-- pr-history-list:
+index: 1
+pr-item: Fifthtry Collections and documents
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 2
+pr-item: Working Around change request
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 3
+pr-item: Permission mete
+pr-item-link: /
 
 
 
@@ -563,9 +586,11 @@ margin-right: $fpm.space.space-4
 
 -- ftd.row cta-btn:
 string button-text: 
-optional ftd.image-src icon-src: 
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.hover
-background-color: $fpm.color.main.cta-primary.base
+optional ftd.image-src icon-src:
+ftd.color backgroundcolor: $fpm.color.main.cta-primary.base
+ftd.color hoverbackgroundcolor: $fpm.color.main.cta-primary.hover
+background-color if $MOUSE-IN: $hoverbackgroundcolor
+background-color: $backgroundcolor
 padding-vertical: $fpm.space.space-2
 padding-horizontal: $fpm.space.space-4
 border-radius: 4
@@ -867,3 +892,80 @@ role: $history-title
 text: $message
 role: $fpm.type.copy-relaxed
 
+
+
+
+
+
+
+
+
+
+-- ftd.column page-title:
+caption title:
+prhistory list pr-history-list:
+margin-top: $fpm.space.space-5
+spacing: 16
+width: fill
+
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: $title
+role: $history-title
+color: $fpm.color.main.text
+width: fill
+
+
+--- cta-btn:
+button-text: ✏️  Edit
+textcolor: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+--- ftd.column:
+spacing: 16
+width: fill
+
+--- history-prs:
+pr-item: $obj.pr-item
+pr-item-url: $obj.pr-item-link
+index: $obj.index
+$loop$: $pr-history-list as $obj
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+spacing: 16
+
+--- cta-btn:
+button-text: Merge
+textcolor: $fpm.color.main.text-strong
+
+--- cta-btn:
+button-text: Close
+backgroundcolor: $fpm.color.main.cta-secondary.base
+hoverbackgroundcolor: $fpm.color.main.cta-secondary.hover
+textcolor: $fpm.color.main.text-strong
+
+
+-- ftd.row history-prs:
+integer index:
+string pr-item:
+string pr-item-url:
+spacing: 16
+
+--- ftd.integer: $index
+border-radius: 25
+role: $fpm.type.fine-print
+background-color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-2
+padding-vertical: $fpm.space.space-1
+
+--- ftd.text: 
+text: $pr-item
+color: $fpm.color.main.text
+role: $fpm.type.fine-print
+padding-top: $fpm.space.space-1
