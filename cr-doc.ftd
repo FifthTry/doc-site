@@ -9,11 +9,127 @@
 -- boolean show-cr-dd: false
 
 
--- ftd.type label-big-bold: $fpm.type.label-big.font
+-- ftd.type history-title: $fpm.type.copy-relaxed.font
 desktop: $fpm.type.copy-relaxed.desktop
 mobile: $fpm.type.copy-relaxed.mobile
 xl: $fpm.type.copy-relaxed.xl
 weight: 700
+
+
+
+
+
+
+
+
+
+
+-- record dropdown-links:
+optional string cr-title:
+optional string cr-url:
+optional string child: 
+optional string child-url: 
+
+
+-- dropdown-links list list-dd:
+
+-- list-dd:
+cr-title: #9: New Features for R3
+cr-url: /change-request
+
+-- list-dd: 
+child: First Document
+child-url: /change-request
+
+-- list-dd: 
+child: Second Document
+child-url: /change-request
+
+
+
+
+
+
+
+
+
+-- record top-section:
+caption title:
+string link-url:
+boolean is-dropdown: false
+integer index:
+boolean is-last: false
+
+-- top-section list list-ts:
+
+-- list-ts: History
+link-url: /history/
+index: 1
+
+
+-- list-ts: Change Requests
+link-url: /CRs/
+index: 2
+is-dropdown: true
+
+
+-- list-ts: Settings
+link-url: /settings/
+index: 3
+
+
+
+
+
+
+
+-- top-section list list-crs:
+
+-- list-crs: #7 Edited: sample user's Blog
+link-url: /change-request
+index: 1
+
+
+-- list-crs: #8 Lorem ipsum dolor sit amet
+link-url: /change-request
+index: 2
+
+
+-- list-crs: #17 blog post: Lorem ipsum dolor sit amet
+link-url: /change-request
+index: 3
+
+
+
+
+
+-- top-section list site-links:
+
+-- site-links: About
+link-url: /change-request
+index: 1
+
+
+-- site-links: Terms
+link-url: /change-request
+index: 2
+
+
+-- site-links: Privacy
+link-url: /change-request
+index: 3
+
+
+-- site-links: Blog
+link-url: /change-request
+index: 4
+is-last: true
+
+
+
+
+
+
 
 
 -- record PrRequest:
@@ -99,11 +215,11 @@ cursor: pointer
 -- ftd.row cr-wrapper:
 caption title:
 string history: History
-string history-link: /history
+string history-link: /history/
 optional string cr-text: Change Requests
-string cr-link: /cr
+string cr-link: /CRs/
 string settings: Settings
-string settings-link: /settings
+string settings-link: /settings/
 width: percent 30
 height: calc 100vh
 anchor: window
@@ -440,112 +556,6 @@ margin-right: $fpm.space.space-4
 
 
 
--- record dropdown-links:
-optional string cr-title:
-optional string cr-url:
-optional string child: 
-optional string child-url: 
-
-
--- dropdown-links list list-dd:
-
--- list-dd:
-cr-title: #9: New Features for R3
-cr-url: /change-request
-
--- list-dd: 
-child: First Document
-child-url: /change-request
-
--- list-dd: 
-child: Second Document
-child-url: /change-request
-
-
-
-
-
-
-
-
-
--- record top-section:
-caption title:
-string link-url:
-boolean is-dropdown: false
-integer index:
-boolean is-last: false
-
--- top-section list list-ts:
-
--- list-ts: History
-link-url: /change-request
-index: 1
-
-
--- list-ts: Change Requests
-link-url: /change-request
-index: 2
-is-dropdown: true
-
-
--- list-ts: Settings
-link-url: /change-request
-index: 3
-
-
-
-
-
-
-
--- top-section list list-crs:
-
--- list-crs: #7 Edited: sample user's Blog
-link-url: /change-request
-index: 1
-
-
--- list-crs: #8 Lorem ipsum dolor sit amet
-link-url: /change-request
-index: 2
-
-
--- list-crs: #17 blog post: Lorem ipsum dolor sit amet
-link-url: /change-request
-index: 3
-
-
-
-
-
--- top-section list site-links:
-
--- site-links: About
-link-url: /change-request
-index: 1
-
-
--- site-links: Terms
-link-url: /change-request
-index: 2
-
-
--- site-links: Privacy
-link-url: /change-request
-index: 3
-
-
--- site-links: Blog
-link-url: /change-request
-index: 4
-is-last: true
-
-
-
-
-
-
 
 
 -- ftd.text cta-btn:
@@ -700,6 +710,7 @@ $loop$: $pr-request-list as $obj
 
 
 
+
 -- ftd.column pr-section:
 string documentation-title:
 string documentation-link:
@@ -735,7 +746,7 @@ role: $fpm.type.copy-relaxed
 
 --- ftd.text: $documentation-title
 color: $fpm.color.main.text-strong
-role: $label-big-bold
+role: $history-title
 link: $documentation-link
 
 --- ftd.row:
@@ -750,7 +761,7 @@ role: $fpm.type.copy-relaxed
 --- ftd.text: $current-status
 if: $current-status is not null
 color: $fpm.color.main.text-strong
-role: $label-big-bold
+role: $history-title
 link: $current-status-link
 
 --- container: ftd.main
@@ -765,7 +776,7 @@ role: $fpm.type.copy-relaxed
 
 
 --- ftd.text: $user-name
-role: $label-big-bold
+role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text-strong
 link: $user-link
 

@@ -1,0 +1,206 @@
+-- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/cr-doc as cr
+
+-- cr.enable-crmenu: true
+-- cr.toggle-cr-wrapper: false
+
+
+
+
+
+-- ft.page: 
+
+-- history-loop:
+doc-title: Feature Roadmap
+doc-repo: amitu/fifthtry/features
+repo-link: /history/
+history-title: History of Document
+history-link: /history/
+user: amitu
+user-link: /history/
+last-change: Updated
+last-change-link: /history/
+timestamp: yesterday
+timestamp-link: /history/
+
+
+
+
+
+
+
+
+
+
+
+-- cr.cr-toggle:
+if: $cr.enable-crmenu
+
+-- cr.cr-wrapper: Some packge title here...
+if: $cr.toggle-cr-wrapper
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column history-loop:
+optional string doc-title:
+optional string doc-repo: 
+optional string repo-link: 
+optional string history-title: 
+optional string history-link: 
+optional string user: 
+optional string user-link: 
+optional string last-change:
+optional string last-change-link:
+optional string timestamp: 
+optional string timestamp-link: 
+width: fill
+id: some-value
+
+--- ftd.row:
+width: fill
+
+--- ftd.row:
+width: fill
+id: title-wrap
+
+--- ftd.column:
+width: fill
+
+--- ftd.text: $doc-title
+link: $repo-link
+role: $cr.history-title
+color: $fpm.color.main.text-strong
+margin-bottom: $fpm.space.space-1
+
+--- ftd.text: $doc-repo
+link: $repo-link
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+
+--- container: title-wrap
+
+--- ftd.row:
+align: right
+
+--- ftd.text: $history-title
+link: $history-link
+role: $fpm.type.label-big
+color: $fpm.color.main.text-strong
+margin-top: $fpm.space.space-3
+white-space: nowrap
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+margin-top: $fpm.space.space-4
+border-radius: 6
+border-width: 1
+border-color: $fpm.color.main.border-strong
+padding-top: $fpm.space.space-3
+background-color: $fpm.color.main.background.step-2
+id: main-wrap
+
+
+--- ftd.row:
+width: fill
+id: status-wrap
+padding-horizontal: $fpm.space.space-3
+margin-bottom: -6
+padding-bottom: $fpm.space.space-3
+	
+--- ftd.row:
+width: fill
+
+--- ftd.text: $user
+link: $user-link
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text: $last-change
+link: $last-change-link
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+margin-left: $fpm.space.space-6
+background-color: $fpm.color.main.background.base
+padding: $fpm.space.space-3
+border-radius: 100
+
+--- container: status-wrap
+
+--- ftd.row:
+
+--- ftd.text: $timestamp
+link: $timestamp-link
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+margin-top: $fpm.space.space-3
+
+--- container: main-wrap
+
+--- ftd.column: 
+width: fill
+height: 300
+overflow-y: auto
+border-radius: 6
+
+--- ft.code: 
+lang: diff
+
+\--- original
++++ modified
+@@ -3,18 +3,9 @@
+
+\-- ft.h0: Why not to use `fpm`? 
+
+- While we love `fpm`, it is this `fpm` not the right 
+- tool for you. We document some of the reasons here. If 
+- you come across any other objects, please help us update
+- this page.
+
++ While we love `fpm`, it is this `fpm` not the right 
++ tool for you. We document some of the reasons here. If 
++ you come across any other reasons why FPM should not 
++ be used, please help us update this page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- record history-list:
+optional string doc-title:
+optional string doc-repo: 
+optional string repo-link: 
+optional string history-title: 
+optional string history-link: 
+optional string user: 
+optional string user-link: 
+optional string last-change:
+optional string last-change-link:
+optional string timestamp: 
+optional string timestamp-link: 
+
+
+
+
