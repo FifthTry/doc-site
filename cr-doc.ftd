@@ -19,8 +19,8 @@ weight: 700
 -- record PrRequest:
 string documentation-title:
 string documentation-link:
-string current-status:
-string current-status-link:
+optional string current-status:
+optional string current-status-link:
 string user-name:
 string user-link:
 string timestamp:
@@ -756,6 +756,7 @@ color: $fpm.color.main.text-strong
 role: $fpm.type.copy-relaxed
 
 --- ftd.text: $current-status
+if: $current-status is not null
 color: $fpm.color.main.text-strong
 role: $label-big-bold
 link: $current-status-link
