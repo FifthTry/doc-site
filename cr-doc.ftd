@@ -61,6 +61,121 @@ timestamp-link: /index/
 
 
 
+
+
+
+
+
+-- record dropdown-links:
+optional string cr-title:
+optional string cr-url:
+optional string child: 
+optional string child-url: 
+
+
+-- dropdown-links list list-dd:
+
+-- list-dd:
+cr-title: #9: New Features for R3
+cr-url: /change-request
+
+-- list-dd: 
+child: First Document
+child-url: /change-request
+
+-- list-dd: 
+child: Second Document
+child-url: /change-request
+
+
+
+
+
+
+
+
+
+-- record top-section:
+caption title:
+string link-url:
+boolean is-dropdown: false
+integer index:
+boolean is-last: false
+
+-- top-section list list-ts:
+
+-- list-ts: History
+link-url: /change-request
+index: 1
+
+
+-- list-ts: Change Requests
+link-url: /change-request
+index: 2
+is-dropdown: true
+
+
+-- list-ts: Settings
+link-url: /change-request
+index: 3
+
+
+
+
+
+
+
+-- top-section list list-crs:
+
+-- list-crs: #7 Edited: sample user's Blog
+link-url: /change-request
+index: 1
+
+
+-- list-crs: #8 Lorem ipsum dolor sit amet
+link-url: /change-request
+index: 2
+
+
+-- list-crs: #17 blog post: Lorem ipsum dolor sit amet
+link-url: /change-request
+index: 3
+
+
+
+
+
+-- top-section list site-links:
+
+-- site-links: About
+link-url: /change-request
+index: 1
+
+
+-- site-links: Terms
+link-url: /change-request
+index: 2
+
+
+-- site-links: Privacy
+link-url: /change-request
+index: 3
+
+
+-- site-links: Blog
+link-url: /change-request
+index: 4
+is-last: true
+
+
+
+
+
+
+
+
+
+
 -- ftd.row cr-toggle:
 anchor: window
 right: 0
@@ -441,106 +556,7 @@ margin-right: $fpm.space.space-4
 
 
 
--- record dropdown-links:
-optional string cr-title:
-optional string cr-url:
-optional string child: 
-optional string child-url: 
 
-
--- dropdown-links list list-dd:
-
--- list-dd:
-cr-title: #9: New Features for R3
-cr-url: /change-request
-
--- list-dd: 
-child: First Document
-child-url: /change-request
-
--- list-dd: 
-child: Second Document
-child-url: /change-request
-
-
-
-
-
-
-
-
-
--- record top-section:
-caption title:
-string link-url:
-boolean is-dropdown: false
-integer index:
-boolean is-last: false
-
--- top-section list list-ts:
-
--- list-ts: History
-link-url: /change-request
-index: 1
-
-
--- list-ts: Change Requests
-link-url: /change-request
-index: 2
-is-dropdown: true
-
-
--- list-ts: Settings
-link-url: /change-request
-index: 3
-
-
-
-
-
-
-
--- top-section list list-crs:
-
--- list-crs: #7 Edited: sample user's Blog
-link-url: /change-request
-index: 1
-
-
--- list-crs: #8 Lorem ipsum dolor sit amet
-link-url: /change-request
-index: 2
-
-
--- list-crs: #17 blog post: Lorem ipsum dolor sit amet
-link-url: /change-request
-index: 3
-
-
-
-
-
--- top-section list site-links:
-
--- site-links: About
-link-url: /change-request
-index: 1
-
-
--- site-links: Terms
-link-url: /change-request
-index: 2
-
-
--- site-links: Privacy
-link-url: /change-request
-index: 3
-
-
--- site-links: Blog
-link-url: /change-request
-index: 4
-is-last: true
 
 
 
