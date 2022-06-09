@@ -647,7 +647,7 @@ white-space: nowrap
 
 
 
--- ftd.row breadcrum:
+-- ftd.row breadcrumb:
 optional string nav-title: 
 optional string nav-title-url: 
 optional string nav-sub-title: 

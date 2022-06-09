@@ -10,18 +10,25 @@
 
 -- ft.page: 
 
+-- cr.breadcrumb:
+nav-title: Amit Upadhyay's Blog hello
+nav-title-url: /
+nav-sub-title: All Change Requests
+nav-sub-title-url: /
+
 -- history-loop:
-doc-title: Feature Roadmap
-doc-repo: amitu/fifthtry/features
-repo-link: /history/
-history-title: History of Document
-history-link: /history/
-user: amitu
-user-link: /history/
-last-change: Updated
-last-change-link: /history/
-timestamp: yesterday
-timestamp-link: /history/
+$loop$: $history-data as $obj
+doc-title: $obj.doc-title
+doc-repo: $obj.doc-repo
+repo-link: $obj.repo-link
+history-title: $obj.history-title
+history-link: $obj.history-link
+user: $obj.user
+user-link: $obj.user-link
+last-change: $obj.last-change
+last-change-link: $obj.last-change-link
+timestamp: $obj.timestamp
+timestamp-link: $obj.timestamp-link
 
 
 
@@ -50,6 +57,7 @@ if: $cr.toggle-cr-wrapper
 
 
 -- ftd.column history-loop:
+history-list list history-data: $history-data
 optional string doc-title:
 optional string doc-repo: 
 optional string repo-link: 
@@ -61,6 +69,7 @@ optional string last-change:
 optional string last-change-link:
 optional string timestamp: 
 optional string timestamp-link: 
+margin-bottom: $fpm.space.space-8
 width: fill
 id: some-value
 
@@ -129,13 +138,11 @@ color if $MOUSE-IN: $fpm.color.main.text-strong
 align: center
 
 --- ftd.text: $last-change
-link: $last-change-link
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
-margin-left: $fpm.space.space-6
-background-color: $fpm.color.main.background.base
-padding: $fpm.space.space-3
+color: $fpm.color.main.border
+margin-left: $fpm.space.space-4
+background-color: $fpm.color.main.text
+padding: $fpm.space.space-2
 border-radius: 100
 
 --- container: status-wrap
@@ -143,11 +150,9 @@ border-radius: 100
 --- ftd.row:
 
 --- ftd.text: $timestamp
-link: $timestamp-link
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
-margin-top: $fpm.space.space-3
+margin-top: $fpm.space.space-2
 
 --- container: main-wrap
 
@@ -202,5 +207,48 @@ optional string timestamp:
 optional string timestamp-link: 
 
 
+-- history-list list history-data:
+
+-- history-data:
+doc-title: Feature Roadmap
+doc-repo: amitu/fifthtry/features
+repo-link: /history/
+history-title: History of Document
+history-link: /history/
+user: amitu
+user-link: /history/
+last-change: Updated
+last-change-link: /history/
+timestamp: yesterday
+timestamp-link: /history/
+
+
+-- history-data:
+doc-title: Blog
+doc-repo: amitu/fifthtry/blog
+repo-link: /history/
+history-title: History of Document
+history-link: /history/
+user: amitu
+user-link: /history/
+last-change: Updated
+last-change-link: /history/
+timestamp: yesterday
+timestamp-link: /history/
+
+
+
+-- history-data:
+doc-title: Log
+doc-repo: amitu/fifthtry/log
+repo-link: /history/
+history-title: History of Document
+history-link: /history/
+user: amitu
+user-link: /history/
+last-change: Updated
+last-change-link: /history/
+timestamp: yesterday
+timestamp-link: /history/
 
 

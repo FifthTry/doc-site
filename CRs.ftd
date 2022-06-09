@@ -67,7 +67,7 @@ is-last: true
 
 
 
--- cr.breadcrum:
+-- cr.breadcrumb:
 nav-title: Amit Upadhyay's Blog hello
 nav-title-url: /
 nav-sub-title: All Change Requests
