@@ -588,7 +588,7 @@ spacing: 4
 $on-click$: $open = true
 $on-click$: $confirm = false
 padding-horizontal: $fpm.space.space-4
-padding-vertical: $fpm.space.space-2
+padding-vertical: $fpm.space.space-3
 background-color if $open == true: $fpm.color.main.background.step-2
 width: fill
 border-left-radius: 25
@@ -602,7 +602,7 @@ role: $fpm.type.fine-print
 $on-click$: $open = false
 $on-click$: $confirm = true
 padding-horizontal: $fpm.space.space-4
-padding-vertical: $fpm.space.space-2
+padding-vertical: $fpm.space.space-3
 background-color if $confirm == true: $fpm.color.main.background.step-2
 width: fill 
 border-right-radius: 25
@@ -773,7 +773,7 @@ role: $fpm.type.copy-relaxed
 
 
 --- ftd.text: $user-name
-role: $fpm.type.copy-relaxed
+role: $fpm.type.fine-print
 color: $fpm.color.main.text-strong
 link: $user-link
 
@@ -781,6 +781,6 @@ link: $user-link
 role: $fpm.type.copy-relaxed
 
 --- ftd.text:$timestamp
-role: $fpm.type.copy-relaxed
+role: $fpm.type.fine-print
 color: $fpm.color.main.text-strong
 link: $timestamp-link
