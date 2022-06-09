@@ -147,6 +147,7 @@ align: center
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 margin-top: $fpm.space.space-2
+white-space: nowrap
 
 --- container: main-wrap
 
@@ -213,7 +214,7 @@ user: amitu
 user-link: /history/
 last-change: Updated
 last-change-link: /history/
-timestamp: yesterday
+timestamp: yesterday at 2017-11-02 02:36:57.204
 timestamp-link: /history/
 
 
@@ -227,7 +228,7 @@ user: amitu
 user-link: /history/
 last-change: Updated
 last-change-link: /history/
-timestamp: yesterday
+timestamp: yesterday at 2017-11-02 02:36:57.204
 timestamp-link: /history/
 
 
@@ -242,7 +243,7 @@ user: amitu
 user-link: /history/
 last-change: Updated
 last-change-link: /history/
-timestamp: yesterday
+timestamp: yesterday at 2017-11-02 02:36:57.204
 timestamp-link: /history/
 
 
