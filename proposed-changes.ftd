@@ -1,0 +1,115 @@
+-- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/cr-doc as cr
+
+-- ft.page:
+
+
+
+-- cr.breadcrumb:
+nav-title: Fifthtry User Manual
+nav-title-url: /
+nav-sub-title:  Change Requests
+nav-sub-title-url: /
+nav-sub-section-title: History and Switcher
+nav-sub-section-title-url: /
+show-pr-button: false
+
+
+-- cr.request-title:
+user-name: Nikita
+user-link: /
+
+wants to merge these changes
+
+-- cr.open-close:
+switch-first: About Cr
+switch-middle: Proposed Changes
+switch-last: History Of Cr
+middle: true
+
+-- page-code:
+doc-title: Working with Changes request
+doc-title-url: /
+doc-repo: fifthtry/manual~24/video-tutorials/cr
+repo-link: /
+last-change: Mergable
+cta-text: Merge Change
+
+
+
+-- ftd.column page-code:
+optional string doc-title:
+optional string doc-title-url:
+optional string doc-repo: 
+optional string repo-link: 
+optional string last-change:
+optional string cta-text: 
+margin-bottom: $fpm.space.space-8
+margin-top: $fpm.space.space-8
+width: fill
+spacing: 12
+
+--- ftd.row:
+width: fill
+id: change-container
+
+--- ftd.row:
+width: fill
+spacing: 8
+margin-left: -16
+
+--- ft.badge: $last-change
+
+
+--- ftd.text: $doc-title
+link: $doc-title-url
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+padding-top: $fpm.space.space-2
+
+
+--- container: change-container
+
+--- ftd.row:
+
+
+--- cr.cta-btn:
+button-text: $cta-text
+textcolor: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+--- ftd.text: 
+text: $doc-repo
+link: $repo-link
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+
+--- ftd.column: 
+width: fill
+border-radius: 6
+/height: 400
+/overflow-y: auto
+
+
+
+--- ft.code: 
+lang: diff
+
+\--- original
++++ modified
+@@ -3,18 +3,9 @@
+
+\-- ft.h0: Why not to use `fpm`? 
+
+- While we love `fpm`, it is this `fpm` not the right 
+- tool for you. We document some of the reasons here. If 
+- you come across any other objects, please help us update
+- this page.
+
++ While we love `fpm`, it is this `fpm` not the right 
++ tool for you. We document some of the reasons here. If 
++ you come across any other reasons why FPM should not 
++ be used, please help us update this page.

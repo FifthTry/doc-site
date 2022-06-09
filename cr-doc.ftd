@@ -592,7 +592,7 @@ ftd.color hoverbackgroundcolor: $fpm.color.main.cta-primary.hover
 background-color if $MOUSE-IN: $hoverbackgroundcolor
 background-color: $backgroundcolor
 padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-4
+padding-horizontal: $fpm.space.space-5
 border-radius: 4
 ftd.color textcolor: $fpm.color.main.background.step-1
 
@@ -621,8 +621,8 @@ color: $textcolor
 -- ftd.row open-close:
 border-radius: 25
 background-color: $fpm.color.main.text-strong
-boolean confirm: false
-boolean open: true
+boolean first: false
+boolean last: false
 boolean middle: false
 optional string switch-first:
 optional string switch-middle: 
@@ -630,12 +630,12 @@ optional string switch-last:
 
 
 --- ftd.text: $switch-first
-$on-click$: $open = true
-$on-click$: $confirm = false
+$on-click$: $last = true
+$on-click$: $first = false
 $on-click$: $middle = false
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-4
-background-color if $open == true: $fpm.color.main.background.step-2
+background-color if $last == true: $fpm.color.main.background.step-2
 width: fill
 border-left-radius: 25
 overflow-x: hidden
@@ -646,8 +646,8 @@ white-space: nowrap
 
 --- ftd.text: $switch-middle
 if: $switch-middle is not null
-$on-click$: $open = false
-$on-click$: $confirm = false
+$on-click$: $last = false
+$on-click$: $first = false
 $on-click$: $middle = true
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-4
@@ -659,12 +659,12 @@ white-space: nowrap
 --- container: ftd.main
 
 --- ftd.text: $switch-last
-$on-click$: $open = false
-$on-click$: $confirm = true
+$on-click$: $last = false
+$on-click$: $first = true
 $on-click$: $middle = false
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-4
-background-color if $confirm == true: $fpm.color.main.background.step-2
+background-color if $first == true: $fpm.color.main.background.step-2
 width: fill 
 border-right-radius: 25
 role: $fpm.type.fine-print

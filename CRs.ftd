@@ -82,6 +82,7 @@ search-logo: $assets.files.static.search.png
 -- cr.open-close:
 switch-first: Open
 switch-last: Close
+last: true
 
 
 

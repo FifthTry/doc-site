@@ -61,6 +61,7 @@ wants to merge these changes
 switch-first: About Cr
 switch-middle: Proposed Changes
 switch-last: History Of Cr
+first: true
 
 -- cr.page-title: History and switcher
 pr-history-list: $pr-history-list
