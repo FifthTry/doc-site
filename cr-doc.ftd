@@ -598,11 +598,16 @@ border-radius: 25
 background-color: $fpm.color.main.text-strong
 boolean confirm: false
 boolean open: true
-spacing: 4
+boolean middle: false
+optional string switch-first:
+optional string switch-middle: 
+optional string switch-last:
 
---- ftd.text: Open
+
+--- ftd.text: $switch-first
 $on-click$: $open = true
 $on-click$: $confirm = false
+$on-click$: $middle = false
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-4
 background-color if $open == true: $fpm.color.main.background.step-2
@@ -610,20 +615,35 @@ width: fill
 border-left-radius: 25
 overflow-x: hidden
 role: $fpm.type.fine-print
-
+white-space: nowrap
 
 --- container: ftd.main
 
---- ftd.text: Close
+--- ftd.text: $switch-middle
+if: $switch-middle is not null
+$on-click$: $open = false
+$on-click$: $confirm = false
+$on-click$: $middle = true
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+background-color if $middle == true: $fpm.color.main.background.step-2
+width: fill 
+role: $fpm.type.fine-print
+white-space: nowrap
+
+--- container: ftd.main
+
+--- ftd.text: $switch-last
 $on-click$: $open = false
 $on-click$: $confirm = true
+$on-click$: $middle = false
 padding-horizontal: $fpm.space.space-4
 padding-vertical: $fpm.space.space-4
 background-color if $confirm == true: $fpm.color.main.background.step-2
 width: fill 
 border-right-radius: 25
 role: $fpm.type.fine-print
-
+white-space: nowrap
 
 
 
@@ -632,6 +652,8 @@ optional string nav-title:
 optional string nav-title-url: 
 optional string nav-sub-title: 
 optional string nav-sub-title-url:
+optional string nav-sub-section-title:
+optional string nav-sub-section-title-url:
 optional boolean show-pr-button : false
 width: fill
 spacing: 8
@@ -649,6 +671,7 @@ link: $nav-title-url
 white-space: nowrap
 
 --- ftd.text: ->
+if: $nav-sub-title-url is not null
 role: $fpm.type.label-small
 color: $fpm.color.main.text
 white-space: nowrap
@@ -660,6 +683,18 @@ color: $fpm.color.main.text
 link: $nav-sub-title-url
 white-space: nowrap
 
+--- ftd.text: ->
+if: $nav-sub-section-title-url is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+white-space: nowrap
+
+--- ftd.text:$nav-sub-section-title
+if: $nav-sub-section-title-url is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+link: $nav-sub-title-url
+white-space: nowrap
 
 --- container: ftd.main
 
@@ -806,3 +841,29 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.text
 color if $mouse-in: $fpm.color.main.text-strong
 link: $timestamp-link
+
+
+
+
+
+
+
+
+
+-- ftd.row request-title:
+caption user-name:
+optional string user-link: /
+optional body message:
+color: $fpm.color.main.text
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+spacing: 4
+
+--- ftd.text: $user-name
+role: $history-title
+
+
+--- ftd.text:
+text: $message
+role: $fpm.type.copy-relaxed
+

@@ -80,6 +80,10 @@ search-logo: $assets.files.static.search.png
 
 
 -- cr.open-close:
+switch-fist: Open
+switch-last: Close
+
+
 
 -- cr.section: 
 pr-request-list: $pr-request-list

@@ -34,7 +34,7 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 - History: /history/
 - Image: /image/
 - Translation: /translation-status/
-
+- History Switcher: /history-switcher/
 # withbreadcum: /withbreadcum/
 
 # Use this template: https://github.com/FifthTry/fpm-book/generate/

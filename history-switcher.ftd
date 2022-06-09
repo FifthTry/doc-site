@@ -1,0 +1,30 @@
+-- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/cr-doc as cr
+
+
+
+-- ft.page:
+
+
+
+-- cr.breadcrum:
+nav-title: Fifthtry User Manual
+nav-title-url: /
+nav-sub-title:  Change Requests
+nav-sub-title-url: /
+nav-sub-section-title: History and Switcher
+nav-sub-section-title-url: /
+show-pr-button: false
+
+
+-- cr.request-title:
+user-name: Nikita
+user-link: /
+
+wants to merge these changes
+
+-- cr.open-close:
+switch-first: About Cr
+switch-middle: Proposed Changes
+switch-last: History Of Cr
+
