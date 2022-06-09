@@ -618,7 +618,7 @@ role: $fpm.type.fine-print
 $on-click$: $open = false
 $on-click$: $confirm = true
 padding-horizontal: $fpm.space.space-4
-padding-vertical: $fpm.space.space-3
+padding-vertical: $fpm.space.space-4
 background-color if $confirm == true: $fpm.color.main.background.step-2
 width: fill 
 border-right-radius: 25
