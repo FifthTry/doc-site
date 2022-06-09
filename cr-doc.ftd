@@ -9,7 +9,7 @@
 -- boolean show-cr-dd: false
 
 
--- ftd.type label-big-bold: $fpm.type.label-big.font
+-- ftd.type history-title: $fpm.type.label-big.font
 desktop: $fpm.type.copy-relaxed.desktop
 mobile: $fpm.type.copy-relaxed.mobile
 xl: $fpm.type.copy-relaxed.xl
@@ -747,7 +747,7 @@ role: $fpm.type.copy-relaxed
 
 --- ftd.text: $documentation-title
 color: $fpm.color.main.text-strong
-role: $label-big-bold
+role: $history-title
 link: $documentation-link
 
 --- ftd.text: :
@@ -758,7 +758,7 @@ role: $fpm.type.copy-relaxed
 --- ftd.text: $current-status
 if: $current-status is not null
 color: $fpm.color.main.text-strong
-role: $label-big-bold
+role: $history-title
 link: $current-status-link
 
 --- container: ftd.main
