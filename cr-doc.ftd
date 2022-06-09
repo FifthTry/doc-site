@@ -680,6 +680,7 @@ optional string nav-sub-title-url:
 optional string nav-sub-section-title:
 optional string nav-sub-section-title-url:
 optional boolean show-pr-button : false
+margin-bottom: $fpm.space.space-8
 width: fill
 spacing: 8
 

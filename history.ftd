@@ -11,10 +11,10 @@
 -- ft.page: 
 
 -- cr.breadcrumb:
-nav-title: Amit Upadhyay's Blog hello
-nav-title-url: /
-nav-sub-title: All Change Requests
-nav-sub-title-url: /
+nav-title: FifthTry User Manual
+nav-title-url: /history/
+nav-sub-title: History
+nav-sub-title-url: /history/
 
 -- history-loop:
 $loop$: $history-data as $obj
@@ -137,13 +137,7 @@ color: $fpm.color.main.text
 color if $MOUSE-IN: $fpm.color.main.text-strong
 align: center
 
---- ftd.text: $last-change
-role: $fpm.type.fine-print
-color: $fpm.color.main.border
-margin-left: $fpm.space.space-4
-background-color: $fpm.color.main.text
-padding: $fpm.space.space-2
-border-radius: 100
+--- ft.badge: $last-change
 
 --- container: status-wrap
 
