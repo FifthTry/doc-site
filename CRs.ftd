@@ -1,6 +1,61 @@
 -- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/doc-site/cr-doc as cr
 
+-- import: fifthtry.github.io/doc-site/assets
+
+-- cr.PrRequest list pr-request-list:
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: 8th Nov, 2021
+timestamp-link: /index/
+current-status: updated
+current-status-link: /index/
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp:  21 Nov, 2021
+timestamp-link: /index/
+
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp:  22 Nov, 2021
+timestamp-link: /index/
+current-status: updated
+current-status-link: /index/
+
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp:  9th Nov, 2021
+timestamp-link: /index/
+
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: 10 Nov, 2021
+timestamp-link: /index/
+current-status: updated
+current-status-link: /index/
+is-last: true
+
+
 
 
 

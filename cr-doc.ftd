@@ -9,8 +9,53 @@
 -- boolean show-cr-dd: false
 
 
+-- ftd.type label-big-bold: $fpm.type.label-big.font
+desktop: $fpm.type.copy-relaxed.desktop
+mobile: $fpm.type.copy-relaxed.mobile
+xl: $fpm.type.copy-relaxed.xl
+weight: 700
 
 
+-- record PrRequest:
+string documentation-title:
+string documentation-link:
+optional string current-status:
+optional string current-status-link:
+string user-name:
+string user-link:
+string timestamp:
+string timestamp-link:
+boolean is-last: false
+
+-- PrRequest list pr-request-list:
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: jkhk
+timestamp-link: /index/
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+current-status: updated
+current-status-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: jkhk
+timestamp-link: /index/
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link:  /index/
+current-status: updated
+current-status-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: jkhk
+timestamp-link: /index/
 
 
 
@@ -550,3 +595,185 @@ background-color if $confirm == true: $fpm.color.main.background.step-2
 width: fill 
 border-right-radius: 25
 role: $fpm.type.fine-print
+
+
+
+
+-- ftd.row breadcrum:
+optional string nav-title: 
+optional string nav-title-url: 
+optional string nav-sub-title: 
+optional string nav-sub-title-url:
+optional boolean show-pr-button : false
+width: fill
+spacing: 8
+
+
+--- ftd.row:
+width: fill
+spacing: 8 
+
+--- ftd.text: $nav-title 
+if: $nav-title is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+link: $nav-title-url
+white-space: nowrap
+
+--- ftd.text: ->
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+white-space: nowrap
+
+--- ftd.text:$nav-sub-title
+if: $nav-sub-title-url is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+link: $nav-sub-title-url
+white-space: nowrap
+
+
+--- container: ftd.main
+
+--- ftd.row:
+if: $show-pr-button
+
+--- cta-btn:
+icon-src: $assets.files.static.pull-request.png
+button-text: Create CR
+textcolor: $fpm.color.main.text-strong
+
+
+-- ftd.row search:
+caption title:
+optional ftd.image-src search-logo: 
+width: fill
+border-radius: 8
+padding-vertical: 14
+padding-horizontal: 28
+border-width: 1
+background-color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
+margin-top: $fpm.space.space-5
+margin-bottom: $fpm.space.space-6
+
+--- ftd.image:
+src: $search-logo
+height: 16
+width: auto
+
+--- ftd.input:
+cursor: pointer
+width:fill
+color: $fpm.color.main.text
+placeholder: $title
+
+
+
+
+-- ftd.column section:
+margin-top: $fpm.space.space-5
+width:fill
+margin-bottom:$fpm.space.space-5
+border-width: 1
+border-radius: 8
+border-color: $fpm.color.main.border-strong 
+PrRequest list pr-request-list: $pr-request-list
+
+--- pr-section:
+documentation-title: $obj.documentation-title
+documentation-link:  $obj.documentation-link
+user-name: $obj.user-name
+user-link:  $obj.user-link
+timestamp: $obj.timestamp
+timestamp-link:  $obj.timestamp-link
+current-status: $obj.current-status
+current-status-link:  $obj.current-status-link
+is-last: $obj.is-last
+$loop$: $pr-request-list as $obj
+
+
+
+
+
+
+
+
+
+-- ftd.column pr-section:
+string documentation-title:
+string documentation-link:
+string user-name:
+string user-link:
+string timestamp:
+string timestamp-link:
+optional string current-status:
+optional string current-status-link:
+boolean is-last: 
+boolean mouse-in: false
+width: fill
+border-bottom if not $is-last: 1
+border-color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+$on-mouse-enter$: $mouse-in = true
+$on-mouse-leave$: $mouse-in = false
+background-color if $mouse-in: $fpm.color.main.background.step-2
+
+
+--- ftd.column:
+width:fill
+spacing: 8
+
+--- ftd.row:
+width: fill
+spacing: 4
+
+--- ftd.text: \#
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+
+--- ftd.text: $documentation-title
+color: $fpm.color.main.text-strong
+role: $label-big-bold
+link: $documentation-link
+
+--- ftd.row:
+id: selection-container:
+
+--- ftd.text: :
+if: $current-status is not null
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+
+
+--- ftd.text: $current-status
+if: $current-status is not null
+color: $fpm.color.main.text-strong
+role: $label-big-bold
+link: $current-status-link
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+spacing: 4
+color: $fpm.color.main.text
+
+--- ftd.text: by
+role: $fpm.type.copy-relaxed
+
+
+--- ftd.text: $user-name
+role: $label-big-bold
+color: $fpm.color.main.text-strong
+link: $user-link
+
+--- ftd.text: on
+role: $fpm.type.copy-relaxed
+
+--- ftd.text:$timestamp
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text-strong
+link: $timestamp-link
+
