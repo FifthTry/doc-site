@@ -604,7 +604,7 @@ spacing: 4
 $on-click$: $open = true
 $on-click$: $confirm = false
 padding-horizontal: $fpm.space.space-4
-padding-vertical: $fpm.space.space-3
+padding-vertical: $fpm.space.space-4
 background-color if $open == true: $fpm.color.main.background.step-2
 width: fill
 border-left-radius: 25
@@ -756,26 +756,28 @@ spacing: 8
 --- ftd.row:
 width: fill
 spacing: 4
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
 
 --- ftd.text: \#
-color: $fpm.color.main.text-strong
 role: $fpm.type.copy-relaxed
 
 --- ftd.text: $documentation-title
-color: $fpm.color.main.text-strong
 role: $history-title
 link: $documentation-link
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
 
 --- ftd.text: :
 if: $current-status is not null
-color: $fpm.color.main.text-strong
 role: $fpm.type.copy-relaxed
 
 --- ftd.text: $current-status
 if: $current-status is not null
-color: $fpm.color.main.text-strong
 role: $history-title
 link: $current-status-link
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
 
 --- container: ftd.main
 
@@ -783,20 +785,24 @@ link: $current-status-link
 width: fill
 spacing: 4
 color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
 
 --- ftd.text: by
-role: $fpm.type.copy-relaxed
+role: $fpm.type.fine-print
+margin-left: $fpm.space.space-1
 
 
 --- ftd.text: $user-name
 role: $fpm.type.fine-print
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
 link: $user-link
 
 --- ftd.text: on
-role: $fpm.type.copy-relaxed
+role: $fpm.type.fine-print
 
 --- ftd.text:$timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
 link: $timestamp-link
