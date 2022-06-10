@@ -1004,6 +1004,7 @@ margin-left: $fpm.space.space-4
 background-color: $fpm.color.main.text
 padding: $fpm.space.space-2
 border-radius: 40
+white-space: nowrap
 
 
 

@@ -1,5 +1,5 @@
 -- import: fifthtry.github.io/doc-site/assets
-
+-- import: fifthtry.github.io/doc-site as ft
 
 
 -- boolean toggle-cr-wrapper: false
@@ -912,12 +912,12 @@ role: $fpm.type.copy-relaxed
 caption title:
 prhistory list pr-history-list:
 margin-top: $fpm.space.space-7
-spacing: 16
 width: fill
 
 
 --- ftd.row:
 width: fill
+margin-bottom: $fpm.space.space-5
 
 --- ftd.text: $title
 role: $history-title
@@ -934,6 +934,7 @@ textcolor: $fpm.color.main.text-strong
 --- ftd.column:
 spacing: 16
 width: fill
+margin-bottom: $fpm.space.space-9
 
 --- history-prs:
 pr-item: $obj.pr-item
@@ -946,7 +947,7 @@ $loop$: $pr-history-list as $obj
 --- ftd.row:
 width: fill
 spacing: 16
-margin-top: $fpm.space.space-8
+
 
 --- cta-btn:
 button-text: Merge
@@ -979,3 +980,102 @@ role: $fpm.type.copy-tight
 padding-top: $fpm.space.space-1
 link: $pr-item-url
 color if $MOUSE-IN: $fpm.color.main.text-strong
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column inbox:
+caption title:
+optional body title-body:
+optional string emoji:❕
+padding-vertical: $fpm.space.space-4
+padding-horizontal:$fpm.space.space-7
+optional ftd.color bordercolor: $fpm.color.main.error.base
+border-color: $bordercolor
+border-width: 1
+optional ftd.color backgroundcolor: $fpm.color.main.error.base
+background-color: $backgroundcolor
+spacing: 16
+open: true
+append-at: code-container
+
+--- ftd.row:
+width: fill
+id: selection-container
+spacing: 16
+
+
+--- ftd.text: 
+text: $emoji
+
+--- container: selection-container
+
+--- ftd.column:
+width: fill
+spacing: 8
+
+--- ftd.text: $title
+role: $history-title
+
+
+--- ftd.text:
+text: $title-body
+role: $fpm.type.copy-tight
+
+
+--- container: ftd.main
+
+--- ftd.column: 
+width: fill
+border-radius: 6
+id: code-container
+
+
+
+
+
+
+
+
+
+
+-- ftd.row buttons:
+width: fill
+optional string cta-primary-text:
+optional string cta-secondary-text:
+optional string last-change:
+spacing: 16
+margin-bottom: $fpm.space.space-7
+
+--- ftd.row:
+width: fill
+spacing: 16
+
+--- cta-btn:
+button-text: $cta-primary-text
+textcolor: $fpm.color.main.text-strong
+
+--- cta-btn:
+button-text: $cta-secondary-text
+textcolor: $fpm.color.main.text-strong
+backgroundcolor: $fpm.color.main.cta-secondary.base
+
+--- container: ftd.main
+
+--- ft.badge: $last-change
+
+
+
+
+
+
+
+

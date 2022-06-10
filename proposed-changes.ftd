@@ -7,16 +7,16 @@
 
 -- cr.breadcrumb:
 nav-title: Fifthtry User Manual
-nav-title-url: /
+nav-title-url: /proposed-changes/
 nav-sub-title:  Change Requests
-nav-sub-title-url: /
+nav-sub-title-url: /proposed-changes/
 nav-sub-section-title: History and Switcher
 show-pr-button: false
 
 
 -- cr.request-title:
 user-name: Nikita
-user-link: /
+user-link: /proposed-changes/
 
 wants to merge these changes
 
@@ -28,9 +28,9 @@ middle: true
 
 -- page-code:
 doc-title: Working with Changes request
-doc-title-url: /
+doc-title-url: /proposed-changes/
 doc-repo: fifthtry/manual~24/video-tutorials/cr
-repo-link: /
+repo-link: /proposed-changes/
 last-change: Mergable
 cta-text: Merge Change
 
