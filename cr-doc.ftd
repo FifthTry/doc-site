@@ -1071,7 +1071,7 @@ backgroundcolor: $fpm.color.main.cta-secondary.base
 --- container: ftd.main
 
 --- ft.badge: $last-change
-
+light: true
 
 
 

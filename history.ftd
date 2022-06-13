@@ -138,6 +138,7 @@ color if $MOUSE-IN: $fpm.color.main.text-strong
 align: center
 
 --- ft.badge: $last-change
+light: true
 
 --- container: status-wrap
 

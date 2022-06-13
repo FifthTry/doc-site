@@ -58,6 +58,7 @@ spacing: 16
 margin-left: -16
 
 --- ft.badge: $last-change
+light: true
 
 
 --- ftd.text: $doc-title

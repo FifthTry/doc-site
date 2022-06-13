@@ -37,6 +37,7 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 - History Switcher: /history-switcher/
 - Proposed changes: /proposed-changes/
 - Markdown: /learn-markdown/
+- Badge: /badge/
 # withbreadcum: /withbreadcum/
 
 # Use this template: https://github.com/FifthTry/fpm-book/generate/

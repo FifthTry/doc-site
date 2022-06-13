@@ -998,12 +998,29 @@ $body
 
 -- ftd.text badge: $title
 caption title: 
+boolean light: true
+boolean dark: false
+boolean primary: false
+boolean secondary: false
+boolean success: false
+boolean danger: false
+boolean warning: false
+boolean info: false
 role: $fpm.type.fine-print
-color: $fpm.color.main.border
+color: $fpm.color.main.text-strong
+color if $light: $fpm.color.main.background.base
 margin-left: $fpm.space.space-4
-background-color: $fpm.color.main.text
-padding: $fpm.space.space-2
-border-radius: 40
+background-color if $light: $fpm.color.main.text
+background-color if $dark: $fpm.color.main.background.step-2
+background-color if $primary: $fpm.color.main.cta-primary.base
+background-color if $secondary: $fpm.color.main.cta-secondary.base
+background-color if $success: $fpm.color.main.success.base
+background-color if $danger: $fpm.color.main.error.base
+background-color if $warning: $fpm.color.main.warning.base
+background-color if $info: $fpm.color.main.info.base
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-radius: 20
 white-space: nowrap
 
 
