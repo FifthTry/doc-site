@@ -1,0 +1,118 @@
+-- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/assets
+
+-- ft.page: `chat-bot` and it's Usage
+
+`chat-bot` is a chatting experince via using `FTD` lang:
+
+
+
+
+-- message:
+
+Hey Buddy! Though this is a chat message but I have multiple features like showing
+code snippet inside this message!
+Would you like to see how? 
+
+--- ft.code: Below is code:
+lang: ftd
+
+\-- message:
+
+
+
+
+-- message:
+avatar-left: false
+
+Yo! I like the way this code block fits in my msg: Even if I want to add new 
+text as line then I should be able to add it
+
+--- ft.code: Below is code:
+lang: ftd
+
+\-- message:
+avatar-left: false
+avatar: $assets.files.static.bot-icons.user-icon.png
+
+
+--- ftd.text: Though the code block appears above, can I have some text below it?
+color: $fpm.color.main.text-strong
+role: $fpm.type.blockquote
+
+
+
+
+
+
+-- ftd.column message:
+optional body body:
+boolean avatar-left: true
+ftd.image-src avatar: $assets.files.static.bot-icons.agent.png
+width: fill
+margin-top: $fpm.space.space-2
+margin-bottom: $fpm.space.space-7
+open: true
+append-at: msg-container
+
+--- ftd.row:
+if: $avatar-left
+width: fill
+
+--- ftd.image:
+src: $avatar
+width: 32
+height: 32
+margin-right: $fpm.space.space-4
+margin-top: $fpm.space.space-2
+ 
+--- ftd.column:
+border-width: 1
+border-color: $fpm.color.main.border-strong
+background-color: $fpm.color.main.background.step-1
+padding: $fpm.space.space-3
+border-radius: 3
+width: fill
+id: msg-container
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text-strong
+role: $fpm.type.blockquote
+width: fill
+
+--- container: ftd.main
+
+--- ftd.column:
+if: not $avatar-left
+width: fill
+ 
+--- ftd.row:
+width: fill
+id: chat
+
+--- ftd.column:
+border-width: 1
+border-color: $fpm.color.main.border-strong
+background-color: $fpm.color.main.background.step-1
+padding: $fpm.space.space-3
+border-radius: 3
+width: fill
+id: msg-container
+
+--- ftd.text:
+text: $body
+color: $fpm.color.main.text-strong
+role: $fpm.type.blockquote
+width: fill
+
+--- container: chat
+
+--- ftd.image:
+src: $avatar
+width: 32
+height: 32
+margin-left: $fpm.space.space-4
+margin-top: $fpm.space.space-2
+
+
