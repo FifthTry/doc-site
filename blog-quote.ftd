@@ -152,7 +152,6 @@ color:$fpm.color.main.text-strong
 --- ftd.row:
 width: fill
 id: about-container
-spacing: 16
 margin-top: $fpm.space.space-6
 align: center
 
@@ -164,6 +163,7 @@ src: $user-logo
 width: auto
 height: 60
 border-radius: 100
+margin-right: $fpm.space.space-5
 
 
 
@@ -175,12 +175,12 @@ src: $user-brand-logo
 width: auto
 height: 44
 padding-top: $fpm.space.space-4
+margin-right: $fpm.space.space-9
 
 --- container:about-container
 
 --- ftd.column: 
 width: fill
-
 
 --- ftd.text: $user-name
 role: $heading-small-bold
@@ -263,4 +263,5 @@ color: $fpm.color.main.text-strong
 
 --- ftd.text: $user-sub-title
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.text-strong
+

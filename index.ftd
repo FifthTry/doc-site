@@ -1007,8 +1007,11 @@ boolean danger: false
 boolean warning: false
 boolean info: false
 role: $fpm.type.fine-print
-color: $fpm.color.main.text-strong
-color if $light: $fpm.color.main.background.base
+color: $fpm.color.main.background.base
+color if $dark: $fpm.color.main.text-strong
+color if $primary: $fpm.color.main.text-strong
+color if $secondary: $fpm.color.main.text-strong
+color if $danger: $fpm.color.main.text-strong
 margin-left: $fpm.space.space-4
 background-color if $light: $fpm.color.main.text
 background-color if $dark: $fpm.color.main.background.step-2
