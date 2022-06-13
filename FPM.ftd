@@ -41,6 +41,7 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 - Blog-quote: /blog-quote/
 - Post Single Intro: /post-single-intro/
 - Message: /message/
+- Tip: /tip/
 # withbreadcum: /withbreadcum/
 
 # Use this template: https://github.com/FifthTry/fpm-book/generate/

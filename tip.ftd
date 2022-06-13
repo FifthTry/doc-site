@@ -1,0 +1,90 @@
+-- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site/assets
+
+-- ft.page: `tip` and it's Usage
+
+`tip` is a new conversation experince via using `FTD` lang:
+
+
+
+-- tip: Cool bots hot tip!
+
+Hey Buddy! Though this is a chat message but I have multiple features like showing
+code snippet inside this message!
+Would you like to see how? 
+
+--- ft.code: Below is code:
+lang: ftd
+
+\-- tip:  Some tip title here
+
+Hey Buddy! Though this is a chat message but I have multiple features like showing
+code snippet inside this message!
+Would you like to see how? 
+
+-- tip: Cool bots hot tip !
+
+Yo! I like the way this code block fits in my msg: Even if I want to add new 
+text as line then I should be able to add it
+
+--- ft.code: Wow! awesome man!:
+lang: ftd
+
+\--- ftd.text: Though the code block appears above, can I have some text below it?
+color: $fpm.color.main.text
+role: $fpm.type.copy-relaxed
+
+--- ftd.text: Though the code block appears above, can I have some text below it?
+color: $fpm.color.main.text
+role: $fpm.type.copy-relaxed
+
+
+
+
+
+
+-- ftd.column tip:
+optional caption title:
+optional body body:
+optional ftd.image-src avatar: $assets.files.static.bot-icons.agent.png
+border-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.step-1
+padding: $fpm.space.space-4
+border-radius: 3
+border-width: 1
+width: fill
+margin-top: $fpm.space.space-2
+margin-bottom: $fpm.space.space-7
+open: true
+append-at: msg-container
+
+--- ftd.column:
+width: fill
+
+--- ftd.row:
+align: center
+margin-bottom: $fpm.space.space-6
+
+--- ftd.image:
+src: $avatar
+width: 32
+height: 32
+margin-right: $fpm.space.space-4
+margin-top: $fpm.space.space-2
+align: center
+
+--- ftd.text: $title
+if: $title is not null
+color: $fpm.color.main.text-strong
+role: $fpm.type.heading-small
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+id: msg-container
+
+--- ft.markdown:
+body: $body
+
+--- container: ftd.main
