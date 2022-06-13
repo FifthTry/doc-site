@@ -1,0 +1,98 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site as ft
+
+-- ftd.type history-title: $fpm.type.label-big.font
+desktop: $fpm.type.heading-small.desktop
+mobile: $fpm.type.heading-small.mobile
+xl: $fpm.type.heading-small.xl
+weight: 700
+
+-- string quote-text:
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
+
+
+
+-- blog-quote:
+quote-image: $assets.files.static.block.png
+quote-text: $quote-text
+user-logo: $assets.files.static.arpita.jpeg
+user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
+user-name: Arpita Jaiswal
+user-sub-title: Director of ....
+
+
+
+
+-- ftd.column blog-quote:
+optional ftd.image-src quote-image:
+optional body quote-text:
+optional ftd.image-src user-logo:
+optional ftd.image-src user-brand-logo:
+optional string user-name:
+optional string user-sub-title:
+width: fill
+padding-vertical: $fpm.space.space-11
+ftd.color backgroundcolor: $fpm.color.main.shadow
+background-color: $backgroundcolor
+
+
+--- ftd.row:
+align: center
+max-width: 1200
+id: main-container
+spacing: 80
+
+
+
+--- ftd.image:
+src: $quote-image
+width: auto
+height: 72
+
+
+--- container: main-container
+
+
+--- ftd.column:
+width: fill
+max-width: 850
+
+
+--- ftd.text:
+text: $quote-text
+role: $fpm.type.heading-large
+color:$fpm.color.main.text-strong
+
+--- ftd.row:
+width: fill
+id: about-container
+spacing: 16
+margin-top: $fpm.space.space-6
+align: center
+
+--- ftd.image:
+src: $user-logo
+width: auto
+height: 60
+
+--- ftd.image:
+src: $user-brand-logo
+width: auto
+height: 44
+padding-top: $fpm.space.space-4
+
+--- container:about-container
+
+--- ftd.column: 
+width: fill
+
+
+--- ftd.text: $user-name
+role: $history-title
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $user-sub-title
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
