@@ -17,9 +17,9 @@ with WebContainers is absolutely bonkers.
 -- blog-quote:
 quote-image: $assets.files.static.block.png
 quote-text: $quote-text
-user-logo: $assets.files.static.arpita.jpeg
+user-logo: $assets.files.static.amitu.jpg
 user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
-user-name: Arpita Jaiswal
+user-name: Amit Upadhyay
 user-sub-title: Director of ....
 
 
