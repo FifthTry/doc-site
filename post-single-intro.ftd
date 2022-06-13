@@ -1,0 +1,153 @@
+-- import: fpm
+-- import: fifthtry.github.io/doc-site/assets
+
+-- string body:
+
+Hi there! We're StackBlitz, a web IDE powered by WebAssembly. We're excited to 
+join this cross-industry partnership accelerating the world's transition to 
+secure-by-default computing with WebAssembly and more rapidly bring 
+WebContainers to all devices, languages, platforms, and runtimes.
+
+
+
+-- ftd.type heading-hero-bold: $fpm.type.heading-hero.font
+desktop: $fpm.type.heading-hero.desktop
+mobile: $fpm.type.heading-hero.mobile
+xl: $fpm.type.heading-hero.xl
+weight: 700
+
+-- ftd.type fine-print-bold: $fpm.type.fine-print.font
+desktop: $fpm.type.fine-print.desktop
+mobile: $fpm.type.fine-print.mobile
+xl: $fpm.type.fine-print.xl
+weight: 700
+
+
+-- post-single-intro:
+poster: $assets.files.static.poster.png
+post-title: StackBlitz has joined the Bytecode Alliance
+avatar: $assets.files.static.amitu.jpg
+username: Amit Upadhyay
+user-profile-link: https://in.linkedin.com/in/amitu
+post-category: News & Announcements
+post-category-link: /
+timestamp: March 15, 2022
+body: $body
+
+
+-- ftd.column post-single-intro:
+ftd.image-src poster:
+string post-title:
+ftd.image-src avatar:
+string username:
+string user-profile-link:
+string post-category:
+string post-category-link:
+string timestamp:
+body body:
+ftd.color backgroundcolor: $fpm.color.main.background.base
+width: fill
+background-color: $backgroundcolor
+padding-top: $fpm.space.space-15
+
+
+--- post-metadata:
+post-title: $post-title
+
+--- post-user-metadata:
+avatar: $avatar
+username: $username
+user-profile-link: $user-profile-link
+post-category: $post-category
+post-category-link: $post-category-link
+timestamp: $timestamp
+
+--- post-subtitle:
+body: $body
+
+
+--- ftd.image:
+src: $poster
+width: fill
+height: 574
+
+-- ftd.row post-metadata:
+string post-title:
+padding-horizontal: $fpm.space.space-15
+width: fill
+max-width: 1000
+
+
+--- ftd.text: $post-title
+role: $heading-hero-bold
+color: $fpm.color.main.text-strong
+
+
+-- ftd.row post-user-metadata:
+ftd.image-src avatar:
+string username:
+string user-profile-link:
+string post-category:
+string post-category-link:
+string timestamp:
+spacing: 52
+width: fill
+margin-top: $fpm.space.space-9
+padding-horizontal: $fpm.space.space-15
+
+--- ftd.row:
+link: $user-profile-link
+border-radius: 25
+overflow-x: hidden
+
+--- ftd.image:
+src: $avatar
+width: auto
+height: 38
+
+
+--- container: ftd.main
+
+--- ftd.text: $username
+link: $user-profile-link
+role: $fine-print-bold
+color: $fpm.color.main.text
+padding-top: $fpm.space.space-2
+
+--- container: ftd.main
+
+--- ftd.text: $timestamp
+role: $fine-print-bold
+color: $fpm.color.main.text
+padding-top: $fpm.space.space-2
+
+--- container: ftd.main
+
+--- ftd.text: $post-category
+link: $post-category-link
+role: $fine-print-bold
+color: $fpm.color.main.cta-primary.base
+padding-top: $fpm.space.space-2
+
+
+
+
+-- ftd.row post-subtitle:
+width: fill
+padding-horizontal: $fpm.space.space-15
+margin-top: $fpm.space.space-13
+margin-bottom: $fpm.space.space-11
+body body:
+
+--- ftd.row:
+width: fill
+border-left: 2
+padding-left: $fpm.space.space-11
+border-color: $fpm.color.main.border
+
+
+
+--- ftd.text: 
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.heading-small
