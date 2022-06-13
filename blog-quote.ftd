@@ -1,11 +1,19 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site as ft
 
--- ftd.type history-title: $fpm.type.label-big.font
+-- ftd.type heading-small-bold: $fpm.type.heading-small.font
 desktop: $fpm.type.heading-small.desktop
 mobile: $fpm.type.heading-small.mobile
 xl: $fpm.type.heading-small.xl
 weight: 700
+
+
+-- ftd.type fine-print-bold: $fpm.type.fine-print.font
+desktop: $fpm.type.fine-print.desktop
+mobile: $fpm.type.fine-print.mobile
+xl: $fpm.type.fine-print.xl
+weight: 700
+
 
 -- string quote-text:
 
@@ -77,8 +85,38 @@ optional ftd.image-src user-brand-logo:
 optional string user-name:
 optional string user-sub-title:
 width: fill
-padding-vertical: $fpm.space.space-11
 ftd.color backgroundcolor: $fpm.color.main.shadow
+
+
+--- blog-quote-desktop:
+if: not $ft.is-mobile
+quote-image: $quote-image
+quote-text: $quote-text
+user-logo: $user-logo
+user-brand-logo: $user-brand-logo
+user-name: $user-name
+user-sub-title: $user-sub-title
+backgroundcolor: $backgroundcolor
+
+--- blog-quote-mobile:
+if: $ft.is-mobile
+quote-text: $quote-text
+user-logo: $user-logo
+user-brand-logo: $user-brand-logo
+user-name: $user-name
+user-sub-title: $user-sub-title
+backgroundcolor: $backgroundcolor
+
+-- ftd.column blog-quote-desktop:
+optional ftd.image-src quote-image:
+optional body quote-text:
+optional ftd.image-src user-logo:
+optional ftd.image-src user-brand-logo:
+optional string user-name:
+optional string user-sub-title:
+width: fill
+padding-vertical: $fpm.space.space-11
+ftd.color backgroundcolor:
 background-color: $backgroundcolor
 margin-top: $fpm.space.space-6
 margin-bottom: $fpm.space.space-6
@@ -145,9 +183,84 @@ width: fill
 
 
 --- ftd.text: $user-name
-role: $history-title
+role: $heading-small-bold
 color: $fpm.color.main.text-strong
 
 --- ftd.text: $user-sub-title
 role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column blog-quote-mobile:
+optional ftd.image-src quote-image:
+optional body quote-text:
+optional ftd.image-src user-logo:
+optional ftd.image-src user-brand-logo:
+optional string user-name:
+optional string user-sub-title:
+width: fill
+padding-vertical: $fpm.space.space-7
+padding-horizontal: $fpm.space.space-4
+ftd.color backgroundcolor:
+background-color: $backgroundcolor
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+
+
+
+
+--- ftd.text:
+text: $quote-text
+role: $heading-small-bold
+color:$fpm.color.main.text-strong
+margin-bottom: $fpm.space.space-6
+
+
+--- ftd.row:
+width: fill
+id: about-container
+spacing: 16
+align: center
+margin-bottom: $fpm.space.space-4
+
+
+
+
+--- ftd.image:
+src: $user-logo
+width: auto
+height: 42
+border-radius: 100
+
+
+
+
+--- ftd.image:
+src: $user-brand-logo
+width: auto
+height: 32
+padding-top: $fpm.space.space-1
+
+--- container: ftd.main
+
+--- ftd.column: 
+width: fill
+spacing: 8
+
+
+--- ftd.text: $user-name
+role: $fine-print-bold
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $user-sub-title
+role: $fpm.type.fine-print
 color: $fpm.color.main.text

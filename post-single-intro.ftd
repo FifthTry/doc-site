@@ -9,6 +9,12 @@ secure-by-default computing with WebAssembly and more rapidly bring
 WebContainers to all devices, languages, platforms, and runtimes.
 
 
+-- ftd.type heading-medium-bold: $fpm.type.heading-medium.font
+desktop: $fpm.type.heading-medium.desktop
+mobile: $fpm.type.heading-medium.mobile
+xl: $fpm.type.heading-medium.xl
+weight: 700
+
 
 -- ftd.type heading-hero-bold: $fpm.type.heading-hero.font
 desktop: $fpm.type.heading-hero.desktop
@@ -46,8 +52,14 @@ world's transition to secure-by-default computing with WebAssembly
 and more rapidly bring WebContainers to all devices, languages,
 platforms, and runtimes.
 
+-- ftd.column:
+overflow-x: auto
+width: 800
 
--- post-single-intro:
+--- ftd.column:
+width: 1536
+
+--- post-single-intro:
 poster: $assets.files.static.picture1.jpeg
 post-title: StackBlitz has joined the Bytecode Alliance
 avatar: $assets.files.static.amitu.jpg
@@ -76,9 +88,50 @@ string timestamp:
 body body:
 ftd.color backgroundcolor: $fpm.color.main.background.base
 width: fill
+
+
+
+--- post-single-intro-desktop:
+if: not $ft.is-mobile
+poster: $poster
+post-title: $post-title
+avatar: $avatar
+username: $username
+user-profile-link: $user-profile-link
+post-category: $post-category
+post-category-link: $post-category-link
+timestamp: $timestamp
+body: $body
+backgroundcolor: $backgroundcolor
+
+--- post-single-intro-mobile:
+if: $ft.is-mobile
+poster: $poster
+post-title: $post-title
+avatar: $avatar
+username: $username
+user-profile-link: $user-profile-link
+post-category: $post-category
+post-category-link: $post-category-link
+timestamp: $timestamp
+body: $body
+backgroundcolor: $backgroundcolor
+
+
+-- ftd.column post-single-intro-desktop:
+ftd.image-src poster:
+string post-title:
+ftd.image-src avatar:
+string username:
+string user-profile-link:
+string post-category:
+string post-category-link:
+string timestamp:
+body body:
+ftd.color backgroundcolor: $fpm.color.main.background.base
+width: fill
 background-color: $backgroundcolor
 padding-top: $fpm.space.space-15
-
 
 --- post-metadata:
 post-title: $post-title
@@ -100,20 +153,124 @@ src: $poster
 width: fill
 height: 574
 
+
+
+
+
+
+
+
+
+
+-- ftd.column post-single-intro-mobile:
+ftd.image-src poster:
+string post-title:
+ftd.image-src avatar:
+string username:
+string user-profile-link:
+string post-category:
+string post-category-link:
+string timestamp:
+body body:
+ftd.color backgroundcolor:
+width: fill
+background-color: $backgroundcolor
+padding-top: $fpm.space.space-8
+
+
+--- post-metadata:
+post-title: $post-title
+
+--- post-user-metadata:
+avatar: $avatar
+username: $username
+user-profile-link: $user-profile-link
+post-category: $post-category
+post-category-link: $post-category-link
+timestamp: $timestamp
+
+--- post-subtitle:
+body: $body
+
+
+--- ftd.image:
+src: $poster
+width: fill
+height: 152
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- ftd.row post-metadata:
 string post-title:
-padding-horizontal: $fpm.space.space-11
 width: fill
 max-width: 1000
 max-height: 174
 
 
 --- ftd.text: $post-title
+padding-horizontal: $fpm.space.space-11
+if: not $ft.is-mobile
 role: $heading-hero-bold
 color: $fpm.color.main.text-strong
 
+--- ftd.text: $post-title
+padding-horizontal: $fpm.space.space-7
+if: $ft.is-mobile
+role: $heading-medium-bold
+color: $fpm.color.main.text-strong
 
 -- ftd.row post-user-metadata:
+ftd.image-src avatar:
+string username:
+string user-profile-link:
+string post-category:
+string post-category-link:
+string timestamp:
+width: fill
+
+
+
+--- post-user-metadata-desktop:
+if: not $ft.is-mobile
+avatar: $avatar
+username: $username
+user-profile-link: $user-profile-link
+post-category: $post-category
+post-category-link: $post-category-link
+timestamp: $timestamp
+
+--- post-user-metadata-mobile:
+if: $ft.is-mobile
+avatar: $avatar
+username: $username
+user-profile-link: $user-profile-link
+post-category: $post-category
+post-category-link: $post-category-link
+timestamp: $timestamp
+
+
+-- ftd.row post-user-metadata-desktop:
 ftd.image-src avatar:
 string username:
 string user-profile-link:
@@ -124,7 +281,6 @@ spacing: 52
 width: fill
 margin-top: $fpm.space.space-9
 padding-horizontal: $fpm.space.space-11
-
 
 --- ftd.row:
 id: image-text
@@ -165,13 +321,80 @@ padding-top: $fpm.space.space-2
 
 
 
+-- ftd.column post-user-metadata-mobile:
+ftd.image-src avatar:
+string username:
+string user-profile-link:
+string post-category:
+string post-category-link:
+string timestamp:
+spacing: 24
+width: fill
+margin-top: $fpm.space.space-7
+padding-horizontal: $fpm.space.space-8
+
+
+--- ftd.row:
+id: image-text
+spacing: 20
+
+--- ftd.row:
+link: $user-profile-link
+
+
+--- ftd.image:
+src: $avatar
+width: auto
+height: 32
+border-radius: 100
+
+--- container: image-text
+
+--- ftd.text: $username
+link: $user-profile-link
+role: $fine-print-bold
+color: $fpm.color.main.text
+padding-top: $fpm.space.space-2
+white-space: nowrap
+
+--- container: ftd.main
+
+--- ftd.text: $timestamp
+role: $fine-print-bold
+color: $fpm.color.main.text
+padding-top: $fpm.space.space-2
+
+--- container: ftd.main
+
+--- ftd.text: $post-category
+link: $post-category-link
+role: $fine-print-bold
+color: $fpm.color.main.cta-primary.base
+padding-top: $fpm.space.space-2
+
+
 
 -- ftd.row post-subtitle:
+width: fill
+body body:
+max-width: 1056
+
+--- post-subtitle-desktop:
+if: not $ft.is-mobile
+body: $body
+
+--- post-subtitle-mobile:
+if: $ft.is-mobile
+body: $body
+
+
+-- ftd.row post-subtitle-desktop:
 width: fill
 padding-horizontal: $fpm.space.space-11
 margin-top: $fpm.space.space-13
 margin-bottom: $fpm.space.space-11
 body body:
+max-width: 1056
 
 --- ftd.row:
 width: fill
@@ -180,8 +403,29 @@ padding-left: $fpm.space.space-11
 border-color: $fpm.color.main.border
 
 
-
 --- ftd.text: 
 text: $body
 color: $fpm.color.main.text
 role: $fpm.type.heading-small
+
+-- ftd.row post-subtitle-mobile:
+width: fill
+padding-horizontal: $fpm.space.space-7
+margin-top: $fpm.space.space-7
+margin-bottom: $fpm.space.space-7
+body body:
+max-width: 1056
+
+--- ftd.row:
+width: fill
+border-left: 2
+padding-left: $fpm.space.space-7
+border-color: $fpm.color.main.border
+
+
+--- ftd.text: 
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.copy-tight
+
+
