@@ -1,0 +1,21 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/blog-quote as bq
+
+-- string quote-text:
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
+
+-- ftd.column:
+background-color: $fpm.color.main.background.base
+padding-vertical: $fpm.space.space-15
+min-height: 750
+width: fill
+
+--- bq.blog-quote:
+quote-image: $assets.files.static.block.png
+quote-text: $quote-text
+user-logo: $assets.files.static.amitu.jpg
+user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
+user-name: Amit Upadhyay
+user-sub-title: CEO

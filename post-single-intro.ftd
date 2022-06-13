@@ -1,5 +1,5 @@
--- import: fpm
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site as ft
 
 -- string body:
 
@@ -23,8 +23,15 @@ xl: $fpm.type.fine-print.xl
 weight: 700
 
 
--- post-single-intro:
-poster: $assets.files.static.poster.png
+-- ft.page: `post-single-intro` and it's Usage
+
+`-- post-single-intro` can be used as part of blog posts.
+
+-- ft.code: Example code for `-- post-single-intro`
+lang: ftd
+
+\-- post-single-intro:
+poster: $assets.files.static.picture1.jpeg
 post-title: StackBlitz has joined the Bytecode Alliance
 avatar: $assets.files.static.amitu.jpg
 username: Amit Upadhyay
@@ -32,7 +39,29 @@ user-profile-link: https://in.linkedin.com/in/amitu
 post-category: News & Announcements
 post-category-link: /
 timestamp: March 15, 2022
-body: $body
+
+Hi there! We're StackBlitz, a web IDE powered by WebAssembly. We're 
+excited to join this cross-industry partnership accelerating the 
+world's transition to secure-by-default computing with WebAssembly 
+and more rapidly bring WebContainers to all devices, languages,
+platforms, and runtimes.
+
+
+-- post-single-intro:
+poster: $assets.files.static.picture1.jpeg
+post-title: StackBlitz has joined the Bytecode Alliance
+avatar: $assets.files.static.amitu.jpg
+username: Amit Upadhyay
+user-profile-link: https://in.linkedin.com/in/amitu
+post-category: News & Announcements
+post-category-link: /
+timestamp: March 15, 2022
+
+Hi there! We're StackBlitz, a web IDE powered by WebAssembly. We're 
+excited to join this cross-industry partnership accelerating the 
+world's transition to secure-by-default computing with WebAssembly 
+and more rapidly bring WebContainers to all devices, languages,
+platforms, and runtimes.
 
 
 -- ftd.column post-single-intro:
@@ -73,9 +102,10 @@ height: 574
 
 -- ftd.row post-metadata:
 string post-title:
-padding-horizontal: $fpm.space.space-15
+padding-horizontal: $fpm.space.space-11
 width: fill
 max-width: 1000
+max-height: 174
 
 
 --- ftd.text: $post-title
@@ -93,7 +123,12 @@ string timestamp:
 spacing: 52
 width: fill
 margin-top: $fpm.space.space-9
-padding-horizontal: $fpm.space.space-15
+padding-horizontal: $fpm.space.space-11
+
+
+--- ftd.row:
+id: image-text
+spacing: 16
 
 --- ftd.row:
 link: $user-profile-link
@@ -105,8 +140,7 @@ src: $avatar
 width: auto
 height: 38
 
-
---- container: ftd.main
+--- container: image-text
 
 --- ftd.text: $username
 link: $user-profile-link
@@ -134,7 +168,7 @@ padding-top: $fpm.space.space-2
 
 -- ftd.row post-subtitle:
 width: fill
-padding-horizontal: $fpm.space.space-15
+padding-horizontal: $fpm.space.space-11
 margin-top: $fpm.space.space-13
 margin-bottom: $fpm.space.space-11
 body body:

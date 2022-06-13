@@ -14,13 +14,57 @@ with WebContainers is absolutely bonkers.
 
 
 
--- blog-quote:
+
+
+-- ft.page: `blog-quote` and it's Usage
+
+`-- blog-quote` can be used as part of blog posts.
+
+-- ft.code: Basic Example: 
+lang: ftd
+
+\-- blog-quote:
 quote-image: $assets.files.static.block.png
 quote-text: $quote-text
 user-logo: $assets.files.static.amitu.jpg
 user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
 user-name: Amit Upadhyay
-user-sub-title: Director of ....
+user-sub-title: CEO
+
+
+
+
+--- blog-quote:
+quote-image: $assets.files.static.block.png
+quote-text: $quote-text
+user-logo: $assets.files.static.amitu.jpg
+user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
+user-name: Amit Upadhyay
+user-sub-title: CEO
+
+
+
+-- ft.h3: Showing example as actual view on desktop with 1536 pixel screen resolution. Background occupies full width and `blog-quote` appears on center position like below
+
+
+[Click Here](/blog-quote-example)
+
+
+-- ftd.column:
+overflow-x: auto
+width: 800
+
+--- ftd.column:
+width: 1536
+
+
+--- blog-quote:
+quote-image: $assets.files.static.block.png
+quote-text: $quote-text
+user-logo: $assets.files.static.amitu.jpg
+user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
+user-name: Amit Upadhyay
+user-sub-title: CEO
 
 
 
@@ -36,14 +80,16 @@ width: fill
 padding-vertical: $fpm.space.space-11
 ftd.color backgroundcolor: $fpm.color.main.shadow
 background-color: $backgroundcolor
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
 
 
 --- ftd.row:
-align: center
-max-width: 1200
-id: main-container
+id: switch-container
 spacing: 80
-
+width: fill
+max-width: 1000
+align: center
 
 
 --- ftd.image:
@@ -52,7 +98,7 @@ width: auto
 height: 72
 
 
---- container: main-container
+--- container: switch-container
 
 
 --- ftd.column:
@@ -72,10 +118,19 @@ spacing: 16
 margin-top: $fpm.space.space-6
 align: center
 
+
+
+
 --- ftd.image:
 src: $user-logo
 width: auto
 height: 60
+border-radius: 100
+
+
+
+--- container:about-container
+
 
 --- ftd.image:
 src: $user-brand-logo
