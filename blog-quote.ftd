@@ -25,13 +25,15 @@ weight: 700
 -- ft.code: Basic Example: 
 lang: ftd
 
+
 \-- blog-quote: Amit Upadhyay
 label: CEO
 avatar: $assets.files.static.amitu.jpg
-logo: $assets.files.static.logo-fifthtry-dark.svg
+logo: $assets.files.static.fifthtry.svg
 
 Being able to develop & debug Remix applications entirely inside your browser 
 with WebContainers is absolutely bonkers.
+
 
 
 
@@ -39,7 +41,7 @@ with WebContainers is absolutely bonkers.
 -- blog-quote: Amit Upadhyay
 label: CEO
 avatar: $assets.files.static.amitu.jpg
-logo: $assets.files.static.logo-fifthtry-dark.svg
+logo: $assets.files.static.fifthtry.svg
 
 Being able to develop & debug Remix applications entirely inside your browser 
 with WebContainers is absolutely bonkers.
@@ -47,35 +49,14 @@ with WebContainers is absolutely bonkers.
 
 
 
--- ft.h3: Showing example as actual view on desktop with 1536 pixel screen resolution. Background occupies full width and `blog-quote` appears on center position like below
 
-
-[Click Here](/blog-quote-example)
-
-
--- ftd.column:
-overflow-x: auto
-width: 800
-
---- ftd.column:
-width: 1536
-
-
---- blog-quote: Amit Upadhyay
-label: CEO
-avatar: $assets.files.static.amitu.jpg
-logo: $assets.files.static.logo-fifthtry-dark.svg
-
-
-Being able to develop & debug Remix applications entirely inside your browser 
-with WebContainers is absolutely bonkers.
 
 
 
 
 -- ftd.column blog-quote:
 optional caption title:
-optional ftd.image-src quote-icon: $assets.files.static.block.png
+optional ftd.image-src quote-icon: $assets.files.static.block.svg
 optional body body: 
 optional ftd.image-src avatar:
 optional ftd.image-src logo:
@@ -86,30 +67,30 @@ ftd.color backgroundcolor: $fpm.color.main.background.base
 
 --- blog-quote-desktop:
 if: not $ft.is-mobile
-quote-image: $quote-icon
-quote-text: $body
-user-logo: $avatar
-user-brand-logo: $logo
-user-name: $title
-user-sub-title: $label
+quote-icon: $quote-icon
+body: $body
+avatar: $avatar
+logo: $logo
+title: $title
+label: $label
 backgroundcolor: $backgroundcolor
 
 --- blog-quote-mobile:
 if: $ft.is-mobile
-quote-text: $body
-user-logo: $avatar
-user-brand-logo: $logo
-user-name: $title
-user-sub-title: $label
+body: $body
+avatar: $avatar
+logo: $logo
+title: $title
+label: $label
 backgroundcolor: $backgroundcolor
 
 -- ftd.column blog-quote-desktop:
-optional ftd.image-src quote-image:
-optional body quote-text:
-optional ftd.image-src user-logo:
-optional ftd.image-src user-brand-logo:
-optional string user-name:
-optional string user-sub-title:
+optional caption title:
+optional ftd.image-src quote-icon: $assets.files.static.block.svg
+optional body body: 
+optional ftd.image-src avatar:
+optional ftd.image-src logo:
+optional string label:
 width: fill
 padding-vertical: $fpm.space.space-11
 ftd.color backgroundcolor:
@@ -127,7 +108,7 @@ align: center
 
 
 --- ftd.image:
-src: $quote-image
+src: $quote-icon
 width: auto
 height: 72
 
@@ -141,9 +122,9 @@ max-width: 850
 
 
 --- ftd.text:
-text: $quote-text
+text: $body
 role: $fpm.type.heading-large
-color:$fpm.color.main.text-strong
+color:$fpm.color.main.text
 
 --- ftd.row:
 width: fill
@@ -155,7 +136,7 @@ align: center
 
 
 --- ftd.image:
-src: $user-logo
+src: $avatar
 width: auto
 height: 60
 border-radius: 100
@@ -167,7 +148,7 @@ margin-right: $fpm.space.space-5
 
 
 --- ftd.image:
-src: $user-brand-logo
+src: $logo
 width: auto
 height: 44
 padding-top: $fpm.space.space-4
@@ -178,11 +159,11 @@ margin-right: $fpm.space.space-9
 --- ftd.column: 
 width: fill
 
---- ftd.text: $user-name
+--- ftd.text: $title
 role: $heading-small-bold
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 
---- ftd.text: $user-sub-title
+--- ftd.text: $label
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text
 
@@ -197,12 +178,12 @@ color: $fpm.color.main.text
 
 
 -- ftd.column blog-quote-mobile:
-optional ftd.image-src quote-image:
-optional body quote-text:
-optional ftd.image-src user-logo:
-optional ftd.image-src user-brand-logo:
-optional string user-name:
-optional string user-sub-title:
+optional caption title:
+optional ftd.image-src quote-icon: $assets.files.static.block.svg
+optional body body: 
+optional ftd.image-src avatar:
+optional ftd.image-src logo:
+optional string label:
 width: fill
 padding-vertical: $fpm.space.space-7
 padding-horizontal: $fpm.space.space-4
@@ -212,17 +193,24 @@ margin-top: $fpm.space.space-6
 margin-bottom: $fpm.space.space-6
 
 
-
-
---- ftd.text:
-text: $quote-text
-role: $heading-small-bold
-color:$fpm.color.main.text-strong
+--- ftd.image:
+src: $quote-icon
+width: auto
+height: 42
+align: center
 margin-bottom: $fpm.space.space-6
 
 
+--- ftd.text:
+text: $body
+width: auto
+role: $heading-small-bold
+color:$fpm.color.main.text
+margin-bottom: $fpm.space.space-6
+text-align: center
+
+
 --- ftd.row:
-width: fill
 id: about-container
 spacing: 16
 align: center
@@ -231,33 +219,37 @@ margin-bottom: $fpm.space.space-4
 
 
 
+
 --- ftd.image:
-src: $user-logo
+src: $avatar
 width: auto
 height: 42
+align: center
 border-radius: 100
 
 
 
 
 --- ftd.image:
-src: $user-brand-logo
+src: $logo
 width: auto
-height: 32
-padding-top: $fpm.space.space-1
+height: 24
+align: center
 
---- container: ftd.main
+
+--- container: about-container
 
 --- ftd.column: 
-width: fill
 spacing: 8
+align: center
 
 
---- ftd.text: $user-name
+--- ftd.text: $title
 role: $fine-print-bold
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 
---- ftd.text: $user-sub-title
+--- ftd.text: $label
 role: $fpm.type.fine-print
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
+align: center
 

@@ -34,10 +34,10 @@ platforms, and runtimes.
 
 
 
---- bq.blog-quote:
-quote-image: $assets.files.static.block.png
-quote-text: $quote-text
-user-logo: $assets.files.static.amitu.jpg
-user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
-user-name: Amit Upadhyay
-user-sub-title: CEO
+--- bq.blog-quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.fifthtry.svg
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
