@@ -15,12 +15,6 @@ xl: $fpm.type.fine-print.xl
 weight: 700
 
 
--- string quote-text:
-
-Being able to develop & debug Remix applications entirely inside your browser 
-with WebContainers is absolutely bonkers.
-
-
 
 
 
@@ -31,24 +25,25 @@ with WebContainers is absolutely bonkers.
 -- ft.code: Basic Example: 
 lang: ftd
 
-\-- blog-quote:
-quote-image: $assets.files.static.block.png
-quote-text: $quote-text
-user-logo: $assets.files.static.amitu.jpg
-user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
-user-name: Amit Upadhyay
-user-sub-title: CEO
+\-- blog-quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.logo-fifthtry-dark.svg
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
 
 
 
 
---- blog-quote:
-quote-image: $assets.files.static.block.png
-quote-text: $quote-text
-user-logo: $assets.files.static.amitu.jpg
-user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
-user-name: Amit Upadhyay
-user-sub-title: CEO
+-- blog-quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.logo-fifthtry-dark.svg
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
+
 
 
 
@@ -66,45 +61,46 @@ width: 800
 width: 1536
 
 
---- blog-quote:
-quote-image: $assets.files.static.block.png
-quote-text: $quote-text
-user-logo: $assets.files.static.amitu.jpg
-user-brand-logo: $assets.files.static.logo-fifthtry-dark.svg
-user-name: Amit Upadhyay
-user-sub-title: CEO
+--- blog-quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.logo-fifthtry-dark.svg
+
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
 
 
 
 
 -- ftd.column blog-quote:
-optional ftd.image-src quote-image:
-optional body quote-text:
-optional ftd.image-src user-logo:
-optional ftd.image-src user-brand-logo:
-optional string user-name:
-optional string user-sub-title:
+optional caption title:
+optional ftd.image-src quote-icon: $assets.files.static.block.png
+optional body body: 
+optional ftd.image-src avatar:
+optional ftd.image-src logo:
+optional string label:
 width: fill
-ftd.color backgroundcolor: $fpm.color.main.shadow
+ftd.color backgroundcolor: $fpm.color.main.background.base
 
 
 --- blog-quote-desktop:
 if: not $ft.is-mobile
-quote-image: $quote-image
-quote-text: $quote-text
-user-logo: $user-logo
-user-brand-logo: $user-brand-logo
-user-name: $user-name
-user-sub-title: $user-sub-title
+quote-image: $quote-icon
+quote-text: $body
+user-logo: $avatar
+user-brand-logo: $logo
+user-name: $title
+user-sub-title: $label
 backgroundcolor: $backgroundcolor
 
 --- blog-quote-mobile:
 if: $ft.is-mobile
-quote-text: $quote-text
-user-logo: $user-logo
-user-brand-logo: $user-brand-logo
-user-name: $user-name
-user-sub-title: $user-sub-title
+quote-text: $body
+user-logo: $avatar
+user-brand-logo: $logo
+user-name: $title
+user-sub-title: $label
 backgroundcolor: $backgroundcolor
 
 -- ftd.column blog-quote-desktop:

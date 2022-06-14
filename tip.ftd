@@ -50,7 +50,7 @@ optional ftd.image-src avatar: $assets.files.static.bot-icons.agent.png
 border-color: $fpm.color.main.border
 background-color: $fpm.color.main.background.step-1
 padding: $fpm.space.space-4
-border-radius: 3
+border-radius: 4
 border-width: 1
 width: fill
 margin-top: $fpm.space.space-2

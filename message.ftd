@@ -1,6 +1,13 @@
 -- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/doc-site/assets
 
+
+
+-- ftd.column:
+width: fill
+id: page-container
+
+
 -- ft.page: `chat-bot` and it's Usage
 
 `chat-bot` is a chatting experince via using `FTD` lang:
@@ -34,12 +41,54 @@ text as line then I should be able to add it
 lang: ftd
 
 \--- ftd.text: Though the code block appears above, can I have some text below it?
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 role: $fpm.type.label-big
 
 --- ftd.text: Though the code block appears above, can I have some text below it?
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 role: $fpm.type.label-big
+
+
+-- message:
+
+🤘
+
+
+
+-- message:
+avatar-left: false
+avatar: $assets.files.static.bot-icons.user.png
+
+👍👍
+
+
+
+-- message:
+
+Lorem ipsum dolor sit amet,
+
+
+
+-- message:
+avatar-left: false
+avatar: $assets.files.static.bot-icons.user.png
+
+sed do eiusmod tempor ut
+
+
+-- message:
+
+Lorem ipsum
+
+
+
+-- message:
+avatar-left: false
+avatar: $assets.files.static.bot-icons.user.png
+
+sed do eiusmod
+
+
 
 
 
@@ -50,11 +99,11 @@ role: $fpm.type.label-big
 optional body body:
 boolean avatar-left: true
 ftd.image-src avatar: $assets.files.static.bot-icons.agent.png
-width: fill
 margin-top: $fpm.space.space-2
 margin-bottom: $fpm.space.space-7
-open: true
 append-at: msg-container
+id: message
+align if not $avatar-left: right
 
 --- ftd.row:
 if: $avatar-left
@@ -72,13 +121,13 @@ border-width: 1
 border-color: $fpm.color.main.border
 background-color: $fpm.color.main.background.step-1
 padding: $fpm.space.space-3
-border-radius: 3
+border-radius: 4
 width: fill
 id: msg-container
 
 --- ftd.text:
 text: $body
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 role: $fpm.type.label-big
 width: fill
 
@@ -97,13 +146,13 @@ border-width: 1
 border-color: $fpm.color.main.border
 background-color: $fpm.color.main.background.step-1
 padding: $fpm.space.space-3
-border-radius: 3
-width: fill
+border-radius: 4
 id: msg-container
+align: right
 
 --- ftd.text:
 text: $body
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 role: $fpm.type.label-big
 width: fill
 
@@ -115,5 +164,11 @@ width: 32
 height: auto
 margin-left: $fpm.space.space-4
 margin-top: $fpm.space.space-2
+
+--- container: ftd.main
+
+
+
+
 
 
