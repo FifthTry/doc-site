@@ -37,7 +37,7 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 - Proposed changes: /proposed-changes/
 - Markdown: /learn-markdown/
 - Badge: /badge/
-- Blog-quote: /blog-quote/
-- Post Single Intro: /post-single-intro/
+- Quote: /blog-quote/
+- Intro: /intro/
 - Message: /message/
 - Tip: /tip/

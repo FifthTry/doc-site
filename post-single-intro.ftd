@@ -390,9 +390,8 @@ body: $body
 
 -- ftd.row post-subtitle-desktop:
 width: fill
-padding-horizontal: $fpm.space.space-11
-margin-top: $fpm.space.space-13
-margin-bottom: $fpm.space.space-11
+margin-top: $fpm.space.space-9
+margin-bottom: $fpm.space.space-9
 body body:
 max-width: 1056
 
@@ -406,11 +405,10 @@ border-color: $fpm.color.main.border
 --- ftd.text: 
 text: $body
 color: $fpm.color.main.text
-role: $fpm.type.heading-small
+role: $fpm.type.copy-large
 
 -- ftd.row post-subtitle-mobile:
 width: fill
-padding-horizontal: $fpm.space.space-7
 margin-top: $fpm.space.space-7
 margin-bottom: $fpm.space.space-7
 body body:

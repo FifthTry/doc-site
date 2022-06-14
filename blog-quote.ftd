@@ -18,33 +18,33 @@ weight: 700
 
 
 
--- ft.page: `blog-quote` and it's Usage
+-- ft.page: `quote` and it's Usage
 
-`-- blog-quote` can be used as part of blog posts.
+`-- quote` can be used as part of blog posts.
 
 -- ft.code: Basic Example: 
 lang: ftd
 
 
-\-- blog-quote: Amit Upadhyay
+\-- quote: Amit Upadhyay
 label: CEO
 avatar: $assets.files.static.amitu.jpg
 logo: $assets.files.static.fifthtry.svg
 
-Being able to develop & debug Remix applications entirely inside your browser 
-with WebContainers is absolutely bonkers.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua.
 
 
 
 
 
--- blog-quote: Amit Upadhyay
+-- quote: Amit Upadhyay
 label: CEO
 avatar: $assets.files.static.amitu.jpg
 logo: $assets.files.static.fifthtry.svg
 
-Being able to develop & debug Remix applications entirely inside your browser 
-with WebContainers is absolutely bonkers.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua..
 
 
 
@@ -54,7 +54,7 @@ with WebContainers is absolutely bonkers.
 
 
 
--- ftd.column blog-quote:
+-- ftd.column quote:
 optional caption title:
 optional ftd.image-src quote-icon: $assets.files.static.block.svg
 optional body body: 
@@ -65,7 +65,7 @@ width: fill
 ftd.color backgroundcolor: $fpm.color.main.background.base
 
 
---- blog-quote-desktop:
+--- quote-desktop:
 if: not $ft.is-mobile
 quote-icon: $quote-icon
 body: $body
@@ -75,7 +75,7 @@ title: $title
 label: $label
 backgroundcolor: $backgroundcolor
 
---- blog-quote-mobile:
+--- quote-mobile:
 if: $ft.is-mobile
 body: $body
 avatar: $avatar
@@ -84,7 +84,7 @@ title: $title
 label: $label
 backgroundcolor: $backgroundcolor
 
--- ftd.column blog-quote-desktop:
+-- ftd.column quote-desktop:
 optional caption title:
 optional ftd.image-src quote-icon: $assets.files.static.block.svg
 optional body body: 
@@ -177,7 +177,7 @@ color: $fpm.color.main.text
 
 
 
--- ftd.column blog-quote-mobile:
+-- ftd.column quote-mobile:
 optional caption title:
 optional ftd.image-src quote-icon: $assets.files.static.block.svg
 optional body body: 
