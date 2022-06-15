@@ -8,85 +8,74 @@ width: fill
 id: page-container
 
 
--- ft.page: `chat-bot` and it's Usage
+-- ft.page: `message-left` with it's Usage
 
-`chat-bot` is a chatting experince via using `FTD` lang:
+`message-left` OR `message-right` is a chatting experince via using `FTD` lang:
+
+-- ftd.column:
+width if not $ft.is-mobile: 380
+padding if not $ft.is-mobile: 24
+border-radius: 20
+background-color: $fpm.color.main.background.base
 
 
+-- message-left: Hey Buddy!
+pull-top: -4
 
+--- ftd.column:
+margin-top: 4
 
--- message:
+--- ft.markdown:
+uis nostrud exercitation ullamco labil oris nisi ut aliquip ex ea commo dorli consequat. 
+Duis aute irure dolor lorii
 
-Hey Buddy! Though this is a chat message but I have multiple features like showing
-code snippet inside this message!
-Would you like to see how? 
+--- ftd.column:
+margin-top: -14
 
 --- ft.code: Below is code:
 lang: ftd
 
-\-- message:
+\-- message-left: Hi! 
+\-- ftd.text: Hi!
 
-Hey Buddy! Though this is a chat message but I have multiple features like showing
-code snippet inside this message!
-Would you like to see how? 
 
--- message:
-avatar-left: false
-avatar: $assets.files.static.bot-icons.user.png
+--- ftd.column:
+margin-top: -11
 
-Yo! I like the way this code block fits in my msg: Even if I want to add new 
-text as line then I should be able to add it
+
+-- message-right: Yo! 
+pull-top: -4
+
+--- ft.markdown:
+in voluptate velit esse cillum dolor er eu fugiat nulla pariatur. Excepte urla sint occaecat cupidatat nor proident,
 
 --- ft.code: Wow! awesome man!:
 lang: ftd
 
-\--- ftd.text: Though the code block appears above, can I have some text below it?
+\-- message-right: Yo! 
+\-- ftd.text: Yo! 
+
+--- ftd.text: Sed ut perspiciatis unde omnis isa te natus error sit volupta tem.
 color: $fpm.color.main.text
 role: $fpm.type.label-big
 
---- ftd.text: Though the code block appears above, can I have some text below it?
-color: $fpm.color.main.text
-role: $fpm.type.label-big
 
-
--- message:
-
-🤘
+-- message-left: 🤘
 
 
 
--- message:
-avatar-left: false
-avatar: $assets.files.static.bot-icons.user.png
-
-👍👍
+-- message-right: 👍👍
 
 
-
--- message:
-
-Lorem ipsum dolor sit amet,
+-- message-left: Lorem ipsum dolor sit amet,
 
 
-
--- message:
-avatar-left: false
-avatar: $assets.files.static.bot-icons.user.png
-
-sed do eiusmod tempor ut
+-- message-right: sed do eiusmod tempor ut
 
 
--- message:
+-- message-left: Lorem ipsum
 
-Lorem ipsum
-
-
-
--- message:
-avatar-left: false
-avatar: $assets.files.static.bot-icons.user.png
-
-sed do eiusmod
+-- message-right: sed do eiusmod
 
 
 
@@ -99,8 +88,7 @@ sed do eiusmod
 optional body body:
 boolean avatar-left: true
 ftd.image-src avatar: $assets.files.static.bot-icons.agent.png
-margin-top: $fpm.space.space-2
-margin-bottom: $fpm.space.space-7
+margin-bottom: $fpm.space.space-4
 append-at: msg-container
 id: message
 align if not $avatar-left: right
@@ -114,7 +102,7 @@ src: $avatar
 width: 32
 height: auto
 margin-right: $fpm.space.space-4
-margin-top: $fpm.space.space-2
+
  
 --- ftd.column:
 border-width: 1
@@ -163,7 +151,46 @@ src: $avatar
 width: 32
 height: auto
 margin-left: $fpm.space.space-4
-margin-top: $fpm.space.space-2
+
+--- container: ftd.main
+
+
+
+
+
+-- ftd.column message-left:
+optional caption title:
+ftd.image-src avatar: $assets.files.static.bot-icons.agent.png
+margin-bottom: $fpm.space.space-4
+integer pull-top: 0
+append-at: msg-container
+id: message
+
+--- ftd.row:
+width: fill
+
+--- ftd.image:
+src: $avatar
+width: 32
+height: auto
+margin-right: $fpm.space.space-4
+
+--- ftd.column:
+border-width: 1
+border-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.step-1
+padding: $fpm.space.space-3
+border-radius: 4
+width: fill
+id: msg-container
+
+--- ftd.text:
+text: $title
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+width: fill
+text-align: left
+margin-top: $pull-top
 
 --- container: ftd.main
 
@@ -172,3 +199,53 @@ margin-top: $fpm.space.space-2
 
 
 
+
+
+
+
+
+
+
+-- ftd.column message-right:
+optional caption title:
+ftd.image-src avatar: $assets.files.static.bot-icons.user.png
+margin-bottom: $fpm.space.space-4
+integer pull-top: 0
+append-at: msg-container
+id: message
+align: right
+
+--- ftd.column:
+width: fill
+ 
+--- ftd.row:
+width: fill
+id: chat-right
+
+--- ftd.column:
+border-width: 1
+border-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.step-1
+padding: $fpm.space.space-3
+border-radius: 4
+id: msg-container
+align: right
+
+--- ftd.text:
+text: $title
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+width: fill
+text-align: right
+margin-top: $pull-top
+
+
+--- container: chat-right
+
+--- ftd.image:
+src: $avatar
+width: 32
+height: auto
+margin-left: $fpm.space.space-4
+
+--- container: ftd.main

@@ -64,7 +64,11 @@ src: $assets.files.static.Information_example_page_300px.jpg
 width: 400
 
 
+-- tip: Cool bots hot tip!
 
+Hey Buddy! Though this is a chat message but I have multiple features like showing
+code snippet inside this message!
+Would you like to see how?
 
 
 
