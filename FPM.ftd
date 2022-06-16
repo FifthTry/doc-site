@@ -12,6 +12,8 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 
 -- fpm.dependency: fifthtry.github.io/typography
 
+-- fpm.dependency: fifthtry.github.io/bling
+
 
 
 -- fpm.auto-import: fpm
@@ -19,4 +21,6 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 -- fpm.auto-import: fifthtry.github.io/header as h
 -- fpm.auto-import: fifthtry.github.io/toc as tt
+-- fpm.auto-import: fifthtry.github.io/bling/chat
+
 
