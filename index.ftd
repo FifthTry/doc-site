@@ -24,7 +24,8 @@ $processor$: toc
 $processor$: toc
 
 - Quickstart: /
-- Use this template: https://github.com/FifthTry/fpm-book/generate/
+- GitHub: https://github.com/FifthTry/doc-site/
+- Use this template: https://github.com/FifthTry/doc-site/generate/
 
 
 -- fpm.toc-item list sample-left:
