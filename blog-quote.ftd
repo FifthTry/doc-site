@@ -1,0 +1,255 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site as ft
+
+-- ftd.type heading-small-bold: $fpm.type.heading-small.font
+desktop: $fpm.type.heading-small.desktop
+mobile: $fpm.type.heading-small.mobile
+xl: $fpm.type.heading-small.xl
+weight: 700
+
+
+-- ftd.type fine-print-bold: $fpm.type.fine-print.font
+desktop: $fpm.type.fine-print.desktop
+mobile: $fpm.type.fine-print.mobile
+xl: $fpm.type.fine-print.xl
+weight: 700
+
+
+
+
+
+-- ft.page: `quote` and it's Usage
+
+`-- quote` can be used as part of blog posts.
+
+-- ft.code: Basic Example: 
+lang: ftd
+
+
+\-- quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.fifthtry.svg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua.
+
+
+
+
+
+-- quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.fifthtry.svg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua..
+
+
+
+
+
+
+
+
+
+-- ftd.column quote:
+optional caption title:
+optional ftd.image-src quote-icon: $assets.files.static.block.svg
+optional body body: 
+optional ftd.image-src avatar:
+optional ftd.image-src logo:
+optional string label:
+width: fill
+ftd.color backgroundcolor: $fpm.color.main.background.base
+
+
+--- quote-desktop:
+if: not $ft.is-mobile
+quote-icon: $quote-icon
+body: $body
+avatar: $avatar
+logo: $logo
+title: $title
+label: $label
+backgroundcolor: $backgroundcolor
+
+--- quote-mobile:
+if: $ft.is-mobile
+body: $body
+avatar: $avatar
+logo: $logo
+title: $title
+label: $label
+backgroundcolor: $backgroundcolor
+
+-- ftd.column quote-desktop:
+optional caption title:
+optional ftd.image-src quote-icon: $assets.files.static.block.svg
+optional body body: 
+optional ftd.image-src avatar:
+optional ftd.image-src logo:
+optional string label:
+width: fill
+padding-vertical: $fpm.space.space-11
+ftd.color backgroundcolor:
+background-color: $backgroundcolor
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+
+
+--- ftd.row:
+id: switch-container
+spacing: 80
+width: fill
+max-width: 1000
+align: center
+
+
+--- ftd.image:
+src: $quote-icon
+width: auto
+height: 72
+
+
+--- container: switch-container
+
+
+--- ftd.column:
+width: fill
+max-width: 850
+
+
+--- ftd.text:
+text: $body
+role: $fpm.type.heading-large
+color:$fpm.color.main.text
+
+--- ftd.row:
+width: fill
+id: about-container
+margin-top: $fpm.space.space-6
+align: center
+
+
+
+
+--- ftd.image:
+src: $avatar
+width: auto
+height: 60
+border-radius: 100
+margin-right: $fpm.space.space-5
+
+
+
+--- container:about-container
+
+
+--- ftd.image:
+src: $logo
+width: auto
+height: 44
+padding-top: $fpm.space.space-4
+margin-right: $fpm.space.space-9
+
+--- container:about-container
+
+--- ftd.column: 
+width: fill
+
+--- ftd.text: $title
+role: $heading-small-bold
+color: $fpm.color.main.text
+
+--- ftd.text: $label
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column quote-mobile:
+optional caption title:
+optional ftd.image-src quote-icon: $assets.files.static.block.svg
+optional body body: 
+optional ftd.image-src avatar:
+optional ftd.image-src logo:
+optional string label:
+width: fill
+padding-vertical: $fpm.space.space-7
+padding-horizontal: $fpm.space.space-4
+ftd.color backgroundcolor:
+background-color: $backgroundcolor
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+
+
+--- ftd.image:
+src: $quote-icon
+width: auto
+height: 42
+align: center
+margin-bottom: $fpm.space.space-6
+
+
+--- ftd.text:
+text: $body
+width: auto
+role: $heading-small-bold
+color:$fpm.color.main.text
+margin-bottom: $fpm.space.space-6
+text-align: center
+
+
+--- ftd.row:
+id: about-container
+spacing: 16
+align: center
+margin-bottom: $fpm.space.space-4
+
+
+
+
+
+--- ftd.image:
+src: $avatar
+width: auto
+height: 42
+align: center
+border-radius: 100
+
+
+
+
+--- ftd.image:
+src: $logo
+width: auto
+height: 24
+align: center
+
+
+--- container: about-container
+
+--- ftd.column: 
+spacing: 8
+align: center
+
+
+--- ftd.text: $title
+role: $fine-print-bold
+color: $fpm.color.main.text
+
+--- ftd.text: $label
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+align: center
+

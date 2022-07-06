@@ -1,0 +1,43 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/blog-quote as bq
+-- import: fifthtry.github.io/doc-site/post-single-intro as psi
+
+-- string quote-text:
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.
+
+-- ftd.column:
+background-color: $fpm.color.main.background.base
+padding-vertical: $fpm.space.space-7
+width: fill
+spacing: 72
+
+
+
+--- psi.post-single-intro:
+poster: $assets.files.static.picture1.jpeg
+post-title: StackBlitz has joined the Bytecode Alliance
+avatar: $assets.files.static.amitu.jpg
+username: Amit Upadhyay
+user-profile-link: https://in.linkedin.com/in/amitu
+post-category: News & Announcements
+post-category-link: /
+timestamp: March 15, 2022
+
+Hi there! We're StackBlitz, a web IDE powered by WebAssembly. We're 
+excited to join this cross-industry partnership accelerating the 
+world's transition to secure-by-default computing with WebAssembly 
+and more rapidly bring WebContainers to all devices, languages,
+platforms, and runtimes.
+
+
+
+
+--- bq.quote: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.fifthtry.svg
+
+Being able to develop & debug Remix applications entirely inside your browser 
+with WebContainers is absolutely bonkers.

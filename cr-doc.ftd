@@ -1,0 +1,1081 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site as ft
+
+
+-- boolean toggle-cr-wrapper: false
+
+-- boolean enable-crmenu: false
+
+-- boolean show-cr-dd: false
+
+
+-- ftd.type history-title: $fpm.type.label-big.font
+desktop: $fpm.type.copy-relaxed.desktop
+mobile: $fpm.type.copy-relaxed.mobile
+xl: $fpm.type.copy-relaxed.xl
+weight: 700
+
+-- record prhistory:
+string pr-item:
+string pr-item-link:
+integer index:
+
+
+
+-- record PrRequest:
+string documentation-title:
+string documentation-link:
+optional string current-status:
+optional string current-status-link:
+string user-name:
+string user-link:
+string timestamp:
+string timestamp-link:
+boolean is-last: false
+
+-- PrRequest list pr-request-list:
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+current-status: updated
+current-status-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: jkhk
+timestamp-link: /index/
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link: /index/
+current-status: updated
+current-status-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: jkhk
+timestamp-link: /index/
+
+-- pr-request-list:
+documentation-title: updated
+documentation-link:  /index/
+current-status: updated
+current-status-link: /index/
+user-name: Arpita
+user-link: /index/
+timestamp: jkhk
+timestamp-link: /index/
+
+
+
+-- prhistory list pr-history-list:
+
+-- pr-history-list:
+index: 1
+pr-item: Fifthtry Collections and documents
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 2
+pr-item: Working Around change request
+pr-item-link: /
+
+
+-- pr-history-list:
+index: 3
+pr-item: Permission mete
+pr-item-link: /
+
+
+
+
+-- record dropdown-links:
+optional string cr-title:
+optional string cr-url:
+optional string child: 
+optional string child-url: 
+
+
+-- dropdown-links list list-dd:
+
+-- list-dd:
+cr-title: #9: New Features for R3
+cr-url: /change-request
+
+-- list-dd: 
+child: First Document
+child-url: /change-request
+
+-- list-dd: 
+child: Second Document
+child-url: /change-request
+
+
+
+
+
+
+
+
+
+-- record top-section:
+caption title:
+string link-url:
+boolean is-dropdown: false
+integer index:
+boolean is-last: false
+
+-- top-section list list-ts:
+
+-- list-ts: History
+link-url: /change-request
+index: 1
+
+
+-- list-ts: Change Requests
+link-url: /change-request
+index: 2
+is-dropdown: true
+
+
+-- list-ts: Settings
+link-url: /change-request
+index: 3
+
+
+
+
+
+
+
+-- top-section list list-crs:
+
+-- list-crs: #7 Edited: sample user's Blog
+link-url: /change-request
+index: 1
+
+
+-- list-crs: #8 Lorem ipsum dolor sit amet
+link-url: /change-request
+index: 2
+
+
+-- list-crs: #17 blog post: Lorem ipsum dolor sit amet
+link-url: /change-request
+index: 3
+
+
+
+
+
+-- top-section list site-links:
+
+-- site-links: About
+link-url: /change-request
+index: 1
+
+
+-- site-links: Terms
+link-url: /change-request
+index: 2
+
+
+-- site-links: Privacy
+link-url: /change-request
+index: 3
+
+
+-- site-links: Blog
+link-url: /change-request
+index: 4
+is-last: true
+
+
+
+
+
+
+
+
+
+
+-- ftd.row cr-toggle:
+anchor: window
+right: 0
+top: 50
+z-index: 9999
+
+--- toggle:
+$on-click$: toggle $toggle-cr-wrapper
+
+
+
+
+
+
+
+
+
+-- ftd.row toggle:
+
+
+--- ftd.image:
+src: $assets.files.static.menu_btn.svg
+height: 40
+align: center
+width: 28
+cursor: pointer
+
+
+
+
+
+
+
+
+
+
+-- ftd.row cr-wrapper:
+caption title:
+string history: History
+string history-link: /history
+optional string cr-text: Change Requests
+string cr-link: /cr
+string settings: Settings
+string settings-link: /settings
+width: percent 30
+height: calc 100vh
+anchor: window
+right: 0
+top: 10
+z-index: 999
+
+--- ftd.column:
+width: calc 100% - 20px
+height: calc 100vh - 0px
+overflow-y: auto
+padding-top:$fpm.space.space-5
+padding-horizontal: $fpm.space.space-6
+z-index: 9999
+
+--- card-package: $title
+ts-list: $list-ts
+
+--- card-package: CRs Modifying this Document
+ts-list: $list-crs
+
+--- card-profile: FifthTry: Github for documentation
+site-links: $site-links
+username: Anonymous
+signin: Sign In
+signin-link: /signin
+
+
+
+
+
+
+
+
+
+-- ftd.column card-package:
+optional caption title:
+top-section list ts-list:
+width: fill
+border-radius: 6
+border-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.step-2
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+margin-bottom: $fpm.space.space-6
+id: links-block
+
+--- package-title: $title
+if: $title is not null
+
+--- links-loop:
+$loop$: $ts-list as $obj
+link-title: $obj.title
+link-url: $obj.link-url
+index: $obj.index
+is-dropdown: $obj.is-dropdown
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+
+-- ftd.column links-loop:
+dropdown-links list list-dd: $list-dd
+string link-title:
+string link-url:
+integer index:
+boolean is-dropdown:
+width: fill
+
+--- ftd.row:
+width: fill
+id: links-wrap
+
+--- ftd.text: $link-title
+link: $link-url
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.label-small
+margin-bottom: $fpm.space.space-2
+width: fill
+
+--- ftd.text: 
+if: $is-dropdown
+text: &#43;
+link: $link-url
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.copy-large
+align: center
+move-up: 6
+cursor: pointer
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $show-cr-dd
+width: fill
+
+--- ftd.column:
+if: $is-dropdown
+width: fill
+background-color: $fpm.color.main.border-strong
+padding-horizontal: $fpm.space.space-2
+padding-vertical: $fpm.space.space-2
+padding-bottom: 0
+margin-bottom: $fpm.space.space-3
+border-radius: 6
+
+--- cr-loop:
+$loop$: $list-dd as $obj
+cr-title: $obj.cr-title
+cr-url: $obj.cr-url
+child: $obj.child
+child-url: $obj.child-url
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column cr-loop:
+optional string cr-title:
+optional string cr-url:
+optional string child: 
+optional string child-url: 
+width: fill
+
+--- ftd.column:
+width: fill
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: 
+text: $cr-title
+if: $cr-title is not null
+color: $fpm.color.main.background.step-1
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.label-big
+margin-bottom: $fpm.space.space-2
+width: fill
+link: $cr-url
+
+
+--- ftd.text: 
+if: $cr-title is not null
+text: &#120;
+color: $fpm.color.main.background.step-1
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.copy-large
+align: center
+move-up: 8
+cursor: pointer
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: 
+if: $child is not null
+text: $child
+link: $child-url
+color: $fpm.color.main.background.step-1
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.label-small
+margin-bottom: $fpm.space.space-2
+
+--- ftd.row:
+if: $child is not null
+width: 10
+height: 10
+background-color: $fpm.color.main.success.border
+border-radius: 10
+margin-left: $fpm.space.space-2
+margin-top: 3
+
+--- container: ftd.main
+
+
+
+
+
+
+
+
+
+-- ftd.text package-title: $title
+caption title:
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-large
+margin-bottom: $fpm.space.space-4
+
+
+
+
+
+
+
+
+
+
+-- ftd.column card-profile:
+optional caption title:
+top-section list site-links:
+optional string username:
+optional string signin:
+optional string signin-link:
+optional ftd.image-src avatar: 
+width: fill
+border-radius: 6
+border-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.step-2
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+margin-bottom: $fpm.space.space-4
+id: links-block
+
+--- ftd.row:
+id: avatar
+margin-bottom: $fpm.space.space-4
+
+--- ftd.image:
+if: $avatar is not null
+src: $avatar
+width: 36
+height: 36
+border-radius: 36
+
+--- ftd.row:
+if: $avatar is null
+width: 36
+height: 36
+background-color: $fpm.color.main.background.step-1
+border-radius: 36
+margin-right: $fpm.space.space-3
+
+--- container: avatar
+
+--- ftd.text:
+text: $username
+color: $fpm.color.main.text
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+role: $fpm.type.label-small
+align: center
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+
+--- ftd.text:
+text: $signin
+link: $signin-link
+color: $fpm.color.main.text
+role: $fpm.type.label-small
+color if $MOUSE-IN: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+--- ftd.column:
+border-top: 1
+border-color: $fpm.color.main.border-strong
+padding-top: $fpm.space.space-4
+margin-top: $fpm.space.space-5
+width: fill
+
+--- ftd.text: $title
+color: $fpm.color.main.text
+role: $fpm.type.label-small
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+
+--- loop-links:
+$loop$: $site-links as $obj
+title: $obj.title
+link: $obj.link-url
+is-last: $obj.is-last
+
+
+
+
+
+
+
+
+
+
+-- ftd.row loop-links:
+caption title:
+string link:
+boolean is-last: false
+margin-top: $fpm.space.space-6
+spacing: 20
+
+--- ftd.text: $title
+width: fill
+color: $fpm.color.main.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+link: $link
+
+--- ftd.text: |
+if: not $is-last
+color: $fpm.color.main.text
+role: $fpm.type.fine-print
+margin-right: $fpm.space.space-4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.row cta-btn:
+string button-text: 
+optional ftd.image-src icon-src:
+ftd.color backgroundcolor: $fpm.color.main.cta-primary.base
+ftd.color hoverbackgroundcolor: $fpm.color.main.cta-primary.hover
+background-color if $MOUSE-IN: $hoverbackgroundcolor
+background-color: $backgroundcolor
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-5
+border-radius: 4
+ftd.color textcolor: $fpm.color.main.background.step-1
+
+--- ftd.image:
+if: $icon-src is not null
+src: $icon-src
+height: 16
+width: auto
+margin-right: $fpm.space.space-2
+
+--- container: ftd.main
+
+--- ftd.text:
+text: $button-text
+role: $fpm.type.label-small
+white-space: nowrap
+color: $textcolor
+
+
+
+
+
+
+
+
+-- ftd.row open-close:
+border-radius: 25
+background-color: $fpm.color.main.text-strong
+boolean first: false
+boolean last: false
+boolean middle: false
+optional string switch-first:
+optional string switch-middle: 
+optional string switch-last:
+
+
+--- ftd.text: $switch-first
+$on-click$: $last = true
+$on-click$: $first = false
+$on-click$: $middle = false
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+background-color if $last == true: $fpm.color.main.background.step-2
+width: fill
+border-left-radius: 25
+overflow-x: hidden
+role: $fpm.type.fine-print
+white-space: nowrap
+
+--- container: ftd.main
+
+--- ftd.text: $switch-middle
+if: $switch-middle is not null
+$on-click$: $last = false
+$on-click$: $first = false
+$on-click$: $middle = true
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+background-color if $middle == true: $fpm.color.main.background.step-2
+width: fill 
+role: $fpm.type.fine-print
+white-space: nowrap
+
+--- container: ftd.main
+
+--- ftd.text: $switch-last
+$on-click$: $last = false
+$on-click$: $first = true
+$on-click$: $middle = false
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+background-color if $first == true: $fpm.color.main.background.step-2
+width: fill 
+border-right-radius: 25
+role: $fpm.type.fine-print
+white-space: nowrap
+
+
+
+-- ftd.row breadcrumb:
+optional string nav-title: 
+optional string nav-title-url: 
+optional string nav-sub-title: 
+optional string nav-sub-title-url:
+optional string nav-sub-section-title:
+optional string nav-sub-section-title-url:
+optional boolean show-pr-button: false
+margin-bottom: $fpm.space.space-8
+width: fill
+spacing: 8
+
+
+--- ftd.row:
+width: fill
+spacing: 8 
+
+--- ftd.text: $nav-title 
+if: $nav-title is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $nav-title-url is null: $fpm.color.main.text-strong
+link: $nav-title-url
+color if $MOUSE-IN: $fpm.color.main.text-strong
+white-space: nowrap
+
+--- ftd.text: ->
+if: $nav-sub-title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+white-space: nowrap
+
+--- ftd.text:$nav-sub-title
+if: $nav-sub-title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+color if $nav-sub-title-url is null: $fpm.color.main.text-strong
+color if $MOUSE-IN: $fpm.color.main.text-strong
+link: $nav-sub-title-url
+white-space: nowrap
+
+--- ftd.text: ->
+if: $nav-sub-section-title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+white-space: nowrap
+
+--- ftd.text: $nav-sub-section-title
+if: $nav-sub-section-title is not null
+role: $fpm.type.label-small
+color: $fpm.color.main.text
+color if $nav-sub-section-title-url is null: $fpm.color.main.text-strong
+link: $nav-sub-title-url
+white-space: nowrap
+
+
+--- container: ftd.main
+
+--- ftd.row:
+if: $show-pr-button
+
+--- cta-btn:
+icon-src: $assets.files.static.pull-request.png
+button-text: Create CR
+textcolor: $fpm.color.main.text-strong
+
+
+-- ftd.row search:
+caption title:
+optional ftd.image-src search-logo: 
+width: fill
+border-radius: 8
+padding-vertical: 14
+padding-horizontal: 28
+border-width: 1
+background-color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
+margin-top: $fpm.space.space-5
+margin-bottom: $fpm.space.space-6
+
+--- ftd.image:
+src: $search-logo
+height: 16
+width: auto
+
+--- ftd.input:
+cursor: pointer
+width:fill
+color: $fpm.color.main.text
+placeholder: $title
+
+
+
+
+-- ftd.column section:
+margin-top: $fpm.space.space-5
+width:fill
+margin-bottom:$fpm.space.space-5
+border-width: 1
+border-radius: 8
+border-color: $fpm.color.main.border-strong 
+PrRequest list pr-request-list: $pr-request-list
+
+--- pr-section:
+documentation-title: $obj.documentation-title
+documentation-link:  $obj.documentation-link
+user-name: $obj.user-name
+user-link:  $obj.user-link
+timestamp: $obj.timestamp
+timestamp-link:  $obj.timestamp-link
+current-status: $obj.current-status
+current-status-link:  $obj.current-status-link
+is-last: $obj.is-last
+$loop$: $pr-request-list as $obj
+
+
+
+
+
+
+
+
+
+-- ftd.column pr-section:
+string documentation-title:
+string documentation-link:
+string user-name:
+string user-link:
+string timestamp:
+string timestamp-link:
+optional string current-status:
+optional string current-status-link:
+boolean is-last: 
+boolean mouse-in: false
+width: fill
+border-bottom if not $is-last: 1
+border-color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-4
+padding-vertical: $fpm.space.space-4
+$on-mouse-enter$: $mouse-in = true
+$on-mouse-leave$: $mouse-in = false
+background-color if $mouse-in: $fpm.color.main.background.step-2
+
+
+--- ftd.column:
+width:fill
+spacing: 8
+
+--- ftd.row:
+width: fill
+spacing: 4
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
+
+--- ftd.text: \#
+role: $fpm.type.copy-relaxed
+
+--- ftd.text: $documentation-title
+role: $history-title
+link: $documentation-link
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
+
+--- ftd.text: :
+if: $current-status is not null
+role: $fpm.type.copy-relaxed
+
+--- ftd.text: $current-status
+if: $current-status is not null
+role: $history-title
+link: $current-status-link
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+spacing: 4
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
+
+--- ftd.text: by
+role: $fpm.type.fine-print
+margin-left: $fpm.space.space-1
+
+
+--- ftd.text: $user-name
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
+link: $user-link
+
+--- ftd.text: on
+role: $fpm.type.fine-print
+
+--- ftd.text:$timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+color if $mouse-in: $fpm.color.main.text-strong
+link: $timestamp-link
+
+
+
+
+
+
+
+
+
+-- ftd.row request-title:
+caption user-name:
+optional string user-link: /
+optional body message:
+color: $fpm.color.main.text
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+spacing: 4
+
+--- ftd.text: $user-name
+role: $history-title
+
+
+--- ftd.text:
+text: $message
+role: $fpm.type.copy-relaxed
+
+
+
+
+
+
+
+
+
+
+-- ftd.column page-title:
+caption title:
+prhistory list pr-history-list:
+margin-top: $fpm.space.space-7
+width: fill
+
+
+--- ftd.row:
+width: fill
+margin-bottom: $fpm.space.space-5
+
+--- ftd.text: $title
+role: $history-title
+color: $fpm.color.main.text
+width: fill
+
+
+--- cta-btn:
+button-text: ✏️  Edit
+textcolor: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+--- ftd.column:
+spacing: 16
+width: fill
+margin-bottom: $fpm.space.space-9
+
+--- history-prs:
+pr-item: $obj.pr-item
+pr-item-url: $obj.pr-item-link
+index: $obj.index
+$loop$: $pr-history-list as $obj
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+spacing: 16
+
+
+--- cta-btn:
+button-text: Merge
+textcolor: $fpm.color.main.text-strong
+
+--- cta-btn:
+button-text: Close
+backgroundcolor: $fpm.color.main.cta-secondary.base
+hoverbackgroundcolor: $fpm.color.main.cta-secondary.hover
+textcolor: $fpm.color.main.text-strong
+
+
+-- ftd.row history-prs:
+integer index:
+string pr-item:
+string pr-item-url:
+spacing: 16
+
+--- ftd.integer: $index
+border-radius: 25
+role: $fpm.type.fine-print
+background-color: $fpm.color.main.text
+padding-horizontal: $fpm.space.space-2
+padding-vertical: $fpm.space.space-1
+
+--- ftd.text: 
+text: $pr-item
+color: $fpm.color.main.text
+role: $fpm.type.copy-tight
+padding-top: $fpm.space.space-1
+link: $pr-item-url
+color if $MOUSE-IN: $fpm.color.main.text-strong
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column inbox:
+caption title:
+optional body title-body:
+optional string emoji:❕
+padding-vertical: $fpm.space.space-4
+padding-horizontal:$fpm.space.space-7
+optional ftd.color bordercolor: $fpm.color.main.error.base
+border-color: $bordercolor
+border-width: 1
+optional ftd.color backgroundcolor: $fpm.color.main.error.base
+background-color: $backgroundcolor
+spacing: 16
+open: true
+append-at: code-container
+
+--- ftd.row:
+width: fill
+id: selection-container
+spacing: 16
+
+
+--- ftd.text: 
+text: $emoji
+
+--- container: selection-container
+
+--- ftd.column:
+width: fill
+spacing: 8
+
+--- ftd.text: $title
+role: $history-title
+
+
+--- ftd.text:
+text: $title-body
+role: $fpm.type.copy-tight
+
+
+--- container: ftd.main
+
+--- ftd.column: 
+width: fill
+border-radius: 6
+id: code-container
+
+
+
+
+
+
+
+
+
+
+-- ftd.row buttons:
+width: fill
+optional string cta-primary-text:
+optional string cta-secondary-text:
+optional string last-change:
+spacing: 16
+margin-bottom: $fpm.space.space-7
+
+--- ftd.row:
+width: fill
+spacing: 16
+
+--- cta-btn:
+button-text: $cta-primary-text
+textcolor: $fpm.color.main.text-strong
+
+--- cta-btn:
+button-text: $cta-secondary-text
+textcolor: $fpm.color.main.text-strong
+backgroundcolor: $fpm.color.main.cta-secondary.base
+
+--- container: ftd.main
+
+--- ft.badge: $last-change
+light: true
+
+
+
+
+
+
+

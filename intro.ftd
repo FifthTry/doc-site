@@ -1,0 +1,202 @@
+-- import: fifthtry.github.io/doc-site/post-single-intro as psi
+-- import: fifthtry.github.io/doc-site as ft
+
+
+
+
+-- ft.page: `intro` and it's Usage
+
+`-- intro` can be used as part of blog posts.
+
+-- ft.code: Example code for `-- intro`
+lang: ftd
+
+\-- intro:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimium.
+
+
+
+
+-- intro:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimium.
+
+-- ft.code: Example code for `-- intro`
+lang: ftd
+
+
+\-- intro-two:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimium.
+
+
+-- intro-two:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimium.
+
+
+-- ftd.column intro:
+body body:
+ftd.color backgroundcolor: $fpm.color.main.background.base
+width: fill
+
+
+
+--- intro-desktop:
+if: not $ft.is-mobile
+body: $body
+backgroundcolor: $backgroundcolor
+
+--- intro-mobile:
+if: $ft.is-mobile
+body: $body
+backgroundcolor: $backgroundcolor
+
+
+-- ftd.column intro-desktop:
+body body:
+ftd.color backgroundcolor: $fpm.color.main.background.base
+width: fill
+background-color: $backgroundcolor
+
+
+
+--- psi.post-subtitle:
+body: $body
+
+
+-- ftd.column intro-mobile:
+body body:
+ftd.color backgroundcolor:
+width: fill
+background-color: $backgroundcolor
+
+
+
+--- psi.post-subtitle:
+body: $body
+
+
+
+
+
+
+
+
+
+-- ftd.column intro-two:
+body body:
+ftd.color backgroundcolor: $fpm.color.main.background.base
+width: fill
+
+
+
+--- intro-desktop-italic:
+if: not $ft.is-mobile
+body: $body
+backgroundcolor: $backgroundcolor
+
+--- intro-mobile-italic:
+if: $ft.is-mobile
+body: $body
+backgroundcolor: $backgroundcolor
+
+
+
+
+-- ftd.column intro-desktop-italic:
+body body:
+ftd.color backgroundcolor: $fpm.color.main.background.base
+width: fill
+background-color: $backgroundcolor
+
+
+
+--- post-subtitle:
+body: $body
+
+
+-- ftd.column intro-mobile-italic:
+body body:
+ftd.color backgroundcolor:
+width: fill
+background-color: $backgroundcolor
+
+
+
+--- post-subtitle:
+body: $body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.row post-subtitle:
+width: fill
+body body:
+max-width: 1056
+
+--- post-subtitle-desktop:
+if: not $ft.is-mobile
+body: $body
+
+--- post-subtitle-mobile:
+if: $ft.is-mobile
+body: $body
+
+
+-- ftd.row post-subtitle-desktop:
+width: fill
+margin-top: $fpm.space.space-9
+margin-bottom: $fpm.space.space-9
+body body:
+max-width: 1056
+
+--- ftd.row:
+width: fill
+border-left: 2
+padding-left: $fpm.space.space-11
+border-color: $fpm.color.main.border
+
+
+
+--- ftd.text: 
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.copy-large
+style: italic
+
+-- ftd.row post-subtitle-mobile:
+width: fill
+margin-top: $fpm.space.space-7
+margin-bottom: $fpm.space.space-7
+body body:
+max-width: 1056
+
+--- ftd.row:
+width: fill
+border-left: 2
+padding-left: $fpm.space.space-7
+border-color: $fpm.color.main.border
+
+
+--- ftd.text: 
+text: $body
+color: $fpm.color.main.text
+role: $fpm.type.copy-tight
+style: italic

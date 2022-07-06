@@ -1,0 +1,209 @@
+-- import: fifthtry.github.io/doc-site as ft
+
+-- ft.page: `badge` and it's Usage
+
+Badges can be used as part of any component and are available in below formats:
+
+
+-- all-badges: All `badge` examples:
+
+
+
+-- badge-output: Light Badge:
+
+
+--- ft.code: Example code for dark `badge` `light` is by default true:
+lang: ftd
+
+\-- ft.badge: Light
+
+
+
+
+-- badge-output: Dark Badge:
+dark: true
+light: false
+
+--- ft.code: Example code for dark `badge`:
+lang: ftd
+
+\-- ft.badge: Dark
+dark: true
+
+
+
+-- badge-output: Primary Badge:
+primary: true
+light: false
+
+--- ft.code: Example code for primary `badge`:
+lang: ftd
+
+\-- ft.badge: Primary
+primary: true
+
+
+
+
+-- badge-output: Secondary Badge:
+secondary: true
+light: false
+
+--- ft.code: Example code for secondary `badge`:
+lang: ftd
+
+\-- ft.badge: Secondary
+secondary: true
+
+
+-- badge-output: Success Badge:
+success: true
+light: false
+
+--- ft.code: Example code for success `badge`:
+lang: ftd
+
+\-- ft.badge: Success
+success: true
+
+
+-- badge-output: Danger Badge:
+danger: true
+light: false
+
+--- ft.code: Example code for danger `badge`:
+lang: ftd
+
+\-- ft.badge: Danger
+danger: true
+
+
+-- badge-output: Warning Badge:
+warning: true
+light: false
+
+--- ft.code: Example code for warning `badge`:
+lang: ftd
+
+\-- ft.badge: Warning
+warning: true
+
+
+-- badge-output: Info Badge:
+info: true
+light: false
+
+--- ft.code: Example code for info `badge`:
+lang: ftd
+
+\-- ft.badge: Info
+info: true
+
+
+
+
+
+
+
+
+
+
+-- ftd.column all-badges:
+caption title:
+width: fill
+margin-bottom: $fpm.space.space-6
+
+--- ft.h3: $title
+align: center
+
+--- ftd.row:
+width: fill
+margin-left: -16
+
+--- ft.badge: Light
+light: true
+
+--- ft.badge: Dark
+dark: true
+
+--- ft.badge: Primary
+primary: true
+
+--- ft.badge: Secondary
+secondary: true
+
+--- ft.badge: Info
+info: true
+
+--- ft.badge: Warning
+warning: true
+
+--- ft.badge: Success
+success: true
+
+--- ft.badge: Danger
+danger: true
+
+
+
+
+
+
+
+
+-- ftd.column badge-output:
+caption title: 
+boolean light: true
+boolean dark: false
+boolean primary: false
+boolean secondary: false
+boolean success: false
+boolean danger: false
+boolean warning: false
+boolean info: false
+width: fill
+
+--- ftd.row:
+
+--- ft.h3: $title
+align: center
+
+--- ft.badge: Light 
+if: $light
+light: true
+align: center
+
+--- ft.badge: Dark 
+if: $dark
+dark: true
+align: center
+
+--- ft.badge: Primary
+if: $primary
+primary: true
+align: center
+
+--- ft.badge: Secondary
+if: $secondary
+secondary: true
+align: center
+
+--- ft.badge: Success
+if: $success
+success: true
+align: center
+
+--- ft.badge: Danger
+if: $danger
+danger: true
+align: center
+
+--- ft.badge: Warning
+if: $warning
+warning: true
+align: center
+
+--- ft.badge: Info
+if: $info
+info: true
+align: center

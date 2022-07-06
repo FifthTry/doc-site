@@ -1,4 +1,5 @@
 -- import: fpm
+-- import: fifthtry.github.io/doc-site as ft
 -- import: fifthtry.github.io/code-block as cb
 -- import: fifthtry.github.io/doc-site/assets
 
@@ -250,6 +251,7 @@ text: $title
 caption $title:
 region: title
 text: $title
+color: $fpm.color.main.text-strong
 role: $fpm.type.heading-medium
 
 --- container: ftd.main
@@ -1169,3 +1171,15 @@ if: $open
 
 --- key-item: $obj
 $loop$: $fpm.upto-date-files as $obj
+
+
+
+
+
+
+
+
+
+-- ft.page: Design page
+
+Add some Design here
