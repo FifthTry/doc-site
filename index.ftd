@@ -5,7 +5,7 @@
 -- boolean pricing-cta: false
 
 -- boolean parent-brand: true
-
+-- boolean show-floater: false
 -- ftd.color light-green:
 light: #0DCEAB
 dark: #0DCEAB
@@ -78,16 +78,16 @@ boolean is-last: false
 -- tc list tc-list:
 
 -- tc-list: About
-url: /
+url: https://fifthtry.com/
 
 -- tc-list: Terms
-url: /
+url: https://fifthtry.com/
 
 -- tc-list: Privacy
-url: /
+url: https://fifthtry.com/
 
 -- tc-list: Blog
-url: /
+url: https://fifthtry.com/
 is-last: true
 
 -- fpm.sitemap-data sitemap:
@@ -134,6 +134,7 @@ $processor$: toc
 toc: $sample-toc
 sub-sections: $sample-left
 login-button: $login-button
+show-floater: true
 /extra: $sample-right
 sections: $sample-header
 nav-title: Blog
@@ -362,10 +363,6 @@ optional string nav-title:
 optional string nav-title-url:
 optional string nav-sub-title:
 optional string nav-sub-title-url:
-width: fill
-open: true
-boolean widthfill: false
-append-at: main-container
 string github-text: {green: Sign in} to access Editing Tools
 string github-text-url: /
 ftd.image-src side-logo: $assets.files.static.editor-icon.svg
@@ -376,9 +373,15 @@ string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
 tc list tc-list: $tc-list
+boolean show-floater: $show-floater
+width: fill
+open: true
+boolean widthfill: false
+append-at: main-container
 
 
 --- floater:
+show-floater: $show-floater
 sidebar-brand-logo: $sidebar-brand-logo
 cross-icon: $cross-icon
 side-logo: $side-logo
@@ -1110,13 +1113,13 @@ $body
 
 
 -- ftd.column floater:
+if: $show-floater
 anchor: parent
+boolean show-floater:
 top: 0
 right: 0
 id: sidebar
 ftd.image-src side-logo:
-string about-text: 
-string edit-text:
 tc list tc-list:
 height: fill
 max-height: calc 100vh-200px
@@ -1170,6 +1173,7 @@ spacing: 12
 --- ftd.row:
 width: fill
 
+
 --- ftd.text: $about-text
 link: $about-text-url
 role: $small-bold
@@ -1183,6 +1187,11 @@ width: 16
 height: 16
 
 --- container: section-container
+
+--- ftd.column:
+width: fill
+height: fill
+overflow-y: auto
 
 --- ftd.text: $edit-text
 link: $edit-text-url
@@ -1210,6 +1219,7 @@ max-width: 127
 
 --- ftd.column:
 width:fill
+id: floater-container
 background-color: $fpm.color.main.background.step-1
 padding-vertical: $fpm.space.space-2
 padding-horizontal: $fpm.space.space-4
@@ -1219,11 +1229,17 @@ spacing: 8
 role: $large
 color: $fpm.color.main.text-strong
 
+
+--- ftd.row:
+link: https://fifthtry.com/
+height: 32
+
 --- ftd.image:
 src: $sidebar-brand-logo
 width: auto
 height: 32
 
+--- container: floater-container
 --- ftd.row:
 width: fill
 spacing: 8
@@ -1263,8 +1279,11 @@ boolean is-last:
 color: $fpm.color.main.text-strong
 spacing: 8
 
+
 --- ftd.text: $title
 role:$copy-print
+link: $url
+color: $fpm.color.main.text-strong
 
 --- ftd.row:
 margin-top: 8
