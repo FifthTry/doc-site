@@ -78,16 +78,16 @@ boolean is-last: false
 -- tc list tc-list:
 
 -- tc-list: About
-url: https://fifthtry.com/
+url: https://github.com/FifthTry
 
 -- tc-list: Terms
-url: https://fifthtry.com/
+url: https://fifthtry.com/terms/
 
 -- tc-list: Privacy
-url: https://fifthtry.com/
+url: https://fifthtry.com/privacy/
 
 -- tc-list: Blog
-url: https://fifthtry.com/
+url: https://fifthtry.com/blog/
 is-last: true
 
 -- fpm.sitemap-data sitemap:
@@ -1134,13 +1134,14 @@ string about-text:
 string about-text-url: 
 string edit-text:
 string edit-text-url:
+$on-click-outside$: $open = false
 
 --- ftd.image:
 if: not $open
 src: $side-logo
 height: 89
 width: 27
-move-down: 400
+move-down: 250
 $on-click$: $open= true
 
 --- container:  ftd.main
@@ -1172,7 +1173,6 @@ spacing: 12
 
 --- ftd.row:
 width: fill
-
 
 --- ftd.text: $about-text
 link: $about-text-url
@@ -1229,7 +1229,6 @@ spacing: 8
 role: $large
 color: $fpm.color.main.text-strong
 
-
 --- ftd.row:
 link: https://fifthtry.com/
 height: 32
@@ -1240,6 +1239,7 @@ width: auto
 height: 32
 
 --- container: floater-container
+
 --- ftd.row:
 width: fill
 spacing: 8
@@ -1284,6 +1284,7 @@ spacing: 8
 role:$copy-print
 link: $url
 color: $fpm.color.main.text-strong
+open-in-new-tab: true
 
 --- ftd.row:
 margin-top: 8
