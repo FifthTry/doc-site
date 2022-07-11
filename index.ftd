@@ -1122,7 +1122,7 @@ id: sidebar
 ftd.image-src side-logo:
 tc list tc-list:
 height: fill
-max-height: calc 100vh-200px
+max-height: calc 100vh - 0px
 string github-text:
 boolean open: false
 z-index: 1000
@@ -1150,8 +1150,8 @@ $on-click$: $open= true
 if: $open
 id: right-sidebar
 min-width: 256
-height: calc 100% - 2px
-max-height: calc percent 100 - 2px
+height: calc 100%
+max-height: calc percent 100
 
 --- ftd.row:
 width: fill
