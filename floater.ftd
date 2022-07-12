@@ -3,6 +3,26 @@
 
 -- ft.show-floater: true
 
+
+-- ftd.font-size copy-tight-bold-desktop:
+line-height: 20
+size: 16
+letter-spacing: 0
+
+-- ftd.type copy-tight-bold: $fpm.font-display
+desktop: $copy-tight-bold-desktop
+mobile: $copy-tight-bold-desktop
+xl: $copy-tight-bold-desktop
+weight: 700
+
+-- ftd.text green: text
+role: $copy-tight-bold
+color: $light-green
+
+-- ftd.color light-green:
+light: #0DCEAB
+dark: #0DCEAB
+
 -- fpm.toc-item list sample-left:
 $processor$: toc
 
