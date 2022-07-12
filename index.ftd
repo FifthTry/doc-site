@@ -1114,7 +1114,7 @@ $body
 
 -- ftd.column floater:
 if: $show-floater
-anchor: parent
+anchor: window
 boolean show-floater:
 top: 0
 right: 0
