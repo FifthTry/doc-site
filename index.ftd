@@ -5,7 +5,9 @@
 -- boolean pricing-cta: false
 
 -- boolean parent-brand: true
+
 -- boolean show-floater: false
+
 -- ftd.color light-green:
 light: #0DCEAB
 dark: #0DCEAB
@@ -94,13 +96,7 @@ is-last: true
 $processor$: sitemap
 
 
--- fpm.toc-item list sample-toc:
-$processor$: toc
 
-- Introduction: 
-- Quickstart: 
-- Getting started: 
-  - Deploy: /
 
 
 -- fpm.toc-item list sample-header:
@@ -111,36 +107,13 @@ $processor$: toc
 - Use this template: https://github.com/FifthTry/doc-site/generate/
 
 
--- fpm.toc-item list sample-left:
-$processor$: toc
-
-- Home: /
-- About: /
-- Publications: /
-
--- fpm.toc-item list sample-right:
-$processor$: toc
-
-- Latest Publications: 
-  - Santa Maria: /
-  - Bina Recoz: /
-  - A Day in the Dark: /
-- Author Diary: /
 
 
 
 
 -- page: Quickstart
-toc: $sample-toc
-sub-sections: $sample-left
 login-button: $login-button
-show-floater: true
-/extra: $sample-right
 sections: $sample-header
-nav-title: Blog
-nav-title-url: /log/
-nav-sub-title: This is article title
-nav-sub-title-url: /article/
 
 The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
 total amount of memory, in bytes, that the String has received from the allocator. The difference between 
@@ -373,15 +346,13 @@ string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
 tc list tc-list: $tc-list
-boolean show-floater: $show-floater
 width: fill
 open: true
 boolean widthfill: false
 append-at: main-container
 
-
 --- floater:
-show-floater: $show-floater
+if: $show-floater
 sidebar-brand-logo: $sidebar-brand-logo
 cross-icon: $cross-icon
 side-logo: $side-logo
@@ -1113,9 +1084,7 @@ $body
 
 
 -- ftd.column floater:
-if: $show-floater
 anchor: window
-boolean show-floater:
 top: 0
 right: 0
 id: sidebar

@@ -1,0 +1,34 @@
+-- import: fifthtry.github.io/doc-site as ft
+
+
+-- ft.show-floater: true
+
+-- fpm.toc-item list sample-left:
+$processor$: toc
+
+- Home: /
+- Image: /image/
+- Floater: /floater/
+
+
+
+-- ft.page: Floater
+
+To see working floater - click on Fifthtry vertical logo at right side of this page.
+
+Floater can be enabled via adding below lines into `FPM.ftd` file of your package:
+
+-- ft.code: add below lines into `FPM.ftd` file
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/doc-site as ds
+\-- fpm.auto-import: ds
+
+
+
+-- ft.code: add below lines into `FPM/confg.ftd` file
+lang: ftd
+
+\-- import: ds
+
+\-- ds.show-floater: true

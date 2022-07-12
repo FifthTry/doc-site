@@ -15,9 +15,22 @@ base: https://raw.githubusercontent.com/fifthtry/doc-site/main
 
 
 
+
 -- fpm.auto-import: fpm
 -- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 -- fpm.auto-import: fifthtry.github.io/header as h
 -- fpm.auto-import: fifthtry.github.io/toc as tt
 
+
+-- fpm.sitemap:
+
+# Home: /index.html
+
+- Image: /image/
+- Floater: /floater/
+
+# GitHub
+url: https://github.com/FifthTry/doc-site/
+# Use this template
+url: https://github.com/FifthTry/doc-site/generate/
