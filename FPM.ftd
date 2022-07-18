@@ -3,7 +3,7 @@
 -- fpm.package: fifthtry.github.io/doc-site
 zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 base: https://raw.githubusercontent.com/fifthtry/doc-site/main
-
+favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.dependency: fifthtry.github.io/code-block
 
@@ -13,6 +13,8 @@ base: https://raw.githubusercontent.com/fifthtry/doc-site/main
 
 -- fpm.dependency: fifthtry.github.io/typography
 
+-- fpm.dependency: fifthtry.github.io/roboto-mono
+
 
 
 
@@ -21,6 +23,8 @@ base: https://raw.githubusercontent.com/fifthtry/doc-site/main
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 -- fpm.auto-import: fifthtry.github.io/header as h
 -- fpm.auto-import: fifthtry.github.io/toc as tt
+-- fpm.auto-import: fifthtry.github.io/roboto-mono as mono
+
 
 
 -- fpm.sitemap:
