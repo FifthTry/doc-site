@@ -253,7 +253,7 @@ sign-in-txt: $sign-in-txt
 --- ftd.column:
 id: content-container
 width: fill
-max-width: 1104
+max-width: 800
 align: center
 min-height: calc 100vh
 padding-vertical: 40
@@ -294,7 +294,7 @@ padding-vertical: 30
 
 --- ftd.column:
 if: not $is-mobile
-max-width: 1104
+max-width: 800
 width: fill
 align: center
 id:  content-container
@@ -475,7 +475,7 @@ width: fill
 
 --- ftd.column:
 id: main-container
-max-width if $toc is empty: 1104
+max-width if $toc is empty: 800
 max-width if $widthfill: fill
 max-width: 800
 align if $toc is empty: center
