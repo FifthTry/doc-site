@@ -629,7 +629,7 @@ width: fill
 if: not $is-mobile
 footer-toc: $footer-toc
 
-container: ftd.main
+--- container: ftd.main
 
 --- footer-mobile:
 if: $is-mobile
