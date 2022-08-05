@@ -246,10 +246,8 @@ margin-right: 20
 margin-top: 4
 
 --- ftd.text: $title
-text: $title
-caption $title:
-region: title
-text: $title
+caption title:
+region: $title
 role: $fpm.type.heading-medium
 
 --- container: ftd.main
@@ -258,10 +256,8 @@ role: $fpm.type.heading-medium
 if: not $icon
 
 --- ftd.text: $title
-text: $title
-caption $title:
-region: title
-text: $title
+caption title:
+region: $title
 role: $fpm.type.heading-medium
 
 
