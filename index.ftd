@@ -1064,7 +1064,7 @@ role: $fpm.type.label-big
 
 --- ftd.text: $title
 if: $title is not null
-role. $fpm.type.label-big
+role: $fpm.type.label-big
 
 --- container: m
 
