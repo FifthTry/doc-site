@@ -431,7 +431,6 @@ boolean pricing-cta:
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
-boolean pricing-cta:
 width: fill
 open: true
 append-at: main-container
@@ -515,9 +514,8 @@ fpm.toc-item list toc: $toc
 fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
-fpm.toc-item list footer-toc:
+;fpm.toc-item list footer-toc:
 fpm.toc-item list footer-toc: $footer-toc
-fpm.toc-item list toc: $toc
 optional fpm.toc-item current-section:
 optional fpm.toc-item current-page:
 optional fpm.toc-item current-subsection:
@@ -791,7 +789,6 @@ append-at: inner
 text: $title
 caption $title:
 region: title
-text: $title
 role: $fpm.type.heading-medium
 color: $fpm.color.main.text
 padding-bottom: 8
@@ -1095,8 +1092,7 @@ max-height: calc 100vh - 0px
 string github-text:
 boolean open: false
 z-index: 1000
-string github-text-url: 
-ftd.image-src side-logo: 
+string github-text-url:
 ftd.image-src sidebar-brand-logo: 
 ftd.image-src cross-icon:
 string about-text: 
