@@ -626,7 +626,7 @@ width: fill
 if: not $is-mobile
 footer-toc: $footer-toc
 
-container: ftd.main
+--- container: ftd.main
 
 --- footer-mobile:
 if: $is-mobile
@@ -1060,7 +1060,7 @@ role: $fpm.type.label-big
 
 --- ftd.text: $title
 if: $title is not null
-role. $fpm.type.label-big
+role: $fpm.type.label-big
 
 --- container: m
 
