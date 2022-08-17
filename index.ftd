@@ -487,10 +487,6 @@ width: fill
 --- tf.h0: $title
 if: $title is not null
 
-
---- tf.markdown:
-if: $body is not null
-
 $body
 
 
