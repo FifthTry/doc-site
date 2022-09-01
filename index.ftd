@@ -894,7 +894,6 @@ margin-bottom: 34
 
 
 -- ftd.iframe youtube:
-string id:
 youtube: $id
 height: 400
 width: fill
@@ -907,8 +906,6 @@ margin-bottom: 34
 
 
 -- ftd.column container:
-optional string id:
-id: $id
 max-width: 800
 width: fill
 padding-top: 15
@@ -961,7 +958,7 @@ background-color: $fpm.color.main.background.base
 optional caption caption:
 optional body body:
 optional string link:
-optional string align: center
+optional string alignment: center
 optional string width:
 optional string height:
 ftd.image-src src:
@@ -973,7 +970,7 @@ align if $width is null: center
 src: $src
 width: $width
 height: $height
-align: $align
+align: $alignment
 
 --- ftd.text:
 if: $caption is not null
