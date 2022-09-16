@@ -1,7 +1,6 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site/blog/blog-ui as ui
--- import: fifthtry.github.io/doc-site/author-meta as author
 -- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
 
 
@@ -12,7 +11,7 @@
 -- meta.author amitu: Amit Upadhyay
 profile: CEO
 bio-url: /blog-authors/amitu/
-image: $assets.files.static.avatar.jpg
+image: $assets.files.static.authors.amitu.jpg
 company: FifthTry Pvt. Ltd.
 
 Founder CEO of FifthTry Private Limited. FifthTry is backed by Y Combinators. 

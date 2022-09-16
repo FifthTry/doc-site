@@ -33,20 +33,23 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 - Image: /image/
 - Floater: /floater/
-- Featured Posts: /featured-ui/
-- Article: /article/
-- Author bio: /author-bio/
 
 
 # Blog: /featured-ui/
 
-## Posts:
+## Posts: /featured-ui/
 
-- Amit Upadhyaya Post: /blog-articles/amitu-post/
+- Amit Upadhyay Post: /blog-articles/amitu-post/
 - Abrar Post: /blog-articles/abrar-post/
 - Arpita Post: /blog-articles/arpita-post/
 - Ganesh Post: /blog-articles/ganesh-post/
 
+## Authors: /blog-authors/amitu/
+
+- Amit Upadhyay: /blog-authors/amitu/
+- Abrar Khan: /blog-authors/abrar/
+- Arpita Jaiswal: /blog-authors/arpita/
+- Ganesh S Salunke: /blog-authors/ganesh/
 
 
 

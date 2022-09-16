@@ -11,7 +11,7 @@
 -- blog.post:
 
 -- blog.featured-post:
-post-data: $abrar-post.abrar-first-post
+post-data: $amitu-post.amitu-first-post
 
 
 -- blog.image-first:
@@ -23,5 +23,5 @@ post-data: $ganesh-post.ganesh-first-post
 
 
 -- blog.without-image:
-post-data: $amitu-post.amitu-first-post
+post-data: $abrar-post.abrar-first-post
 
