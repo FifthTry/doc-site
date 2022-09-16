@@ -1,0 +1,35 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/blog/blog-ui as ui
+-- import: fifthtry.github.io/doc-site/author-meta as author
+-- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
+
+
+
+
+
+
+-- meta.author abrar: Abrar Khan
+profile: Sr. Software Developer
+bio-url: /blog-authors/abrar/
+image: $assets.files.static.authors.abrar-k.jpg
+company: FifthTry Pvt. Ltd.
+
+Completed my masters from National Institute of Technology. Working as Sr. Software
+Developer at FifthTry Private Ltd. a Banglore based start-up company.
+
+Currently working full time with FifthTry and building FTD and FPM day and night.
+
+
+
+
+
+-- ds.page: 
+
+
+-- ui.author-bio: $abrar.title
+profile: $abrar.profile
+company: $abrar.company
+avatar: $abrar.image
+
+$abrar.body

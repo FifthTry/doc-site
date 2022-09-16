@@ -1,0 +1,616 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
+-- import: fifthtry.github.io/doc-site as ft
+
+
+-- ftd.column post:
+open: true
+append-at: post-container
+
+--- ftd.row:
+wrap: true
+id: post-container
+spacing: 16
+
+
+
+
+
+
+-- ftd.column featured-post:
+meta.post post-data:
+
+--- post-card: $post-data.title
+timestamp: $post-data.published-on
+author: $post-data.author
+image: $post-data.post-image
+url:  $post-data.post-url
+body: $post-data.body
+
+
+
+
+-- ftd.column post-card:
+caption title:
+string timestamp:
+meta.author author:
+ftd.image-src image:
+string url:
+optional body body:
+width: fill
+
+
+
+--- featured-post-desktop: $title
+if: not $ft.is-mobile
+timestamp: $timestamp
+author: $author
+image: $image
+url: $url
+body: $body
+
+
+--- featured-post-mobile: $title
+if:  $ft.is-mobile
+timestamp: $timestamp
+author: $author
+image: $image
+url: $url
+body: $body
+
+
+-- ftd.column featured-post-desktop:
+caption title:
+string timestamp:
+meta.author author:
+ftd.image-src image:
+string url:
+optional body body:
+width: fill
+padding-vertical: $fpm.space.space-6
+padding-horizontal:$fpm.space.space-6
+border-width: 1
+border-color: $fpm.color.main.border
+margin-top: $fpm.space.space-2
+margin-bottom: $fpm.space.space-3
+margin-left: $fpm.space.space-3
+margin-right: $fpm.space.space-3
+border-radius: $fpm.space.space-2
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-medium
+color: $fpm.color.main.text-strong
+width: fill
+text-align: center
+link: $url
+
+--- ftd.row:
+width: fill
+id: box-container
+margin-top: $fpm.space.space-7
+
+--- ftd.column:
+width: fill
+
+--- ftd.image:
+src: $image
+width: fill
+height: auto
+
+--- container: box-container
+
+--- ftd.column:
+width: fill
+margin-left: $fpm.space.space-6
+spacing: 12
+id: te-container
+
+--- ftd.text:
+if: $body is not null
+text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+width: fill
+height: 120
+overflow-y: hidden
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+text-align: right
+width: fill
+link: $author.bio-url
+
+--- container: te-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+text-align: right
+width: fill
+
+
+
+
+
+
+-- ftd.column featured-post-mobile:
+caption title:
+string timestamp:
+meta.author author:
+ftd.image-src image:
+string url:
+optional body body:
+width: fill
+padding-vertical: $fpm.space.space-6
+padding-horizontal:$fpm.space.space-6
+border-width: 1
+border-color: $fpm.color.main.border
+border-radius: $fpm.space.space-2
+spacing: 12
+
+--- ftd.text: $title
+role: $fpm.type.heading-medium
+color: $fpm.color.main.text-strong
+width: fill
+text-align: center
+link: $url
+
+--- ftd.image:
+src: $image
+width: fill
+height: auto
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+width: fill
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+
+
+
+
+
+
+
+
+
+-- ftd.column image-first:
+meta.post post-data:
+
+
+--- image-first-card: $post-data.title
+timestamp: $post-data.published-on
+author: $post-data.author
+image: $post-data.post-image
+url:  $post-data.post-url
+body: $post-data.body
+
+-- ftd.column image-first-card:
+optional ftd.image-src image:
+string url:
+string timestamp:
+caption title:
+meta.author author:
+body body:
+border-width: 1
+border-color: $fpm.color.main.border
+padding-vertical: $fpm.space.space-6
+width: fill
+max-width: 344
+max-height: 484
+padding-horizontal:$fpm.space.space-6
+color: $fpm.color.main.text
+margin-top : $fpm.space.space-3
+margin-bottom : $fpm.space.space-3
+spacing: 12
+border-radius: 8
+
+
+
+--- ftd.image:
+src: $image
+width: fill
+height:auto
+
+--- ftd.text: $title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+margin-top if $image is not null: 12
+link: $url
+
+--- ftd.row:
+id: time-container
+width: fill
+spacing: 8
+margin-top: 8
+
+--- ftd.row:
+spacing: 2
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+--- ftd.text:, 
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: time-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: ftd.main
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+height: 120
+overflow-y: hidden
+
+-- ftd.column image-in-between:
+meta.post post-data:
+
+--- image-in-between-card: $post-data.title
+timestamp: $post-data.published-on
+image: $post-data.post-image
+author: $post-data.author
+url:  $post-data.post-url
+body: $post-data.body
+
+
+
+
+
+-- ftd.column image-in-between-card:
+optional ftd.image-src image:
+string url:
+string timestamp:
+caption title:
+meta.author author:
+body body:
+border-width: 1
+border-color: $fpm.color.main.border
+padding-vertical: $fpm.space.space-6
+width: fill
+max-width: 344
+max-height: 484
+padding-horizontal:$fpm.space.space-6
+color: $fpm.color.main.text
+margin-top : $fpm.space.space-3
+margin-bottom : $fpm.space.space-3
+margin-left if not $ft.is-mobile: $fpm.space.space-3
+/margin-right if not $ft.is-mobile: $fpm.space.space-3
+spacing: 12
+border-radius: 8
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+link: $url
+
+--- ftd.row:
+id: time-container
+width: fill
+spacing: 8
+margin-top: 8
+
+--- ftd.row:
+spacing: 2
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+--- ftd.text:, 
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: time-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: ftd.main
+
+--- ftd.image:
+src: $image
+width: fill
+height:auto
+margin-top:12
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+height: 120
+overflow-y: hidden
+
+-- ftd.column without-image:
+meta.post post-data:
+
+
+--- without-image-card: $post-data.title
+timestamp: $post-data.published-on
+author: $post-data.author
+url:  $post-data.post-url
+body: $post-data.body
+
+
+
+-- ftd.column without-image-card:
+string url:
+string timestamp:
+caption title:
+meta.author author:
+body body:
+border-width: 1
+border-color: $fpm.color.main.border
+padding-vertical: $fpm.space.space-6
+width: fill
+max-width: 344
+max-height: 484
+padding-horizontal:$fpm.space.space-6
+color: $fpm.color.main.text
+margin-top : $fpm.space.space-3
+margin-bottom : $fpm.space.space-3
+/margin-left if not $ft.is-mobile: $fpm.space.space-3
+margin-right if not $ft.is-mobile: $fpm.space.space-3
+spacing: 12
+border-radius: 8
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+link: $url
+
+--- ftd.row:
+id: time-container
+width: fill
+spacing: 8
+margin-top: 8
+
+--- ftd.row:
+spacing: 2
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+
+--- ftd.text:, 
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: time-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: ftd.main
+
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+height: 120
+overflow-y: hidden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column author-bio:
+caption title:
+string profile:
+optional string company:
+ftd.image-src avatar:
+body body:
+width: fill
+color: $fpm.color.main.text
+spacing: 24
+margin-top: 12
+margin-bottom: 12
+margin-left: 12
+margin-right: 12
+
+--- author-bio-desktop: $title
+if: not $ft.is-mobile
+profile: $profile
+company: $company
+avatar: $avatar
+body: $body
+
+--- author-bio-mobile: $title
+if: $ft.is-mobile
+profile: $profile
+company: $company
+avatar: $avatar
+body: $body
+
+-- ftd.column author-bio-desktop:
+caption title:
+string profile:
+optional string company:
+ftd.image-src avatar:
+body body:
+width: fill
+color: $fpm.color.main.text
+spacing: 32
+margin-top: 12
+margin-bottom: 12
+margin-left: 12
+margin-right: 12
+
+--- ftd.row:
+width: fill
+id: auth-container
+spacing: 24
+
+--- ftd.column:
+width: percent 30
+
+
+--- ftd.image:
+src: $avatar
+width: 152
+height: 152
+border-radius: 500
+
+--- container: auth-container
+
+--- ftd.column:
+width: fill
+align: center
+
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+margin-bottom: 16
+
+--- ftd.text: $profile
+role: $fpm.type.copy-tight
+margin-bottom: 4
+
+--- ftd.text: $company
+role: $fpm.type.copy-tight
+
+--- container: ftd.main
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+
+
+
+
+-- ftd.column author-bio-mobile:
+caption title:
+string profile:
+optional string company:
+ftd.image-src avatar:
+body body:
+width: fill
+color: $fpm.color.main.text
+spacing: 16
+margin-top: 12
+margin-bottom: 12
+
+
+--- ftd.image:
+src: $avatar
+width: 132
+height: 132
+border-radius: 500
+align: center
+
+
+--- ftd.column:
+align: center
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $profile
+role: $fpm.type.copy-tight
+
+--- ftd.text: $company
+role: $fpm.type.copy-tight
+
+--- container: ftd.main
+
+--- ftd.text:
+text: $body
+role: $fpm.type.fine-print
+
+
+
+
+-- ftd.column article:
+caption title:
+ftd.image-src image:
+meta.author author:
+string timestamp:
+body body:
+color: $fpm.color.main.text
+spacing: 16
+open: true
+append-at: atictles-container
+
+--- ftd.text: $title
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: $author.title
+role: $fpm.type.copy-relaxed
+width: fill
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+--- ftd.row:
+id: post-container
+spacing: 12
+
+
+--- ftd.text: Posted on:
+role: $fpm.type.copy-relaxed
+white-space: nowrap
+color: $fpm.color.main.cta-primary.border
+
+
+--- ftd.text: $timestamp
+role: $fpm.type.copy-relaxed
+white-space: nowrap
+color: $fpm.color.main.cta-primary.border
+
+--- container: ftd.main
+
+
+--- ftd.image:
+src: $image
+width: fill
+height: auto
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+
+--- ftd.column:
+id: atictles-container

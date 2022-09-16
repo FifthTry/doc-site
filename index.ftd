@@ -189,6 +189,7 @@ weight: 700
 -- fpm.toc-item list sub-sections:
 -- fpm.toc-item list extra:
 -- fpm.toc-item list toc:
+
 -- fpm.toc-item list footer-toc:
 
 
@@ -501,8 +502,6 @@ footer-toc: $footer-toc
 
 
 
-
-
 -- ftd.column doc-page-mobile:
 optional caption title:
 optional body body:
@@ -572,6 +571,8 @@ $body
 --- footer:
 if: $footer-toc is not empty
 footer-toc: $footer-toc
+
+
 
 
 
@@ -1251,3 +1252,23 @@ padding-vertical: 1
 padding-horizontal: 1
 border-radius: 100
 background-color: $fpm.color.main.text-strong
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

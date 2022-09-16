@@ -29,12 +29,28 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.sitemap:
 
-# Home: /index.html
+# Home: /
 
 - Image: /image/
 - Floater: /floater/
+- Featured Posts: /featured-ui/
+- Article: /article/
+- Author bio: /author-bio/
 
-# GitHub
+
+# Blog: /featured-ui/
+
+## Posts:
+
+- Amit Upadhyaya Post: /blog-articles/amitu-post/
+- Abrar Post: /blog-articles/abrar-post/
+- Arpita Post: /blog-articles/arpita-post/
+- Ganesh Post: /blog-articles/ganesh-post/
+
+
+
+
+# GitHub:
 url: https://github.com/FifthTry/doc-site/
-# Use this template
+# Use this template:
 url: https://github.com/FifthTry/doc-site/generate/
