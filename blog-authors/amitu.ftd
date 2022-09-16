@@ -1,0 +1,33 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/blog/blog-ui as ui
+-- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
+
+
+
+
+
+
+-- meta.author amitu: Amit Upadhyay
+profile: CEO
+bio-url: /blog-authors/amitu/
+image: $assets.files.static.authors.amitu.jpg
+company: FifthTry Pvt. Ltd.
+
+Founder CEO of FifthTry Private Limited. FifthTry is backed by Y Combinators. 
+A Banglore based start-up having development center at 91Springboard, JP Nagar,
+Banglore.
+
+
+
+
+
+-- ds.page: 
+
+
+-- ui.author-bio: $amitu.title
+profile: $amitu.profile
+company: $amitu.company
+avatar: $amitu.image
+
+$amitu.body

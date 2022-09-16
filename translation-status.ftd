@@ -1,6 +1,6 @@
 -- import: fpm
 -- import: fpm-lib
--- import: fifthtry.github.io/doc-site/index as ft
+-- import: fifthtry.github.io/doc-site/index as ds
 -- import: fifthtry.github.io/doc-site/design-doc as doc
 -- import: fifthtry.github.io/doc-site/assets
 
@@ -8,8 +8,8 @@
 width: fill
 height: fill
 
---- ft.page:
-toc: $ft.toc
+--- ds.page:
+toc: $ds.toc
 
 --- doc.page-title: $fpm.i18n.language-detail-page
 icon: true

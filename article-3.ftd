@@ -1,0 +1,50 @@
+-- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/author-meta as author
+-- import: fifthtry.github.io/doc-site/blog/blog-ui as blog
+-- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
+
+-- meta.post fourth-post: Title of the post
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.static.image-placeholder.png
+post-url: /article/
+author: $author.amitu
+
+
+Imperdiet dui accumsan sit amet nulla. Donec et odio pellentesque diam. 
+Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. 
+Neque ornare aenean euismod elementum.
+
+
+Venenatis cras sed felis eget. 
+Mi bibendum neque egestas congue quisque egestas diam. Mollis nunc sed id 
+
+semper risus in. Vitae congue eu consequat ac felis donec et odio pellentesque. 
+Id nibh tortor id aliquet lectus proin nibh nisl condimentum. Dui sapien eget 
+
+mi proin sed libero enim. Duis at consectetur lorem donec massa sapien faucibus.
+Non sodales neque sodales ut. Molestie nunc non blandit massa enim nec dui.
+Pharetra vel turpis nunc eget lorem dolor sed.
+
+
+
+
+
+
+
+
+
+
+-- ds.page:
+
+-- blog.article: $fourth-post.title 
+image: $fourth-post.post-image
+author: $fourth-post.author
+timestamp: $fourth-post.published-on
+
+$fourth-post.body
+
+
+
+
+

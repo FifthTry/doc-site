@@ -29,12 +29,31 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.sitemap:
 
-# Home: /index.html
+# Home: /
 
 - Image: /image/
 - Floater: /floater/
 
-# GitHub
+
+# Blog: /featured-ui/
+
+## Posts: /featured-ui/
+
+- Amit Upadhyay Post: /blog-articles/amitu-post/
+- Abrar Post: /blog-articles/abrar-post/
+- Arpita Post: /blog-articles/arpita-post/
+- Ganesh Post: /blog-articles/ganesh-post/
+
+## Authors: /blog-authors/amitu/
+
+- Amit Upadhyay: /blog-authors/amitu/
+- Abrar Khan: /blog-authors/abrar/
+- Arpita Jaiswal: /blog-authors/arpita/
+- Ganesh S Salunke: /blog-authors/ganesh/
+
+
+
+# GitHub:
 url: https://github.com/FifthTry/doc-site/
-# Use this template
+# Use this template:
 url: https://github.com/FifthTry/doc-site/generate/

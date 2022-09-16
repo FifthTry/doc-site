@@ -1,7 +1,7 @@
--- import: fifthtry.github.io/doc-site as ft
+-- import: fifthtry.github.io/doc-site as ds
 
 
--- ft.show-floater: true
+-- ds.show-floater: true
 
 
 -- ftd.font-size copy-tight-bold-desktop:
@@ -32,13 +32,13 @@ $processor$: toc
 
 
 
--- ft.page: Floater
+-- ds.page: Floater
 
 To see working floater - click on Fifthtry vertical logo at right side of this page.
 
 Floater can be enabled via adding below lines into `FPM.ftd` file of your package:
 
--- ft.code: add below lines into `FPM.ftd` file
+-- ds.code: add below lines into `FPM.ftd` file
 lang: ftd
 
 \-- fpm.dependency: fifthtry.github.io/doc-site as ds
@@ -46,7 +46,7 @@ lang: ftd
 
 
 
--- ft.code: add below lines into `FPM/confg.ftd` file
+-- ds.code: add below lines into `FPM/confg.ftd` file
 lang: ftd
 
 \-- import: ds
