@@ -29,7 +29,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.sitemap:
 
-# Home: /
+# Home: /index.html
 
 - Image: /image/
 - Floater: /floater/
