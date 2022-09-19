@@ -1,13 +1,11 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/blog-authors/arpita as author
--- import: fifthtry.github.io/doc-site/blog/blog-ui as blog
--- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
 
 
 ; Change below details for your new blog post
 
--- meta.post arpita-first-post: Title of the post
+-- ds.post-meta meta: Title of the post
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
 post-url: /blog-articles/arpita-post/
@@ -18,10 +16,10 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 
 -- ds.page:
 
---- blog.article: $arpita-first-post.title 
-image: $arpita-first-post.post-image
-author: $arpita-first-post.author
-timestamp: $arpita-first-post.published-on
+-- ds.post: 
+meta: $meta
+
+--- ds.markdown:
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
@@ -49,7 +47,7 @@ sit aspernatur aut odit aut f.
 
 `Duis aute irure dolor` in reprehenderit in voluptate velit esse cillum dolore eu.
 
---- ds.code: Code example
+--- ds.code: `Duis aute irure dolor` code
 lang: ftd
 
 \-- ftd.text: Title of the text

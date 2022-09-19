@@ -1,14 +1,13 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
--- import: fifthtry.github.io/doc-site/blog/blog-ui as ui
--- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
 
 
 
 
 
 
--- meta.author abrar: Abrar Khan
+
+-- ds.author-meta abrar: Abrar Khan
 profile: Sr. Software Developer
 bio-url: /blog-authors/abrar/
 image: $assets.files.static.authors.abrar-k.jpg
@@ -26,9 +25,5 @@ Currently working full time with FifthTry and building FTD and FPM day and night
 -- ds.page: 
 
 
--- ui.author-bio: $abrar.title
-profile: $abrar.profile
-company: $abrar.company
-avatar: $abrar.image
-
-$abrar.body
+-- ds.author-bio:
+author: $abrar

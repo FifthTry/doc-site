@@ -1,13 +1,11 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
--- import: fifthtry.github.io/doc-site/blog/blog-ui as ui
--- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
 
 
 
 
 
--- meta.author arpita: Arpita Jaiswal
+-- ds.author-meta arpita: Arpita Jaiswal
 profile: Software Developer
 bio-url:  /blog-authors/arpita/
 image: $assets.files.static.authors.arpita.jpg
@@ -26,9 +24,5 @@ Currently, building a new language FTD and its package manager FPM day and night
 -- ds.page: 
 
 
--- ui.author-bio: $arpita.title
-profile: $arpita.profile
-company: $arpita.company
-avatar: $arpita.image
-
-$arpita.body
+-- ds.author-bio: 
+author:$arpita
