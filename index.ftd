@@ -111,7 +111,7 @@ $processor$: toc
 
 
 
--- page: Introduction to `doc-site` 
+-- page: Introduction to doc-site
 
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
 language `doc-site` is designed for you to create your documentation sites. 
@@ -164,7 +164,7 @@ weight: 700
 -- integer content-padding: 150
 -- integer max-width: 1000
 -- string github: NA
--- optional string site-name: `ds` - Doc Site
+-- optional string site-name: Doc Site
 -- optional ftd.image-src site-logo:
 -- optional ftd.image-src brand-site-logo:
 -- optional string brand-site-name: 
@@ -1253,6 +1253,11 @@ background-color: $fpm.color.main.text-strong
 
 
 
+-- ftd.text yellowmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.custom.two
+padding-horizontal: 2
+margin-right: 4
 
 
 
@@ -1263,3 +1268,23 @@ background-color: $fpm.color.main.text-strong
 
 
 
+-- ftd.text greenmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.success.text
+padding-horizontal: 2
+margin-right: 4
+
+
+
+
+
+
+
+
+
+
+-- ftd.text redmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.error.text
+padding-horizontal: 2
+margin-right: 4
