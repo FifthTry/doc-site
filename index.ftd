@@ -2101,14 +2101,85 @@ role: $fpm.type.fine-print
 
 
 
-
-
-
-
-
-
 -- ftd.text redmarker: text
 color: $fpm.color.main.background.step-1
 background-color: $fpm.color.main.error.text
 padding-horizontal: 2
 margin-right: 4
+
+
+
+
+
+
+
+
+
+-- ftd.column h4:
+caption title:
+optional body body:
+width: fill
+region: h3
+append-at: inner
+margin-top: 32
+margin-bottom: 16
+
+--- ftd.text:
+caption $title:
+text: $title
+region: title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+padding-bottom: 16
+padding-top: 8
+align: center
+
+--- ftd.column:
+id: inner
+width: fill
+margin-bottom if $body is not null: -26
+
+--- markdown:
+if: $body is not null
+body: $body
+
+
+
+
+
+
+
+
+-- ftd.text h5: $title
+caption title:
+role:$fpm.type.copy-relaxed
+style: bold
+color: $fpm.color.main.text-strong
+margin-right: 8
+
+
+
+
+
+
+
+
+
+-- ftd.text markdown-indented:
+body body:
+optional boolean collapsed:
+optional caption title:
+optional boolean two_columns:
+text: $body
+role: $fpm.type.copy-relaxed
+text-indent: percent 5
+color: $fpm.color.main.text
+margin-bottom: 26
+
+
+-- ftd.text boldmarker: text
+role:$fpm.type.copy-relaxed
+style: bold
+color: $fpm.color.main.text-strong
+margin-right: 8
+
