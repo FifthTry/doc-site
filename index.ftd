@@ -110,6 +110,28 @@ $processor$: toc
 
 
 
+-- record author-meta:
+caption title:
+string profile:
+string company:
+string bio-url:
+optional ftd.image-src image:
+body body:
+
+-- record post-meta:
+caption title:
+string published-on:
+optional ftd.image-src post-image:
+optional body body:
+string post-url:
+author-meta author:
+
+
+
+
+
+
+
 
 
 -- page: Introduction to doc-site
@@ -1290,36 +1312,6 @@ margin-right: 4
 
 
 
-
-
-
-
-
-
-
-
-
-
--- record author-meta:
-caption title:
-string profile:
-string company:
-string bio-url:
-optional ftd.image-src image:
-body body:
-
-
-
--- record post-meta:
-caption title:
-string published-on:
-optional ftd.image-src post-image:
-optional body body:
-string post-url:
-author-meta author:
-
-
-
 -- ftd.column post:
 post-meta meta:
 open: true
@@ -1419,9 +1411,8 @@ spacing: 16
 
 --- container: ftd.main
 
---- ftd.row:
+--- ftd.column:
 if: $is-mobile
-wrap: true
 id: post-meta-container
 
 
@@ -1600,13 +1591,20 @@ color: $fpm.color.main.cta-primary.border
 -- ftd.column image-first:
 post-meta post-data:
 
-
 --- image-first-card: $post-data.title
 timestamp: $post-data.published-on
 author: $post-data.author
 image: $post-data.post-image
 url:  $post-data.post-url
 body: $post-data.body
+
+
+
+
+
+
+
+
 
 -- ftd.column image-first-card:
 optional ftd.image-src image:
@@ -1619,7 +1617,7 @@ border-width: 1
 border-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 width: fill
-max-width: 344
+max-width if not $is-mobile: 344
 max-height: 484
 padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
@@ -1627,8 +1625,6 @@ margin-top : $fpm.space.space-3
 margin-bottom : $fpm.space.space-3
 spacing: 12
 border-radius: 8
-
-
 
 --- ftd.image:
 src: $image
@@ -1642,6 +1638,7 @@ margin-top if $image is not null: 12
 link: $url
 
 --- ftd.row:
+if: not $is-mobile
 id: time-container
 width: fill
 spacing: 8
@@ -1673,6 +1670,42 @@ role: $fpm.type.copy-relaxed
 height: 120
 overflow-y: hidden
 
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+id: time-container
+width: fill
+spacing: 8
+margin-top: 8
+
+--- ftd.row:
+spacing: 2
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+--- ftd.text:, 
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: time-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+
+
+
+
+
+
+
+
+
 -- ftd.column image-in-between:
 post-meta post-data:
 
@@ -1682,6 +1715,11 @@ image: $post-data.post-image
 author: $post-data.author
 url:  $post-data.post-url
 body: $post-data.body
+
+
+
+
+
 
 
 
@@ -1698,7 +1736,7 @@ border-width: 1
 border-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 width: fill
-max-width: 344
+max-width if not $is-mobile: 344
 max-height: 484
 padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
@@ -1709,13 +1747,13 @@ margin-left if not $is-mobile: $fpm.space.space-3
 spacing: 12
 border-radius: 8
 
-
 --- ftd.text: $title
 role: $fpm.type.heading-small
 color: $fpm.color.main.text-strong
 link: $url
 
 --- ftd.row:
+if: not $is-mobile
 id: time-container
 width: fill
 spacing: 8
@@ -1753,15 +1791,57 @@ role: $fpm.type.copy-relaxed
 height: 120
 overflow-y: hidden
 
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+id: time-container
+width: fill
+spacing: 8
+margin-top: 8
+
+--- ftd.row:
+spacing: 2
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+--- ftd.text:, 
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: time-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+
+
+
+
+
+
+
+
+
 -- ftd.column without-image:
 post-meta post-data:
-
 
 --- without-image-card: $post-data.title
 timestamp: $post-data.published-on
 author: $post-data.author
 url:  $post-data.post-url
 body: $post-data.body
+
+
+
+
+
+
+
 
 
 
@@ -1775,7 +1855,7 @@ border-width: 1
 border-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 width: fill
-max-width: 344
+max-width if not $is-mobile: 344
 max-height: 484
 padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
@@ -1793,6 +1873,7 @@ color: $fpm.color.main.text-strong
 link: $url
 
 --- ftd.row:
+if: not $is-mobile
 id: time-container
 width: fill
 spacing: 8
@@ -1827,6 +1908,34 @@ height: 120
 overflow-y: hidden
 
 
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+id: time-container
+width: fill
+spacing: 8
+margin-top: 8
+
+--- ftd.row:
+spacing: 2
+
+--- ftd.text: $author.title
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+link: $author.bio-url
+
+--- ftd.text:, 
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+--- container: time-container
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+color: $fpm.color.main.cta-primary.border
+
+
 
 
 
@@ -1838,13 +1947,21 @@ overflow-y: hidden
 -- ftd.column author-bio:
 author-meta author:
 
-
 --- author-bio-card: $author.title
 profile: $author.profile
 company: $author.company
 avatar: $author.image
 
 $author.body
+
+
+
+
+
+
+
+
+
 
 -- ftd.column author-bio-card:
 caption title:
@@ -1874,6 +1991,14 @@ company: $company
 avatar: $avatar
 body: $body
 
+
+
+
+
+
+
+
+
 -- ftd.column author-bio-desktop:
 caption title:
 string profile:
@@ -1896,7 +2021,6 @@ spacing: 24
 --- ftd.column:
 width: percent 30
 
-
 --- ftd.image:
 src: $avatar
 width: 152
@@ -1908,8 +2032,6 @@ border-radius: 500
 --- ftd.column:
 width: fill
 align: center
-
-
 
 --- ftd.text: $title
 role: $fpm.type.heading-large
@@ -1932,6 +2054,12 @@ role: $fpm.type.copy-relaxed
 
 
 
+
+
+
+
+
+
 -- ftd.column author-bio-mobile:
 caption title:
 string profile:
@@ -1944,7 +2072,6 @@ spacing: 16
 margin-top: 12
 margin-bottom: 12
 
-
 --- ftd.image:
 src: $avatar
 width: 132
@@ -1952,10 +2079,8 @@ height: 132
 border-radius: 500
 align: center
 
-
 --- ftd.column:
 align: center
-
 
 --- ftd.text: $title
 role: $fpm.type.heading-small
@@ -1975,8 +2100,86 @@ role: $fpm.type.fine-print
 
 
 
+
 -- ftd.text redmarker: text
 color: $fpm.color.main.background.step-1
 background-color: $fpm.color.main.error.text
 padding-horizontal: 2
 margin-right: 4
+
+
+
+
+
+
+
+
+
+-- ftd.column h4:
+caption title:
+optional body body:
+width: fill
+region: h3
+append-at: inner
+margin-top: 32
+margin-bottom: 16
+
+--- ftd.text:
+caption $title:
+text: $title
+region: title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+padding-bottom: 16
+padding-top: 8
+align: center
+
+--- ftd.column:
+id: inner
+width: fill
+margin-bottom if $body is not null: -26
+
+--- markdown:
+if: $body is not null
+body: $body
+
+
+
+
+
+
+
+
+-- ftd.text h5: $title
+caption title:
+role:$fpm.type.copy-relaxed
+style: bold
+color: $fpm.color.main.text-strong
+margin-right: 8
+
+
+
+
+
+
+
+
+
+-- ftd.text markdown-indented:
+body body:
+optional boolean collapsed:
+optional caption title:
+optional boolean two_columns:
+text: $body
+role: $fpm.type.copy-relaxed
+text-indent: percent 5
+color: $fpm.color.main.text
+margin-bottom: 26
+
+
+-- ftd.text boldmarker: text
+role:$fpm.type.copy-relaxed
+style: bold
+color: $fpm.color.main.text-strong
+margin-right: 8
+
