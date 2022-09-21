@@ -1,5 +1,4 @@
 -- import: fifthtry.github.io/doc-site/assets
--- import: fifthtry.github.io/doc-site/blog/blog-ui as blog
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/blog-articles/abrar-post 
 -- import: fifthtry.github.io/doc-site/blog-articles/arpita-post 
@@ -8,20 +7,20 @@
 
 -- ds.page:
 
--- blog.post:
+-- ds.posts:
 
--- blog.featured-post:
-post-data: $amitu-post.amitu-first-post
-
-
--- blog.image-first:
-post-data: $arpita-post.arpita-first-post
+-- ds.featured-post:
+post-data: $abrar-post.meta
 
 
--- blog.image-in-between:
-post-data: $ganesh-post.ganesh-first-post
+-- ds.image-first:
+post-data: $arpita-post.meta
 
 
--- blog.without-image:
-post-data: $abrar-post.abrar-first-post
+-- ds.image-in-between:
+post-data: $ganesh-post.meta
+
+
+-- ds.without-image:
+post-data: $amitu-post.meta
 

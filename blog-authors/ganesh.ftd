@@ -1,14 +1,12 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
--- import: fifthtry.github.io/doc-site/blog/blog-ui as ui
--- import: fifthtry.github.io/doc-site/blog/blog-meta as meta
 
 
 
 
 
 
--- meta.author ganesh: Ganesh S Salunke
+-- ds.author-meta ganesh: Ganesh S Salunke
 profile: Sr. Manager Frontend
 bio-url:  /blog-authors/ganeshs/
 image: $assets.files.static.authors.ganeshs.jpg
@@ -28,9 +26,6 @@ day and night.
 -- ds.page: 
 
 
--- ui.author-bio: $ganesh.title
-profile: $ganesh.profile
-company: $ganesh.company
-avatar: $ganesh.image
+-- ds.author-bio: 
+author: $ganesh
 
-$ganesh.body
