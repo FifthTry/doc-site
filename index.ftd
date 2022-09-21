@@ -111,9 +111,9 @@ $processor$: toc
 
 
 
--- page: Quickstart
-login-button: $login-button
-sections: $sample-header
+
+-- page: Introduction to doc-site
+
 
 The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
 total amount of memory, in bytes, that the String has received from the allocator. The difference between 
@@ -173,7 +173,9 @@ weight: 700
 -- integer content-padding: 150
 -- integer max-width: 1000
 -- string github: NA
--- optional string site-name: 
+
+-- optional string site-name: Doc Site
+
 -- optional ftd.image-src site-logo:
 -- optional ftd.image-src brand-site-logo:
 -- optional string brand-site-name: 
@@ -1262,6 +1264,11 @@ background-color: $fpm.color.main.text-strong
 
 
 
+-- ftd.text yellowmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.custom.two
+padding-horizontal: 2
+margin-right: 4
 
 
 
@@ -1272,6 +1279,12 @@ background-color: $fpm.color.main.text-strong
 
 
 
+
+-- ftd.text greenmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.success.text
+padding-horizontal: 2
+margin-right: 4
 
 
 
@@ -1962,3 +1975,8 @@ role: $fpm.type.fine-print
 
 
 
+-- ftd.text redmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.error.text
+padding-horizontal: 2
+margin-right: 4
