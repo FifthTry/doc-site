@@ -1,4 +1,3 @@
--- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/blog-articles/category-1/sample-post-1
 -- import: fifthtry.github.io/doc-site/blog-articles/category-1/sample-post-2 
@@ -7,20 +6,20 @@
 
 -- ds.page:
 
--- ds.posts:
+--- ds.posts:
 
--- ds.featured-post:
+--- ds.featured-post:
 post-data: $sample-post-1.meta
 
 
--- ds.image-first:
+--- ds.image-first:
 post-data: $sample-post-2.meta
 
 
--- ds.image-in-between:
+--- ds.image-in-between:
 post-data: $sample-post-3.meta
 
 
--- ds.without-image:
+--- ds.without-image:
 post-data: $sample-post-4.meta
 

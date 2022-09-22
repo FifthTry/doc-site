@@ -1797,7 +1797,6 @@ padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
 margin-top : $fpm.space.space-3
 margin-bottom : $fpm.space.space-3
-/margin-left if not $is-mobile: $fpm.space.space-3
 margin-right if not $is-mobile: $fpm.space.space-3
 spacing: 12
 border-radius: 8
