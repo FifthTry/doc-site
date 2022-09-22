@@ -34,7 +34,9 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 - Image: /image/
 - Floater: /floater/
 
-# Docs: /docs/
+# Docs: /documentation/docs/
+
+- How to use blog: /documentation/blog-docs/
 
 # Blog: /featured-posts/
 
