@@ -27,7 +27,7 @@ This simple and easy documentation will help you to modify or update original `d
 with your own web projects.
 
 
---- ds.h2: Editing `index.ftd` & updating default content
+-- ds.h2: Editing `index.ftd` & updating default content
 
 `index.ftd` is added by default to your `FTD` `doc-site`. Let's edit its default
 content with your new content.
@@ -42,7 +42,7 @@ To edit `index.ftd` file click on edit icon. Once you click on edit icon
 syntax to create page for your `FTD` website homepage. e.g. below code:
 
 
---- ds.code: Example content for `index.ftd` using `ds.page` syntax:
+-- ds.code: Example content for `index.ftd` using `ds.page` syntax:
 lang: ftd
 
 \-- ds.page: ✨ Design the Ultimate Blog Homepage
@@ -50,7 +50,8 @@ lang: ftd
 For blogs, a user’s [first impression is key](https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/). If visitors can’t determine [credibility](http://credibility.stanford.edu/), navigate easily or connect with 
 the content, they are less likely to subscribe or return.
 
---- ds.markdown:
+
+-- ds.markdown:
 
 The primary job of a blog is to deliver content to a distinct 
 audience. In staying true to the topic, the blog must also meet
@@ -68,9 +69,12 @@ not the most visually stunning, but the most relevant and functional.
 Once you are done with editing `index.ftd` file. Click on `Commit changes` button.
 
 
---- ds.image: Editing `ingex.ftd` file and `Commit changes`
+-- ds.image: Editing `ingex.ftd` file and `Commit changes`
 src: $assets.files.static.docs.editing-index-ftd-with-homepage-content.png
 width: fill
+
+
+-- ds.markdown:
 
 `FPM` auto deployment job will run and `index.ftd` file will be deployed on live 
 automatically by our `FPM` builder.
@@ -78,11 +82,14 @@ automatically by our `FPM` builder.
 To cross-check  if `pages build and deployment` workflow ran successfully. Click 
 on `Actions` tab.
 
---- ds.image: `pages build and deployment` workflow should run successfully
+
+-- ds.image: `pages build and deployment` workflow should run successfully
 id: pages-build-and-deployment
 src: $assets.files.static.docs.action-tab-pages-build-and-deployment.png
 width: fill
 
+
+-- ds.markdown:
 
 Once you see {ds.greenmarker:green} tick on `pages build and deployment`, it means your `index.ftd`
 file is successfully deployed on live website.
@@ -91,26 +98,31 @@ Click on your `FTD` website url e.g. [`https://gsalunke.github.io/my-ftd-blog/`]
 `index.ftd` file on your website homepage.
 
 
---- ds.image: `index.ftd` with homepage content
+-- ds.image: `index.ftd` with homepage content
 src: $assets.files.static.docs.index-ftd-updated-with-homepage-post.png
 width: fill
 
 
---- ds.h2: How to create a new page into `FTD` website?
+-- ds.h2: How to create a new page into `FTD` website?
 id: how-to-create-new-ftd-file
 
 On your `GitHub` repository home, click on `Add file` button dropdown. It will show
 two options `Create new file` and `Upload files`. Click on `Create new file` to 
 create new `.ftd` file.
 
---- ds.image: Creating new `FTD` file
+
+-- ds.image: Creating new `FTD` file
 src: $assets.files.static.docs.create-new-ftd-file-into-ftd-repository.png
 width: fill
+
+
+-- ds.markdown:
 
 Once you clicked on `Create new file`, `GitHub` will open live editor. Provide name 
 of your first `.ftd` file into `Name your file...` input box. e.g. `post.ftd` 
 
---- ds.code: Writing first `FTD` file e.g. `post.ftd`
+
+-- ds.code: Writing first `FTD` file e.g. `post.ftd`
 lang: ftd
 
 \-- ds.page: My first blog post -- title of the post
@@ -129,16 +141,18 @@ I find it very simple to use. Just few clicks here and there and you
 are ready with your own `GitHub` live website.
 
 
---- ds.h3: Commiting my first `post.ftd`
+-- ds.h3: Commiting my first `post.ftd`
 id: commiting-my-first-post-ftd
 
 Below image shows how to `Commit` your first `post.ftd` file
 
 
---- ds.image: Creating your first `FTD` blog post
+-- ds.image: Creating your first `FTD` blog post
 src: $assets.files.static.docs.first-blog-post-ftd-file.png
 width: fill
 
+
+-- ds.markdown:
 
 Once you click on `Commit new file` button. `GitHub` will add your `post.ftd` file
 into your repository.
@@ -149,10 +163,15 @@ on live automatically by our `FPM` builder.
 To cross-check  if `pages build and deployment` workflow ran successfully. Click 
 on `Actions` tab.
 
---- ds.image: `pages build and deployment` workflow should run successfully
-id: pages-build-and-deployment
+
+-- ds.image: `pages build and deployment` workflow should run successfully
+id: pages-build-and-deployment-1
 src: $assets.files.static.docs.action-tab-pages-build-and-deployment.png
 width: fill
+
+
+
+-- ds.markdown:
 
 Once you see {ds.greenmarker:green} tick on `pages build and deployment`, it means your `post.ftd`
 file is successfully deployed on live website.
@@ -160,7 +179,7 @@ file is successfully deployed on live website.
 To see it live add `post` into your website url. e.g. https://gsalunke.github.io/my-ftd-blog/post/.
 
 
---- ds.h2: Creating `config.ftd` & changing `ds.site-name` with `My FTD Blog`
+-- ds.h2: Creating `config.ftd` & changing `ds.site-name` with `My FTD Blog`
 
 Default value of `ds.site-name` variable is `LOGO`. Let's change it with your 
 blog name. e.g. here we will change `LOGO` `site-name` with `My FTD Blog`.
@@ -177,7 +196,7 @@ Now provide file name as `config.ftd` and add below code into `config.ftd` file
 using `GitHub` live editor.
 
 
---- ds.code: Creating `config.ftd` file into `My FTD Blog`
+-- ds.code: Creating `config.ftd` file into `My FTD Blog`
 lang: ftd
 
 \-- import: fpm
@@ -186,22 +205,24 @@ lang: ftd
 \-- ds.site-name: My FTD Blog
 
 
---- ds.image: Creating `FPM/config.ftd` file
+-- ds.image: Creating `FPM/config.ftd` file
 src: $assets.files.static.docs.adding-config-ftd-into-FPM-folder.png
 width: fill
 
 
+-- ds.markdown:
+
 Once you commit `FPM/config.ftd` file, `FPM` builder will start building newly added
 files.
 
-Let `FPM` build finish up [pages-build-and-deployment](pages-build-and-deployment) build
+Let `FPM` build finish up [pages-build-and-deployment](author-docs/#pages-build-and-deployment-1) build
 process. 
 
 Once you see {ds.greenmarker:green} tick on `pages build and deployment`, it means your `config.ftd`
 file is successfully deployed on live website.
 
 
---- ds.h2: Udating `config.ftd` into `FPM.ftd` file
+-- ds.h2: Udating `config.ftd` into `FPM.ftd` file
 id: updating-fpm-ftd-file
 
 Our newly created `FTD` configuration file should be added into `FPM.ftd` file,
@@ -216,13 +237,13 @@ will be opned for editing into `GitHub` live editor.
 Add below code into your `FPM.ftd` file.
 
 
---- ds.code: Updating `FPM.ftd` file with `config.ftd`
+-- ds.code: Updating `FPM.ftd` file with `config.ftd`
 lang: ftd
 
 \-- fpm.auto-import: gsalunke.github.io/my-ftd-blog/FPM/config
 
 
---- ds.markdown:
+-- ds.markdown:
 
 In above example code we have added `config.ftd` file into `gsalunke.github.io/my-ftd-blog/`
 
@@ -232,7 +253,7 @@ example.
 Follow same steps [commiting-my-first-post-ftd](author-docs/#commiting-my-first-post-ftd) to `commit` `FPM.ftd` file. 
 
 
---- ds.image: Importing `FPM/config.ftd` into `FPM.ftd` file
+-- ds.image: Importing `FPM/config.ftd` into `FPM.ftd` file
 src: $assets.files.static.docs.referring-config-ftd-into-FPM-ftd-file.png
 width: fill
 
@@ -243,16 +264,18 @@ changes and deploy them on live. Ref. [pages-build-and-deployment](author-docs/#
 Visit your `FTD` website, newly added `site-name` `My FTD Blog` will appear instead of
 default `LOGO` site name.
 
---- ds.image: `My FTD Blog` site name from `FPM/config.ftd`
+-- ds.image: `My FTD Blog` site name from `FPM/config.ftd`
 src: $assets.files.static.docs.site-name-and-first-blog-post.png
 width: fill
 
+
+-- ds.markdown:
 
 👍👍 Done! you can add as many pages as you want to create now. [Follow same process to
 create new pages](author-docs/#how-to-create-new-ftd-file). 
 
 
---- ds.h2: Using `fpm.sitemap` feature for sections in header
+-- ds.h2: Using `fpm.sitemap` feature for sections in header
 id: fpm-sitemap-feature
 
 FifthTry have developed `fpm.sitemap` for you. Using `fpm.sitemap` feature you 
@@ -261,7 +284,7 @@ can add sections and sub-sections into header.
 To use `fpm.sitemap` feature, we need to [edit your `FPM.ftd`](author-docs/#updating-fpm-ftd-file) file and add sections, sub-sections into it.
 
 
---- ds.code: Using `fpm.sitemap` example code:
+-- ds.code: Using `fpm.sitemap` example code:
 lang: ftd
 
 \-- fpm.sitemap:
@@ -275,12 +298,14 @@ lang: ftd
 
 # Sample Post: /post/
 
---- ds.markdown:
+
+-- ds.markdown:
 
 Once you add sitemap links into your `FPM.ftd` file and commit it. `FPM` will auto generate 
 `sitemap` for your `FTD` website. 
 
---- ds.h3: Let's understand above code snippet:
+
+-- ds.h3: Let's understand above code snippet:
 
 `# Home: index.html` : `#` single hash treated as a section
 
@@ -316,20 +341,23 @@ For example refer our [fpm.dev](https://fpm.dev/) or [ftd.dev](https://ftd.dev/)
 websites to learn more about sitemap linking.
 
 
---- ds.image: Updating `FPM.ftd` file with `fpm.sitemap` feature
+-- ds.image: Updating `FPM.ftd` file with `fpm.sitemap` feature
 src: $assets.files.static.docs.updating-fpm-ftd-with-sitemap-feature.png
 width: fill
+
+
+-- ds.markdown:
 
 Once you click on `Commit changes` button, `FPM` builder will start building these
 changes and deploy them on live. Ref. [pages-build-and-deployment](author-docs/#pages-build-and-deployment)
 
 
---- ds.image: `fpm.sitemap` feature implemented 👍
+-- ds.image: `fpm.sitemap` feature implemented 👍
 src: $assets.files.static.docs.fpm-sitemap-feature-output-homepage.png
 width: fill
 
 
---- ds.h1: Using `FTD` components inside `doc-site`
+-- ds.h1: Using `FTD` components inside `doc-site`
 
 FifthTry has designed many `FTD` components for authors. By following simple 
 and easy steps you can use these components into your `FTD` projects.
@@ -347,31 +375,34 @@ Lets say if you are looking for an [`sidenote` component](https://fifthtry.githu
 
 Watch below video which explains - how to add `FPM` dependencies?
 
---- ds.youtube: 
+
+
+-- ds.youtube: 
 v: 8fu8BtKVq9s
 
 
---- ds.h3: Using `sitenote` component from `Bling` component library
+-- ds.h3: Using `sitenote` component from `Bling` component library
 
 [Click here](https://fifthtry.github.io/bling/sidenote/) to visit `sidenote` documentation.
 
 Its very easy to add any `FTD` dependency in `FPM.ftd` file. Use below code snippet
 to add `sidenote` dependency in `FPM.ftd` file.
 
---- ds.code: Adding `sidenote` as dependency inside `FPM.ftd`
+-- ds.code: Adding `sidenote` as dependency inside `FPM.ftd`
 lang: ftd
 
 \-- fpm.dependency: fifthtry.github.io/bling
 \-- fpm.auto-import: fifthtry.github.io/bling/sidenote
 
 
---- ds.markdown:
+-- ds.markdown:
 
 With `fpm.auto-import` `sidenote` will be auto imported into all `.ftd` files 
 inside your `FTD` web project. Just add below code snippent and change its 
 default content with your content for a sidenote.
 
---- ds.code: Example code for `-- sidenote`
+
+-- ds.code: Example code for `-- sidenote`
 lang: ftd
 
 \-- sidenote.sidenote:
@@ -381,12 +412,12 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
 veniam, quis nostrud exercitation ullamco laboris nisi ut
 
 
---- ds.image: sidenote output
+-- ds.image: sidenote output
 src: $assets.files.static.docs.sidenote-from-bling-library.png
 width: fill
 
 
---- ds.h1: Using blog on doc-site
+-- ds.h1: Using blog on doc-site
 
 FifthTry `doc-site` static/manual blog components are ready to use. By doing 
 some changes you can start using blog components we have designed for you.
@@ -400,7 +431,7 @@ These blog components are as follows:
 
 
 
---- ds.h2: How to edit README.md file?
+-- ds.h2: How to edit README.md file?
 
 Click on edit icon at right side of your README.md file on your `GitHub`repository
 page. `GitHub` will open live editor for your README.md file. You can make changes
