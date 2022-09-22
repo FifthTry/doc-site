@@ -34,15 +34,21 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 - Image: /image/
 - Floater: /floater/
 
+# Docs: /docs/
 
-# Blog: /featured-ui/
+# Blog: /featured-posts/
 
-## Posts: /featured-ui/
+## Posts: /featured-posts/
 
-- Amit Upadhyay Post: /blog-articles/amitu-post/
-- Abrar Post: /blog-articles/abrar-post/
-- Arpita Post: /blog-articles/arpita-post/
-- Ganesh Post: /blog-articles/ganesh-post/
+- News & Culture: /blog-articles/category-1/
+
+  - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
+  - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
+
+- Technology & Learning: /blog-articles/category-2/
+
+  - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
+  - What rust gives us?: /blog-articles/category-2/sample-post-4/
 
 ## Authors: /blog-authors/amitu/
 
@@ -50,7 +56,6 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 - Abrar Khan: /blog-authors/abrar/
 - Arpita Jaiswal: /blog-authors/arpita/
 - Ganesh S Salunke: /blog-authors/ganesh/
-
 
 
 # GitHub:

@@ -1,15 +1,14 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site as ds
--- import: fifthtry.github.io/doc-site/blog-authors/abrar as author
+-- import: fifthtry.github.io/doc-site/blog-authors/arpita as author
 
 
 ; Change below details for your new blog post
 
--- ds.post-meta meta: Title of the post
+-- ds.post-meta meta: What rust gives us?
 published-on: July 22, 2014 at 10:02 pm
-post-image: $assets.files.static.image-placeholder.png
-post-url: /blog-articles/abrar-post/
-author: $author.abrar
+post-url: /blog-articles/category-2/sample-post-4/
+author: $author.arpita
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 

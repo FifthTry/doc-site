@@ -1,16 +1,15 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site as ds
--- import: fifthtry.github.io/doc-site/blog-authors/ganesh as author
-
+-- import: fifthtry.github.io/doc-site/blog-authors/abrar as author
 
 
 ; Change below details for your new blog post
 
--- ds.post-meta meta: Title of the post
+-- ds.post-meta meta: A day in a city of dreams
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: /blog-articles/ganesh-post/
-author: $author.ganesh
+post-url: /blog-articles/category-1/sample-post-1/
+author: $author.abrar
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
