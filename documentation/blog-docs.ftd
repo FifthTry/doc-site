@@ -34,8 +34,8 @@ bio-url: /blog-authors/abrar/
 image: $assets.files.static.authors.abrar-k.jpg
 company: FifthTry Pvt. Ltd.
 
-Completed my masters from National Institute of Technology. Working as Sr. Software
-Developer at FifthTry Private Ltd. a Banglore based start-up company.
+Completed my masters from National Institute of Technology. Working as
+Sr. Software Developer at FifthTry Private Ltd. a Banglore based start-up company.
 
 Currently working full time with FifthTry and building FTD and FPM day and night.
 
@@ -86,8 +86,8 @@ post-image: $assets.files.static.image-placeholder.png
 post-url: /blog-articles/category-1/sample-post-1/
 author: $author.abrar
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
 
 
 -- ds.h3: Let's understand above code snippet:
