@@ -8,9 +8,50 @@
 
 -- boolean show-floater: false
 
+-- fpm.theme-color: #1F5E6B
+
+-- boolean sidebar-open: false
+
+
+-- string toc-sidebar-width: 300
+-- string toc-mobile-sidebar-width: percent 70
+-- integer content-padding: 150
+-- integer max-width: 1000
+-- string github: NA
+
+-- optional string site-name: Doc Site
+
+-- optional ftd.image-src site-logo:
+-- optional ftd.image-src brand-site-logo:
+-- optional string brand-site-name: 
+-- optional string brand-caption:
+-- optional string brand-site-url: index.html
+
+-- string site-url: index.html
+
+-- fpm.toc-item list sections:
+-- fpm.toc-item list sub-sections:
+-- fpm.toc-item list extra:
+-- fpm.toc-item list toc:
+
+-- fpm.toc-item list footer-toc:
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
 -- ftd.color light-green:
 light: #0DCEAB
 dark: #0DCEAB
+
+
+
+
 
 -- ftd.font-size small-bold-desktop:
 line-height: 16
@@ -24,6 +65,9 @@ xl: $small-bold-desktop
 weight: 400
 
 
+
+
+
 -- ftd.font-size copy-tight-bold-desktop:
 line-height: 20
 size: 16
@@ -34,6 +78,10 @@ desktop: $copy-tight-bold-desktop
 mobile: $copy-tight-bold-desktop
 xl: $copy-tight-bold-desktop
 weight: 700
+
+
+
+
 
 -- ftd.font-size copy-print-desktop:
 line-height: 18
@@ -46,6 +94,10 @@ mobile: $copy-print-desktop
 xl: $copy-print-desktop
 weight: 400
 
+
+
+
+
 -- ftd.font-size fine-print-desktop:
 line-height: 16
 size: 14
@@ -56,6 +108,10 @@ desktop: $fine-print-desktop
 mobile: $fine-print-desktop
 xl: $fine-print-desktop
 weight: 700
+
+
+
+
 
 -- ftd.font-size large-desktop:
 line-height: 20
@@ -68,9 +124,17 @@ mobile: $large-desktop
 xl: $large-desktop
 weight: 400
 
+
+
+
+
 -- ftd.color right-sidebar-background:
 light: #262626
 dark: #262626
+
+
+
+
 
 -- record tc:
 caption title:
@@ -95,17 +159,12 @@ is-last: true
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
-
-
-
-
 -- fpm.toc-item list sample-header:
 $processor$: toc
 
 - Quickstart: /
 - GitHub: https://github.com/FifthTry/doc-site/
 - Use this template: https://github.com/FifthTry/doc-site/generate/
-
 
 
 
@@ -118,6 +177,10 @@ string bio-url:
 optional ftd.image-src image:
 body body:
 
+
+
+
+
 -- record post-meta:
 caption title:
 string published-on:
@@ -125,50 +188,6 @@ optional ftd.image-src post-image:
 optional body body:
 string post-url:
 author-meta author:
-
-
-
-
-
-
-
-
-
--- page: Introduction to doc-site
-
-
-The length is how much memory, in bytes, the contents of the String is currently using. The capacity is the 
-total amount of memory, in bytes, that the String has received from the allocator. The difference between 
-length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
-
-When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity 
-that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the 
-data representation in memory looks like Figure 4-2.
-
--- image: This is the image with caption
-src: $assets.files.static.Information_example_page_300px.jpg
-width: 400
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -186,154 +205,17 @@ xl: $cta-txt
 weight: 700
 
 
--- fpm.theme-color: #1F5E6B
--- boolean sidebar-open: false
-
-
--- string toc-sidebar-width: 300
--- string toc-mobile-sidebar-width: percent 70
--- integer content-padding: 150
--- integer max-width: 1000
--- string github: NA
-
--- optional string site-name: Doc Site
-
--- optional ftd.image-src site-logo:
--- optional ftd.image-src brand-site-logo:
--- optional string brand-site-name: 
--- optional string brand-caption:
--- optional string brand-site-url: index.html
 
 
 
--- string site-url: index.html
+-- page: Introduction to doc-site
 
 
--- fpm.toc-item list sections:
--- fpm.toc-item list sub-sections:
--- fpm.toc-item list extra:
--- fpm.toc-item list toc:
+We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
+language `doc-site` is designed for you to create your documentation sites. 
 
--- fpm.toc-item list footer-toc:
-
-
-
--- boolean is-mobile: false
-
--- is-mobile: true
-if: $ftd.device == mobile
-
-
-
-/-- ftd.column page_:
-optional caption title:
-optional body body:
-width: fill
-background-color: $fpm.color.main.background.base
-open: true
-append-at: content-container
-fpm.toc-item list sections: $sitemap.sections
-fpm.toc-item list sub-sections: $sitemap.subsections
-fpm.toc-item list extra: $extra
-fpm.toc-item list toc: $sitemap.toc
-optional string nav-title: 
-optional string nav-title-url:
-optional string nav-sub-title:
-optional string nav-sub-title-url:
-boolean login-button: $login-button
-optional string login-btn-txt: Login
-optional string sign-in-txt: 
-
---- container: ftd.main
-
-/--- h.header:
-login-button: $login-button
-sections: $sections
-sub-sections: $sub-sections
-extra: $extra
-site-logo: $site-logo
-site-url: $site-url
-site-name: $site-name
-background: $header-bg
-text-color: $fpm.color.main.cta-primary.base
-active-text-color: $fpm.color.main.cta-primary.base
-menu-right: 0
-menu-left: -88
-menu-bg: $fpm.color.main.background.step-1
-menu-hover-bg: $fpm.color.main.background.step-2
-menu-link: $fpm.color.main.text
-menu-link-active: $fpm.color.main.text
-logo-height: 38
-current-url: /home/
-toc: $toc
-nav-title: $nav-title
-nav-title-url: $nav-title-url
-nav-sub-title: $nav-sub-title
-nav-sub-title-url: $nav-sub-title-url
-login-btn-txt: $login-btn-txt
-sign-in-txt: $sign-in-txt
-
---- container: ftd.main
-
---- ftd.column:
-id: content-container
-width: fill
-max-width: 800
-align: center
-min-height: calc 100vh
-padding-vertical: 40
-padding-horizontal if $is-mobile: 20
-
---- tf.h0: $title
-if: $title is not null
-
-
---- tf.markdown:
-if: $body is not null
-
-$body
-
-
---- container: ftd.main
-
---- footer:
-if: $footer-toc is not empty
-footer-toc: $footer-toc
-
-
-
-
-
-
-
-
-
-
-
-
--- ftd.column content:
-width: fill
-open: true
-append-at: content-container
-padding-vertical: 30
-
---- ftd.column:
-if: not $is-mobile
-max-width: 800
-width: fill
-align: center
-id:  content-container
-
---- container: ftd.main
-
---- ftd.column:
-if: $is-mobile
-width: fill
-align: center
-padding-horizontal: 20
-id:  content-container
-
-
+Check out our simple and easy [documentation](/docs/) to learn more about 
+`doc-site`.
 
 
 
@@ -1312,6 +1194,26 @@ margin-right: 4
 
 
 
+
+
+
+
+
+-- ftd.text redmarker: text
+color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.error.text
+padding-horizontal: 2
+margin-right: 4
+
+
+
+
+
+
+
+
+
+
 -- ftd.column post:
 post-meta meta:
 open: true
@@ -1329,6 +1231,14 @@ $meta.body
 id: atictles-container
 
 
+
+
+
+
+
+
+
+
 -- ftd.column article-card:
 caption title:
 optional ftd.image-src image:
@@ -1337,7 +1247,6 @@ string timestamp:
 optional body body:
 color: $fpm.color.main.text
 spacing: 16
-
 
 --- ftd.text: $title
 role: $fpm.type.heading-large
@@ -1356,12 +1265,10 @@ link: $author.bio-url
 id: post-meta-container
 spacing: 12
 
-
 --- ftd.text: posted on:
 role: $fpm.type.copy-relaxed
 white-space: nowrap
 color: $fpm.color.main.cta-primary.border
-
 
 --- ftd.text: $timestamp
 role: $fpm.type.copy-relaxed
@@ -1370,26 +1277,11 @@ color: $fpm.color.main.cta-primary.border
 
 --- container: ftd.main
 
-
 --- ftd.image:
 if: $image is not null
 src: $image
 width: fill
 height: auto
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1419,6 +1311,12 @@ id: post-meta-container
 
 
 
+
+
+
+
+
+
 -- ftd.column featured-post:
 post-meta post-data:
 
@@ -1432,6 +1330,12 @@ body: $post-data.body
 
 
 
+
+
+
+
+
+
 -- ftd.column featured-post-card:
 caption title:
 string timestamp:
@@ -1441,8 +1345,6 @@ string url:
 optional body body:
 width: fill
 
-
-
 --- featured-post-meta-desktop: $title
 if: not $is-mobile
 timestamp: $timestamp
@@ -1451,7 +1353,6 @@ image: $image
 url: $url
 body: $body
 
-
 --- featured-post-meta-mobile: $title
 if:  $is-mobile
 timestamp: $timestamp
@@ -1459,6 +1360,14 @@ author: $author
 image: $image
 url: $url
 body: $body
+
+
+
+
+
+
+
+
 
 
 -- ftd.column featured-post-meta-desktop:
@@ -1533,6 +1442,10 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 text-align: right
 width: fill
+
+
+
+
 
 
 
@@ -1618,6 +1531,7 @@ body: $post-data.body
 
 
 
+
 -- ftd.column image-first-card:
 optional ftd.image-src image:
 string url:
@@ -1694,7 +1608,7 @@ link: $url
 
 --- ftd.column:
 if: $is-mobile
-id: time-container
+id: time-container-2
 width: fill
 spacing: 8
 margin-top: 8
@@ -1711,7 +1625,7 @@ link: $author.bio-url
 role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 
---- container: time-container
+--- container: time-container-2
 
 --- ftd.text: $timestamp
 role: $fpm.type.fine-print
@@ -1763,7 +1677,6 @@ color: $fpm.color.main.text
 margin-top : $fpm.space.space-3
 margin-bottom : $fpm.space.space-3
 margin-left if not $is-mobile: $fpm.space.space-3
-/margin-right if not $is-mobile: $fpm.space.space-3
 spacing: 8
 border-radius: 8
 
@@ -1774,7 +1687,7 @@ link: $url
 
 --- ftd.row:
 if: not $is-mobile
-id: time-container
+id: time-container-3
 width: fill
 spacing: 8
 margin-top: 8
@@ -1791,7 +1704,7 @@ link: $author.bio-url
 role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 
---- container: time-container
+--- container: time-container-3
 
 --- ftd.text: $timestamp
 role: $fpm.type.fine-print
@@ -1818,7 +1731,7 @@ link: $url
 
 --- ftd.column:
 if: $is-mobile
-id: time-container
+id: time-container-4
 width: fill
 spacing: 8
 margin-top: 8
@@ -1835,7 +1748,7 @@ link: $author.bio-url
 role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 
---- container: time-container
+--- container: time-container-4
 
 --- ftd.text: $timestamp
 role: $fpm.type.fine-print
@@ -1889,7 +1802,6 @@ margin-right if not $is-mobile: $fpm.space.space-3
 spacing: 12
 border-radius: 8
 
-
 --- ftd.text: $title
 role: $fpm.type.heading-small
 color: $fpm.color.main.text-strong
@@ -1897,7 +1809,7 @@ link: $url
 
 --- ftd.row:
 if: not $is-mobile
-id: time-container
+id: time-container-6
 width: fill
 spacing: 8
 margin-top: 8
@@ -1910,19 +1822,17 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 link: $author.bio-url
 
-
 --- ftd.text:, 
 role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 
---- container: time-container
+--- container: time-container-6
 
 --- ftd.text: $timestamp
 role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 
 --- container: ftd.main
-
 
 --- ftd.text:
 text: $body
@@ -1932,12 +1842,11 @@ height: 120
 overflow-y: hidden
 link: $url
 
-
 --- container: ftd.main
 
 --- ftd.column:
 if: $is-mobile
-id: time-container
+id: time-container-1
 width: fill
 spacing: 8
 margin-top: 8
@@ -1953,7 +1862,7 @@ link: $author.bio-url
 role: $fpm.type.fine-print
 color: $fpm.color.main.cta-primary.border
 
---- container: time-container
+--- container: time-container-1
 
 --- ftd.text: $timestamp
 role: $fpm.type.fine-print
@@ -2014,6 +1923,7 @@ profile: $profile
 company: $company
 avatar: $avatar
 body: $body
+
 
 
 
@@ -2125,61 +2035,33 @@ role: $fpm.type.fine-print
 
 
 
--- ftd.text redmarker: text
-color: $fpm.color.main.background.step-1
-background-color: $fpm.color.main.error.text
-padding-horizontal: 2
-margin-right: 4
 
 
 
 
 
 
-
-
-
--- ftd.column h4:
-caption title:
-optional body body:
+-- ftd.column content:
 width: fill
-region: h3
-append-at: inner
-margin-top: 32
-margin-bottom: 16
-
---- ftd.text:
-caption $title:
-text: $title
-region: title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
-padding-bottom: 16
-padding-top: 8
-align: center
+open: true
+append-at: content-container
+padding-vertical: 30
 
 --- ftd.column:
-id: inner
+if: not $is-mobile
+max-width: 800
 width: fill
-margin-bottom if $body is not null: -26
+align: center
+id:  content-container
 
---- markdown:
-if: $body is not null
-body: $body
+--- container: ftd.main
 
-
-
-
-
-
-
-
--- ftd.text h5: $title
-caption title:
-role:$fpm.type.copy-relaxed
-style: bold
-color: $fpm.color.main.text-strong
-margin-right: 8
+--- ftd.column:
+if: $is-mobile
+width: fill
+align: center
+padding-horizontal: 20
+id:  content-container
 
 
 
@@ -2189,21 +2071,4 @@ margin-right: 8
 
 
 
--- ftd.text markdown-indented:
-body body:
-optional boolean collapsed:
-optional caption title:
-optional boolean two_columns:
-text: $body
-role: $fpm.type.copy-relaxed
-text-indent: percent 5
-color: $fpm.color.main.text
-margin-bottom: 26
-
-
--- ftd.text boldmarker: text
-role:$fpm.type.copy-relaxed
-style: bold
-color: $fpm.color.main.text-strong
-margin-right: 8
 
