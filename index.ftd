@@ -211,7 +211,10 @@ weight: 700
 -- page: Introduction to doc-site
 
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
-language `doc-site` is designed for you to create your documentation sites. 
+language `doc-site` is designed for you to create FTD web-sites.
+
+
+
 
 Check out our simple and easy [documentation](/docs/) to learn more about 
 `doc-site`.
@@ -1490,8 +1493,6 @@ text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
 width: fill
-height: 120
-overflow-y: hidden
 
 --- ftd.text: $author.title
 role: $fpm.type.fine-print
@@ -1609,7 +1610,7 @@ border-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 width: fill
 max-width if not $is-mobile: 344
-max-height: 484
+max-height: 500
 padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
 margin-top : $fpm.space.space-3
@@ -1665,8 +1666,6 @@ color: $fpm.color.main.cta-primary.border
 text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
-height: 120
-overflow-y: hidden
 link: $url
 
 --- container: ftd.main
@@ -1736,7 +1735,7 @@ border-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 width: fill
 max-width if not $is-mobile: 344
-max-height: 484
+max-height: 500
 padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
 margin-top : $fpm.space.space-3
@@ -1788,8 +1787,6 @@ link: $url
 text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
-height: 120
-overflow-y: hidden
 link: $url
 
 --- container: ftd.main
@@ -1857,7 +1854,7 @@ border-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 width: fill
 max-width if not $is-mobile: 344
-max-height: 484
+max-height: 500
 padding-horizontal:$fpm.space.space-6
 color: $fpm.color.main.text
 margin-top : $fpm.space.space-3
@@ -1902,8 +1899,6 @@ color: $fpm.color.main.cta-primary.border
 text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.text
-height: 120
-overflow-y: hidden
 link: $url
 
 --- container: ftd.main
@@ -2129,6 +2124,20 @@ id:  content-container
 
 
 
+
+
+
+
+
+
+
+-- ftd.column hr:
+height: 1
+width: fill
+background-color: $fpm.color.main.cta-tertiary.pressed
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+open: false
 
 
 
