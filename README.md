@@ -6,7 +6,7 @@ language `doc-site` is designed for you to create your documentation sites.
 Check out our simple and easy [documentation](https://fifthtry.github.io/doc-site/documentation/docs/) to learn more about 
 `doc-site`.
 
-# 🚀 Project Structure:
+## 🚀 Project Structure:
 
 Inside of your `doc-site` project, you'll see the following folders and files:
 ```
