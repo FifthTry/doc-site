@@ -3,7 +3,7 @@
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
 language `doc-site` is designed for you to create your documentation sites. 
 
-Check out our simple and easy [documentation](/docs/) to learn more about 
+Check out our simple and easy [documentation](https://fifthtry.github.io/doc-site/documentation/docs/) to learn more about 
 `doc-site`.
 
 # 🚀 Project Structure:
