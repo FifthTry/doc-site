@@ -4,18 +4,17 @@
 
 
 
--- ds.page: Introducing blog, articles & authors
+-- ds.page: How to use blog
 
-We at FifthTry promote `FTD` to write your blogs. Considering this we have
+We at FifthTry promote [FTD](https://ftd.dev/) to write your blogs. Considering this we have
 designed blog inside `dod-site`. 
 
 By following our simple blog documentation you can create you own. We have 
 developed featured article list, blog article & authors bio pages. Lets 
 understand how to use them.
 
-
-
-
+Make sure you have done [these steps](https://fpm.dev/author/create-on-github/) 
+and created your [FTD](https://ftd.dev/) website repository on GitHub.
 
 -- ds.h1: Adding author details
 

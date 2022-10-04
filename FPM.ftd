@@ -31,12 +31,10 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 # Home: /index.html
 
+- Docs: /docs/
+- How to use blog: /docs/blog/
 - Image: /image/
 - Floater: /floater/
-
-# Docs: /documentation/docs/
-
-- How to use blog: /documentation/blog-docs/
 
 # Blog: /featured-posts/
 
