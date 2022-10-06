@@ -31,10 +31,8 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 # Home: /index.html
 
-- Docs: /docs/
+- Using doc-site for FTD web projects: /docs/
 - How to use blog: /docs/blog/
-- Image: /image/
-- Floater: /floater/
 
 # Blog: /featured-posts/
 
