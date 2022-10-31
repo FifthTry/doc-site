@@ -1,0 +1,10 @@
+-- import: fifthtry.github.io/doc-site as ds
+
+-- ds.page:
+id: main-id
+
+-- ftd.text: hello
+
+-- container: main-id.page-right-sidebar
+
+-- ftd.text: jjii

@@ -1,0 +1,41 @@
+-- ftd.column page:
+append-at: main-container
+open: true
+width: fill
+
+--- ftd.row:
+width: fill
+id: main-row
+
+--- ftd.column:
+id: main-container
+width: percent 80
+background-color: $fpm.color.main.background.step-2
+
+--- container: main-row
+
+--- ftd.column:
+id: r1
+width: percent 20
+background-color: $fpm.color.main.scrim
+
+
+
+
+-- page:
+id: page-id
+
+-- ftd.text: This is page title
+
+
+-- ftd.text: hello
+
+-- ftd.text: hello
+
+-- ftd.text: hello
+
+-- ftd.text: hello
+
+-- ftd.text: hello
+
+-- ftd.text: hello

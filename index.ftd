@@ -294,7 +294,7 @@ Feel free to check [our documentation](https://fpm.dev/) or jump into our [Fifth
 
 
 
--- ftd.column page:
+-- ftd.row page:
 optional caption title:
 optional body body:
 fpm.toc-item list toc: $sitemap.toc
@@ -408,7 +408,7 @@ boolean widthfill:
 boolean login-button:
 width: fill
 open: true
-append-at: main-container
+append-at: main-container-one
 background-color: $fpm.color.main.background.base
 
 --- h.header:
@@ -438,6 +438,7 @@ width: fill
 id: main-row
 spacing: 48
 
+
 --- render-toc:
 if: $toc is not empty
 toc-obj: $toc
@@ -448,7 +449,7 @@ toc-obj: $toc
 width: fill
 
 --- ftd.column:
-id: main-container
+id: main-container-one
 max-width if $toc is empty: 800
 max-width if $widthfill: fill
 max-width: 800
@@ -463,6 +464,13 @@ width: fill
 if: $title is not null
 
 $body
+
+--- container: main-row
+
+--- ftd.column:
+id: page-right-sidebar
+width: 420
+
 
 
 --- container: ftd.main
