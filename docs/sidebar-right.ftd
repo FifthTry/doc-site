@@ -5,15 +5,15 @@
 
 
 
--- ds.page: Using sidebar-right feature
+-- ds.page: Using right-sidebar feature
 id: my-page
 
-We have made provision of adding `sidebar-right` for additional components to
+We have made provision of adding `right-sidebar` for additional components to
 be shown on right-side of `page` component.
 
 To use this feature follow below instructions:
 
--- ds.code: Example code for sidebar-right:
+-- ds.code: Example code for right-sidebar:
 lang: ftd
 
 \-- ds.page: Your page title here
@@ -21,7 +21,7 @@ id: my-page --> add ID to your page component
 
 Some body content here...
 
-\-- container: my-page.wrapper.sidebar-right
+\-- container: my-page.wrapper.right-sidebar
 
 \-- ds.code: My code componet of sidebar-right
 
@@ -36,7 +36,7 @@ Some heading 2 body here...
 
 Some heading 2 body here...
 
--- ds.code: Example code for sidebar-right:
+-- ds.code: Example code for right-sidebar:
 lang: ftd
 
 \-- ds.h2: Heading 2 title
