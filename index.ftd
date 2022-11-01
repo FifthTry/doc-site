@@ -361,7 +361,6 @@ extra: $extra
 body: $body
 widthfill: $widthfill
 
-
 --- container: ftd.main
 
 --- doc-page-mobile: $title
@@ -408,7 +407,7 @@ boolean widthfill:
 boolean login-button:
 width: fill
 open: true
-append-at: main-container
+append-at: main-container-one
 background-color: $fpm.color.main.background.base
 
 --- h.header:
@@ -431,8 +430,6 @@ menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
 
-
-
 --- ftd.row:
 width: fill
 id: main-row
@@ -448,7 +445,7 @@ toc-obj: $toc
 width: fill
 
 --- ftd.column:
-id: main-container
+id: main-container-one
 max-width if $toc is empty: 800
 max-width if $widthfill: fill
 max-width: 800
@@ -464,6 +461,13 @@ if: $title is not null
 
 $body
 
+--- container: main-row
+
+--- ftd.column:
+id: page-right-sidebar
+width: 420
+padding-vertical: 24
+padding-horizontal: 24
 
 --- container: ftd.main
 
@@ -517,7 +521,7 @@ parent-brand: $parent-brand
 
 --- container: ftd.main
 
---- ftd.row:
+--- ftd.column:
 width: fill
 id: main-row
 
@@ -538,6 +542,13 @@ if: $body is not null
 
 $body
 
+--- container: main-row
+
+--- ftd.column:
+id: page-right-sidebar
+width: fill
+padding-vertical: 24
+padding-horizontal: 24
 
 
 --- container: ftd.main

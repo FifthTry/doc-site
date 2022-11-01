@@ -5,6 +5,7 @@
 
 
 -- ds.page: How to use blog
+id: main-id
 
 We at FifthTry promote [FTD](https://ftd.dev/) to write your blogs. Considering this we have
 designed blog inside `dod-site`. 
@@ -38,6 +39,7 @@ Sr. Software Developer at FifthTry Private Ltd. a Banglore based start-up compan
 
 Currently working full time with FifthTry and building FTD and FPM day and night.
 
+-- container: main-id.main-container.page-right-sidebar
 
 -- ds.h3: Let's understand above code snippet:
 
