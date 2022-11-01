@@ -407,7 +407,7 @@ boolean widthfill:
 boolean login-button:
 width: fill
 open: true
-append-at: main-container-one
+append-at: main-wrap
 background-color: $fpm.color.main.background.base
 
 --- h.header:
@@ -445,7 +445,7 @@ toc-obj: $toc
 width: fill
 
 --- ftd.column:
-id: main-container-one
+id: main-wrap
 max-width if $toc is empty: 800
 max-width if $widthfill: fill
 max-width: 800
@@ -464,7 +464,7 @@ $body
 --- container: main-row
 
 --- ftd.column:
-id: page-right-sidebar
+id: sidebar-right
 width: 420
 padding-vertical: 24
 padding-horizontal: 24
@@ -545,7 +545,7 @@ $body
 --- container: main-row
 
 --- ftd.column:
-id: page-right-sidebar
+id: sidebar-right
 width: fill
 padding-vertical: 24
 padding-horizontal: 24
