@@ -324,7 +324,7 @@ tc list tc-list: $tc-list
 width: fill
 open: true
 boolean widthfill: false
-append-at: main-container
+append-at: wrapper
 
 --- floater:
 if: $show-floater
@@ -343,7 +343,7 @@ github-text: $github-text
 
 --- doc-page-desktop: $title
 if: not $is-mobile
-id: main-container
+id: wrapper
 toc: $toc
 login-button: $login-button
 footer-toc: $footer-toc
@@ -365,7 +365,7 @@ widthfill: $widthfill
 
 --- doc-page-mobile: $title
 if: $is-mobile
-id: main-container
+id: wrapper
 toc: $toc
 footer-toc: $footer-toc
 sections: $sections
@@ -464,7 +464,7 @@ $body
 --- container: main-row
 
 --- ftd.column:
-id: sidebar-right
+id: right-sidebar
 width: 420
 padding-vertical: 24
 padding-horizontal: 24
@@ -493,7 +493,7 @@ optional fpm.toc-item current-page:
 optional fpm.toc-item current-subsection:
 width: fill
 open: true
-append-at: main-container
+append-at: wrapper
 background-color: $fpm.color.main.background.base
 
 --- h.header:
@@ -526,7 +526,7 @@ width: fill
 id: main-row
 
 --- ftd.column:
-id: main-container
+id: wrapper
 width: fill
 align: top
 min-height: calc 100vh
@@ -545,7 +545,7 @@ $body
 --- container: main-row
 
 --- ftd.column:
-id: sidebar-right
+id: right-sidebar
 width: fill
 padding-vertical: 24
 padding-horizontal: 24
