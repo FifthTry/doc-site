@@ -7,9 +7,11 @@
 
 -- ds.page: Using right-sidebar feature
 id: my-page
+sidebar: true
 
 We have made provision of adding `right-sidebar` for additional components to
-be shown on right-side of `page` component.
+be shown on right-side of `page` component. Add `sidebar: true` attribute to 
+your page component.
 
 To use this feature follow below instructions:
 
@@ -17,40 +19,46 @@ To use this feature follow below instructions:
 lang: ftd
 
 \-- ds.page: Your page title here
+sidebar: true
 id: my-page --> add ID to your page component
 
 Some body content here...
 
 \-- container: my-page.wrapper.right-sidebar
 
-\-- ds.code: My code componet of sidebar-right
+\-- ds.sidebar:
 
-\-- ds.h2: Heading 2 title
+\--- ds.code: My code componet of sidebar-right
+
+\--- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
 
 -- container: my-page.wrapper.right-sidebar
 
--- ds.h2: Heading 2 title
+-- ds.sidebar:
+
+--- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
--- ds.code: Example code for right-sidebar:
+--- ds.code: Example code for right-sidebar:
 lang: ftd
 
 \-- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
-
 -- container: my-page.wrapper.right-sidebar-mobile
 
--- ds.h2: Heading 2 title
+-- ds.sidebar:
+
+--- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
--- ds.code: Example code for right-sidebar:
+--- ds.code: Example code for right-sidebar:
 lang: ftd
 
 \-- ds.h2: Heading 2 title

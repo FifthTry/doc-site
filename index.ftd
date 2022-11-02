@@ -322,6 +322,7 @@ string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
 tc list tc-list: $tc-list
+boolean sidebar: false
 width: fill
 open: true
 boolean widthfill: false
@@ -361,6 +362,7 @@ nav-sub-title-url: $nav-sub-title-url
 extra: $extra
 body: $body
 widthfill: $widthfill
+right-sidebar: $sidebar
 
 --- container: ftd.main
 
@@ -377,6 +379,7 @@ current-subsection: $current-subsection
 current-page: $current-page
 extra: $extra
 body: $body
+right-sidebar: $sidebar
 
 
 
@@ -406,6 +409,7 @@ boolean pricing-cta:
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
+boolean right-sidebar: false
 width: fill
 open: true
 append-at: main-wrap
@@ -492,6 +496,7 @@ fpm.toc-item list footer-toc: $footer-toc
 optional fpm.toc-item current-section:
 optional fpm.toc-item current-page:
 optional fpm.toc-item current-subsection:
+booelan right-sidebar: false
 width: fill
 open: true
 append-at: wrapper
@@ -547,6 +552,7 @@ if: $title is not null
 --- container: heading-container
 
 --- ftd.column:
+if: $right-sidebar
 align: center
 padding-top: $fpm.space.space-2
 
@@ -564,8 +570,29 @@ $body
 
 --- container: main-row
 
---- mobile-right-sidebar:
+--- ftd.column:
 if: $open-right-sidebar-info
+anchor: parent
+top: 0
+bottom: 0
+left: 0
+right: 0
+background-color:  $fpm.color.main.background.overlay
+z-index: 1
+width: fill
+$on-click$: $open-right-sidebar-info = false
+
+
+--- ftd.column:
+width: fill
+
+--- ftd.image:
+src: $assets.files.static.cross.svg
+height: 16
+width: auto
+margin-top: 30
+margin-left: 16
+$on-click$: $open-right-sidebar-info = false 
 
 --- container: main-row
 
@@ -576,11 +603,11 @@ height: calc 100vh - 0px
 overflow-y: auto
 align: top-right
 padding-top:$fpm.space.space-5
-anchor: window
+anchor: parent
 right: 0
 top: 0
 background-color: $fpm.color.main.background.step-1
-z-index: 999
+z-index: 1
 
 --- ftd.column:
 id: right-sidebar-mobile
@@ -2197,23 +2224,5 @@ open: false
 
 
 
--- ftd.column mobile-right-sidebar:
-anchor: window
-top: 0
-bottom: 0
-left: 0
-right: 0
-background-color:  $fpm.color.main.background.overlay
-z-index: 99
+-- ftd.column sidebar:
 width: fill
-$on-click$: $open-right-sidebar-info = false
-
-
---- ftd.image:
-src: $assets.files.static.cross.svg
-height: 16
-width: auto
-anchor: window
-left: 16
-top: 30
-$on-click$: $open-right-sidebar-info = false 
