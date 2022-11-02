@@ -12,6 +12,7 @@
 
 -- boolean sidebar-open: false
 
+-- boolean open-right-sidebar-info: false
 
 -- string toc-sidebar-width: 300
 -- string toc-mobile-sidebar-width: percent 70
@@ -324,7 +325,7 @@ tc list tc-list: $tc-list
 width: fill
 open: true
 boolean widthfill: false
-append-at: main-container
+append-at: wrapper
 
 --- floater:
 if: $show-floater
@@ -343,7 +344,7 @@ github-text: $github-text
 
 --- doc-page-desktop: $title
 if: not $is-mobile
-id: main-container
+id: wrapper
 toc: $toc
 login-button: $login-button
 footer-toc: $footer-toc
@@ -365,7 +366,7 @@ widthfill: $widthfill
 
 --- doc-page-mobile: $title
 if: $is-mobile
-id: main-container
+id: wrapper
 toc: $toc
 footer-toc: $footer-toc
 sections: $sections
@@ -464,7 +465,7 @@ $body
 --- container: main-row
 
 --- ftd.column:
-id: sidebar-right
+id: right-sidebar
 width: 420
 padding-vertical: 24
 padding-horizontal: 24
@@ -493,7 +494,7 @@ optional fpm.toc-item current-page:
 optional fpm.toc-item current-subsection:
 width: fill
 open: true
-append-at: main-container
+append-at: wrapper
 background-color: $fpm.color.main.background.base
 
 --- h.header:
@@ -525,17 +526,34 @@ parent-brand: $parent-brand
 width: fill
 id: main-row
 
+
 --- ftd.column:
-id: main-container
+id: wrapper
 width: fill
 align: top
 min-height: calc 100vh
 padding-horizontal: 20
 padding-vertical: 20
 
+
+--- ftd.row:
+width: fill
+id: heading-container
+
+
 --- tf.h1: $title
 if: $title is not null
 
+--- container: heading-container
+
+--- ftd.column:
+
+--- ftd.image:
+src: $assets.files.static.info-icon.svg
+width: 48
+$on-click$: toggle $open-right-sidebar-info
+
+--- container: wrapper
 
 --- tf.markdown:
 if: $body is not null
@@ -544,8 +562,26 @@ $body
 
 --- container: main-row
 
+--- mobile-right-sidebar:
+if: $open-right-sidebar-info
+
+--- container: main-row
+
 --- ftd.column:
-id: sidebar-right
+if: $open-right-sidebar-info
+width: calc 100% - 48px
+height: calc 100vh - 0px
+overflow-y: auto
+align: top-right
+padding-top:$fpm.space.space-5
+anchor: window
+right: 0
+top: 0
+background-color: $fpm.color.main.background.step-1
+z-index: 999
+
+--- ftd.column:
+id: right-sidebar-mobile
 width: fill
 padding-vertical: 24
 padding-horizontal: 24
@@ -2156,3 +2192,26 @@ open: false
 
 
 
+
+
+
+-- ftd.column mobile-right-sidebar:
+anchor: window
+top: 0
+bottom: 0
+left: 0
+right: 0
+background-color:  $fpm.color.main.background.overlay
+z-index: 99
+width: fill
+$on-click$: $open-right-sidebar-info = false
+
+
+--- ftd.image:
+src: $assets.files.static.cross.svg
+height: 16
+width: auto
+anchor: window
+left: 16
+top: 30
+$on-click$: $open-right-sidebar-info = false 
