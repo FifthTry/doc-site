@@ -14,7 +14,7 @@
 
 -- boolean open-right-sidebar-info: false
 
--- string toc-sidebar-width: 300
+-- string toc-sidebar-width: 450
 -- string toc-mobile-sidebar-width: percent 70
 -- integer content-padding: 150
 -- integer max-width: 1000
@@ -466,9 +466,9 @@ $body
 
 --- ftd.column:
 id: right-sidebar
-width: 420
+width: $toc-sidebar-width
 padding-vertical: 24
-padding-horizontal: 24
+margin-right: 48
 
 --- container: ftd.main
 
@@ -547,10 +547,11 @@ if: $title is not null
 --- container: heading-container
 
 --- ftd.column:
+align: center
 
 --- ftd.image:
 src: $assets.files.static.info-icon.svg
-width: 48
+width: 36
 $on-click$: toggle $open-right-sidebar-info
 
 --- container: wrapper
