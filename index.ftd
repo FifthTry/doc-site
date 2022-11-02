@@ -548,6 +548,7 @@ if: $title is not null
 
 --- ftd.column:
 align: center
+padding-top: $fpm.space.space-2
 
 --- ftd.image:
 src: $assets.files.static.info-icon.svg
