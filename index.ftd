@@ -471,7 +471,13 @@ $body
 --- ftd.column:
 id: right-sidebar
 width: $toc-sidebar-width
-padding-vertical: 24
+z-index: 999
+sticky: true
+top: 0
+right: 48
+height: calc 100vh - 0px
+overflow-y: auto
+align: top-right
 margin-right: 48
 
 --- container: ftd.main
