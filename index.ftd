@@ -731,12 +731,15 @@ footer-toc: $obj
 
 
 
-
-
--- ftd.column toc-instance:
+-- ftd.row toc-bar:
 fpm.toc-item toc:
-id: toc-instance
+spacing: 5
 
+--- ftd.image:
+if: $toc.font-icon is not null
+src: $toc.font-icon
+max-height: 20
+max-width: 20
 
 --- ftd.text:
 if: $toc.url is not null
@@ -758,6 +761,13 @@ color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 padding-left: 10
 
+-- ftd.column toc-instance:
+fpm.toc-item toc:
+id: toc-instance
+
+--- toc-bar:
+toc: $toc
+
 
 --- childrens:
 $loop$: $toc.children as $obj
@@ -772,16 +782,8 @@ toc: $obj
 -- ftd.column childrens:
 fpm.toc-item toc:
 
-
---- ftd.text: 
-link: $toc.url
-text: $toc.title
-role: $cta
-min-width: fit-content
-margin-bottom: 16
-color: $fpm.color.main.text
-margin-left: $fpm.space.space-3
-color if $toc.is-active: $fpm.color.main.cta-primary.base
+--- toc-bar:
+toc: $toc
 
 --- ftd.column:
 margin-left: $fpm.space.space-3
