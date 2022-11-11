@@ -473,7 +473,7 @@ if: $right-sidebar
 id: right-sidebar
 width: $toc-sidebar-width
 z-index: 999
-background-color: $fpm.color.main.background.step-1
+background-color: $fpm.color.main.background.overlay
 sticky: true
 top: 0
 right: 48
@@ -815,7 +815,7 @@ height: calc 100vh - 0px
 overflow-y: auto
 width: $toc-sidebar-width
 align: top-left
-background-color:  $fpm.color.main.background.step-1
+background-color:  $fpm.color.main.background.overlay
 border-radius: 8
 padding-left: 24
 padding-top: 16
