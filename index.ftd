@@ -469,9 +469,11 @@ $body
 --- container: main-row
 
 --- ftd.column:
+if: $right-sidebar
 id: right-sidebar
 width: $toc-sidebar-width
 z-index: 999
+background-color: $fpm.color.main.background.overlay
 sticky: true
 top: 0
 right: 48
@@ -479,6 +481,13 @@ height: calc 100vh - 0px
 overflow-y: auto
 align: top-right
 margin-right: 48
+padding-left: 24
+padding-top: 4
+padding-right: 16
+padding-bottom: 32
+margin-top: 25
+margin-bottom: 25
+border-radius: 8
 
 --- container: ftd.main
 
@@ -608,7 +617,6 @@ width: calc 100% - 48px
 height: calc 100vh - 0px
 overflow-y: auto
 align: top-right
-padding-top:$fpm.space.space-5
 anchor: parent
 right: 0
 top: 0
@@ -807,7 +815,7 @@ height: calc 100vh - 0px
 overflow-y: auto
 width: $toc-sidebar-width
 align: top-left
-background-color:  $fpm.color.main.background.step-1
+background-color:  $fpm.color.main.background.overlay
 border-radius: 8
 padding-left: 24
 padding-top: 16
