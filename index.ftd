@@ -13,7 +13,7 @@
 
 -- string login-url: /
 
--- boolean is-reader: true
+-- boolean is-reader: false
 
 -- fpm.theme-color: #1F5E6B
 
@@ -38,7 +38,6 @@ $processor$: fpm-apps
 -- optional string brand-site-name: 
 -- optional string brand-caption:
 -- optional string brand-site-url: index.html
-
 -- string site-url: index.html
 
 -- fpm.toc-item list sections:
@@ -2370,7 +2369,7 @@ width: fill
 -- ftd.column wall-box:
 background-color: $fpm.color.main.background.base
 width: 614
-width if $is-mobile: 200
+width if $is-mobile: fill
 border-width: 1
 padding-vertical: 35
 padding-horizontal: 32
@@ -2381,7 +2380,7 @@ shadow-blur: 4
 border-top: 3
 border-radius: 8
 border-color: $fpm.color.main.border
-align: center
+
 
 
 --- ftd.text: $wall-message
