@@ -13,7 +13,7 @@
 
 -- string login-url: /
 
--- boolean is-reader: false
+-- boolean is-reader: true
 
 -- fpm.theme-color: #1F5E6B
 
@@ -611,6 +611,7 @@ id: heading-container
 
 
 --- heading-one-mobile: $title
+if: $title is not null
 
 --- container: heading-container
 
@@ -851,6 +852,8 @@ color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 padding-left: 10
 
+--- container: ftd.main
+
 
 --- childrens:
 $loop$: $toc.children as $obj
@@ -867,6 +870,7 @@ fpm.toc-item toc:
 
 
 --- ftd.row:
+if: $toc.url is not null
 width: fill
 spacing: 8
 
@@ -875,7 +879,6 @@ if: $toc.font-icon is not null
 src: $toc.font-icon
 height: 14
 width: auto
-
 
 
 --- ftd.text: 
@@ -887,6 +890,30 @@ margin-bottom: 16
 color: $fpm.color.main.text
 margin-left: $fpm.space.space-3
 color if $toc.is-active: $fpm.color.main.cta-primary.base
+
+--- container: ftd.main
+
+--- ftd.row:
+if: $toc.url is null
+width: fill
+spacing: 8
+
+--- ftd.image:
+if: $toc.font-icon is not null
+src: $toc.font-icon
+height: 14
+width: auto
+
+
+--- ftd.text: 
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+--- container: ftd.main
 
 --- ftd.column:
 margin-left: $fpm.space.space-3
