@@ -12,6 +12,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fpm.dependency: fifthtry.github.io/toc
 
 -- fpm.dependency: fifthtry.github.io/typography
+-- fpm.dependency: fifthtry.github.io/app-switcher 
 
 -- fpm.dependency: fifthtry.github.io/roboto-mono
 
@@ -25,7 +26,13 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fpm.auto-import: fifthtry.github.io/toc as tt
 -- fpm.auto-import: fifthtry.github.io/roboto-mono as mono
 
-
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
 
 -- fpm.sitemap:
 

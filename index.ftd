@@ -1,4 +1,5 @@
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/app-switcher as apps-switcher
 
 -- boolean login-button: false
 
@@ -8,11 +9,21 @@
 
 -- boolean show-floater: false
 
+-- string wall-message: Please, login via clicking on below button
+
+-- string login-url: /
+
+-- boolean is-reader: true
+
 -- fpm.theme-color: #1F5E6B
 
 -- boolean sidebar-open: false
 
 -- boolean open-right-sidebar-info: false
+
+-- fpm.app-ui apps:
+$processor$: fpm-apps
+
 
 -- string toc-sidebar-width: 450
 -- string toc-mobile-sidebar-width: percent 70
@@ -301,6 +312,7 @@ optional body body:
 fpm.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
+fpm.app-ui apps: $apps
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
 optional fpm.toc-item current-section: $sitemap.current-section
@@ -343,6 +355,9 @@ github-text: $github-text
 
 --- container: ftd.main
 
+
+
+
 --- doc-page-desktop: $title
 if: not $is-mobile
 id: wrapper
@@ -363,6 +378,7 @@ extra: $extra
 body: $body
 widthfill: $widthfill
 right-sidebar: $sidebar
+apps: $apps
 
 --- container: ftd.main
 
@@ -380,6 +396,7 @@ current-page: $current-page
 extra: $extra
 body: $body
 right-sidebar: $sidebar
+apps: $apps
 
 
 
@@ -396,6 +413,7 @@ fpm.toc-item list toc: $toc
 fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
+fpm.app-ui apps:
 fpm.toc-item list footer-toc:
 optional fpm.toc-item current-section:
 optional fpm.toc-item current-page:
@@ -414,6 +432,7 @@ width: fill
 open: true
 append-at: main-wrap
 background-color: $fpm.color.main.background.base
+
 
 --- h.header:
 login-button: $login-button
@@ -435,6 +454,9 @@ menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
 
+--- apps-switcher.app-switcher:
+apps: $apps
+
 --- ftd.row:
 width: fill
 id: main-row
@@ -449,8 +471,9 @@ toc-obj: $toc
 --- ftd.column:
 width: fill
 
+
 --- ftd.column:
-id: main-wrap
+id: main-content-wrap
 max-width if $toc is empty: 800
 max-width if $widthfill: fill
 max-width: 800
@@ -461,10 +484,27 @@ padding-horizontal if not $widthfill: 34
 padding-vertical if not $widthfill: 25
 width: fill
 
---- tf.h0: $title
+
+
+--- heading-one: $title
 if: $title is not null
 
+--- wall-box:
+if: not $is-reader
+
+
+--- container: main-content-wrap
+
+--- ftd.column:
+if: $is-reader
+width: fill
+id: main-wrap 
+
+--- tf.markdown:
+if: $body is not null
+
 $body
+
 
 --- container: main-row
 
@@ -507,6 +547,7 @@ fpm.toc-item list toc: $toc
 fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
 fpm.toc-item list extra:
+fpm.app-ui  apps:
 fpm.toc-item list footer-toc: $footer-toc
 optional fpm.toc-item current-section:
 optional fpm.toc-item current-page:
@@ -542,13 +583,17 @@ parent-brand: $parent-brand
 
 --- container: ftd.main
 
+--- apps-switcher.app-switcher:
+apps: $apps
+
+
 --- ftd.column:
 width: fill
 id: main-row
 
 
 --- ftd.column:
-id: wrapper
+id: main-content-wrap
 width: fill
 align: top
 min-height: calc 100vh
@@ -556,12 +601,16 @@ padding-horizontal: 20
 padding-vertical: 20
 
 
+--- ftd.column:
+width: fill
+id: main-headaing-container
+
 --- ftd.row:
 width: fill
 id: heading-container
 
 
---- tf.h1: $title
+--- heading-one-mobile: $title
 if: $title is not null
 
 --- container: heading-container
@@ -576,12 +625,24 @@ src: $assets.files.static.info-icon.svg
 width: 36
 $on-click$: toggle $open-right-sidebar-info
 
---- container: wrapper
+--- container: main-headaing-container
+
+--- wall-box:
+if: not $is-reader
+
+--- container: main-content-wrap
+
+
+--- ftd.column:
+if: $is-reader
+width: fill
+id: wrapper 
 
 --- tf.markdown:
 if: $body is not null
 
 $body
+
 
 --- container: main-row
 
@@ -745,6 +806,7 @@ footer-toc: $obj
 fpm.toc-item toc:
 id: toc-instance
 
+
 --- ftd.row:
 if: $toc.url is not null
 width: fill
@@ -756,7 +818,9 @@ src: $toc.font-icon
 height: 14
 width: auto
 
+
 --- ftd.text:
+if: $toc.url is not null
 link: $toc.url
 text: $toc.title
 role: $cta
@@ -778,8 +842,8 @@ src: $toc.font-icon
 height: 14
 width: auto
 
-
 --- ftd.text:
+if: $toc.url is null
 text: $toc.title
 role: $cta
 min-width: fit-content
@@ -787,6 +851,8 @@ margin-bottom: 16
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 padding-left: 10
+
+--- container: ftd.main
 
 
 --- childrens:
@@ -799,12 +865,12 @@ toc: $obj
 
 
 
-
-
 -- ftd.column childrens:
 fpm.toc-item toc:
 
+
 --- ftd.row:
+if: $toc.url is not null
 width: fill
 spacing: 8
 
@@ -825,7 +891,29 @@ color: $fpm.color.main.text
 margin-left: $fpm.space.space-3
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
---- container:ftd.main
+--- container: ftd.main
+
+--- ftd.row:
+if: $toc.url is null
+width: fill
+spacing: 8
+
+--- ftd.image:
+if: $toc.font-icon is not null
+src: $toc.font-icon
+height: 14
+width: auto
+
+
+--- ftd.text: 
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+--- container: ftd.main
 
 --- ftd.column:
 margin-left: $fpm.space.space-3
@@ -2276,3 +2364,79 @@ open: false
 
 -- ftd.column sidebar:
 width: fill
+
+
+
+-- ftd.column wall-box:
+background-color: $fpm.color.main.background.base
+width: 614
+width if $is-mobile: 200
+border-width: 1
+padding-vertical: 35
+padding-horizontal: 32
+shadow-offset-x: 3
+shadow-offset-y: 4
+shadow-size: 1
+shadow-blur: 4
+border-top: 3
+border-radius: 8
+border-color: $fpm.color.main.border
+align: center
+
+
+--- ftd.text: $wall-message
+text-align: center
+role: $fpm.type.heading-medium
+color: $fpm.color.main.text-strong
+width: fill
+padding-bottom: 64
+
+
+--- ftd.row:
+align: center
+
+--- ftd.text: LOGIN
+link: $login-url
+text-align: center
+role: $fpm.type.copy-tight
+padding-vertical: 12
+padding-horizontal: 24
+color: $fpm.color.main.text-strong
+background-color:$fpm.color.main.cta-primary.base
+border-radius:8
+
+
+
+
+
+-- ftd.column heading-one:
+caption title:
+width: fill
+region: h0
+margin-top: 0
+margin-bottom: 32
+
+
+--- ftd.text:
+region: title
+role: $fpm.type.heading-hero
+text: $title
+color: $fpm.color.main.text-strong
+padding-bottom: 16
+padding-top: 8
+
+
+-- ftd.column heading-one-mobile:
+caption title:
+width: fill
+region: h1
+margin-top: 32
+margin-bottom: 16
+
+--- ftd.text:
+text: $title
+region: title
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+padding-bottom: 16
+padding-top: 8
