@@ -13,7 +13,7 @@
 
 -- string login-url: /
 
--- boolean is-reader: false
+-- boolean is-reader: true
 
 -- fpm.theme-color: #1F5E6B
 
