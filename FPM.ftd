@@ -39,12 +39,12 @@ readers: fpm-fans
 # Home: /index.html
 
 - Using doc-site for FTD web projects: /docs/
-icon: /static/primary-favorites.svg
+icon: static/primary-favorites.svg
 
 - How to use blog: /docs/blog/
-icon: /static/primary-favorites.svg
+icon: static/primary-favorites.svg
 - Right-sidebar example: /docs/right-sidebar/
-icon: /static/primary-favorites.svg
+icon: static/primary-favorites.svg
 
 # Blog: /featured-posts/
 
