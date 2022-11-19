@@ -2226,12 +2226,12 @@ id: auth-container
 spacing: 24
 
 --- ftd.column:
-width: percent 30
+width: 152
 
 --- ftd.image:
 src: $avatar
-width: 152
-height: 152
+width: fill
+height: fill
 border-radius: 500
 
 --- container: auth-container
