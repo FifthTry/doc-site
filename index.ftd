@@ -9,11 +9,16 @@
 
 -- boolean show-floater: false
 
+-- boolean $aa: true
+
+
+-- boolean $torture: false
+
 -- string wall-message: Please, login via clicking on below button
 
--- string login-url: /
+-- string login-url: /auth/login?platform=github
 
--- boolean is-reader: false
+-- boolean is-reader: true
 
 -- fpm.theme-color: #1F5E6B
 
@@ -456,6 +461,8 @@ menu-icon: $assets.files.static.header.hamburger.svg
 --- apps-switcher.app-switcher:
 apps: $apps
 
+--- container: ftd.main
+
 --- ftd.row:
 width: fill
 id: main-row
@@ -582,9 +589,12 @@ parent-brand: $parent-brand
 
 --- container: ftd.main
 
+
+
 --- apps-switcher.app-switcher:
 apps: $apps
 
+--- container: ftd.main
 
 --- ftd.column:
 width: fill
@@ -800,16 +810,22 @@ footer-toc: $obj
 
 
 
-
 -- ftd.column toc-instance:
 fpm.toc-item toc:
 id: toc-instance
+boolean bury: $toc.bury
+boolean show-burry: false
+width: fill
 
+
+--- ftd.boolean: $bury
+color: $fpm.color.main.text-strong
 
 --- ftd.row:
 if: $toc.url is not null
 width: fill
 spacing: 8
+id: jjjj
 
 --- ftd.image:
 if: $toc.font-icon is not null
@@ -817,6 +833,68 @@ src: $toc.font-icon
 height: 14
 width: auto
 
+
+
+--- ftd.row:
+if: not $bury
+
+
+--- ftd.text:
+if: $toc.url is not null
+link: $toc.url
+text: $toc.title
+role: $cta
+min-width: fit-content
+width: fill
+margin-bottom: 16
+color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bury
+
+
+--- ftd.text:
+if: $toc.url is not null
+link: $toc.url
+text: $toc.title
+role: $cta
+width: fill
+margin-bottom: 16
+color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+
+--- ftd.text:
+if: $toc.url is not null
+text: ...
+role: $cta
+margin-bottom: 16
+color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+$on-click$: toggle $show-burry
+
+
+--- container: ftd.main
+
+--- ftd.row:
+if: $toc.url is null
+width: fill
+spacing: 8
+id: jjjj
+
+--- ftd.image:
+if: $toc.font-icon is not null
+src: $toc.font-icon
+height: 14
+width: auto
+
+--- ftd.row:
+if: not $toc.bury
+
+--- ftd.boolean: $toc.bury
+color: $fpm.color.main.text
 
 --- ftd.text:
 if: $toc.url is not null
@@ -828,6 +906,86 @@ margin-bottom: 16
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
+--- container: jjjj
+
+--- ftd.row:
+if:  $toc.bury
+
+--- ftd.boolean: $toc.bury
+color: $fpm.color.main.text
+
+--- ftd.text:
+if: $toc.url is not null
+link: $toc.url
+text: ...
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+background-color: $fpm.color.main.text
+padding-vertical: 12
+padding-horizontal: 12
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $show-burry
+width: fill
+
+--- box:
+$loop$: $toc.children as $obj
+toc: $obj
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: not $bury
+
+
+--- childrens:
+$loop$: $toc.children as $obj
+toc: $obj
+
+
+
+
+
+-- ftd.row box:
+padding-vertical:12
+padding-horizontal:12
+background-color: $fpm.color.main.text-strong
+fpm.toc-item toc:
+anchor: parent
+width: fill
+top: 0
+left: 0
+
+
+
+--- ftd.row:
+if: $toc.url is not null
+width: fill
+spacing: 8
+
+--- ftd.image:
+if: $toc.font-icon is not null
+src: $toc.font-icon
+height: 14
+width: auto
+
+
+--- ftd.text: 
+link: $toc.url
+text: $toc.title
+role: $cta
+min-width: fit-content
+margin-bottom: 16
+color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
+color if $toc.is-active: $fpm.color.main.cta-primary.base
+
 --- container: ftd.main
 
 --- ftd.row:
@@ -841,22 +999,26 @@ src: $toc.font-icon
 height: 14
 width: auto
 
---- ftd.text:
-if: $toc.url is null
+
+--- ftd.text: 
 text: $toc.title
 role: $cta
 min-width: fit-content
 margin-bottom: 16
 color: $fpm.color.main.text
+margin-left: $fpm.space.space-3
 color if $toc.is-active: $fpm.color.main.cta-primary.base
-padding-left: 10
-
 --- container: ftd.main
 
+--- ftd.column:
+margin-left: $fpm.space.space-3
 
 --- childrens:
 $loop$: $toc.children as $obj
 toc: $obj
+
+
+
 
 
 
@@ -2439,3 +2601,5 @@ role: $fpm.type.heading-large
 color: $fpm.color.main.text-strong
 padding-bottom: 16
 padding-top: 8
+
+

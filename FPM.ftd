@@ -34,24 +34,84 @@ readers: fpm-fans
 /config: db_url=$ENV.DB_URL
 /config: name=Upadhyay Khanadan
 
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
+
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
+-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+readers: fpm-fans
+/config: db_url=$ENV.DB_URL
+/config: name=Upadhyay Khanadan
+
 -- fpm.sitemap:
 
 # Home: /index.html
 
+
 - Using doc-site for FTD web projects: /docs/
 icon: /static/primary-favorites.svg
+bury: true
 
-- How to use blog: /docs/blog/
-icon: /static/primary-favorites.svg
-- Right-sidebar example: /docs/right-sidebar/
-icon: /static/primary-favorites.svg
+  - How to use blog: /docs/blog/
+  - How to use blog: /docs/blog/
+  - How to use blog-one: /docs/blog/
+
 
 # Blog: /featured-posts/
+bury: true
 
 ## Posts: /featured-posts/
+bury: true
 
 - News & Culture: /blog-articles/category-1/
-
   - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
   - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
 
