@@ -495,7 +495,7 @@ width: fill
 --- heading-one: $title
 if: $title is not null
 
---- wall-box:
+--- wall-bury-box:
 if: not $is-reader
 
 
@@ -636,7 +636,7 @@ $on-click$: toggle $open-right-sidebar-info
 
 --- container: main-headaing-container
 
---- wall-box:
+--- wall-bury-box:
 if: not $is-reader
 
 --- container: main-content-wrap
@@ -818,14 +818,12 @@ boolean show-burry: false
 width: fill
 
 
---- ftd.boolean: $bury
-color: $fpm.color.main.text-strong
 
 --- ftd.row:
 if: $toc.url is not null
 width: fill
 spacing: 8
-id: jjjj
+id: toc-container
 
 --- ftd.image:
 if: $toc.font-icon is not null
@@ -850,10 +848,11 @@ margin-bottom: 16
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
---- container: jjjj
+--- container: toc-container
 
 --- ftd.row:
 if: $bury
+width: fill
 
 
 --- ftd.text:
@@ -866,14 +865,23 @@ margin-bottom: 16
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
---- ftd.text:
-if: $toc.url is not null
-text: ...
-role: $cta
-margin-bottom: 16
-color: $fpm.color.main.text
+--- ftd.row:
+color: $fpm.color.main.background.base
+padding-vertical: 6
+padding-horizontal: 6
+background-color: $fpm.color.main.text-strong
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 $on-click$: toggle $show-burry
+border-radius: 4
+
+
+--- ftd.text: ...
+if: $toc.url is not null
+margin-top: -9
+role: $fpm.type.fine-print
+style: heavy
+
+
 
 
 --- container: ftd.main
@@ -882,7 +890,7 @@ $on-click$: toggle $show-burry
 if: $toc.url is null
 width: fill
 spacing: 8
-id: jjjj
+id: toc-container
 
 --- ftd.image:
 if: $toc.font-icon is not null
@@ -893,8 +901,7 @@ width: auto
 --- ftd.row:
 if: not $toc.bury
 
---- ftd.boolean: $toc.bury
-color: $fpm.color.main.text
+
 
 --- ftd.text:
 if: $toc.url is not null
@@ -906,13 +913,10 @@ margin-bottom: 16
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
---- container: jjjj
+--- container: toc-container
 
 --- ftd.row:
 if:  $toc.bury
-
---- ftd.boolean: $toc.bury
-color: $fpm.color.main.text
 
 --- ftd.text:
 if: $toc.url is not null
@@ -920,12 +924,11 @@ link: $toc.url
 text: ...
 role: $cta
 min-width: fit-content
-margin-bottom: 16
 color: $fpm.color.main.text
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 background-color: $fpm.color.main.text
-padding-vertical: 12
-padding-horizontal: 12
+padding-vertical: 4
+padding-horizontal: 14
 
 --- container: ftd.main
 
@@ -933,9 +936,8 @@ padding-horizontal: 12
 if: $show-burry
 width: fill
 
---- box:
-$loop$: $toc.children as $obj
-toc: $obj
+--- bury-box:
+children: $toc.children
 
 
 --- container: ftd.main
@@ -952,17 +954,26 @@ toc: $obj
 
 
 
--- ftd.row box:
-padding-vertical:12
+-- ftd.column bury-box:
+;padding-vertical:12
+padding-top: 20
 padding-horizontal:12
+fpm.toc-item list children:
 background-color: $fpm.color.main.text-strong
-fpm.toc-item toc:
 anchor: parent
+border-radius: 6
 width: fill
 top: 0
 left: 0
 
+--- bury-box-item:
+$loop$: $children as $obj
+toc: $obj
 
+
+-- ftd.column bury-box-item:
+width: fill
+fpm.toc-item toc:
 
 --- ftd.row:
 if: $toc.url is not null
@@ -982,7 +993,7 @@ text: $toc.title
 role: $cta
 min-width: fit-content
 margin-bottom: 16
-color: $fpm.color.main.text
+color: $fpm.color.main.background.base
 margin-left: $fpm.space.space-3
 color if $toc.is-active: $fpm.color.main.cta-primary.base
 
@@ -1002,12 +1013,13 @@ width: auto
 
 --- ftd.text: 
 text: $toc.title
-role: $cta
+role: $fpm.type.fine-print
 min-width: fit-content
 margin-bottom: 16
-color: $fpm.color.main.text
+color: $fpm.color.main.background.base
 margin-left: $fpm.space.space-3
 color if $toc.is-active: $fpm.color.main.cta-primary.base
+
 --- container: ftd.main
 
 --- ftd.column:
@@ -1843,7 +1855,7 @@ text-align: center
 
 --- ftd.row:
 width: fill
-id: box-container
+id: bury-box-container
 margin-top: $fpm.space.space-7
 
 --- ftd.column:
@@ -1854,7 +1866,7 @@ src: $image
 width: fill
 height: auto
 
---- container: box-container
+--- container: bury-box-container
 
 --- ftd.column:
 width: fill
@@ -2528,7 +2540,7 @@ width: fill
 
 
 
--- ftd.column wall-box:
+-- ftd.column wall-bury-box:
 background-color: $fpm.color.main.background.base
 width: 614
 width if $is-mobile: fill
