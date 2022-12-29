@@ -83,7 +83,6 @@ background-color: $bgcolor
 width: fill
 open: true
 append-at: test-container
-align: center
 border-radius: 6
 
 --- ftd.row:

@@ -2,26 +2,29 @@
 
 -- record toc-item:
 caption title:
-string method:
-string url:
+optional string method:
+optional string url:
+
 
 -- toc-item list toc-item-list:
 
--- toc-item-list: Post 
+-- toc-item-list: ENDPOINTS 
+
+-- toc-item-list: Post Api
 method: POST
 url: /api/post
 
--- toc-item-list: Get 
+-- toc-item-list: Get Api
 method: GET
 url: /api/get
 
 
 
--- toc-item-list: Put 
+-- toc-item-list: Put Api
 method: PUT
 url: /api/put
 
--- toc-item-list: Delete 
+-- toc-item-list: Delete Api
 method: DELETE
 url: /api/delete
 -- api-page: api overview
@@ -49,7 +52,9 @@ id: main-container
 width: 398
 background-color: $fpm.color.main.background.step-1
 min-height: calc 100vh
-padding-vertical: 48
+height: fill
+padding-vertical: 32
+spacing: 16
 
 --- toc-list:
 title: $obj.title
@@ -64,8 +69,8 @@ $loop$: $toc-item-list as $obj
 width: fill
 id: api-container
 padding-vertical: 48
-padding-left: 48
-spacing: 24
+padding-left: 64
+spacing: 20
 
 
 --- ftd.text: $title
@@ -83,24 +88,54 @@ color: $fpm.color.main.text
 
 -- ftd.row toc-list:
 caption title:
-string method:
-string url:
+optional string method:
+optional string url:
+boolean is-active: false
 color: $fpm.color.main.text
-padding-vertical: 12
-padding-horizontal: 12
 width: fill
 
+
+--- ftd.row:
+if: $url is not null
+width: fill
+link: $url
+background-color if $MOUSE-IN: $fpm.color.main.background.step-2
+
+
+--- ftd.row:
+padding-vertical: 4
+padding-horizontal: 16
+width: fill
 
 --- ftd.text: $title
-role: $fpm.type.copy-tight
+role: $fpm.type.fine-print
 width: fill
 color: $fpm.color.main.text
-link: $url
+
 
 --- ftd.text: $method
-role: $fpm.type.copy-tight
+if: $method is not null
+role: $fpm.type.fine-print
 color if $method == POST: $fpm.color.main.success.base
 color if $method == PUT: $fpm.color.main.warning.text
 color if $method == GET: $fpm.color.main.info.text
 color if $method == DELETE: $fpm.color.main.error.text
+
+--- container: ftd.main
+
+
+--- ftd.row:
+if: $url is null
+width: fill
+padding-vertical: 4
+padding-horizontal: 16
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+width: fill
+color: $fpm.color.main.text
+
+
+
+
 
