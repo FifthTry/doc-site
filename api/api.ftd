@@ -1,5 +1,4 @@
-
--- import: fpm
+-- import: fifthtry.github.io/doc-site/assets
 
 -- record parameter:
 caption title:
@@ -70,7 +69,9 @@ caption title:
 string type:
 string purpose:
 body body:
-boolean sow-yes: false
+boolean authorization: false
+boolean show-box: false
+boolean show-data: false
 ftd.color bgcolor: $fpm.color.main.background.step-1
 ftd.color typecolor: $fpm.color.main.background.step-1
 ftd.color textColor: $fpm.color.main.background.step-1
@@ -88,9 +89,14 @@ border-radius: 6
 --- ftd.row:
 width: fill
 padding: 5
-spacing: 12
-$on-click$: toggle $sow-yes
+$on-click$: toggle $show-box
+$on-mouse-enter$: $show-data = true
+$on-mouse-leave$: $show-data = false
+id: api-main-container
 
+--- ftd.row:
+width: fill
+spacing: 12
 
 --- ftd.text: $type
 padding-vertical: 4
@@ -111,10 +117,49 @@ align: center
 role: $fpm.type.copy-tight
 align: center
 
+--- container: api-main-container
+
+--- ftd.row:
+align: center
+spacing: 4
+
+--- ftd.image:
+if: not $show-box
+src: $assets.files.api.static.down.svg
+width: 24
+
+
+
+--- ftd.image:
+if: $show-box
+src: $assets.files.api.static.up.svg
+width: 24
+
+
+
+--- ftd.image:
+if: $authorization
+src: $assets.files.api.static.lock.svg
+width: 24
+
+
+--- ftd.row:
+if: $show-data
+
+--- ftd.image:
+src: $assets.files.api.static.clipboard.png
+width: 24
+height: 24
+
+--- ftd.image:
+src: $assets.files.api.static.down-left.png
+width: 24
+height: 24
+
 --- container: ftd.main
 
 --- ftd.column:
-if: $sow-yes
+if: $show-box
 border-color: $typecolor
 border-top: 1
 

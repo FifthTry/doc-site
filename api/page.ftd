@@ -63,7 +63,7 @@ $loop$: $toc-item-list as $obj
 --- ftd.column:
 width: fill
 id: api-container
-padding-bottom: 48
+padding-vertical: 48
 padding-left: 48
 spacing: 24
 

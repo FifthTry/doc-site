@@ -6,6 +6,7 @@
 
 -- api.api: /store/<api-name>
 type: POST
+authorization: true
 purpose: Find purchase order by ID
 bgcolor: $fpm.color.main.success.base
 typecolor: $fpm.color.main.success.text
