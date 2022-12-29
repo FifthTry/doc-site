@@ -33,7 +33,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna lorem, eleme
 
 -- ftd.column api-page:
 width: fill
-min-height: fill
 optional caption title:
 optional body body:
 background-color: $fpm.color.main.background.base
@@ -43,7 +42,7 @@ append-at: api-container
 
 --- ftd.row:
 width: fill
-id: hh
+id: main-container
 
 
 --- ftd.column:
@@ -58,13 +57,13 @@ url: $obj.url
 method: $obj.method
 $loop$: $toc-item-list as $obj
 
---- container: hh
+--- container: main-container
 
 
 --- ftd.column:
 width: fill
 id: api-container
-padding-top: 48
+padding-bottom: 48
 padding-left: 48
 spacing: 24
 
