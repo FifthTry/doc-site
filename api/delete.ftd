@@ -2,10 +2,10 @@
 -- import: fifthtry.github.io/doc-site/api/page as ds
 
 
--- ds.api-page: Get overview
+-- ds.api-page: Delete overview
 
 -- api.api: /store/<api-name>
-type: POST
+type: DELETE
 purpose: Find purchase order by ID
 bgcolor: $fpm.color.main.error.base
 typecolor: $fpm.color.main.error.text

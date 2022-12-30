@@ -7,7 +7,7 @@
 -- ds.api-page: Put overview
 
 -- api.api: /store/<api-name>
-type: POST
+type: PUT
 purpose: Find purchase order by ID
 bgcolor: $fpm.color.main.warning.base
 typecolor: $fpm.color.main.warning.text

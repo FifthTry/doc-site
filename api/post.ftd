@@ -2,7 +2,7 @@
 -- import: fifthtry.github.io/doc-site/api/page as ds
 
 
--- ds.api-page: Get overview
+-- ds.api-page: Post overview
 
 -- api.api: /store/<api-name>
 type: POST

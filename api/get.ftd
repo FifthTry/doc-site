@@ -5,7 +5,7 @@
 -- ds.api-page: Get overview
 
 -- api.api: /store/<api-name>
-type: POST
+type: GET
 purpose: Find purchase order by ID
 bgcolor: $fpm.color.main.info.base
 typecolor: $fpm.color.main.info.text
