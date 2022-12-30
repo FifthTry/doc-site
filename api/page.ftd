@@ -1,0 +1,149 @@
+-- import: fifthtry.github.io/doc-site/api/api as ds
+
+-- record toc-item:
+caption title:
+optional string method:
+optional string url:
+
+
+-- toc-item list toc-item-list:
+
+-- toc-item-list: ENDPOINTS 
+
+-- toc-item-list: Post Api
+method: POST
+url: /api/post
+
+-- toc-item-list: Get Api
+method: GET
+url: /api/get
+
+
+
+-- toc-item-list: Put Api
+method: PUT
+url: /api/put
+
+-- toc-item-list: Delete Api
+method: DELETE
+url: /api/delete
+
+-- api-page: api overview
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna lorem, elementum at ante vitae, fermentum venenatis lacus. Curabitur non lobortis elit. Maecenas quis laoreet dolor, nec ultrices quam. Pellentesque egestas velit id fringilla iaculis. Sed non fringilla magna, eu ultrices erat. Integer blandit, turpis sed lacinia interdum, massa sapien sodales mi, eget faucibus lacus lorem non magna. Donec non odio vel nisl porttitor lacinia. Quisque gravida nisi at fringilla pharetra. Phasellus mauris augue, dictum et libero ultrices, gravida lobortis est. Maecenas id massa eget lacus aliquet eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur euismod mauris a lorem posuere, vitae egestas ex cursus. Pellentesque et consectetur felis. Duis viverra rhoncus hendrerit. Ut commodo, nunc et iaculis sodales, enim libero aliquet lacus, ut venenatis lectus sem ut ex. Morbi molestie sem et sapien sodales malesuada.
+
+
+
+
+
+
+
+
+
+
+-- ftd.column api-page:
+width: fill
+optional caption title:
+optional body body:
+background-color: $fpm.color.main.background.base
+open: true
+toc-item list toc-item-list:$toc-item-list
+append-at: api-container
+
+--- ftd.row:
+width: fill
+id: main-container
+
+
+--- ftd.column:
+width: 398
+background-color: $fpm.color.main.background.step-1
+min-height: calc 100vh
+height: fill
+padding-vertical: 32
+spacing: 5
+
+--- toc-list:
+title: $obj.title
+url: $obj.url
+method: $obj.method
+$loop$: $toc-item-list as $obj
+
+--- container: main-container
+
+
+--- ftd.column:
+width: fill
+id: api-container
+padding-vertical: 48
+padding-left: 64
+spacing: 20
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+
+
+
+--- ftd.column:
+
+
+-- ftd.row toc-list:
+caption title:
+optional string method:
+optional string url:
+boolean is-active: false
+color: $fpm.color.main.text
+width: fill
+
+
+--- ftd.row:
+if: $url is not null
+width: fill
+link: $url
+background-color if $MOUSE-IN: $fpm.color.main.background.code
+
+
+--- ftd.row:
+padding-vertical: 8
+padding-horizontal: 16
+width: fill
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+width: fill
+color: $fpm.color.main.text
+
+
+--- ftd.text: $method
+if: $method is not null
+role: $fpm.type.fine-print
+color if $method == POST: $fpm.color.main.success.base
+color if $method == PUT: $fpm.color.main.warning.text
+color if $method == GET: $fpm.color.main.info.text
+color if $method == DELETE: $fpm.color.main.error.text
+
+--- container: ftd.main
+
+
+--- ftd.row:
+if: $url is null
+width: fill
+padding-vertical: 8
+padding-horizontal: 16
+
+--- ftd.text: $title
+role: $fpm.type.fine-print
+width: fill
+color: $fpm.color.main.text
+
+
+
+
+

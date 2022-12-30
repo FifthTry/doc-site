@@ -1,0 +1,23 @@
+-- import: fifthtry.github.io/doc-site/api/api as api
+-- import: fifthtry.github.io/doc-site/api/page as ds
+
+
+-- ds.api-page: Get overview
+
+-- api.api: /store/<api-name>
+type: POST
+authorization: true
+purpose: Find purchase order by ID
+bgcolor: $fpm.color.main.success.base
+typecolor: $fpm.color.main.success.text
+textColor: $fpm.color.main.success.text
+
+For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+
+-- api.parameter-card:
+cta-title: Try it out
+cta-url: api/post
+parameters-list: $api.parameters-list
+
+-- api.response-card:
+responses-list: $api.responses-list
