@@ -16,7 +16,7 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 
 -- api.parameter-card:
 cta-title: Try it out
-cta-url: /url
+cta-url: api/post
 parameters-list: $api.parameters-list
 
 -- api.response-card:

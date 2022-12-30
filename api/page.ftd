@@ -27,12 +27,20 @@ url: /api/put
 -- toc-item-list: Delete Api
 method: DELETE
 url: /api/delete
+
 -- api-page: api overview
 
 
-
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna lorem, elementum at ante vitae, fermentum venenatis lacus. Curabitur non lobortis elit. Maecenas quis laoreet dolor, nec ultrices quam. Pellentesque egestas velit id fringilla iaculis. Sed non fringilla magna, eu ultrices erat. Integer blandit, turpis sed lacinia interdum, massa sapien sodales mi, eget faucibus lacus lorem non magna. Donec non odio vel nisl porttitor lacinia. Quisque gravida nisi at fringilla pharetra. Phasellus mauris augue, dictum et libero ultrices, gravida lobortis est. Maecenas id massa eget lacus aliquet eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur euismod mauris a lorem posuere, vitae egestas ex cursus. Pellentesque et consectetur felis. Duis viverra rhoncus hendrerit. Ut commodo, nunc et iaculis sodales, enim libero aliquet lacus, ut venenatis lectus sem ut ex. Morbi molestie sem et sapien sodales malesuada.
+
+
+
+
+
+
+
+
+
 
 -- ftd.column api-page:
 width: fill
@@ -54,7 +62,7 @@ background-color: $fpm.color.main.background.step-1
 min-height: calc 100vh
 height: fill
 padding-vertical: 32
-spacing: 16
+spacing: 5
 
 --- toc-list:
 title: $obj.title
@@ -99,11 +107,11 @@ width: fill
 if: $url is not null
 width: fill
 link: $url
-background-color if $MOUSE-IN: $fpm.color.main.background.step-2
+background-color if $MOUSE-IN: $fpm.color.main.background.code
 
 
 --- ftd.row:
-padding-vertical: 4
+padding-vertical: 8
 padding-horizontal: 16
 width: fill
 
@@ -127,7 +135,7 @@ color if $method == DELETE: $fpm.color.main.error.text
 --- ftd.row:
 if: $url is null
 width: fill
-padding-vertical: 4
+padding-vertical: 8
 padding-horizontal: 16
 
 --- ftd.text: $title
