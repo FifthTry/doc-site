@@ -48,7 +48,7 @@ icon: static/primary-favorites.svg
 
 # Blog: /featured-posts/
 
-## Posts: /featured-posts/
+## Posts: featured-posts/
 
 - News & Culture: /blog-articles/category-1/
 
@@ -60,7 +60,7 @@ icon: static/primary-favorites.svg
   - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
   - What rust gives us?: /blog-articles/category-2/sample-post-4/
 
-## Authors: /blog-authors/amitu/
+## Authors: blog-authors/amitu/
 
 - Amit Upadhyay: /blog-authors/amitu/
 - Abrar Khan: /blog-authors/abrar/
