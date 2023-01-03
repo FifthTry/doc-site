@@ -1529,7 +1529,7 @@ author-meta author:
 string timestamp:
 optional body body:
 color: $fpm.color.main.text
-spacing: 16
+width: fill
 
 --- ftd.text: $title
 role: $fpm.type.heading-large
@@ -1537,6 +1537,8 @@ color: $fpm.color.main.text-strong
 
 --- ftd.row:
 width: fill
+margin-bottom: 16
+margin-top: 16
 
 --- ftd.text: $author.title
 role: $fpm.type.copy-relaxed
