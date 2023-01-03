@@ -26,7 +26,7 @@ jobs:
         continue-on-error: false
         run: |
           echo "Using '$CI_REPOSITORY_NAME_SLUG/' as the base while building"
-          fpm build --base=/
+          fpm build --base=/$CI_REPOSITORY_NAME/
       - uses: actions/upload-artifact@master
         with:
           name: GH_PAGES_BUILD
