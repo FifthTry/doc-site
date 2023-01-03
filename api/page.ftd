@@ -1,3 +1,4 @@
+-- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site/api/api as ds
 
 -- record toc-item:
@@ -5,28 +6,43 @@ caption title:
 optional string method:
 optional string url:
 
+-- optional string site-name: Doc Site
+
+-- boolean login-button: false
+
+-- string login-url: /
+
+-- boolean pricing-cta: false
+
+-- optional ftd.image-src site-logo:
+-- string site-url: index.html
 
 -- toc-item list toc-item-list:
 
 -- toc-item-list: ENDPOINTS 
 
+-- fpm.toc-item list sections:
+-- fpm.toc-item list sub-sections:
+-- fpm.toc-item list extra:
+-- fpm.toc-item list toc:
+
 -- toc-item-list: Post Api
 method: POST
-url: /api/post
+url: api/post
 
 -- toc-item-list: Get Api
 method: GET
-url: /api/get
+url: api/get
 
 
 
 -- toc-item-list: Put Api
 method: PUT
-url: /api/put
+url: api/put
 
 -- toc-item-list: Delete Api
 method: DELETE
-url: /api/delete
+url: api/delete
 
 -- api-page: api overview
 
@@ -50,6 +66,42 @@ background-color: $fpm.color.main.background.base
 open: true
 toc-item list toc-item-list:$toc-item-list
 append-at: api-container
+boolean login-button: $login-button
+boolean pricing-cta: $pricing-cta
+optional string login-btn-txt: Login
+optional string sign-in-txt:
+fpm.toc-item list sections: $sections
+fpm.toc-item list sub-sections: $sub-sections
+fpm.toc-item list extra: $extra
+optional fpm.toc-item current-section:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-subsection:
+
+--- ftd.column:
+width: fill
+id: wrapper
+
+--- h.header:
+login-button: $login-button
+pricing-cta: $pricing-cta
+login-btn-txt: $login-btn-txt
+sign-in-txt: $sign-in-txt 
+sections: $sections
+sub-sections: $sub-sections
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+extra: $extra
+site-logo: $site-logo
+site-url: $site-url
+site-name: $site-name
+logo-height: 38
+menu-right: 0
+menu-left: -88
+current-url: /home/
+menu-icon: $assets.files.static.header.hamburger.svg
+
+--- container: wrapper
 
 --- ftd.row:
 width: fill
