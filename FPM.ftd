@@ -75,6 +75,7 @@ icon: static/primary-favorites.svg
 - GET: /api/get/
 - DELETE: /api/delete/
 
+
 # GitHub
 url: https://github.com/FifthTry/doc-site/
 # Use this template
