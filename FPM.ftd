@@ -38,43 +38,42 @@ readers: fpm-fans
 
 # Home: /index.html
 
-- Using doc-site for FTD web projects: docs/
+- Using doc-site for FTD web projects: /docs/
 icon: static/primary-favorites.svg
 
-- How to use blog: docs/blog/
+- How to use blog: /docs/blog/
 icon: static/primary-favorites.svg
-- Right-sidebar example: docs/right-sidebar/
+- Right-sidebar example: /docs/right-sidebar/
 icon: static/primary-favorites.svg
 
-# Blog: featured-posts/
+# Blog: /featured-posts/
 
-## Posts: featured-posts/
+## Posts: /featured-posts/
 
-- News & Culture: blog-articles/category-1/
+- News & Culture: /blog-articles/category-1/
 
-  - A day in a city of dreams: blog-articles/category-1/sample-post-1/
-  - Understanding process of start-up funding: blog-articles/category-1/sample-post-2/
+  - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
+  - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
 
-- Technology & Learning: blog-articles/category-2/
+- Technology & Learning: /blog-articles/category-2/
 
-  - What are front-end technologies we have?: blog-articles/category-2/sample-post-3/
-  - What rust gives us?: blog-articles/category-2/sample-post-4/
+  - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
+  - What rust gives us?: /blog-articles/category-2/sample-post-4/
 
-## Authors: blog-authors/amitu/
+## Authors: /blog-authors/amitu/
 
-- Amit Upadhyay: blog-authors/amitu/
-- Abrar Khan: blog-authors/abrar/
-- Arpita Jaiswal: blog-authors/arpita/
-- Ganesh S Salunke: blog-authors/ganesh/
+- Amit Upadhyay: /blog-authors/amitu/
+- Abrar Khan: /blog-authors/abrar/
+- Arpita Jaiswal: /blog-authors/arpita/
+- Ganesh S Salunke: /blog-authors/ganesh/
 
 
-# API Docs: api/post/
+# API Docs: /api/post/
 
-- POST: api/post/
-- PUT: api/put/
-- GET: api/get/
-- DELETE: api/delete/
-
+- POST: /api/post/
+- PUT: /api/put/
+- GET: /api/get/
+- DELETE: /api/delete/
 
 # GitHub
 url: https://github.com/FifthTry/doc-site/
