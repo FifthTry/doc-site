@@ -12,21 +12,21 @@ optional string url:
 
 -- toc-item-list: Post Api
 method: POST
-url: /api/post
+url: api/post
 
 -- toc-item-list: Get Api
 method: GET
-url: /api/get
+url: api/get
 
 
 
 -- toc-item-list: Put Api
 method: PUT
-url: /api/put
+url: api/put
 
 -- toc-item-list: Delete Api
 method: DELETE
-url: /api/delete
+url: api/delete
 
 -- api-page: api overview
 
