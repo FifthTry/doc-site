@@ -9,7 +9,7 @@
 -- ds.post-meta meta: What are front-end technologies we have?
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: /blog-articles/category-2/sample-post-3/
+post-url: blog-articles/category-2/sample-post-3/
 author: $author.ganesh
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 

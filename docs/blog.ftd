@@ -30,7 +30,7 @@ lang: ftd
 
 \-- ds.author-meta abrar: Abrar Khan
 profile: Sr. Software Developer
-bio-url: /blog-authors/abrar/
+bio-url: blog-authors/abrar/
 image: $assets.files.static.authors.abrar-k.jpg
 company: FifthTry Pvt. Ltd.
 
@@ -70,7 +70,7 @@ a title. You can change `Abrar Khan` with your name.
 -- ds.h1: Writing a post 
 
 Writing a post/article you can add your post meta and post details. Below code 
-snippet shows how to write post meta and create your post. [see sample post](/blog-articles/category-1/sample-post-1/)
+snippet shows how to write post meta and create your post. [see sample post](blog-articles/category-1/sample-post-1/)
 
 
 -- ds.code: Example of how to create blog post 
@@ -83,7 +83,7 @@ lang: ftd
 \-- ds.post-meta meta: A day in a city of dreams
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: /blog-articles/category-1/sample-post-1/
+post-url: blog-articles/category-1/sample-post-1/
 author: $author.abrar
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
@@ -194,17 +194,17 @@ above components.
 featured list page ui. 
 
 `--- ds.featured-post:` : This line imports `ds.featured-post` component which 
-comes with featured post UI. [see our blog page](/featured-posts/)
+comes with featured post UI. [see our blog page](featured-posts/)
 
 `--- ds.image-first:` : `ds.image-first` component shows your post image at the 
-top then shows title of the post and other post details. [see our blog page](/featured-posts/)
+top then shows title of the post and other post details. [see our blog page](featured-posts/)
 
 `--- ds.image-in-between:` : `ds.image-in-between` component shows your post 
-image after title and post metadata then shows other post details. [see our blog page](/featured-posts/)
+image after title and post metadata then shows other post details. [see our blog page](featured-posts/)
 
 `--- ds.without-image:` : `ds.without-image` component shows your post without
 image incase your post not contains featured image. It shows only title and post
-metadata then shows other post details. [see our blog page](/featured-posts/)
+metadata then shows other post details. [see our blog page](featured-posts/)
 
 Category pages are similar to featured-posts page. You can add category related
 details into body part of `-- ds.page` page.

@@ -9,7 +9,7 @@
 
 -- ds.author-meta amitu: Amit Upadhyay
 profile: CEO
-bio-url: /blog-authors/amitu/
+bio-url: blog-authors/amitu/
 image: $assets.files.static.authors.amitu.jpg
 company: FifthTry Pvt. Ltd.
 
