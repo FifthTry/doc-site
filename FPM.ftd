@@ -68,6 +68,13 @@ icon: static/primary-favorites.svg
 - Ganesh S Salunke: /blog-authors/ganesh/
 
 
+# API Docs: /api/post/
+
+- POST: /api/post/
+- PUT: /api/put/
+- GET: /api/get/
+- DELETE: /api/delete/
+
 # GitHub
 url: https://github.com/FifthTry/doc-site/
 # Use this template

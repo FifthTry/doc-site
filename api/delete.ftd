@@ -2,7 +2,7 @@
 -- import: fifthtry.github.io/doc-site/api/page as ds
 
 
--- ds.api-page: Delete overview
+-- ds.api-page: Delete API
 
 -- api.api: /store/<api-name>
 type: DELETE

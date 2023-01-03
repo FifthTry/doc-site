@@ -4,7 +4,7 @@
 -- import: fifthtry.github.io/doc-site/api/page as ds
 
 
--- ds.api-page: Put overview
+-- ds.api-page: Put API
 
 -- api.api: /store/<api-name>
 type: PUT
