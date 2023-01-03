@@ -70,7 +70,7 @@ string type:
 string purpose:
 body body:
 boolean authorization: false
-boolean show-box: false
+boolean show-box: true
 boolean show-data: false
 ftd.color bgcolor: $fpm.color.main.background.step-1
 ftd.color typecolor: $fpm.color.main.background.step-1
@@ -88,7 +88,7 @@ border-radius: 6
 --- ftd.row:
 width: fill
 padding: 5
-$on-click$: toggle $show-box
+;$on-click$: toggle $show-box
 $on-mouse-enter$: $show-data = true
 $on-mouse-leave$: $show-data = false
 id: api-main-container
@@ -122,14 +122,14 @@ align: center
 align: center
 spacing: 4
 
---- ftd.image:
+/--- ftd.image:
 if: not $show-box
 src: $assets.files.api.static.down.svg
 width: 24
 
 
 
---- ftd.image:
+/--- ftd.image:
 if: $show-box
 src: $assets.files.api.static.up.svg
 width: 24
