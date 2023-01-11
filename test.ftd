@@ -1,8 +1,8 @@
 -- import: fifthtry.github.io/doc-site/assets
-;; -- import: fifthtry.github.io/app-switcher as apps-switcher
+;; -- import: fifthtry.github.io/app-swiitemher as apps-swiitemher
 
 -- import: fpm
-
+-- import: fpm/processors as pr
 -- boolean login-button: false
 
 -- boolean pricing-cta: false
@@ -56,27 +56,30 @@ $processor$: fpm-apps
 
 
 
--- record tc:
+-- record item:
 caption title:
 optional string url:
 boolean is-last: false
 
--- tc list tc-list:
+-- item list itemlist:
 
--- tc: About
+-- item: About
 url: https://github.com/FifthTry
 
--- tc: Terms
+-- item: Terms
 url: https://fifthtry.com/terms/
 
--- tc: Privacy
+-- item: Privacy
 url: https://fifthtry.com/privacy/
 
--- tc: Blog
+-- item: Blog
 url: https://fifthtry.com/blog/
 is-last: true
 
--- end: tc-list
+-- end: itemlist
+
+
+
 
 ;; -- fpm.sitemap-data sitemap:
 $processor$: sitemap
@@ -111,6 +114,9 @@ optional body body:
 string post-url:
 author-meta author:
 
+-- fpm.sitemap-data sitemap:
+$processor$: pr.sitemap
+
 
 -- page:
 
@@ -141,7 +147,7 @@ string about-text: About this page
 string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
-;;tc list tc-list: $tc-list
+item list itemlist: $itemlist
 boolean sidebar: false
 children wrapper: 
 boolean widthfill: false
@@ -158,9 +164,9 @@ cross-icon: $page.cross-icon
 side-logo: $page.side-logo
 about-text-url: $page.about-text-url
 about-text: $page.about-text
-edit-text: $page.edit-tet
+edit-text: $page.edit-text
 edit-text-url: $page.edit-text-url
-tc-list: $page.tc-list
+itemlist: $page.itemlist
 github-text-url: $page.github-text-url
 github-text: $page.github-text
 
@@ -188,7 +194,7 @@ string edit-text-url:
 string github-text:
 boolean $open: false
 string github-text-url:
-tc list tc-list:
+item list itemlist:
 
 -- ftd.column:
 anchor: window
@@ -318,7 +324,7 @@ spacing.px: 8
 title: $obj.title
 url: $obj.url
 is-last: $obj.is-last
-$loop$: $floater.tc-list as $obj
+$loop$: $floater.itemlist as $obj
 
 -- end: ftd.row
 
@@ -405,7 +411,7 @@ menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
 
-;; -- apps-switcher.app-switcher:
+;; -- apps-swiitemher.app-swiitemher:
 apps: $doc-page-desktop.apps
 
 -- ftd.row:
@@ -586,7 +592,7 @@ current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
 parent-brand: $doc-page-mobile.parent-brand
 
--- apps-switcher.app-switcher:
+-- apps-swiitemher.app-swiitemher:
 apps: $apps
 
 -- ftd.column:
