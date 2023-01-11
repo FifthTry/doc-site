@@ -117,7 +117,7 @@ author-meta author:
 -- component page:
 optional caption title: ss
 optional body body: dd
-fpm.toc-item list toc:  dd
+fpm.toc-item list toc:  $sitemap.sections
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
 fpm.app-ui apps: $apps

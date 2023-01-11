@@ -1,8 +1,56 @@
--- ftd.code code-page:
-caption file-name:
-optional body content:
-string lang:
-lang: $lang
-if: $content is not null
+-- import: fpm
 
-$content
+-- image: mbc
+alignment: hsj
+src:https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+
+mjcbz
+
+-- component image:
+optional caption caption:
+optional body body:
+optional string link:
+optional ftd.align alignment: center
+optional ftd.resizing width:
+optional ftd.resizing height:
+ftd.image-src src:
+
+
+-- ftd.column:
+width if {image.width != NULL}: fill-container
+height: fill-container
+align-content if {image.width == NULL}: center
+
+-- ftd.image:
+src: $image.src
+width: $image.width
+height: $image.height
+;;align-content: $image.alignment
+
+-- ftd.text:
+if: {image.caption != NULL}
+text: $image.caption
+color: white
+width if {image.width != NULL}: $width
+width if {image.width == NULL}: fill-container
+role: $fpm.type.label-big
+border-bottom-left-radius.px: 5
+border-bottom-right-radius.px: 5
+background.solid: black
+padding-vertical.px: 8
+padding-horizontal.px: 20
+text-align: center
+
+-- ftd.column:
+if: {image.body != NULL}
+margin-top.px: 20
+
+-- markdown:
+body: $image.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: image
