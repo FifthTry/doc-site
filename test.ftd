@@ -112,26 +112,26 @@ string post-url:
 author-meta author:
 
 
-
+-- page:
 
 -- component page:
 optional caption title: ss
 optional body body: dd
-fpm.toc-item list toc:  $sitemap.sections
+fpm.toc-item list toc:  
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
-fpm.app-ui apps: $apps
-fpm.toc-item list sections: 
-fpm.toc-item list sub-sections:
-optional fpm.toc-item current-section: 
-optional fpm.toc-item current-subsection: 
-optional fpm.toc-item current-page: 
-fpm.toc-item list extra: 
-fpm.toc-item list footer-toc: 
-optional string nav-title: 
-optional string nav-title-url:
-optional string nav-sub-title:
-optional string nav-sub-title-url:
+;;fpm.app-ui apps: $apps
+fpm.toc-item list sections: $sitemap.sections
+fpm.toc-item list sub-sections:  $sitemap.subsections
+optional fpm.toc-item current-section:  $sitemap.current-section
+optional fpm.toc-item current-subsection: $sitemap.current-subsection
+optional fpm.toc-item current-page: $sitemap.current-page
+;;fpm.toc-item list extra: 
+fpm.toc-item list footer-toc: $footer-toc
+;;optional string nav-title: 
+;;optional string nav-title-url:
+;;optional string nav-sub-title:
+;;optional string nav-sub-title-url:
 ;; string github-text: {green: Sign in} to access Editing Tools
 string github-text-url: /
 ftd.image-src side-logo: $assets.files.static.editor-icon.svg
@@ -141,7 +141,7 @@ string about-text: About this page
 string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
-tc list tc-list: 
+;;tc list tc-list: $tc-list
 boolean sidebar: false
 children wrapper: 
 boolean widthfill: false
@@ -170,6 +170,10 @@ github-text: $page.github-text
 
 -- end: page
 
+-- ftd.color right-sidebar-background:
+light: #262626
+dark: #262626
+
 
 
 
@@ -192,22 +196,22 @@ top.px: 0
 right.px: 0
 height: fill-container
 max-height.fixed.calc:  100vh - 0px
-z-index: 1000
+;;z-index: 1000
 
 -- ftd.image:
-if: {open}
+if: {floater.open}
 src: $floater.side-logo
 height.fixed.px: 89
 width.fixed.px: 27
 ;;move-down: 250
-$on-click$: $set($value=$open,v=true)
+$on-click$: $set($value=$floater.open,v=true)
 
 
 -- ftd.column:
-if: {open}
+;;if: {floater.open}
 min-width.fixed.px: 256
 height.fixed.calc: 100%
-max-height.fixed.calc: calc percent 100
+max-height.fixed.calc:  100%
 
 -- ftd.row:
 width: fill-container
@@ -234,10 +238,10 @@ width: fill-container
 link: $floater.about-text-url
 ;;role: $small-bold
 width: fill-container
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 
 -- ftd.image:
-$on-click$: $set($value=$open,v=false)
+$on-click$: $set($value=$floater.open,v=false)
 src: $floater.cross-icon
 width.fixed.px: 16
 height.fixed.px: 16
@@ -271,7 +275,7 @@ src: $assets.files.static.avatar.svg
 -- ftd.text: $floater.github-text
 link: $floater.github-text-url
 ;;role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 max-width.fixed.px: 127
 
 -- end: ftd.row
@@ -288,14 +292,14 @@ max-width.fixed.px: 127
 -- ftd.column:
 width: fill-container
 ;;id: floater-container
-background.solid: $fpm.color.main.background.step-1
-padding-vertical.px: $fpm.space.space-2
-padding-horizontal.px: $fpm.space.space-4
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 8
+padding-horizontal.px: 16
 spacing.px: 8
 
 -- ftd.text: powered by
 ;;role: $large
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 link: https://fifthtry.com/
@@ -335,6 +339,10 @@ $loop$: $floater.tc-list as $obj
 
 
 
+
+-- ftd.color light-green:
+light: #0DCEAB
+dark: #0DCEAB
 
 
 
@@ -376,7 +384,7 @@ boolean right-sidebar: false
 
 -- ftd.column:
 width: fill
-background.solid: $fpm.color.main.background.base
+background.solid: $inherited.colors.background.base
 
 ;;-- h.header:
 login-button: $doc-page-desktop.login-button
@@ -460,7 +468,7 @@ if: {right-sidebar}
 ;; id: right-sidebar
 width.fixed.px: $toc-sidebar-width
 ;;z-index: 999
-background.solid: $fpm.color.main.background.overlay
+background.solid: $inherited.colors.background.overlay
 ;;sticky: true
 top.px: 0
 right.px: 48
@@ -555,7 +563,7 @@ chidren wrapper:
 
 -- ftd.column:
 width: fill-container
-background-color: $fpm.color.main.background.base
+background.solid: $inherited.colors.background.base
 
 -- h.header:
 sections: $doc-page-mobile.sections
@@ -594,11 +602,11 @@ min-height.fixed.calc: calc 100vh
 padding-horizontal.px: 20
 padding-vertical.px: 20
 
---- ftd.column:
+-- ftd.column:
 width: fill
 id: main-headaing-container
 
---- ftd.row:
+-- ftd.row:
 width: fill-container
 ;;id: heading-container
 
@@ -609,7 +617,7 @@ if: {doc-page-mobile.title != NULL}
 -- ftd.column:
 if: {doc-page-mobile.right-sidebar}
 align-content: center
-padding-top.px: $fpm.space.space-2
+padding-top.px: 8
 
 -- ftd.image:
 src: $assets.files.static.info-icon.svg
@@ -644,7 +652,7 @@ top.px: 0
 bottom.px: 0
 left.px: 0
 right.px: 0
-background.solid:  $fpm.color.main.background.overlay
+background.solid:  $inherited.colors.background.overlay
 z-index: 1
 width: fill-container
 ;;$on-click$: $open-right-sidebar-info = false
@@ -673,7 +681,7 @@ align-content: top-right
 anchor: parent
 right.px: 0
 top.px: 0
-background.solid: $fpm.color.main.background.step-1
+background.solid: $inherited.colors.background.step-1
 z-index: 1
 
 -- ftd.column:
@@ -695,6 +703,8 @@ footer-toc: $doc-page-mobile.footer-toc
 
 -- end: ftd.column
 
+
+-- end: ftd.column
 -- end: doc-page-mobile
 
 
@@ -733,12 +743,12 @@ min-width: hug-content
 padding-left.px: 10
 padding-top.px: 6
 padding-bottom.px: 6
-color: $fpm.color.main.text
+color: $inherited.colors.text
 
 
 -- end: footer-link
 
-
+-- ftd.text footer-link:
 
 
 
@@ -754,7 +764,7 @@ min-width: hug-content
 padding-left.px: 10
 padding-top.px: 3
 padding-bottom.px: 8
-color: $fpm.color.main.text
+color: $inherited.colors.text
 role: $fpm.type.label-big
 
 -- footer-link: $obj.title
@@ -813,7 +823,7 @@ fpm.toc-item list footer-toc:
 
 -- ftd.row:
 width: fill-container
-background-color: $fpm.color.main.background.base
+background.solid: $inherited.colors.background.base
 padding-horizontal.px: 150
 padding-vertical.px: 50
 spacing-mode: space-between
@@ -837,7 +847,7 @@ fpm.toc-item list footer-toc:
 
 -- ftd.column:
 width: fill-container
-background-color: $fpm.color.main.background.base
+background.solid: $inherited.colors.background.base
 padding-horizontal.px: 20
 padding-vertical.px: 50
 spacing-mode: space-between
@@ -887,8 +897,8 @@ text: $toc-instance.toc.title
 ;;role: $cta
 min-width: hug-content
 margin-bottom.px: 16
-color: $fpm.color.main.text
-color if {toc-instance.toc.is-active}: $fpm.color.main.cta-primary.base
+color: $inherited.colors.text
+color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
@@ -908,14 +918,14 @@ text: $toc-instance.toc.title
 ;;role: $cta
 min-width: hug-content
 margin-bottom.px: 16
-color: $fpm.color.main.text
-margin-left.px: $fpm.space.space-3
-color if {toc-instance.toc.is-active}: $fpm.color.main.cta-primary.base
+color: $inherited.colors.text
+margin-left.px: 12
+color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
 -- ftd.column:
-margin-left.px: $fpm.space.space-3
+margin-left.px: 12
 
 -- childrens:
 $loop$: $toc-instance.toc.children as $obj
@@ -956,7 +966,7 @@ height-fixed.calc:  100vh - 0px
 overflow-y: auto
 width: $toc-sidebar-width
 align-content: top-left
-background.solid:  $fpm.color.main.background.overlay
+background.solid:  $inherited.colors.background.overlay
 border-radius.px: 8
 padding-left.px: 24
 padding-top.px: 16
@@ -972,9 +982,9 @@ toc: $obj
 
 -- end: ftd.column
 
--- end: ftd.column
-
 -- end: render-toc
+
+
 
 
 
@@ -994,11 +1004,12 @@ optional ftd.align alignment: center
 optional ftd.resizing width:
 optional ftd.resizing height:
 ftd.image-src src:
-width {image.width != NULL}: fill-container
-height: fill-container
-align-content if {image.width == NULL}: center
+
 
 -- ftd.column:
+width if {image.width != NULL}: fill-container
+height: fill-container
+align-content if {image.width == NULL}: center
 
 -- ftd.image:
 src: $image.src
@@ -1009,14 +1020,14 @@ align-content: $image.alignment
 -- ftd.text:
 if: {image.caption != NULL}
 text: $image.caption
-color: $fpm.color.main.text
+color: $inherited.colors.text
 align-content: center
 width if {image.width != NULL}: $width
 width if {image.width == NULL}: fill-container
 role: $fpm.type.label-big
 border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
-background.solid: $fpm.color.main.background.step-1
+background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 8
 padding-horizontal.px: 20
 text-align: center
@@ -1039,9 +1050,9 @@ body: $image.body
 -- component wall-box:
 
 -- ftd.column:
-background.solid: $fpm.color.main.background.base
+background.solid: $inherited.colors.background.base
 width.fixed.px: 614
-width {ftd.device == 'mobile'}: fill-container
+width if {ftd.device == 'mobile'}: fill-container
 border-width.px: 1
 padding-vertical.px: 35
 padding-horizontal.px: 32
@@ -1051,12 +1062,12 @@ padding-horizontal.px: 32
 ;;shadow-blur: 4
 border-top-width.px: 3
 border-radius.px: 8
-border-color: $fpm.color.main.border
+border-color: $inherited.colors.border
 
 -- ftd.text: $wall-message
 text-align: center
 role: $fpm.type.heading-medium
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 width: fill-container
 padding-bottom.px: 64
 
@@ -1070,8 +1081,8 @@ text-align: center
 role: $fpm.type.copy-tight
 padding-vertical.px: 12
 padding-horizontal.px: 24
-color: $fpm.color.main.text-strong
-background.solid:$fpm.color.main.cta-primary.base
+color: $inherited.colors.text-strong
+background.solid:$inherited.colors.cta-primary.base
 border-radius.px:8
 
 -- end: ftd.row
@@ -1095,7 +1106,7 @@ margin-bottom.px: 32
 region: title
 role: $fpm.type.heading-hero
 text: $heading-one.title
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 padding-bottom.px: 16
 padding-top.px: 8
 
@@ -1119,7 +1130,7 @@ margin-bottom.px: 16
 region: title
 role: $fpm.type.heading-hero
 text: $heading-one-mobile.title
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 padding-bottom.px: 16
 padding-top.px: 8
 
@@ -1171,6 +1182,63 @@ children: $post.atictles-container
 
 
 
+-- component article-card:
+caption title:
+optional ftd.image-src image:
+author-meta author:
+string timestamp:
+optional body body:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+
+-- ftd.text: $article-card.title
+role: $fpm.type.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.row:
+width: fill-container
+margin-bottom.px: 16
+margin-top.px: 16
+
+-- ftd.text: $article-card.author.title
+role: $fpm.type.copy-relaxed
+width: fill-container
+color: $inherited.colors.cta-primary.border
+link: $article-card.author.bio-url
+
+-- ftd.row:
+spacing.px: 12
+
+-- ftd.text: posted on:
+role: $fpm.type.copy-relaxed
+white-space: nowrap
+color: $inherited.colors.cta-primary.border
+
+-- ftd.text: $article-card.timestamp
+role: $fpm.type.copy-relaxed
+white-space: nowrap
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+
+-- ftd.image:
+if: {article-card.image != NULL}
+src: $article-card.image
+width: fill-container
+height: hug-content
+
+
+-- end: ftd.column
+
+-- end: article-card
+
+
+
 
 
 
@@ -1213,7 +1281,7 @@ body: $image-first.post-data.body
 
 -- end: ftd.column
 
--- end: image-first:
+-- end: image-first
 
 
 
@@ -1234,15 +1302,15 @@ body body:
 
 -- ftd.column:
 border-width.px: 1
-border-color: $fpm.color.main.border
-padding-vertical.px: $fpm.space.space-6
+border-color: $inherited.colors.border
+padding-vertical.px: 24
 width: fill-container
 max-width if {ftd.device != mobile}: 344
 max-height.fixed.px: 500
-padding-horizontal.px: $fpm.space.space-6
-color: $fpm.color.main.text
-margin-top.px : $fpm.space.space-3
-margin-bottom.px : $fpm.space.space-3
+padding-horizontal.px: 24
+color: $inherited.colors.text
+margin-top.px : 12
+margin-bottom.px : 12
 spacing.px: 12
 border-radius.px: 8
 
@@ -1258,7 +1326,7 @@ height: hug-content
 
 -- ftd.text: $image-first-card.title
 role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 margin-top.px if {image-first-card.image != NULL}: 12
 
 -- ftd.row:
@@ -1274,25 +1342,25 @@ spacing.px: 2
 
 -- ftd.text: $image-first-card.author.title
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $image-first-card.author.bio-url
 
 -- ftd.text: , 
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-first-card.timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text:
 text: $image-first-card.body
 role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
+color: $inherited.colors.text
 link: $url
 
 -- end: ftd.column
@@ -1309,24 +1377,24 @@ spacing.px: 2
 
 -- ftd.text: $image-first-card.author.title
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $image-first-card.author.bio-url
 
 -- ftd.text:, 
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-first-card.timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: image-first-card:
+-- end: image-first-card
 
 
 
@@ -1435,22 +1503,22 @@ body body:
 
 -- ftd.column:
 border-width.px: 1
-border-color: $fpm.color.main.border
-padding-vertical.px: $fpm.space.space-6
+border-color: $inherited.colors.border
+padding-vertical.px: 24
 width: fill-container
 max-width.fixed.px if {ftd.device !=NULL}: 344
 max-height.fixed.px: 500
-padding-horizontal.px:$fpm.space.space-6
-color: $fpm.color.main.text
-margin-top.px: $fpm.space.space-3
-margin-bottom.px: $fpm.space.space-3
-margin-left.px if {ftd.device !=NULL}: $fpm.space.space-3
+padding-horizontal.px:24
+color: $inherited.colors.text
+margin-top.px: 12
+margin-bottom.px: 12
+margin-left.px if {ftd.device !=NULL}: 12
 spacing.px: 8
 border-radius.px: 8
 
 -- ftd.text: $image-in-between-card.title
 role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 link: $image-in-between-card.url
 
 -- ftd.row:
@@ -1463,20 +1531,20 @@ margin-top.px: 8
 -- ftd.row:
 spacing.px: 2
 
---- ftd.text: $image-in-between-card.author.title
+-- ftd.text: $image-in-between-card.author.title
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $image-in-between-card.author.bio-url
 
---- ftd.text:, 
+-- ftd.text:, 
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
---- ftd.text: $image-in-between-card.timestamp
+-- ftd.text: $image-in-between-card.timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
@@ -1490,7 +1558,7 @@ link: $url
 -- ftd.text:
 text: $image-in-between-card.body
 role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
+color: $inherited.colors.text
 link: $url
 
 -- ftd.column:
@@ -1505,18 +1573,18 @@ spacing.px: 2
 
 -- ftd.text: $image-in-between-card.author.title
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $image-in-between-card.author.bio-url
 
 -- ftd.text:, 
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-in-between-card.timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 
 -- end: ftd.column
@@ -1524,6 +1592,7 @@ color: $fpm.color.main.cta-primary.border
 -- end: ftd.column
 
 -- end: image-in-between-card
+
 
 
 
@@ -1568,22 +1637,22 @@ body body:
 
 -- ftd.column:
 border-width.px: 1
-border-color: $fpm.color.main.border
-padding-vertical.px: $fpm.space.space-6
+border-color: $inherited.colors.border
+padding-vertical.px: 24
 width: fill-container
 max-width if {ftd.device !=mobile}: 344
 max-height.fixed.px: 500
-padding-horizontal.px:$fpm.space.space-6
-color: $fpm.color.main.text
-margin-top.px: $fpm.space.space-3
-margin-bottom.px: $fpm.space.space-3
-margin-right.px if {ftd.device !=mobile}: $fpm.space.space-3
+padding-horizontal.px:24
+color: $inherited.colors.text
+margin-top.px: 12
+margin-bottom.px: 12
+margin-right.px if {ftd.device !=mobile}: 12
 spacing.px: 12
 border-radius.px: 8
 
 -- ftd.text: $without-image-card.title
 role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 link: $without-image-card.url
 
 -- ftd.row:
@@ -1595,27 +1664,27 @@ margin-top.px: 8
 
 -- ftd.row:
 
---- ftd.text: $without-image-card.author.title
+-- ftd.text: $without-image-card.author.title
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $without-image-card.author.bio-url
 
---- ftd.text:, 
+-- ftd.text:, 
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
---- ftd.text: $without-image-card.timestamp
+-- ftd.text: $without-image-card.timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text:
 text: $without-image-card.body
 role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
+color: $inherited.colors.text
 link: $without-image-card.url
 
 -- ftd.column:
@@ -1629,18 +1698,18 @@ margin-top.px: 8
 
 -- ftd.text: $without-image-card.author.title
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $without-image-card.author.bio-url
 
 -- ftd.text:, 
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $without-image-card.timestamp
 role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
 
@@ -1648,6 +1717,13 @@ color: $fpm.color.main.cta-primary.border
 
 -- end: without-image-card
 
+
+-- ftd.column without-image-card:
+string url:
+string timestamp:
+caption title:
+author-meta author:
+body body:
 
 
 
@@ -1695,6 +1771,16 @@ $author-bio.author.body
 
 -- end: author-bio
 
+-- ftd.column author-bio:
+author-meta author:
+
+--- author-bio-card: $author.title
+profile: $author.profile
+company: $author.company
+avatar: $author.image
+
+$author.body
+
 
 
 
@@ -1711,7 +1797,7 @@ body body:
 
 -- ftd.column:
 width: fill-container
-color: $fpm.color.main.text
+color: $inherited.colors.text
 spacing.px: 24
 margin-top.px: 12
 margin-bottom.px: 12
@@ -1762,14 +1848,14 @@ body body:
 
 -- ftd.column:
 width: fill-container
-color: $fpm.color.main.text
+color: $inherited.colors.text
 spacing.px: 32
 margin-top.px: 12
 margin-bottom.px: 12
 margin-left.px: 12
 margin-right.px: 12
 
---- ftd.row:
+-- ftd.row:
 width: fill-container
 ;;id: auth-container
 spacing.px: 24
@@ -1792,7 +1878,7 @@ align-content: center
 
 -- ftd.text: $author-bio-desktop.title
 role: $fpm.type.heading-large
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 margin-bottom.px: 16
 
 -- ftd.text: $author-bio-desktop.profile
@@ -1829,7 +1915,7 @@ body body:
 
 -- ftd.column:
 width: fill-container
-color: $fpm.color.main.text
+color: $inherited.colors.text
 spacing.px: 16
 margin-top.px: 12
 margin-bottom.px: 12
@@ -1847,7 +1933,7 @@ align-content: center
 
 -- ftd.text: $author-bio-mobile.title
 role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 
 -- ftd.text: $author-bio-mobile.profile
 role: $fpm.type.copy-tight
@@ -1869,6 +1955,102 @@ role: $fpm.type.fine-print
 
 
 
+
+
+
+
+
+
+
+
+
+-- component footer-list:
+caption title:
+string url:
+boolean is-last:
+
+-- ftd.column:
+color: $inherited.colors.text-strong
+spacing.px: 8
+
+-- ftd.text: $footer-list.title
+;;role:$copy-print
+link: $footer-list.url
+color: $inherited.colors.text-strong
+;;open-in-new-tab: true
+
+-- ftd.row:
+margin-top.px: 8
+if:{ !footer-list.is-last}
+padding-vertical.px: 1
+padding-horizontal.px: 1
+border-radius.px: 100
+background.solid: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: footer-list
+
+
+
+
+
+
+
+
+-- componenet yellowmarker:
+
+-- ftd.text : text
+color: $inherited.colors.background.step-1
+background.solid: $inherited.colors.custom.two
+padding-horizontal.px: 2
+margin-right.px: 4
+
+-- end: yellowmarker
+
+
+
+
+
+
+
+
+
+
+-- component greenmarker:
+
+-- ftd.text: text
+color: $inherited.colors.background.step-1
+background.solid: $inherited.colors.success.text
+padding-horizontal: 2
+margin-right: 4
+
+
+-- end:greenmarker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component redmarker:
+
+-- ftd.text: text
+color: $inherited.colors.background.step-1
+background.solid: $inherited.colors.error.text
+padding-horizontal.px: 2
+margin-right.px: 4
+
+
+-- end: redmarker
 
 
 
