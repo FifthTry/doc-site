@@ -9,9 +9,10 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.dependency: fifthtry.github.io/header
 
--- fpm.dependency: fifthtry.github.io/toc
+;; -- fpm.dependency: fifthtry.github.io/toc
 
 -- fpm.dependency: fifthtry.github.io/typography
+
 -- fpm.dependency: fifthtry.github.io/app-switcher 
 
 -- fpm.dependency: fifthtry.github.io/roboto-mono
@@ -23,8 +24,8 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 -- fpm.auto-import: fifthtry.github.io/header as h
--- fpm.auto-import: fifthtry.github.io/toc as tt
--- fpm.auto-import: fifthtry.github.io/roboto-mono as mono
+;; -- fpm.auto-import: fifthtry.github.io/toc as tt
+-- fpm.auto-import: fifthtry.github.io/roboto as mono
 
 -- fpm.app: Todos for Family
 mount-point: /todos/
