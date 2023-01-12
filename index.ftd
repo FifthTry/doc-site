@@ -2208,8 +2208,6 @@ height: 400
 width: fill
 margin-bottom: 34
 
--- end: ftd.iframe
-
 -- end: iframe
 
 
@@ -2229,8 +2227,6 @@ youtube: $youtube.v
 height: 400
 width: fill
 margin-bottom: 34
-
--- end: ftd.iframe
 
 -- end: youtube
 
