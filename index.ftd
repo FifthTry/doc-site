@@ -2199,6 +2199,50 @@ $body
 
 
 
+-- component iframe:
+string src:
+
+-- ftd.iframe:
+src: $iframe,src
+height: 400
+width: fill
+margin-bottom: 34
+
+-- end: ftd.iframe
+
+-- end: iframe
+
+
+
+
+
+
+
+
+
+
+-- component youtube:
+caption v:
+
+-- ftd.iframe:
+youtube: $youtube.v
+height: 400
+width: fill
+margin-bottom: 34
+
+-- end: ftd.iframe
+
+-- end: youtube
+
+
+
+
+
+
+
+
+
+
 -- component output:
 caption title: Output
 children output-container:
