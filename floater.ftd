@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/doc-site as ds
 
 
--- ds.show-floater: true
+-- $ds.show-floater: true
 
 
 -- ftd.font-size copy-tight-bold-desktop:
@@ -52,3 +52,5 @@ lang: ftd
 \-- import: ds
 
 \-- ds.show-floater: true
+
+-- end: ds.page
