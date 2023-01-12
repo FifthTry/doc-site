@@ -1,31 +1,14 @@
--- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
-
-
--- ds.image image-page: $file-name
-caption file-name:
-ftd.image-src src:
-src: $src
-
+-- import: fifthtry.github.io/doc-site as ds
 
 -- ds.page: Image with Caption
 
---- ds.image: This is the image with caption
-if: not $ds.is-mobile
-src: $assets.files.static.picture1.jpeg
-width: 500
+-- ds.image: This is the image with caption
+src: $assets.files.static.image-placeholder.png
+width.fixed.px: 500
 
---- ds.image: This is the image with caption
-if: $ds.is-mobile
-src: $assets.files.static.picture1.jpeg
-width: fill
+-- ds.image: This is the image with caption
+src: $assets.files.static.image-placeholder.png
 
 
-
-
-
-
-
-
-
-
+-- end: ds.page
