@@ -3,11 +3,10 @@
 
 
 
-
+-- $ds.sidebar: true
 
 -- ds.page: Using right-sidebar feature
-id: my-page
-sidebar: true
+$sidebar: $ds.sidebar
 
 We have made provision of adding `right-sidebar` for additional components to
 be shown on right-side of `page` component. Add `sidebar: true` attribute to 
@@ -35,33 +34,32 @@ Some body content here...
 Some heading 2 body here...
 
 
--- container: my-page.wrapper.right-sidebar
 
--- ds.sidebar:
+-- ds.right-sidebar:
 
---- ds.h2: Heading 2 title
+-- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
---- ds.code: Example code for right-sidebar:
+-- ds.code: Example code for right-sidebar:
 lang: ftd
 
 \-- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
--- container: my-page.wrapper.right-sidebar-mobile
 
--- ds.sidebar:
+-- end: ds.right-sidebar
 
---- ds.h2: Heading 2 title
+-- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
---- ds.code: Example code for right-sidebar:
+-- ds.code: Example code for right-sidebar:
 lang: ftd
 
 \-- ds.h2: Heading 2 title
 
 Some heading 2 body here...
 
+-- end: ds.page
