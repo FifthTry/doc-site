@@ -210,3 +210,4 @@ Category pages are similar to featured-posts page. You can add category related
 details into body part of `-- ds.page` page.
 
 
+-- end: ds.page

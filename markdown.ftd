@@ -1,8 +1,0 @@
--- import: fifthtry.github.io/doc-site as ds
-
--- ds.page markdown-page:
-caption file-name:
-optional body content:
-if: $content is not null
-
-$content

@@ -80,7 +80,7 @@ Once you are done with editing `index.ftd` file. Click on `Commit changes` butto
 
 -- ds.image: Editing `ingex.ftd` file and `Commit changes`
 src: $assets.files.static.docs.editing-index-ftd-with-homepage-content.png
-width: fill
+width.fixed.px: 500
 
 
 -- ds.markdown:
@@ -93,9 +93,8 @@ on `Actions` tab.
 
 
 -- ds.image: `pages build and deployment` workflow should run successfully
-id: pages-build-and-deployment
 src: $assets.files.static.docs.action-tab-pages-build-and-deployment.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.markdown:
@@ -109,11 +108,10 @@ Click on your `FTD` website url e.g. [`https://gsalunke.github.io/my-ftd-blog/`]
 
 -- ds.image: `index.ftd` with homepage content
 src: $assets.files.static.docs.index-ftd-updated-with-homepage-post.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.h2: How to create a new page into `FTD` website?
-id: how-to-create-new-ftd-file
 
 On your `GitHub` repository home, click on `Add file` button dropdown. It will show
 two options `Create new file` and `Upload files`. Click on `Create new file` to 
@@ -122,7 +120,7 @@ create new `.ftd` file.
 
 -- ds.image: Creating new `FTD` file
 src: $assets.files.static.docs.create-new-ftd-file-into-ftd-repository.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.markdown:
@@ -151,14 +149,14 @@ are ready with your own `GitHub` live website.
 
 
 -- ds.h3: Commiting my first `post.ftd`
-id: commiting-my-first-post-ftd
+
 
 Below image shows how to `Commit` your first `post.ftd` file
 
 
 -- ds.image: Creating your first `FTD` blog post
 src: $assets.files.static.docs.first-blog-post-ftd-file.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.markdown:
@@ -174,9 +172,8 @@ on `Actions` tab.
 
 
 -- ds.image: `pages build and deployment` workflow should run successfully
-id: pages-build-and-deployment-1
 src: $assets.files.static.docs.action-tab-pages-build-and-deployment.png
-width: fill
+width.fixed.px: 750
 
 
 
@@ -216,7 +213,7 @@ lang: ftd
 
 -- ds.image: Creating `FPM/config.ftd` file
 src: $assets.files.static.docs.adding-config-ftd-into-FPM-folder.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.markdown:
@@ -232,7 +229,6 @@ file is successfully deployed on live website.
 
 
 -- ds.h2: Udating `config.ftd` into `FPM.ftd` file
-id: updating-fpm-ftd-file
 
 Our newly created `FTD` configuration file should be added into `FPM.ftd` file,
 otherwise the configurations we mentioned `FPM/config.ftd` file won't work.
@@ -264,7 +260,7 @@ Follow same steps [commiting-my-first-post-ftd](author-docs/#commiting-my-first-
 
 -- ds.image: Importing `FPM/config.ftd` into `FPM.ftd` file
 src: $assets.files.static.docs.referring-config-ftd-into-FPM-ftd-file.png
-width: fill
+width.fixed.px: 750
 
 Once you click on `Commit changes` button, `FPM` builder will start building these
 changes and deploy them on live. Ref. [pages-build-and-deployment](author-docs/#pages-build-and-deployment)
@@ -275,7 +271,7 @@ default `LOGO` site name.
 
 -- ds.image: `My FTD Blog` site name from `FPM/config.ftd`
 src: $assets.files.static.docs.site-name-and-first-blog-post.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.markdown:
@@ -285,7 +281,7 @@ create new pages](author-docs/#how-to-create-new-ftd-file).
 
 
 -- ds.h2: Using `fpm.sitemap` feature for sections in header
-id: fpm-sitemap-feature
+
 
 FifthTry have developed `fpm.sitemap` for you. Using `fpm.sitemap` feature you 
 can add sections and sub-sections into header.
@@ -352,7 +348,7 @@ websites to learn more about sitemap linking.
 
 -- ds.image: Updating `FPM.ftd` file with `fpm.sitemap` feature
 src: $assets.files.static.docs.updating-fpm-ftd-with-sitemap-feature.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.markdown:
@@ -363,7 +359,7 @@ changes and deploy them on live. Ref. [pages-build-and-deployment](author-docs/#
 
 -- ds.image: `fpm.sitemap` feature implemented 👍
 src: $assets.files.static.docs.fpm-sitemap-feature-output-homepage.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.h1: Using `FTD` components inside `doc-site`
@@ -386,7 +382,7 @@ Watch below video which explains - how to add `FPM` dependencies?
 
 
 
--- ds.youtube: 
+\-- ds.youtube: 
 v: 8fu8BtKVq9s
 
 
@@ -423,7 +419,7 @@ veniam, quis nostrud exercitation ullamco laboris nisi ut
 
 -- ds.image: sidenote output
 src: $assets.files.static.docs.sidenote-from-bling-library.png
-width: fill
+width.fixed.px: 750
 
 
 -- ds.h1: Using blog on doc-site
@@ -448,7 +444,7 @@ to it and click on `Commit changes` button to save your changes.
 
 
 
-
+-- end: ds.page
 
 
 
