@@ -1,4 +1,6 @@
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/typography as tf
+-- import: fifthtry.github.io/doc-site/header as h
 ;; -- import: fifthtry.github.io/app-switcher as apps-switcher
 
 -- import: fpm
