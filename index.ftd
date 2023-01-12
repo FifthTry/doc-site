@@ -2246,8 +2246,8 @@ background.solid: $inherited.colors.background.base
 caption title:
 
 -- ftd.text: $highlight.title
-background.solid: $fpm.color.main.custom.two
-color: $fpm.color.main.background.base
+background.solid: $inherited.colors.custom.two
+color: $inherited.colors.background.base
 padding.px: 3
 border-radius.px: 3
 
@@ -2269,13 +2269,13 @@ optional body body:
 -- ftd.column:
 border-radius.px: 3
 width: fill-container
-background-color: $fpm.color.main.background.base
-color: $fpm.color.main.text
+background-color: $inherited.colors.background.base
+color: $inherited.colors.text
 
 -- ftd.column:
 width.fixed.px: 5
 height.fixed.percent:  100
-background-color: $fpm.color.main.background.base
+background-color: $inherited.colors.background.base
 
 -- ftd.column:
 width: fill-container
@@ -2286,17 +2286,17 @@ spacing.px: 10
 spacing.PX: 5
 
 -- ftd.text: Tip
-role: $fpm.type.label-big
+role: $inherited.types.label-big
 
 -- ftd.text: $tip.title
 if: {tip.title != NULL}
-role: $fpm.type.label-big
+role: $inherited.types.label-big
 
 -- end: ftd.row
 
 -- ftd.text:
 if: {tip.body != NULL}
-role: $fpm.type.copy-large
+role: $inherited.types.copy-large
 
 $tip.body
 
