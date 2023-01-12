@@ -2,6 +2,7 @@
 ;; -- import: fifthtry.github.io/app-switcher as apps-switcher
 
 -- import: fpm
+
 -- import: fpm/processors as pr
 
 -- boolean login-button: false
@@ -10,84 +11,76 @@
 
 -- boolean parent-brand: true
 
--- boolean show-floater: false
+-- boolean show-floater: true
 
 -- string wall-message: Please, login via clicking on below button
 
 -- string login-url: /
 
--- boolean is-reader: true
+-- boolean is-reader: false
 
--- fpm.color theme-color:
-dark: #1F5E6B
-light: #1F5E6B
+-- integer toc-sidebar-width: 320
 
--- boolean sidebar-open: false
+-- string github: NA
 
--- boolean open-right-sidebar-info: false
+-- string site-name: Doc Site
 
-;;-- fpm.app-ui apps:
+-- ftd.image-src site-logo:
+light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+
+-- ftd.image-src brand-site-logo:
+light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+
+-- string brand-site-name: FifthTry
+
+-- string brand-caption: FifthTry
+
+-- string brand-site-url: /
+
+-- string site-url: index.html
+
+-- pr.toc-item list sections:
+
+-- pr.toc-item list sub-sections:
+
+-- pr.toc-item list toc:
+
+-- pr.toc-item list footer-toc:
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+/-- pr.app-ui apps:
 $processor$: fpm-apps
 
 
 
--- ftd.resizing toc-sidebar-width: 450
--- string toc-mobile-sidebar-width: percent 70
--- integer content-padding: 150
--- integer max-width: 1000
--- string github: NA
-
--- optional string site-name: Doc Site
-
--- optional ftd.image-src site-logo:
--- optional ftd.image-src brand-site-logo:
--- optional string brand-site-name: 
--- optional string brand-caption:
--- optional string brand-site-url: index.html
--- string site-url: index.html
 
 
--- fpm.toc-item list footer-toc:
-
-
-
-
-
--- record tc:
+-- record item:
 caption title:
 optional string url:
 boolean is-last: false
 
--- tc list tc-list:
+-- item list itemlist:
 
--- tc: About
+-- item: About
 url: https://github.com/FifthTry
 
--- tc: Terms
+-- item: Terms
 url: https://fifthtry.com/terms/
 
--- tc: Privacy
+-- item: Privacy
 url: https://fifthtry.com/privacy/
 
--- tc: Blog
+-- item: Blog
 url: https://fifthtry.com/blog/
 is-last: true
 
--- end: tc-list
+-- end: itemlist
 
-;; -- fpm.sitemap-data sitemap:
-$processor$: sitemap
-
--- fpm.sitemap-data sitemap:
-$processor$: pr.sitemap
-
-
-;;-- fpm.toc-item list sample-header:
-$processor$: toc
-
-- Quickstart: /
-- GitHub: https://github.com/FifthTry/doc-site/
-- Use this template: https://github.com/FifthTry/doc-site/generate/
 
 
 
@@ -116,20 +109,43 @@ author-meta author:
 
 
 
+
+
+
+
+
+-- page: Page title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+-- tf.h1: hih
+
+-- end: page
+
+
+
+
+
+
+
+
+
+
 -- component page:
-optional caption title: ss
-optional body body: dd
-fpm.toc-item list toc:  
+optional caption title: 
+optional body body: 
+pr.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
-;; fpm.app-ui apps: $apps
-fpm.toc-item list sections: $sitemap.sections
-fpm.toc-item list sub-sections: $sitemap.subsections
-optional fpm.toc-item current-section: $sitemap.current-section
-optional fpm.toc-item current-subsection: $sitemap.current-subsection
-optional fpm.toc-item current-page: $sitemap.current-page
-fpm.toc-item list footer-toc: 
-;; string github-text: {green: Sign in} to access Editing Tools
+;;pr.app-ui apps: $apps
+boolean $open-right-sidebar-info: false
+pr.toc-item list sections: $sitemap.sections
+pr.toc-item list sub-sections: $sitemap.subsections
+optional pr.toc-item current-section: $sitemap.current-section
+optional pr.toc-item current-subsection: $sitemap.current-subsection
+optional pr.toc-item current-page: $sitemap.current-page
+pr.toc-item list footer-toc: $footer-toc
+string github-text: {green: Sign in} to access Editing Tools
 string github-text-url: /
 ftd.image-src side-logo: $assets.files.static.editor-icon.svg
 ftd.image-src sidebar-brand-logo: $assets.files.static.brand-logo.svg
@@ -138,13 +154,14 @@ string about-text: About this page
 string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
-tc list tc-list: 
+;;item list itemlist: $itemlist
 boolean sidebar: false
 children wrapper: 
 boolean widthfill: false
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.base
 
 -- ftd.column:
 
@@ -155,13 +172,48 @@ cross-icon: $page.cross-icon
 side-logo: $page.side-logo
 about-text-url: $page.about-text-url
 about-text: $page.about-text
-edit-text: $page.edit-tet
+edit-text: $page.edit-text
 edit-text-url: $page.edit-text-url
-tc-list: $page.tc-list
+;;itemlist: $page.itemlist
 github-text-url: $page.github-text-url
 github-text: $page.github-text
 
 -- end: ftd.column
+
+-- doc-page-desktop: $page.title 
+if: {ftd.device != "mobile"}
+toc: $page.toc
+wrapper: $page.wrapper
+login-button: $page.login-button
+footer-toc: $page.footer-toc
+$open-right-sidebar-info: $page.open-right-sidebar-info
+pricing-cta: $page.pricing-cta
+sections: $page.sections
+current-section: $page.current-section
+current-subsection: $page.current-subsection
+current-page: $page.current-page
+sub-sections: $page.sub-sections
+body: $page.body
+widthfill: $page.widthfill
+right-sidebar: $page.sidebar
+;;apps: $page.apps
+
+-- doc-page-mobile: $page.title
+if: {ftd.device == "mobile"}
+wrapper: $page.wrapper
+toc: $page.toc
+$open-right-sidebar-info: $page.open-right-sidebar-info
+login-button: $page.login-button
+footer-toc: $page.footer-toc
+pricing-cta: $page.pricing-cta
+sections: $page.sections
+current-section: $page.current-section
+current-subsection: $page.current-subsection
+current-page: $page.current-page
+sub-sections: $page.sub-sections
+body: $page.body
+right-sidebar: $page.sidebar
+;;apps: $page.apps
 
 -- end: ftd.column
 
@@ -169,57 +221,8 @@ github-text: $page.github-text
 
 
 
--- component content:
-children content-container:
 
 
--- ftd.column:
-width: fill-container
-padding-vertical.px: 30
-
--- ftd.column:
-if: {ftd.device !='mobile'}
-max-.fixed.px: 800
-width: fill-container
-align-content: center
-children: content-container
-
--- end: ftd.column
-
--- ftd.column:
-if: {ftd.device =='mobile'}
-max-.fixed.px: 800
-width: fill-container
-align-content: center
-children: content-container
-padding-horizontal.px: 20
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: content
-
-
-
-
-
-
-
-
--- component hr:
-
--- ftd.column:
-height.fixed.px: 1
-width: fill-container
-background.solid: $fpm.color.main.cta-tertiary.pressed
-margin-top.px: $fpm.space.space-6
-margin-bottom.px: $fpm.space.space-6
-
-
--- end: ftd.column
-
--- end: hr
 
 
 
@@ -236,30 +239,30 @@ string edit-text-url:
 string github-text:
 boolean $open: false
 string github-text-url:
-tc list tc-list:
+;;item list itemlist:
 
 -- ftd.column:
 anchor: window
 top.px: 0
 right.px: 0
 height: fill-container
-max-height.fixed.calc:  100vh - 0px
-z-index: 1000
+max-height.fixed.calc: 100vh - 0px
+;;z-index: 1000
+align-content: center
 
 -- ftd.image:
-if: {open}
+if: { !floater.open }
 src: $floater.side-logo
 height.fixed.px: 89
 width.fixed.px: 27
 ;;move-down: 250
-$on-click$: $set($value=$open,v=true)
-
+$on-click$: $ftd.set-bool($a = $floater.open, v = true)
 
 -- ftd.column:
-if: {open}
+if: { floater.open }
 min-width.fixed.px: 256
 height.fixed.calc: 100%
-max-height.fixed.calc: calc percent 100
+max-height.fixed.calc: 100%
 
 -- ftd.row:
 width: fill-container
@@ -271,11 +274,9 @@ background.solid: $right-sidebar-background
 -- ftd.column:
 width: fill-container
 height: fill-container
-;;;; id: first-row
 
 -- ftd.column:
 height: fill-container
-;;;; id: section-container
 width: fill-container
 spacing.px: 12
 
@@ -286,10 +287,10 @@ width: fill-container
 link: $floater.about-text-url
 ;;role: $small-bold
 width: fill-container
-color: $fpm.color.main.text-strong
+color: $inherited.colors.text-strong
 
 -- ftd.image:
-$on-click$: $set($value=$open,v=false)
+$on-click$: $ftd.set-bool($a = $floater.open, v = false)
 src: $floater.cross-icon
 width.fixed.px: 16
 height.fixed.px: 16
@@ -310,20 +311,19 @@ color: $light-green
 
 -- end: ftd.column
 
-
 -- ftd.column:
 
 -- ftd.row:
 width: fill-container
 spacing.px: 16
 
--- ftd.image:
+/-- ftd.image:
 src: $assets.files.static.avatar.svg
 
 -- ftd.text: $floater.github-text
 link: $floater.github-text-url
-;;role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
+role: $inherited.types.copy-tight
+color: $inherited.colors.text-strong
 max-width.fixed.px: 127
 
 -- end: ftd.row
@@ -334,19 +334,17 @@ max-width.fixed.px: 127
 
 -- end: ftd.row
 
--- end: ftd.column
-
 -- ftd.column:
 width: fill-container
-;;;; id: floater-container
-background.solid: $fpm.color.main.background.step-1
-padding-vertical.px: $fpm.space.space-2
-padding-horizontal.px: $fpm.space.space-4
+;;id:floater-container
+background.solid:$inherited.colors.background.step-1
+padding-vertical.px: 8
+padding-horizontal.px: 16
 spacing.px: 8
 
 -- ftd.text: powered by
-;;role: $large
-color: $fpm.color.main.text-strong
+role: $inherited.types.copy-tight
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 link: https://fifthtry.com/
@@ -361,13 +359,15 @@ height.fixed.px: 32
 width: fill-container
 spacing.px: 8
 
--- footer-list:
+/-- footer-list:
 title: $obj.title
 url: $obj.url
 is-last: $obj.is-last
-$loop$: $floater.tc-list as $obj
+$loop$: $floater.itemlist as $obj
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -384,53 +384,30 @@ $loop$: $floater.tc-list as $obj
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- component doc-page-desktop:
 optional caption title:
 optional body body:
-fpm.toc-item list toc: $toc
-fpm.toc-item list sections:
-fpm.toc-item list sub-sections:
-fpm.toc-item list extra:
-fpm.app-ui apps:
-fpm.toc-item list footer-toc:
-optional fpm.toc-item current-section:
-optional fpm.toc-item current-page:
-optional fpm.toc-item current-subsection:
+pr.toc-item list toc: 
+pr.toc-item list sections:
+pr.toc-item list sub-sections:
+;;pr.app-ui apps:
+boolean $open-right-sidebar-info: 
+pr.toc-item list footer-toc:
+optional pr.toc-item current-section:
+optional pr.toc-item current-page:
+optional pr.toc-item current-subsection:
 optional string login-btn-txt: Login
 boolean pricing-cta: 
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
 boolean right-sidebar: false
+children wrapper:
 
 -- ftd.column:
-width: fill
-background.solid: $fpm.color.main.background.base
+width: fill-container
 
-;;-- h.header:
+-- h.header:
 login-button: $doc-page-desktop.login-button
 pricing-cta: $doc-page-desktop.pricing-cta
 login-btn-txt: $doc-page-desktop.login-btn-txt
@@ -440,66 +417,58 @@ sub-sections: $doc-page-desktop.sub-sections
 current-section: $doc-page-desktop.current-section
 current-subsection: $doc-page-desktop.current-subsection
 current-page: $doc-page-desktop.current-page
-site-logo: $doc-page-desktop.site-logo
-site-url: $doc-page-desktop.site-url
-site-name: $doc-page-desktop.site-name
+site-logo: $site-logo
+site-url: $site-url
+site-name: $site-name
 logo-height: 38
-menu-right: 0
-menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
 
-;; -- apps-switcher.app-switcher:
-apps: $doc-page-desktop.apps
-
 -- ftd.row:
 width: fill-container
-;;;; id: main-row
 spacing.px: 48
+padding-horizontal.px: 25
 
 -- render-toc:
-if: $doc-page-desktop.toc is not empty
+if: { !is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
-
-
 -- ftd.column:
-width: fill-container
-
--- ftd.column:
-;;;; id: main-content-wrap
-max-width.fixed.px if {is_empty(doc-page-desktop.toc)}: 800
+max-width.fixed.px if { is_empty(doc-page-desktop.toc) }: 800
 max-width if {doc-page-desktop.widthfill}: fill-container
 max-width.fixed.px: 800
-align-content if {!is_empty(doc-page-desktop.toc)}: center
-align-content: top
+align-self if { is_empty(doc-page-desktop.toc) }: center
+align-content: top-left
 min-height.fixed.calc: 100vh
-padding-horizontal.px if {!doc-page-desktop.widthfill}: 34
-padding-vertical.px if {!doc-page-desktop.widthfill}: 25
-padding-top.px if {doc-page-desktop.widthfill}: 9
-width: fill-container
+padding-horizontal.px if { !doc-page-desktop.widthfill }: 34
+padding-vertical.px if { !doc-page-desktop.widthfill }: 25
+padding-top.px if { doc-page-desktop.widthfill }: 9
 
 -- ftd.column:
 width: fill-container
 
--- heading-one: $title
-if: {doc-page-desktop.title != NULL}
+-- tf.h1: $doc-page-desktop.title
+if: { doc-page-desktop.title != NULL }
 
 -- wall-box:
-if: {is-reader}
+if: { is-reader }
 
 -- end: ftd.column
 
 -- ftd.column:
-if: $is-reader
-width: fill
+if: { !is-reader }
+width: fill-container
 
 -- tf.markdown:
-if: {doc-page-desktop.body != NULL}
-
+if: { doc-page-desktop.body != NULL }
 
 $doc-page-desktop.body
 
+-- ftd.column: 
+children: $doc-page-desktop.wrapper
+spacing.px: 32
+width.fixed.percent: 100
+
 -- end: ftd.column
 
 -- end: ftd.column
@@ -507,11 +476,11 @@ $doc-page-desktop.body
 -- end: ftd.column
 
 -- ftd.column:
-if: {right-sidebar}
-;;id: right-sidebar
+if: { doc-page-desktop.right-sidebar }
+;;id:right-sidebar
 width.fixed.px: $toc-sidebar-width
 ;;z-index: 999
-background.solid: $fpm.color.main.background.overlay
+background.solid:$inherited.colors.background.overlay
 ;;sticky: true
 top.px: 0
 right.px: 48
@@ -532,7 +501,7 @@ border-radius.px: 8
 -- end: ftd.row
 
 -- footer:
-if: {!is_empty(doc-page-desktop.footer-toc)}
+if: { !is_empty(doc-page-desktop.footer-toc) }
 footer-toc: $doc-page-desktop.footer-toc
 
 -- end: ftd.column
@@ -548,65 +517,27 @@ footer-toc: $doc-page-desktop.footer-toc
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- component doc-page-mobile:
 optional caption title:
 optional body body:
-fpm.toc-item list toc: $toc
-fpm.toc-item list sections:
-fpm.toc-item list sub-sections:
-fpm.toc-item list extra:
-fpm.app-ui  apps:
-fpm.toc-item list footer-toc: $footer-toc
-optional fpm.toc-item current-section:
-optional fpm.toc-item current-page:
-optional fpm.toc-item current-subsection:
+pr.toc-item list toc: $toc
+pr.toc-item list sections:
+pr.toc-item list sub-sections:
+pr.toc-item list extra:
+;; pr.app-ui apps:
+boolean $open-right-sidebar-info: false
+pr.toc-item list footer-toc: $footer-toc
+optional pr.toc-item current-section:
+optional pr.toc-item current-page:
+optional pr.toc-item current-subsection:
 boolean right-sidebar: false
-chidren wrapper:
+children wrapper:
+boolean pricing-cta: 
+boolean login-button:
 
 -- ftd.column:
 width: fill-container
-background-color: $fpm.color.main.background.base
+background.solid:$inherited.colors.background.base
 
 -- h.header:
 sections: $doc-page-mobile.sections
@@ -615,87 +546,78 @@ toc: $doc-page-mobile.toc
 current-section: $doc-page-mobile.current-section
 current-subsection: $doc-page-mobile.current-subsection
 current-page: $doc-page-mobile.current-page
-site-logo: $doc-page-mobile.site-logo
-site-url: $doc-page-mobile.site-url
-brand-site-url: $doc-page-mobile.brand-site-url
-brand-site-logo: $doc-page-mobile.brand-site-logo
-brand-site-name: $doc-page-mobile.brand-site-name
-brand-caption: $doc-page-mobile.brand-caption
-site-name: $doc-page-mobile.site-name
+site-logo: $site-logo
+site-url: $site-url
+brand-site-url: $brand-site-url
+brand-site-logo: $brand-site-logo
+brand-site-name: $brand-site-name
+brand-caption: $brand-caption
+site-name: $site-name
 logo-height: 38
-menu-right: 0
-menu-left: -88
 current-url: /home/
 menu-icon: $assets.files.static.header.hamburger.svg
-parent-brand: $doc-page-mobile.parent-brand
+parent-brand: $parent-brand
 
--- apps-switcher.app-switcher:
+/-- apps-swiitemher.app-swiitemher:
 apps: $apps
 
 -- ftd.column:
 width: fill-container
-;;;; id: main-row
-
-
--- ftd.column:
-;;;; id: main-content-wrap
-width: fill-container
-align-content: top
-min-height.fixed.calc: calc 100vh
+align-content: top-left
+min-height.fixed.calc: 100vh
 padding-horizontal.px: 20
 padding-vertical.px: 20
 
 -- ftd.column:
-width: fill
+width: fill-container
 
 -- ftd.row:
 width: fill-container
 
--- heading-one-mobile: $doc-page-mobile.title
-if: {doc-page-mobile.title != NULL}
+-- tf.h1: $doc-page-mobile.title
+if: { doc-page-mobile.title != NULL }
 
 -- ftd.column:
-if: {doc-page-mobile.right-sidebar}
+if: { doc-page-mobile.right-sidebar }
 align-content: center
-padding-top.px: $fpm.space.space-2
+padding-top.px: 8
 
 -- ftd.image:
 src: $assets.files.static.info-icon.svg
 width.fixed.px: 36
-;;$on-click$: toggle $open-right-sidebar-info
-
+$on-click$: $ftd.toggle($a=$doc-page-mobile.open-right-sidebar-info)
+ 
 -- end: ftd.column
 
 -- end: ftd.row
 
 -- wall-box:
-if: {!is-reader}
+if: {is-reader}
 
 -- end: ftd.column
 
 -- ftd.column:
-if: {is-reader}
+if: {!is-reader}
 width: fill-container
-
-
-\-- tf.markdown:
-if: {doc-page-mobile.body != null}
+ 
+-- tf.markdown:
+if: {doc-page-mobile.body != NULL}
 
 $doc-page-mobile.body
 
 -- end: ftd.column
 
 -- ftd.column:
-if: {open-right-sidebar-info}
+if: {doc-page-mobile.open-right-sidebar-info}
 anchor: parent
 top.px: 0
 bottom.px: 0
 left.px: 0
 right.px: 0
-background.solid:  $fpm.color.main.background.overlay
-z-index: 1
+background.solid: $inherited.colors.background.overlay
+;;z-index: 1
 width: fill-container
-;;$on-click$: $open-right-sidebar-info = false
+$on-click$: $ftd.set-bool($a = $doc-page-mobile.open-right-sidebar-info, v = false)
 
 --  ftd.column:
 width: fill-container
@@ -706,14 +628,14 @@ height.fixed.px: 16
 width: fill-container
 margin-top.px: 30
 margin-left.px: 16
-;;$on-click$: $open-right-sidebar-info = false 
+$on-click$: $ftd.toggle($a=$doc-page-mobile.open-right-sidebar-info)
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- ftd.column:
-if: {open-right-sidebar-info}
+if: {doc-page-mobile.open-right-sidebar-info}
 width.fixed.calc: 100% - 48px
 height.fixed.calc: 100vh - 0px
 overflow-y: auto
@@ -721,15 +643,14 @@ align-content: top-right
 anchor: parent
 right.px: 0
 top.px: 0
-background.solid: $fpm.color.main.background.step-1
-z-index: 1
+background.solid:$inherited.colors.background.step-1
+;;z-index: 1
 
 -- ftd.column:
-;;;; id: right-sidebar-mobile
+;;id:right-sidebar-mobile
 width: fill-container
 padding-vertical.px: 24
 padding-horizontal.px: 24
-
 
 -- end: ftd.column
 
@@ -743,22 +664,8 @@ footer-toc: $doc-page-mobile.footer-toc
 
 -- end: ftd.column
 
+
 -- end: doc-page-mobile
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -776,13 +683,12 @@ caption title:
 -- ftd.text:
 link: $footer-link.url
 text: $footer-link.title
-role: $fpm.type.label-big
+role: $inherited.types.label-big
 min-width: hug-content
 padding-left.px: 10
 padding-top.px: 6
 padding-bottom.px: 6
-color: $fpm.color.main.text
-
+color: $inherited.colors.text
 
 -- end: footer-link
 
@@ -791,8 +697,14 @@ color: $fpm.color.main.text
 
 
 
+
+
+
+
+
+
 -- component footer-instance:
-fpm.toc-item footer-toc:
+pr.toc-item footer-toc:
 
 -- ftd.column:
 min-width: hug-content
@@ -802,15 +714,14 @@ min-width: hug-content
 padding-left.px: 10
 padding-top.px: 3
 padding-bottom.px: 8
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+color: $inherited.colors.text
+role: $inherited.types.label-big
 
 -- footer-link: $obj.title
 $loop$: $footer-instance.footer-toc.children as $obj
 url: $obj.url
 
 -- end: ftd.column
-
 
 -- end: footer-instance
 
@@ -819,21 +730,23 @@ url: $obj.url
 
 
 
+
+
+
+
 -- component footer:
-fpm.toc-item list footer-toc:
+pr.toc-item list footer-toc:
 
 -- ftd.column:
 width: fill-container
 
 -- footer-desktop:
-if: {ftd.device != 'mobile'}
+if: {ftd.device != "mobile"}
 footer-toc: $footer.footer-toc
-
 
 -- footer-mobile:
-if: {ftd.device == 'mobile'}
+if: {ftd.device == "mobile"}
 footer-toc: $footer.footer-toc
-
 
 -- end: ftd.column
 
@@ -848,20 +761,12 @@ footer-toc: $footer.footer-toc
 
 
 
-
-
-
-
-
-
-
-
 -- component footer-desktop:
-fpm.toc-item list footer-toc:
+pr.toc-item list footer-toc:
 
 -- ftd.row:
 width: fill-container
-background-color: $fpm.color.main.background.base
+background.solid:$inherited.colors.background.base
 padding-horizontal.px: 150
 padding-vertical.px: 50
 spacing-mode: space-between
@@ -880,12 +785,14 @@ footer-toc: $obj
 
 
 
+
+
 -- component footer-mobile:
-fpm.toc-item list footer-toc:
+pr.toc-item list footer-toc:
 
 -- ftd.column:
 width: fill-container
-background-color: $fpm.color.main.background.base
+background.solid:$inherited.colors.background.base
 padding-horizontal.px: 20
 padding-vertical.px: 50
 spacing-mode: space-between
@@ -907,15 +814,10 @@ footer-toc: $obj
 
 
 
-
-
-
-
 -- component toc-instance:
-fpm.toc-item toc:
+pr.toc-item toc:
 
 -- ftd.column:
-
 
 -- ftd.row:
 if: {toc-instance.toc.url != NULL}
@@ -926,46 +828,46 @@ spacing.px: 8
 if: {toc-instance.toc.font-icon != NULL}
 src: $toc-instance.toc.font-icon
 height.fixed.px: 14
-width: fill-container
-
+width: auto
 
 -- ftd.text:
 link: $toc-instance.toc.url
 text: $toc-instance.toc.title
-;;role: $cta
+role: $inherited.types.label-small
 min-width: hug-content
 margin-bottom.px: 16
-color: $fpm.color.main.text
-color if {toc-instance.toc.is-active}: $fpm.color.main.cta-primary.base
+color: $inherited.colors.text
+color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
 -- ftd.row:
 if: {toc-instance.toc.url == NULL}
 width: fill-container
-spacing.fx: 8
+spacing.px: 8
 
 -- ftd.image:
 if: {toc-instance.toc.font-icon != NULL}
 src: $toc-instance.toc.font-icon
 height.fixed.px: 14
-width: fill-container
+width: auto
 
 -- ftd.text: 
 text: $toc-instance.toc.title
-;;role: $cta
+;;role: $inherited.types.label-small
 min-width: hug-content
 margin-bottom.px: 16
-color: $fpm.color.main.text
-margin-left.px: $fpm.space.space-3
-color if {toc-instance.toc.is-active}: $fpm.color.main.cta-primary.base
+color: $inherited.colors.text
+margin-left.px: 12
+color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
 -- ftd.column:
-margin-left.px: $fpm.space.space-3
+margin-left.px: 12
 
 -- childrens:
+if: {!is_empty(toc-instance.toc.children)}
 $loop$: $toc-instance.toc.children as $obj
 toc: $obj
 
@@ -984,6 +886,63 @@ toc: $obj
 
 
 
+-- component childrens:
+pr.toc-item toc:
+
+-- ftd.column:
+
+-- ftd.row:
+if: {childrens.toc.url != NULL}
+width: fill-container
+spacing.px: 8
+
+-- ftd.image:
+if: {childrens.toc.font-icon != NULL}
+src: $childrens.toc.font-icon
+height.fixed.px: 14
+width: auto
+
+-- ftd.text: 
+link: $childrens.toc.url
+text: $childrens.toc.title
+role: $inherited.types.label-small
+min-width: hug-content
+margin-bottom.px: 16
+color: $inherited.colors.text
+color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
+
+-- end: ftd.row
+
+-- ftd.row:
+if: {childrens.toc.url == NULL}
+width: fill-container
+spacing.px: 8
+
+-- ftd.image:
+if: {childrens.toc.font-icon != NULL}
+src: $childrens.toc.font-icon
+height.fixed.px: 14
+width: fill-container
+
+-- ftd.text: 
+text: $childrens.toc.title
+;;role: $inherited.types.label-small
+min-width: hug-content
+margin-bottom.px: 16
+color: $inherited.colors.text
+color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
+
+-- end: ftd.row
+
+-- childrens:
+if: {!is_empty(childrens.toc.children)}
+$loop$: $childrens.toc.children as $obj
+toc: $obj
+
+-- end: ftd.column
+
+-- end: childrens
+
 
 
 
@@ -994,17 +953,17 @@ toc: $obj
 
 
 -- component render-toc:
-fpm.toc-item list toc-obj:
+pr.toc-item list toc-obj:
 
 -- ftd.column:
 ;; sticky: true
 top.px: 0
 left.px: 24
-height-fixed.calc:  100vh - 0px
+height.fixed.calc: 100vh - 0px
 overflow-y: auto
-width: $toc-sidebar-width
+width.fixed.px: $toc-sidebar-width
 align-content: top-left
-background.solid:  $fpm.color.main.background.overlay
+background.solid: $inherited.colors.background.overlay
 border-radius.px: 8
 padding-left.px: 24
 padding-top.px: 16
@@ -1017,10 +976,7 @@ margin-bottom.px: 25
 $loop$: $render-toc.toc-obj as $obj
 toc: $obj
 
-
 -- end: ftd.column
-
-
 
 -- end: render-toc
 
@@ -1038,32 +994,34 @@ optional caption caption:
 optional body body:
 optional string link:
 optional ftd.align alignment: center
-optional ftd.resizing width:
-optional ftd.resizing height:
+optional ftd.resizing width: 
+optional ftd.resizing height: 
 ftd.image-src src:
-width {image.width != NULL}: fill-container
-height: fill-container
-align-content if {image.width == NULL}: center
 
 -- ftd.column:
+width if {image.width != NULL}: auto
+width: auto
+max-width.fixed.px: 800
+height: auto
+align-content if {image.width == NULL}: center
 
 -- ftd.image:
 src: $image.src
 width: $image.width
 height: $image.height
-align-content: $image.alignment
+max-width.fixed.px: 800
+;;align-content: $image.alignment
 
 -- ftd.text:
 if: {image.caption != NULL}
 text: $image.caption
-color: $fpm.color.main.text
-align-content: center
-width if {image.width != NULL}: $width
+color: $inherited.colors.text
+;;width if {image.width != NULL}: $width
 width if {image.width == NULL}: fill-container
-role: $fpm.type.label-big
+role: $inherited.types.label-big
 border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
-background.solid: $fpm.color.main.background.step-1
+background.solid:$inherited.colors.background.step-1
 padding-vertical.px: 8
 padding-horizontal.px: 20
 text-align: center
@@ -1072,23 +1030,30 @@ text-align: center
 if: {image.body != NULL}
 margin-top.px: 20
 
--- markdown:
+-- tf.markdown:
 body: $image.body
 
 -- end: ftd.column
 
 -- end: ftd.column
 
-
 -- end: image
+
+
+
+
+
+
+
+
 
 
 -- component wall-box:
 
 -- ftd.column:
-background.solid: $fpm.color.main.background.base
+background.solid:$inherited.colors.background.base
 width.fixed.px: 614
-width {ftd.device == 'mobile'}: fill-container
+width if {ftd.device == "mobile"}: fill-container
 border-width.px: 1
 padding-vertical.px: 35
 padding-horizontal.px: 32
@@ -1098,27 +1063,26 @@ padding-horizontal.px: 32
 ;;shadow-blur: 4
 border-top-width.px: 3
 border-radius.px: 8
-border-color: $fpm.color.main.border
+border-color: $inherited.colors.border
 
 -- ftd.text: $wall-message
 text-align: center
-role: $fpm.type.heading-medium
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
 width: fill-container
 padding-bottom.px: 64
-
 
 -- ftd.row:
 align-content: center
 
 -- ftd.text: LOGIN
-link: $wall-box.login-url
+link: $login-url
 text-align: center
-role: $fpm.type.copy-tight
+role: $inherited.types.copy-tight
 padding-vertical.px: 12
 padding-horizontal.px: 24
-color: $fpm.color.main.text-strong
-background.solid:$fpm.color.main.cta-primary.base
+color: $inherited.colors.text-strong
+background.solid:$inherited.colors.cta-primary.base
 border-radius.px:8
 
 -- end: ftd.row
@@ -1126,59 +1090,6 @@ border-radius.px:8
 -- end: ftd.column
 
 -- end: wall-box
-
-
-
--- component heading-one:
-caption title:
-
--- ftd.column:
-width: fill-container
-region: h0
-margin-top.px: 0
-margin-bottom.px: 32
-
--- ftd.text:
-region: title
-role: $fpm.type.heading-hero
-text: $heading-one.title
-color: $fpm.color.main.text-strong
-padding-bottom.px: 16
-padding-top.px: 8
-
-
--- end: ftd.column
-
--- end: heading-one
-
-
-
--- component heading-one-mobile:
-caption title:
-
--- ftd.column:
-width: fill-container
-region: h1
-margin-top.px: 32
-margin-bottom.px: 16
-
--- ftd.text:
-region: title
-role: $fpm.type.heading-hero
-text: $heading-one-mobile.title
-color: $fpm.color.main.text-strong
-padding-bottom.px: 16
-padding-top.px: 8
-
-
--- end: ftd.column
-
--- end: heading-one-mobile
-
-
-
-
-
 
 
 
@@ -1195,7 +1106,6 @@ children atictles-container:
 
 -- ftd.column:
 width: fill-container
-
 
 -- article-card: $post.meta.title
 image: $post.meta.post-image
@@ -1218,6 +1128,10 @@ children: $post.atictles-container
 
 
 
+
+
+
+
 -- component article-card:
 caption title:
 optional ftd.image-src image:
@@ -1226,36 +1140,36 @@ string timestamp:
 optional body body:
 
 -- ftd.column:
-color: $fpm.color.main.text
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $article-card.title
-role: $fpm.type.heading-large
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 width: fill-container
 margin-bottom.px: 16
 margin-top.px: 16
 
---- ftd.text: $article-card.author.title
-role: $fpm.type.copy-relaxed
+-- ftd.text: $article-card.author.title
+role: $inherited.types.copy-relaxed
 width: fill-container
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 link: $article-card.author.bio-url
 
 -- ftd.row:
 spacing.px: 12
 
 -- ftd.text: posted on:
-role: $fpm.type.copy-relaxed
+role: $inherited.types.copy-relaxed
 white-space: nowrap
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- ftd.text: $article-card.timestamp
-role: $fpm.type.copy-relaxed
+role: $inherited.types.copy-relaxed
 white-space: nowrap
-color: $fpm.color.main.cta-primary.border
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
@@ -1266,7 +1180,6 @@ if: {article-card.image != NULL}
 src: $article-card.image
 width: fill-container
 height: hug-content
-
 
 -- end: ftd.column
 
@@ -1281,25 +1194,27 @@ height: hug-content
 
 
 
-
-
-
-
-
-
-
 -- component posts:
 
 -- ftd.column:
 
---- ftd.row:
-if: {ftd.device != 'mobile'}
+-- ftd.row:
+if: {ftd.device != "mobile"}
 wrap: true
 spacing.px: 16
 
 -- end: ftd.column
 
 -- end: posts
+
+
+
+
+
+
+
+
+
 
 -- component image-first:
 post-meta post-data:
@@ -1336,15 +1251,15 @@ body body:
 
 -- ftd.column:
 border-width.px: 1
-border-color: $fpm.color.main.border
-padding-vertical.px: $fpm.space.space-6
+border-color: $inherited.colors.border
+padding-vertical.px: 24
 width: fill-container
-max-width if {ftd.device != mobile}: 344
+max-width.fixed.px if {ftd.device != "mobile"}: 344
 max-height.fixed.px: 500
-padding-horizontal.px: $fpm.space.space-6
-color: $fpm.color.main.text
-margin-top.px : $fpm.space.space-3
-margin-bottom.px : $fpm.space.space-3
+padding-horizontal.px: 24
+color: $inherited.colors.text
+margin-top.px : 12
+margin-bottom.px : 12
 spacing.px: 12
 border-radius.px: 8
 
@@ -1358,49 +1273,47 @@ width: fill-container
 height: hug-content
 
 -- ftd.text: $image-first-card.title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 margin-top.px if {image-first-card.image != NULL}: 12
 
 -- ftd.row:
 if: {ftd.device != NULL}
-;; id: time-container
 width: fill-container
 spacing.px: 8
 margin-top.px: 8
-
 
 -- ftd.row:
 spacing.px: 2
 
 -- ftd.text: $image-first-card.author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 link: $image-first-card.author.bio-url
 
 -- ftd.text: , 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-first-card.timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text:
 text: $image-first-card.body
-role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
-link: $url
+role: $inherited.types.copy-relaxed
+color: $inherited.colors.text
+link: $image-first-card.url
 
 -- end: ftd.column
 
 -- ftd.column:
-if: {ftd.device == 'mobile'}
-;; id: time-container-2
+if: {ftd.device == "mobile"}
+;;id:time-container-2
 width: fill-container
 spacing.px: 8
 margin-top.px: 8
@@ -1409,89 +1322,25 @@ margin-top.px: 8
 spacing.px: 2
 
 -- ftd.text: $image-first-card.author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 link: $image-first-card.author.bio-url
 
 -- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-first-card.timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: image-first-card
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1526,6 +1375,7 @@ body: $image-in-between.post-data.body
 
 
 
+
 -- component image-in-between-card:
 optional ftd.image-src image:
 string url:
@@ -1536,27 +1386,27 @@ body body:
 
 -- ftd.column:
 border-width.px: 1
-border-color: $fpm.color.main.border
-padding-vertical.px: $fpm.space.space-6
+border-color: $inherited.colors.border
+padding-vertical.px: 24
 width: fill-container
-max-width.fixed.px if {ftd.device !=NULL}: 344
+max-width.fixed.px if {ftd.device != NULL}: 344
 max-height.fixed.px: 500
-padding-horizontal.px:$fpm.space.space-6
-color: $fpm.color.main.text
-margin-top.px: $fpm.space.space-3
-margin-bottom.px: $fpm.space.space-3
-margin-left.px if {ftd.device !=NULL}: $fpm.space.space-3
+padding-horizontal.px:24
+color: $inherited.colors.text
+margin-top.px: 12
+margin-bottom.px: 12
+margin-left.px if {ftd.device !=NULL}: 12
 spacing.px: 8
 border-radius.px: 8
 
 -- ftd.text: $image-in-between-card.title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 link: $image-in-between-card.url
 
 -- ftd.row:
 if: {ftd.device != NULL}
-;; id: time-container-3
+;;id:time-container-3
 width: fill-container
 spacing.px: 8
 margin-top.px: 8
@@ -1565,38 +1415,38 @@ margin-top.px: 8
 spacing.px: 2
 
 -- ftd.text: $image-in-between-card.author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 link: $image-in-between-card.author.bio-url
 
 -- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-in-between-card.timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.image:
 src: $image-in-between-card.image
 width: fill-container
-height: hug-content
+height:auto
 margin-top.px:12
 link: $image-in-between-card.url
 
 -- ftd.text:
 text: $image-in-between-card.body
-role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
-link: $url
+role: $inherited.types.copy-relaxed
+color: $inherited.colors.text
+link: $image-in-between-card.url
 
 -- ftd.column:
-if: {ftd.device == 'mobile'}
-;; id: time-container-4
+if: {ftd.device == "mobile"}
+;;id:time-container-4
 width: fill-container
 spacing.px: 8
 margin-top.px: 8
@@ -1605,113 +1455,25 @@ margin-top.px: 8
 spacing.px: 2
 
 -- ftd.text: $image-in-between-card.author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 link: $image-in-between-card.author.bio-url
 
 -- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $image-in-between-card.timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
-
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: image-in-between-card
-
-
-
-
-
-
-
--- ftd.column image-in-between-card:
-optional ftd.image-src image:
-string url:
-string timestamp:
-caption title:
-author-meta author:
-body body:
-
-
---- ftd.text: $title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
-link: $url
-
---- ftd.row:
-if: not $is-mobile
-;; id: time-container-3
-width: fill
-spacing: 8
-margin-top: 8
-
---- ftd.row:
-spacing: 2
-
---- ftd.text: $author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
-link: $author.bio-url
-
---- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
-
---- container: time-container-3
-
---- ftd.text: $timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
-
---- container: ftd.main
-
---- ftd.image:
-src: $image
-width: fill
-height:auto
-margin-top:12
-link: $url
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
-link: $url
-
---- container: ftd.main
-
---- ftd.column:
-if: $is-mobile
-;; id: time-container-4
-width: fill
-spacing: 8
-margin-top: 8
-
---- ftd.row:
-spacing: 2
-
---- ftd.text: $author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
-link: $author.bio-url
-
---- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
-
---- container: time-container-4
-
---- ftd.text: $timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
 
 
 
@@ -1745,8 +1507,7 @@ body: $without-image.post-data.body
 
 
 
-
--- compenent without-image-card:
+-- component without-image-card:
 string url:
 string timestamp:
 caption title:
@@ -1755,27 +1516,26 @@ body body:
 
 -- ftd.column:
 border-width.px: 1
-border-color: $fpm.color.main.border
-padding-vertical.px: $fpm.space.space-6
+border-color: $inherited.colors.border
+padding-vertical.px: 24
 width: fill-container
-max-width if {ftd.device !=mobile}: 344
+max-width.px if {ftd.device != "mobile"}: 344
 max-height.fixed.px: 500
-padding-horizontal.px:$fpm.space.space-6
-color: $fpm.color.main.text
-margin-top.px: $fpm.space.space-3
-margin-bottom.px: $fpm.space.space-3
-margin-right.px if {ftd.device !=mobile}: $fpm.space.space-3
+padding-horizontal.px:24
+color: $inherited.colors.text
+margin-top.px: 12
+margin-bottom.px: 12
+margin-right.px if {ftd.device != "mobile"}: 12
 spacing.px: 12
 border-radius.px: 8
 
 -- ftd.text: $without-image-card.title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 link: $without-image-card.url
 
 -- ftd.row:
-if: {ftd.device !=mobile}
-;;;; id: time-container-6
+if: {ftd.device != "mobile"}
 width: fill-container
 spacing.px: 8
 margin-top.px: 8
@@ -1783,31 +1543,30 @@ margin-top.px: 8
 -- ftd.row:
 
 -- ftd.text: $without-image-card.author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 link: $without-image-card.author.bio-url
 
 -- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $without-image-card.timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text:
 text: $without-image-card.body
-role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
+role: $inherited.types.copy-relaxed
+color: $inherited.colors.text
 link: $without-image-card.url
 
 -- ftd.column:
-if: {ftd.device == mobile}
-;;;; id: time-container-1
+if: {ftd.device == "mobile"}
 width: fill-container
 spacing.px: 8
 margin-top.px: 8
@@ -1815,55 +1574,25 @@ margin-top.px: 8
 -- ftd.row:
 
 -- ftd.text: $without-image-card.author.title
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 link: $without-image-card.author.bio-url
 
 -- ftd.text:, 
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
 -- ftd.text: $without-image-card.timestamp
-role: $fpm.type.fine-print
-color: $fpm.color.main.cta-primary.border
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: without-image-card
-
-
--- ftd.column without-image-card:
-string url:
-string timestamp:
-caption title:
-author-meta author:
-body body:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1889,15 +1618,7 @@ $author-bio.author.body
 
 -- end: author-bio
 
--- ftd.column author-bio:
-author-meta author:
 
---- author-bio-card: $author.title
-profile: $author.profile
-company: $author.company
-avatar: $author.image
-
-$author.body
 
 
 
@@ -1915,7 +1636,7 @@ body body:
 
 -- ftd.column:
 width: fill-container
-color: $fpm.color.main.text
+color: $inherited.colors.text
 spacing.px: 24
 margin-top.px: 12
 margin-bottom.px: 12
@@ -1949,14 +1670,6 @@ body: $author-bio-card.body
 
 
 
-
-
-
-
-
-
-
-
 -- component author-bio-desktop:
 caption title:
 string profile:
@@ -1966,7 +1679,7 @@ body body:
 
 -- ftd.column:
 width: fill-container
-color: $fpm.color.main.text
+color: $inherited.colors.text
 spacing.px: 32
 margin-top.px: 12
 margin-bottom.px: 12
@@ -1975,49 +1688,50 @@ margin-right.px: 12
 
 -- ftd.row:
 width: fill-container
-;;;; id: auth-container
+;;;;id:auth-container
 spacing.px: 24
 
 -- ftd.column:
 width.fixed.px: 152
 
 -- ftd.image:
-src: $avatar
+src: $author-bio-desktop.avatar
 width: fill-container
 height: fill-container
 border-radius.px: 500
 
 -- end: ftd.column
 
-
 -- ftd.column:
 width: fill-container
 align-content: center
 
 -- ftd.text: $author-bio-desktop.title
-role: $fpm.type.heading-large
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
 margin-bottom.px: 16
 
 -- ftd.text: $author-bio-desktop.profile
-role: $fpm.type.copy-tight
+role: $inherited.types.copy-tight
 margin-bottom.px: 4
 
 -- ftd.text: $author-bio-desktop.company
-role: $fpm.type.copy-tight
+role: $inherited.types.copy-tight
 
 -- end: ftd.column
 
 -- ftd.text:
 text: $author-bio-desktop.body
-role: $fpm.type.copy-relaxed
-
+role: $inherited.types.copy-relaxed
 
 -- end: ftd.row
 
 -- end: ftd.column
 
 -- end: author-bio-desktop
+
+
+
 
 
 
@@ -2033,37 +1747,36 @@ body body:
 
 -- ftd.column:
 width: fill-container
-color: $fpm.color.main.text
+color: $inherited.colors.text
 spacing.px: 16
 margin-top.px: 12
 margin-bottom.px: 12
-
 
 -- ftd.image:
 src: $author-bio-mobile.avatar
 width.fixed.px: 132
 height.fixed.px: 132
 border-radius.px: 500
-align-content: center
+;;align-content: center
 
 -- ftd.column:
 align-content: center
 
 -- ftd.text: $author-bio-mobile.title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- ftd.text: $author-bio-mobile.profile
-role: $fpm.type.copy-tight
+role: $inherited.types.copy-tight
 
 -- ftd.text: $author-bio-mobile.company
-role: $fpm.type.copy-tight
+role: $inherited.types.copy-tight
 
 -- end: ftd.column
 
 -- ftd.text:
 text: $author-bio-mobile.body
-role: $fpm.type.fine-print
+role: $inherited.types.fine-print
 
 -- end: ftd.column
 
@@ -2078,8 +1791,540 @@ role: $fpm.type.fine-print
 
 
 
--- void set(value,v):
-boolean $value:
-boolean v:
+-- component footer-list:
+caption title:
+string url:
+boolean is-last:
 
-value = v
+-- ftd.column:
+color: $inherited.colors.text-strong
+spacing.px: 8
+
+-- ftd.text: $footer-list.title
+role:$inherited.types.label-small
+link: $footer-list.url
+color: $inherited.colors.text-strong
+;;open-in-new-tab: true
+
+-- ftd.row:
+margin-top.px: 8
+if: {!footer-list.is-last}
+padding-vertical.px: 1
+padding-horizontal.px: 1
+border-radius.px: 100
+background.solid: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: footer-list
+
+
+
+
+
+
+
+
+
+
+-- componenet yellowmarker:
+
+-- ftd.text : text
+color: $inherited.colors.background.step-1
+background.solid:$inherited.colors.custom.two
+padding-horizontal.px: 2
+margin-right.px: 4
+
+-- end: yellowmarker
+
+
+
+
+
+
+
+
+
+
+-- component greenmarker:
+
+-- ftd.text: text
+color: $inherited.colors.background.step-1
+background.solid:$inherited.colors.success.text
+padding-horizontal: 2
+margin-right: 4
+
+
+-- end:greenmarker
+
+
+
+
+
+
+
+
+
+
+-- component redmarker:
+
+-- ftd.text: text
+color: $inherited.colors.background.step-1
+background.solid:$inherited.colors.error.text
+padding-horizontal.px: 2
+margin-right.px: 4
+
+-- end: redmarker
+
+
+
+
+
+
+
+
+
+
+-- component featured-post:
+post-meta post-data:
+
+-- ftd.column:
+
+-- featured-post-card: $featured-post.post-data.title
+timestamp: $featured-post.post-data.published-on
+author: $featured-post.post-data.author
+image: $featured-post.post-data.post-image
+url:  $featured-post.post-data.post-url
+body: $featured-post.post-data.body
+
+-- end: ftd.column
+
+-- end: featured-post
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-card:
+caption title:
+string timestamp:
+author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+
+-- featured-post-meta-desktop: $featured-post-card.title
+if:{ftd.device != "mobile"}
+timestamp: $featured-post-card.timestamp
+author: $featured-post-card.author
+image: $featured-post-card.image
+url: $featured-post-card.url
+body: $featured-post-card.body
+
+-- featured-post-meta-mobile: $featured-post-card.title
+if: {ftd.device=="mobile"}
+timestamp: $featured-post-card.timestamp
+author: $featured-post-card.author
+image: $featured-post-card.image
+url: $featured-post-card.url
+body: $featured-post-card.body
+
+-- end: ftd.column
+
+-- end: featured-post-card
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-meta-desktop:
+caption title:
+string timestamp:
+author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 26
+padding-horizontal.px:26
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-top.px: 8
+margin-bottom.px: 12
+margin-left.px: 12
+margin-right.px: 12
+border-radius.px: 8
+
+-- ftd.column:
+width: fill-container
+link: $featured-post-meta-desktop.url
+
+-- ftd.text: $featured-post-meta-desktop.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+width: fill-container
+text-align: center
+
+-- ftd.row:
+width: fill-container
+margin-top.px: 32
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.image:
+src: $featured-post-meta-desktop.image
+width: fill-container
+height: auto
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+margin-left.px: 24
+spacing.px: 12
+
+-- ftd.text:
+if: {featured-post-meta-desktop.body != NULL}
+text: $featured-post-meta-desktop.body
+role: $inherited.types.copy-relaxed
+color: $inherited.colors.text
+width: fill-container
+
+-- ftd.text: $featured-post-meta-desktop.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+text-align: end
+width: fill-container
+link: $featured-post-meta-desktop.author.bio-url
+
+-- ftd.text: $featured-post-meta-desktop.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+text-align: end
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: featured-post-meta-desktop
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-meta-mobile:
+caption title:
+string timestamp:
+author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 24
+padding-horizontal.px:24
+border-width.px: 1
+border-color: $inherited.colors.border
+border-radius.px: 8
+spacing.px: 8
+
+-- ftd.column:
+width: fill-container
+link: $featured-post-meta-mobile.url
+spacing.px: 12
+
+-- ftd.text: $featured-post-meta-mobile.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+width: fill-container
+text-align: center
+
+-- ftd.image:
+src: $featured-post-meta-mobile.image
+width: fill-container
+height: auto
+
+-- ftd.text:
+text: $featured-post-meta-mobile.body
+role: $inherited.types.copy-relaxed
+color: $inherited.colors.text
+width: fill-container
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 8
+
+-- ftd.text: $featured-post-meta-mobile.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $featured-post-meta-mobile.author.bio-url
+
+-- ftd.text: $featured-post-meta-mobile.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: featured-post-meta-mobile
+
+
+
+
+
+
+
+
+
+
+
+-- tf.markdown markdown:
+body body:
+
+$body
+
+
+
+
+
+
+
+
+-- tf.h0 h0: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+
+
+
+
+
+
+-- tf.h1 h1: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+
+
+
+
+
+
+-- tf.h2 h2: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+
+
+
+
+
+
+-- tf.h3 h3: $title
+caption title:
+optional body body:
+
+$body
+
+
+
+
+
+
+
+
+
+
+-- cb.code code:
+optional caption caption:
+body body:
+string lang:
+caption: $caption
+lang: $lang
+
+$body
+
+
+
+
+
+
+
+
+
+-- component output:
+caption title: Output
+children output-container:
+
+-- ftd.column:
+padding-top.px: 12
+width: fill-container
+
+-- ftd.text: $output.caption
+color: $inherited.colors.text
+background.solid: $inherited.colors.background.base
+border-top-left-radius.px: 2
+border-top-right-radius.px: 2
+padding-vertical.px: 3
+padding-horizontal.px: 10
+role: $inherited.types.label-big
+
+-- ftd.column:
+border-width.px: 1
+border-color: $inherited.colors.text
+width: fill-container
+children: output-container
+padding-vertical: 30
+padding-horizontal: 20
+border-radius.px: 2
+background.solid: $inherited.colors.background.base
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: output
+
+
+
+
+
+
+
+
+
+
+
+-- component highlight:
+caption title:
+
+-- ftd.text: $highlight.title
+background.solid: $fpm.color.main.custom.two
+color: $fpm.color.main.background.base
+padding.px: 3
+border-radius.px: 3
+
+-- end: highlight
+
+
+
+
+
+
+
+
+
+
+-- component tip:
+optional caption title:
+optional body body:
+
+-- ftd.column:
+border-radius.px: 3
+width: fill-container
+background-color: $fpm.color.main.background.base
+color: $fpm.color.main.text
+
+-- ftd.column:
+width.fixed.px: 5
+height.fixed.percent:  100
+background-color: $fpm.color.main.background.base
+
+-- ftd.column:
+width: fill-container
+padding.px: 10
+spacing.px: 10
+
+-- ftd.row:
+spacing.PX: 5
+
+-- ftd.text: Tip
+role: $fpm.type.label-big
+
+-- ftd.text: $tip.title
+if: {tip.title != NULL}
+role: $fpm.type.label-big
+
+-- end: ftd.row
+
+-- ftd.text:
+if: {tip.body != NULL}
+role: $fpm.type.copy-large
+
+$tip.body
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tip
+
+
+
+
+
+
+
+
+
+
+-- ftd.color theme-color:
+dark: #1F5E6B
+light: #1F5E6B
+
+-- ftd.color right-sidebar-background:
+light: #262626
+dark: #262626
+
+
+-- ftd.color light-green:
+light: #0DCEAB
+dark: #0DCEAB
