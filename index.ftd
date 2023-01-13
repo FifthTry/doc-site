@@ -323,7 +323,7 @@ top.px: 0
 right.px: 0
 height: fill-container
 max-height.fixed.calc: 100vh - 0px
-;;z-index: 1000
+z-index: 1000
 align-content: center
 
 -- ftd.image:
@@ -556,7 +556,7 @@ width.fixed.percent: 100
 if: { doc-page-desktop.right-sidebar }
 ;;id:right-sidebar
 width.fixed.px: $toc-sidebar-width
-;;z-index: 999
+z-index: 999
 background.solid:$inherited.colors.background.overlay
 ;;sticky: true
 top.px: 0
@@ -692,7 +692,7 @@ bottom.px: 0
 left.px: 0
 right.px: 0
 background.solid: $inherited.colors.background.overlay
-;;z-index: 1
+z-index: 1
 width: fill-container
 $on-click$: $ftd.set-bool($a = $doc-page-mobile.open-right-sidebar-info, v = false)
 
@@ -721,7 +721,7 @@ anchor: parent
 right.px: 0
 top.px: 0
 background.solid:$inherited.colors.background.step-1
-;;z-index: 1
+z-index: 1
 
 -- ftd.column:
 ;;id:right-sidebar-mobile
