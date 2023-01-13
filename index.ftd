@@ -635,15 +635,15 @@ current-url: /
 menu-icon: $assets.files.static.header.hamburger.svg
 parent-brand: $parent-brand
 
-/-- apps-swiitemher.app-swiitemher:
+/-- apps-switcher.app-switcher:
 apps: $apps
 
 -- ftd.column:
 width: fill-container
-align-content: top-left
-min-height.fixed.calc: 100vh
 padding-horizontal.px: 20
 padding-vertical.px: 20
+height.fixed.px: 500
+overflow-y: auto 
 
 -- ftd.column:
 width: fill-container
@@ -674,7 +674,7 @@ if: {is-reader}
 -- end: ftd.column
 
 -- ftd.column:
-if: {!is-reader}
+if: { !is-reader }
 width: fill-container
  
 -- tf.markdown:
