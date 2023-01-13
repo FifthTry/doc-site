@@ -18,7 +18,7 @@
 
 -- boolean parent-brand: true
 
--- boolean show-floater: true
+-- boolean show-floater: false
 
 -- string wall-message: Please, login via clicking on below button
 
