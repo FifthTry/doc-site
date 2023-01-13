@@ -2417,7 +2417,7 @@ color: $inherited.colors.text
 -- ftd.column:
 width.fixed.px: 5
 height.fixed.percent:  100
-background.color: $inherited.colors.background.base
+background.solid: $inherited.colors.background.base
 
 -- ftd.column:
 width: fill-container
