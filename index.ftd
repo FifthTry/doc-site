@@ -646,8 +646,9 @@ apps: $apps
 
 -- ftd.column:
 width: fill-container
-padding-horizontal.px: 20
-padding-vertical.px: 20
+padding-horizontal.px: 24
+padding-vertical.px: 24
+min-height.fixed.calc: 100vh 
 
 -- ftd.column:
 width: fill-container
