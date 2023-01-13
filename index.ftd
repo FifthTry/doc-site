@@ -1784,7 +1784,6 @@ margin-left.px: 12
 margin-right.px: 12
 
 -- ftd.row:
-width: fill-container
 spacing.px: 24
 
 -- ftd.column:
@@ -1800,7 +1799,7 @@ border-radius.px: 500
 
 -- ftd.column:
 width: fill-container
-align-content: center
+align-content: left
 
 -- ftd.text: $author-bio-desktop.title
 role: $inherited.types.heading-large
