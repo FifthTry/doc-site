@@ -642,8 +642,6 @@ apps: $apps
 width: fill-container
 padding-horizontal.px: 20
 padding-vertical.px: 20
-height.fixed.px: 500
-overflow-y: auto 
 
 -- ftd.column:
 width: fill-container
@@ -681,6 +679,13 @@ width: fill-container
 if: {doc-page-mobile.body != NULL}
 
 $doc-page-mobile.body
+
+-- ftd.column: 
+children: $doc-page-mobile.wrapper
+spacing.px: 32
+width.fixed.percent: 100
+
+-- end: ftd.column
 
 -- end: ftd.column
 
