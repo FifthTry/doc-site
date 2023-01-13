@@ -45,9 +45,6 @@ icon: static/primary-favorites.svg
 - How to use blog: /docs/blog/
 icon: static/primary-favorites.svg
 
-- Right-sidebar example: /docs/right-sidebar/
-icon: static/primary-favorites.svg
-
 # GitHub: https://github.com/FifthTry/doc-site/
 
 # Use this template: https://github.com/FifthTry/doc-site/generate/
