@@ -32,23 +32,23 @@
 
 -- string github: NA
 
--- string site-name: Doc Site
+-- string $site-name: Doc Site
 
--- ftd.image-src site-logo:
+-- ftd.image-src $site-logo:
 light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 
--- ftd.image-src brand-site-logo:
+-- ftd.image-src $brand-site-logo:
 light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 
--- string brand-site-name: FifthTry
+-- string $brand-site-name: FifthTry
 
--- string brand-caption: FifthTry
+-- string $brand-caption: FifthTry
 
--- string brand-site-url: /
+-- string $brand-site-url: /
 
--- string site-url: index.html
+-- string $site-url: index.html
 
 -- fpm.toc-item list sections:
 
@@ -522,6 +522,7 @@ if: { !is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
+width.fixed.percent: 70
 max-width.fixed.px if { is_empty(doc-page-desktop.toc) }: 800
 max-width if {doc-page-desktop.widthfill}: fill-container
 max-width.fixed.px: 800
@@ -1039,7 +1040,9 @@ fpm.toc-item list toc-obj:
 ;; sticky: true
 top.px: 0
 left.px: 24
-height.fixed.calc: 100vh - 0px
+min-width.fixed.px: 320
+min-height.fixed.calc: 100vh - 0px
+height.fixed.calc: 100% - 52px
 overflow-y: auto
 width.fixed.px: $toc-sidebar-width
 align-content: top-left
