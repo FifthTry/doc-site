@@ -7,14 +7,15 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.dependency: fifthtry.github.io/code-block
 
--- fpm.dependency: fifthtry.github.io/header
+-- fpm.dependency: fifthtry.github.io/package-doc as pd
 
--- fpm.dependency: fifthtry.github.io/toc
+;; -- fpm.dependency: fifthtry.github.io/toc
 
 -- fpm.dependency: fifthtry.github.io/typography
+
 -- fpm.dependency: fifthtry.github.io/app-switcher 
 
--- fpm.dependency: fifthtry.github.io/roboto-mono
+-- fpm.dependency: fifthtry.github.io/roboto
 
 
 
@@ -22,9 +23,9 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fpm.auto-import: fpm
 -- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
--- fpm.auto-import: fifthtry.github.io/header as h
--- fpm.auto-import: fifthtry.github.io/toc as tt
--- fpm.auto-import: fifthtry.github.io/roboto-mono as mono
+-- fpm.auto-import: fifthtry.github.io/package-doc/header as h
+;; -- fpm.auto-import: fifthtry.github.io/toc as tt
+-- fpm.auto-import: fifthtry.github.io/roboto as mono
 
 -- fpm.app: Todos for Family
 mount-point: /todos/
@@ -43,40 +44,7 @@ icon: static/primary-favorites.svg
 
 - How to use blog: /docs/blog/
 icon: static/primary-favorites.svg
-- Right-sidebar example: /docs/right-sidebar/
-icon: static/primary-favorites.svg
 
-# Blog: /featured-posts/
+# GitHub: https://github.com/FifthTry/doc-site/
 
-## Posts: featured-posts/
-
-- News & Culture: /blog-articles/category-1/
-
-  - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
-  - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
-
-- Technology & Learning: /blog-articles/category-2/
-
-  - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
-  - What rust gives us?: /blog-articles/category-2/sample-post-4/
-
-## Authors: blog-authors/amitu/
-
-- Amit Upadhyay: /blog-authors/amitu/
-- Abrar Khan: /blog-authors/abrar/
-- Arpita Jaiswal: /blog-authors/arpita/
-- Ganesh S Salunke: /blog-authors/ganesh/
-
-
-# API Docs: /api/post/
-
-- POST: /api/post/
-- PUT: /api/put/
-- GET: /api/get/
-- DELETE: /api/delete/
-
-
-# GitHub
-url: https://github.com/FifthTry/doc-site/
-# Use this template
-url: https://github.com/FifthTry/doc-site/generate/
+# Use this template: https://github.com/FifthTry/doc-site/generate/
