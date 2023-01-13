@@ -2109,23 +2109,30 @@ color: $inherited.colors.cta-primary.border
 
 
 
--- tf.markdown markdown:
+-- component markdown:
 body body:
 
-$body
+-- tf.markdown:
+
+$markdown.body
+
+
+-- end: markdown
 
 
 
 
 
 
-
-
--- tf.h0 h0: $title
+-- component h0: 
 caption title:
 optional body body:
 
-$body
+-- tf.h0: $h0.title
+
+$h0.body
+
+-- end: h0
 
 
 
@@ -2135,12 +2142,15 @@ $body
 
 
 
-
--- tf.h1 h1: $title
+-- component h1: 
 caption title:
 optional body body:
 
-$body
+-- tf.h1: $h1.title
+
+$h1.body
+
+-- end: h1
 
 
 
@@ -2150,12 +2160,15 @@ $body
 
 
 
-
--- tf.h2 h2: $title
+-- component h2: 
 caption title:
 optional body body:
 
-$body
+-- tf.h2: $h2.title
+
+$h2.body
+
+-- end: h2
 
 
 
@@ -2164,13 +2177,15 @@ $body
 
 
 
-
-
--- tf.h3 h3: $title
+-- component h3: 
 caption title:
 optional body body:
 
-$body
+-- tf.h3: $h3.title
+
+$h3.body
+
+-- end: h3
 
 
 
@@ -2180,34 +2195,37 @@ $body
 
 
 
-
--- cb.code code:
+-- component code:
 optional caption caption:
 body body:
 string lang:
-caption: $caption
-lang: $lang
 
-$body
+-- cb.code:
+caption: $code.caption
+lang: $code.lang
 
+$code.body
 
-
-
-
-
+-- end: code
 
 
 
--- component iframes:
+
+
+
+
+
+
+-- component iframe:
 string src:
 
 -- ftd.iframe:
-src: $iframes.src
+src: $iframe.src
 height.fixed.px: 400
 width: fill-container
 margin-bottom.px: 34
 
--- end: iframes
+-- end: iframe
 
 
 
