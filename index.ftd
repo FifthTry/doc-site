@@ -1,6 +1,6 @@
 -- import: fifthtry.github.io/doc-site/assets
--- import: tf
--- import: h
+-- import: fifthtry.github.io/package-doc/typography as tf
+-- import: fifthtry.github.io/package-doc/header as h
 -- import: fifthtry.github.io/app-switcher as apps-switcher
 -- import: fpm
 -- import: fpm/processors as pr
@@ -119,7 +119,9 @@ author-meta author:
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
--- tf.h1: hih
+-- tf.h1: Heading 1
+
+This is heading 1 body.
 
 -- end: page
 
@@ -418,12 +420,13 @@ sub-sections: $doc-page-desktop.sub-sections
 current-section: $doc-page-desktop.current-section
 current-subsection: $doc-page-desktop.current-subsection
 current-page: $doc-page-desktop.current-page
+toc: $doc-page-desktop.toc
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 logo-height: 38
-current-url: /home/
-menu-icon: $assets.files.static.header.hamburger.svg
+current-url: /
+menu-icon: $assets.files.static.header.hamburger-dark.svg
 
 -- ftd.row:
 width: fill-container
@@ -448,7 +451,7 @@ padding-top.px if { doc-page-desktop.widthfill }: 9
 -- ftd.column:
 width: fill-container
 
--- tf.h1: $doc-page-desktop.title
+-- tf.h0: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 
 -- wall-box:
@@ -555,7 +558,7 @@ brand-site-name: $brand-site-name
 brand-caption: $brand-caption
 site-name: $site-name
 logo-height: 38
-current-url: /home/
+current-url: /
 menu-icon: $assets.files.static.header.hamburger.svg
 parent-brand: $parent-brand
 

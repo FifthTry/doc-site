@@ -7,7 +7,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.dependency: fifthtry.github.io/code-block
 
--- fpm.dependency: fifthtry.github.io/header
+-- fpm.dependency: fifthtry.github.io/package-doc as pd
 
 ;; -- fpm.dependency: fifthtry.github.io/toc
 
@@ -23,7 +23,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fpm.auto-import: fpm
 -- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
--- fpm.auto-import: fifthtry.github.io/header as h
+-- fpm.auto-import: fifthtry.github.io/package-doc/header as h
 ;; -- fpm.auto-import: fifthtry.github.io/toc as tt
 -- fpm.auto-import: fifthtry.github.io/roboto as mono
 
@@ -48,7 +48,6 @@ icon: static/primary-favorites.svg
 - Right-sidebar example: /docs/right-sidebar/
 icon: static/primary-favorites.svg
 
-# GitHub
-url: https://github.com/FifthTry/doc-site/
-# Use this template
-url: https://github.com/FifthTry/doc-site/generate/
+# GitHub: https://github.com/FifthTry/doc-site/
+
+# Use this template: https://github.com/FifthTry/doc-site/generate/
