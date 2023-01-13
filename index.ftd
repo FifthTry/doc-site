@@ -6,6 +6,12 @@
 -- import: fpm/processors as pr
 
 
+;;-- fpm.font-copy: $mono.fonts.Roboto
+;;-- fpm.font-code: $mono.fonts.Roboto
+;;-- fpm.font-display: $mono.fonts.Roboto
+;;-- fpm.font-copy: $mono.fonts.Roboto
+
+
 -- boolean login-button: false
 
 -- boolean pricing-cta: false
