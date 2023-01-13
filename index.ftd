@@ -2416,7 +2416,7 @@ color: $inherited.colors.text
 
 -- ftd.column:
 width.fixed.px: 5
-height.fixed.percent:  100
+height:  fill-container
 background.solid: $inherited.colors.background.base
 
 -- ftd.column:
@@ -2425,7 +2425,7 @@ padding.px: 10
 spacing.px: 10
 
 -- ftd.row:
-spacing.PX: 5
+spacing.px: 5
 
 -- ftd.text: Tip
 role: $inherited.types.label-big
