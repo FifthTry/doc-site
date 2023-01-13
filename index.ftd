@@ -1939,7 +1939,7 @@ margin-right.px: 4
 -- ftd.text: text
 color: $inherited.colors.background.step-1
 background.solid:$inherited.colors.success.text
-padding-horizontal: 2
+padding-horizontal.px: 2
 margin-right: 4
 
 
@@ -2349,7 +2349,11 @@ children output-container:
 padding-top.px: 12
 width: fill-container
 
--- ftd.text: $output.caption
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $output.title
 color: $inherited.colors.text
 background.solid: $inherited.colors.background.base
 border-top-left-radius.px: 2
@@ -2358,13 +2362,15 @@ padding-vertical.px: 3
 padding-horizontal.px: 10
 role: $inherited.types.label-big
 
+-- end: ftd.column
+
 -- ftd.column:
 border-width.px: 1
 border-color: $inherited.colors.text
 width: fill-container
-children: output-container
-padding-vertical: 30
-padding-horizontal: 20
+children: $output.output-container
+padding-vertical.px: 30
+padding-horizontal.px: 20
 border-radius.px: 2
 background.solid: $inherited.colors.background.base
 
