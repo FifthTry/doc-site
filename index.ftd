@@ -22,6 +22,8 @@
 
 -- integer toc-sidebar-width: 320
 
+-- boolean $sidebar: false
+
 -- string github: NA
 
 -- string site-name: Doc Site
@@ -158,7 +160,7 @@ string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
 ;;item list itemlist: $itemlist
-boolean sidebar: false
+boolean $sidebar: false
 children wrapper: 
 boolean widthfill: false
 
