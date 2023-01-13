@@ -1,0 +1,52 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/assets
+
+
+
+
+
+-- ds.page: Using right-sidebar feature
+$sidebar: true
+
+-- ds.page.extra-headers:
+
+-- ds.h2: Heading 2 title
+
+Some heading 2 body here...
+
+-- end: ds.page.extra-headers
+
+
+-- ds.page.body:
+
+We have made provision of adding `right-sidebar` for additional components to
+be shown on right-side of `page` component. Add `sidebar: true` attribute to 
+your page component.
+
+To use this feature follow below instructions:
+
+
+-- ds.h2: Heading 2 title
+
+Some heading 2 body here...
+
+-- ds.code: Example code for right-sidebar:
+lang: ftd
+
+\-- ds.h2: Heading 2 title
+
+Some heading 2 body here...
+
+
+-- ds.h2: Heading 2 title
+
+Some heading 2 body here...
+
+-- ds.code: Example code for right-sidebar:
+lang: ftd
+
+\-- ds.h2: Heading 2 title
+
+Some heading 2 body here...
+
+-- end: ds.page
