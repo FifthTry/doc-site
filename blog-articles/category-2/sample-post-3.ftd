@@ -20,7 +20,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 -- ds.post: 
 meta: $meta
 
---- ds.markdown:
+-- ds.markdown:
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
@@ -48,21 +48,21 @@ sit aspernatur aut odit aut f.
 
 `Duis aute irure dolor` in reprehenderit in voluptate velit esse cillum dolore eu.
 
---- ds.code: `Duis aute irure dolor` code
+-- ds.code: `Duis aute irure dolor` code
 lang: ftd
 
 \-- ftd.text: Title of the text
 role: $fpm.type.fine-print
 color: $fpm.color.main.text-strong
 
---- ds.h1: Some title of the level 1 heading
+-- ds.h1: Some title of the level 1 heading
 
 Here we add body for the level 1 heading. This can be multiline and has no limits.
 
 You also can use `markdown` **Bold** links [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/).
 
 
---- ds.h1: Sed ut perspiciatis unde omnis iste natus error
+-- ds.h1: Sed ut perspiciatis unde omnis iste natus error
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
@@ -79,6 +79,6 @@ beatae vitae dicta sunt explicabo.
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
 
 
-
+-- end: ds.page
 
 

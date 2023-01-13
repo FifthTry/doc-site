@@ -1,11 +1,13 @@
 -- import: fifthtry.github.io/doc-site/assets
--- import: fifthtry.github.io/doc-site/typography as tf
 -- import: fifthtry.github.io/doc-site/header as h
-;; -- import: fifthtry.github.io/app-switcher as apps-switcher
-
+-- import: fifthtry.github.io/doc-site/typography as tf
+-- import: fifthtry.github.io/doc-site/code as cb
 -- import: fpm
-
 -- import: fpm/processors as pr
+
+
+
+-- boolean $sidebar: false
 
 -- boolean login-button: false
 
@@ -135,7 +137,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 -- component page:
 optional caption title: 
-optional body body: 
+optional body description: 
 pr.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
@@ -157,8 +159,9 @@ string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
 ;;item list itemlist: $itemlist
-boolean sidebar: false
-children wrapper: 
+boolean $sidebar: $sidebar
+children wrapper:
+ftd.ui list extra-headers: 
 boolean widthfill: false
 
 -- ftd.column:
@@ -195,9 +198,10 @@ current-section: $page.current-section
 current-subsection: $page.current-subsection
 current-page: $page.current-page
 sub-sections: $page.sub-sections
-body: $page.body
+body: $page.description
 widthfill: $page.widthfill
-right-sidebar: $page.sidebar
+$right-sidebar: $page.sidebar
+extra-headers: $page.extra-headers
 ;;apps: $page.apps
 
 -- doc-page-mobile: $page.title
@@ -213,8 +217,9 @@ current-section: $page.current-section
 current-subsection: $page.current-subsection
 current-page: $page.current-page
 sub-sections: $page.sub-sections
-body: $page.body
-right-sidebar: $page.sidebar
+body: $page.description
+$right-sidebar: $page.sidebar
+extra-headers: $page.extra-headers
 ;;apps: $page.apps
 
 -- end: ftd.column
@@ -392,6 +397,7 @@ optional body body:
 pr.toc-item list toc: 
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
+ftd.ui list extra-headers:
 ;;pr.app-ui apps:
 boolean $open-right-sidebar-info: 
 pr.toc-item list footer-toc:
@@ -403,8 +409,9 @@ boolean pricing-cta:
 optional string sign-in-txt:
 boolean widthfill: 
 boolean login-button:
-boolean right-sidebar: false
+boolean $right-sidebar: false
 children wrapper:
+
 
 -- ftd.column:
 width: fill-container
@@ -428,23 +435,28 @@ menu-icon: $assets.files.static.header.hamburger.svg
 
 -- ftd.row:
 width: fill-container
-spacing.px: 48
-padding-horizontal.px: 25
+spacing.px: 12
+padding-horizontal.px: 24
+
 
 -- render-toc:
 if: { !is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
+
 -- ftd.column:
+width.fixed.percent: 70
 max-width.fixed.px if { is_empty(doc-page-desktop.toc) }: 800
 max-width if {doc-page-desktop.widthfill}: fill-container
-max-width.fixed.px: 800
+max-width.fixed.px if { !$doc-page-desktop.right-sidebar }: 800
+max-width.fixed.px if { $doc-page-desktop.right-sidebar }: 800
 align-self if { is_empty(doc-page-desktop.toc) }: center
 align-content: top-left
 min-height.fixed.calc: 100vh
-padding-horizontal.px if { !doc-page-desktop.widthfill }: 34
-padding-vertical.px if { !doc-page-desktop.widthfill }: 25
-padding-top.px if { doc-page-desktop.widthfill }: 9
+padding-horizontal.px if { !doc-page-desktop.widthfill }: 24
+padding-top.px if { !doc-page-desktop.widthfill }: 0
+padding-bottom.px if { !doc-page-desktop.widthfill }: 24
+;;padding-top.px if { doc-page-desktop.widthfill }: 9
 
 -- ftd.column:
 width: fill-container
@@ -478,27 +490,15 @@ width.fixed.percent: 100
 -- end: ftd.column
 
 -- ftd.column:
-if: { doc-page-desktop.right-sidebar }
-;;id:right-sidebar
-width.fixed.px: $toc-sidebar-width
-;;z-index: 999
-background.solid:$inherited.colors.background.overlay
-;;sticky: true
-top.px: 0
-right.px: 48
-height.fixed.calc: 100vh - 0px
-overflow-y: auto
-align-content: top-right
-margin-right.px: 48
-padding-left.px: 24
-padding-top.px: 4
-padding-right.px: 16
-padding-bottom.px: 32
-margin-top.px: 25
-margin-bottom.px: 25
-border-radius.px: 8
+height.fixed.percent: 100
+if: {doc-page-desktop.right-sidebar}
+
+-- right-sidebar:
+extra-headers: $doc-page-desktop.extra-headers
 
 -- end: ftd.column
+
+
 
 -- end: ftd.row
 
@@ -510,6 +510,42 @@ footer-toc: $doc-page-desktop.footer-toc
 
 -- end: doc-page-desktop
 
+
+
+
+
+
+
+
+-- component right-sidebar:
+ftd.ui list extra-headers:
+
+
+-- ftd.column:
+children: $right-sidebar.extra-headers
+width.fixed.px: $toc-sidebar-width
+;;z-index: 999
+background.solid: $inherited.colors.background.overlay
+;;anchor: parent
+;;sticky: true
+top.px: 0
+right.px: 0
+min-height.fixed.calc: 100vh - 0px
+height.fixed.calc: 100% 
+overflow-y: auto
+align-content: top-right
+margin-right.px: 12
+padding-left.px: 24
+padding-top.px: 4
+padding-right.px: 16
+padding-bottom.px: 32
+margin-top.px: 25
+margin-bottom.px: 25
+border-radius.px: 8
+
+-- end: ftd.column
+
+-- end: right-sidebar
 
 
 
@@ -532,7 +568,8 @@ pr.toc-item list footer-toc: $footer-toc
 optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
-boolean right-sidebar: false
+boolean $right-sidebar: false
+ftd.ui list extra-headers:
 children wrapper:
 boolean pricing-cta: 
 boolean login-button:
@@ -961,7 +998,8 @@ pr.toc-item list toc-obj:
 ;; sticky: true
 top.px: 0
 left.px: 24
-height.fixed.calc: 100vh - 0px
+min-height.fixed.calc: 100vh - 0px
+height.fixed.calc: 100% - 52px
 overflow-y: auto
 width.fixed.px: $toc-sidebar-width
 align-content: top-left
@@ -1197,13 +1235,17 @@ height: hug-content
 
 
 -- component posts:
+children container:
 
 -- ftd.column:
 
 -- ftd.row:
+children: $posts.container
 if: {ftd.device != "mobile"}
 wrap: true
 spacing.px: 16
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -1521,7 +1563,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
-max-width.px if {ftd.device != "mobile"}: 344
+max-width.fixed.px if {ftd.device != "mobile"}: 344
 max-height.fixed.px: 500
 padding-horizontal.px:24
 color: $inherited.colors.text
@@ -1690,7 +1732,6 @@ margin-right.px: 12
 
 -- ftd.row:
 width: fill-container
-;;;;id:auth-container
 spacing.px: 24
 
 -- ftd.column:
@@ -2108,12 +2149,13 @@ color: $inherited.colors.cta-primary.border
 
 
 
-
-
--- tf.markdown markdown:
+-- component markdown:
 body body:
 
-$body
+-- tf.markdown:
+body: $markdown.body
+
+-- end: markdown
 
 
 
@@ -2122,11 +2164,15 @@ $body
 
 
 
--- tf.h0 h0: $title
+
+-- component h0:
 caption title:
 optional body body:
 
-$body
+-- tf.h0: $h0.title
+body: $h0.body
+
+-- end: h0
 
 
 
@@ -2137,11 +2183,19 @@ $body
 
 
 
--- tf.h1 h1: $title
+
+
+
+
+
+-- component h1:
 caption title:
 optional body body:
 
-$body
+-- tf.h1: $h1.title
+body: $h1.body
+
+-- end: h1
 
 
 
@@ -2152,26 +2206,27 @@ $body
 
 
 
--- tf.h2 h2: $title
+
+
+-- component h2:
 caption title:
 optional body body:
 
-$body
+-- tf.h2: $h2.title
+body: $h2.body
+
+-- end: h2
 
 
 
-
-
-
-
-
-
-
--- tf.h3 h3: $title
+-- component h3:
 caption title:
 optional body body:
 
-$body
+-- tf.h3: $h3.title
+body: $h3.body
+
+-- end: h3
 
 
 
@@ -2182,14 +2237,17 @@ $body
 
 
 
--- cb.code code:
+-- component code:
 optional caption caption:
 body body:
-string lang:
-caption: $caption
-lang: $lang
+string lang::
 
-$body
+-- cb.code: $code.caption
+lang: $code.lang
+body: $code.body
+
+-- end: code
+
 
 
 
@@ -2246,8 +2304,8 @@ background.solid: $inherited.colors.background.base
 caption title:
 
 -- ftd.text: $highlight.title
-background.solid: $fpm.color.main.custom.two
-color: $fpm.color.main.background.base
+background.solid: $inherited.colors.custom.two
+color: $inherited.colors.background.base
 padding.px: 3
 border-radius.px: 3
 
@@ -2269,13 +2327,13 @@ optional body body:
 -- ftd.column:
 border-radius.px: 3
 width: fill-container
-background-color: $fpm.color.main.background.base
-color: $fpm.color.main.text
+background.solid: $inherited.colors.background.base
+color: $inherited.colors.text
 
 -- ftd.column:
 width.fixed.px: 5
 height.fixed.percent:  100
-background-color: $fpm.color.main.background.base
+background-color: $inherited.colors.background.base
 
 -- ftd.column:
 width: fill-container
@@ -2286,17 +2344,17 @@ spacing.px: 10
 spacing.PX: 5
 
 -- ftd.text: Tip
-role: $fpm.type.label-big
+role: $inherited.types.label-big
 
 -- ftd.text: $tip.title
 if: {tip.title != NULL}
-role: $fpm.type.label-big
+role: $inherited.types.label-big
 
 -- end: ftd.row
 
 -- ftd.text:
 if: {tip.body != NULL}
-role: $fpm.type.copy-large
+role: $inherited.types.copy-large
 
 $tip.body
 
@@ -2318,7 +2376,13 @@ $tip.body
 
 
 
--- ftd.color theme-color:
+-- void set(value,v):
+boolean $value:
+boolean v:
+
+value = v
+
+-- pr.color theme-color:
 dark: #1F5E6B
 light: #1F5E6B
 

@@ -10,11 +10,15 @@
 Write some information of this category here. Change the title according to the
 category of your blog.
 
---- ds.posts:
+-- ds.posts:
 
---- ds.featured-post:
+-- ds.featured-post:
 post-data: $sample-post-3.meta
 
 
---- ds.without-image:
+-- ds.without-image:
 post-data: $sample-post-4.meta
+
+-- end: ds.posts
+
+-- end: ds.page
