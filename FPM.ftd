@@ -17,13 +17,14 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fpm.dependency: fifthtry.github.io/roboto
 
+-- fpm.dependency: fifthtry.github.io/header
 
 
 
 -- fpm.auto-import: fpm
 -- fpm.auto-import: fifthtry.github.io/typography as tf
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
--- fpm.auto-import: fifthtry.github.io/package-doc/header as h
+-- fpm.auto-import: fifthtry.github.io/header as h
 ;; -- fpm.auto-import: fifthtry.github.io/toc as tt
 -- fpm.auto-import: fifthtry.github.io/roboto as mono
 
