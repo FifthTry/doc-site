@@ -31,7 +31,7 @@
 
 -- string github: NA
 
--- string $site-name: Doc Site
+-- optional string $site-name: 
 
 -- ftd.image-src $site-logo:
 light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
@@ -215,6 +215,7 @@ Feel free to check [our documentation](https://fpm.dev/) or jump into our [Fifth
 -- component page:
 optional caption title: 
 optional body body: 
+optional string site-name: $site-name
 fpm.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
@@ -279,6 +280,7 @@ body: $page.body
 widthfill: $page.widthfill
 right-sidebar: $page.sidebar
 extra-headers: $page.extra-headers
+site-name: $page.site-name 
 apps: $page.apps
 
 -- doc-page-mobile: $page.title
@@ -295,6 +297,7 @@ current-subsection: $page.current-subsection
 current-page: $page.current-page
 sub-sections: $page.sub-sections
 body: $page.body
+site-name: $page.site-name 
 right-sidebar: $page.sidebar
 apps: $page.apps
 extra-headers: $page.extra-headers
@@ -472,6 +475,7 @@ $loop$: $floater.itemlist as $obj
 optional caption title:
 optional body body:
 fpm.toc-item list toc: 
+optional string site-name: 
 fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
 fpm.app-ui apps:
@@ -505,7 +509,7 @@ current-page: $doc-page-desktop.current-page
 toc: $doc-page-desktop.toc
 site-logo: $site-logo
 site-url: $site-url
-site-name: $site-name
+site-name: $doc-page-desktop.site-name
 logo-height: 38
 current-url: /
 menu-icon: $assets.files.static.header.hamburger-dark.svg
@@ -593,6 +597,7 @@ footer-toc: $doc-page-desktop.footer-toc
 -- component doc-page-mobile:
 optional caption title:
 optional body body:
+optional string site-name:
 fpm.toc-item list toc: $toc
 fpm.toc-item list sections:
 fpm.toc-item list sub-sections:
@@ -626,7 +631,7 @@ brand-site-url: $brand-site-url
 brand-site-logo: $brand-site-logo
 brand-site-name: $brand-site-name
 brand-caption: $brand-caption
-site-name: $site-name
+site-name: $doc-page-mobile.site-name
 logo-height: 38
 current-url: /
 menu-icon: $assets.files.static.header.hamburger.svg
