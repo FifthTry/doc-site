@@ -493,8 +493,16 @@ boolean login-button:
 boolean right-sidebar: false
 children wrapper:
 
+
 -- ftd.column:
 width: fill-container
+
+-- ftd.column:
+
+-- apps-switcher.app-switcher:
+apps: $apps
+
+-- end: ftd.column
 
 -- h.header:
 login-button: $doc-page-desktop.login-button
@@ -618,6 +626,13 @@ boolean login-button:
 width: fill-container
 background.solid:$inherited.colors.background.base
 
+-- ftd.column:
+
+-- apps-switcher.app-switcher:
+apps: $apps
+
+-- end: ftd.column
+
 -- h.header:
 sections: $doc-page-mobile.sections
 sub-sections: $doc-page-mobile.sub-sections
@@ -636,9 +651,6 @@ logo-height: 38
 current-url: /
 menu-icon: $assets.files.static.header.hamburger.svg
 parent-brand: $parent-brand
-
-/-- apps-switcher.app-switcher:
-apps: $apps
 
 -- ftd.column:
 width: fill-container
