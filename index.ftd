@@ -940,11 +940,10 @@ width: auto
 
 -- ftd.text: 
 text: $toc-instance.toc.title
-;;role: $inherited.types.label-small
+role: $inherited.types.label-small
 min-width: hug-content
 margin-bottom.px: 16
 color: $inherited.colors.text
-margin-left.px: 12
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
