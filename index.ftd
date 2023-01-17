@@ -1011,7 +1011,7 @@ width: fill-container
 
 -- ftd.text: 
 text: $childrens.toc.title
-;;role: $inherited.types.label-small
+role: $inherited.types.label-small
 min-width: hug-content
 margin-bottom.px: 16
 color: $inherited.colors.text
