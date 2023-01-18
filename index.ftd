@@ -49,15 +49,15 @@ dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.s
 
 -- string $site-url: index.html
 
--- fpm.toc-item list sections:
+-- pr.toc-item list sections:
 
--- fpm.toc-item list sub-sections:
+-- pr.toc-item list sub-sections:
 
--- fpm.toc-item list toc:
+-- pr.toc-item list toc:
 
--- fpm.toc-item list footer-toc:
+-- pr.toc-item list footer-toc:
 
--- fpm.sitemap-data sitemap:
+-- pr.sitemap-data sitemap:
 $processor$: fpm.sitemap
 
 -- fpm.app-ui apps:
@@ -216,17 +216,17 @@ Feel free to check [our documentation](https://fpm.dev/) or jump into our [Fifth
 optional caption title: 
 optional body body: 
 optional string site-name: $site-name
-fpm.toc-item list toc: $sitemap.toc
+pr.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
 fpm.app-ui apps: $apps
 boolean $open-right-sidebar-info: false
-fpm.toc-item list sections: $sitemap.sections
-fpm.toc-item list sub-sections: $sitemap.subsections
-optional fpm.toc-item current-section: $sitemap.current-section
-optional fpm.toc-item current-subsection: $sitemap.current-subsection
-optional fpm.toc-item current-page: $sitemap.current-page
-fpm.toc-item list footer-toc: $footer-toc
+pr.toc-item list sections: $sitemap.sections
+pr.toc-item list sub-sections: $sitemap.subsections
+optional pr.toc-item current-section: $sitemap.current-section
+optional pr.toc-item current-subsection: $sitemap.current-subsection
+optional pr.toc-item current-page: $sitemap.current-page
+pr.toc-item list footer-toc: $footer-toc
 string github-text: {green: Sign in} to access Editing Tools
 string github-text-url: /
 ftd.image-src side-logo: $assets.files.static.editor-icon.svg
@@ -474,17 +474,17 @@ $loop$: $floater.itemlist as $obj
 -- component doc-page-desktop:
 optional caption title:
 optional body body:
-fpm.toc-item list toc: 
+pr.toc-item list toc: 
 optional string site-name: 
-fpm.toc-item list sections:
-fpm.toc-item list sub-sections:
+pr.toc-item list sections:
+pr.toc-item list sub-sections:
 fpm.app-ui apps:
 ftd.ui list extra-headers:
 boolean $open-right-sidebar-info: 
-fpm.toc-item list footer-toc:
-optional fpm.toc-item current-section:
-optional fpm.toc-item current-page:
-optional fpm.toc-item current-subsection:
+pr.toc-item list footer-toc:
+optional pr.toc-item current-section:
+optional pr.toc-item current-page:
+optional pr.toc-item current-subsection:
 optional string login-btn-txt: Login
 boolean pricing-cta: 
 optional string sign-in-txt:
@@ -606,17 +606,17 @@ footer-toc: $doc-page-desktop.footer-toc
 optional caption title:
 optional body body:
 optional string site-name:
-fpm.toc-item list toc: $toc
-fpm.toc-item list sections:
-fpm.toc-item list sub-sections:
-fpm.toc-item list extra:
+pr.toc-item list toc: $toc
+pr.toc-item list sections:
+pr.toc-item list sub-sections:
+pr.toc-item list extra:
 fpm.app-ui apps:
 ftd.ui list extra-headers:
 boolean $open-right-sidebar-info: false
-fpm.toc-item list footer-toc: $footer-toc
-optional fpm.toc-item current-section:
-optional fpm.toc-item current-page:
-optional fpm.toc-item current-subsection:
+pr.toc-item list footer-toc: $footer-toc
+optional pr.toc-item current-section:
+optional pr.toc-item current-page:
+optional pr.toc-item current-subsection:
 boolean right-sidebar: false
 children wrapper:
 boolean pricing-cta: 
@@ -802,7 +802,7 @@ color: $inherited.colors.text
 
 
 -- component footer-instance:
-fpm.toc-item footer-toc:
+pr.toc-item footer-toc:
 
 -- ftd.column:
 min-width: hug-content
@@ -833,7 +833,7 @@ url: $obj.url
 
 
 -- component footer:
-fpm.toc-item list footer-toc:
+pr.toc-item list footer-toc:
 
 -- ftd.column:
 width: fill-container
@@ -860,7 +860,7 @@ footer-toc: $footer.footer-toc
 
 
 -- component footer-desktop:
-fpm.toc-item list footer-toc:
+pr.toc-item list footer-toc:
 
 -- ftd.row:
 width: fill-container
@@ -886,7 +886,7 @@ footer-toc: $obj
 
 
 -- component footer-mobile:
-fpm.toc-item list footer-toc:
+pr.toc-item list footer-toc:
 
 -- ftd.column:
 width: fill-container
@@ -913,7 +913,7 @@ footer-toc: $obj
 
 
 -- component toc-instance:
-fpm.toc-item toc:
+pr.toc-item toc:
 
 -- ftd.column:
 
@@ -984,7 +984,7 @@ toc: $obj
 
 
 -- component childrens:
-fpm.toc-item toc:
+pr.toc-item toc:
 
 -- ftd.column:
 
@@ -1050,7 +1050,7 @@ toc: $obj
 
 
 -- component render-toc:
-fpm.toc-item list toc-obj:
+pr.toc-item list toc-obj:
 
 -- ftd.column:
 ;; sticky: true
