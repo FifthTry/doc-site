@@ -26,7 +26,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fpm.auto-import: fifthtry.github.io/code-block as cb
 -- fpm.auto-import: fifthtry.github.io/header as h
 ;; -- fpm.auto-import: fifthtry.github.io/toc as tt
--- fpm.auto-import: fifthtry.github.io/roboto as mono
+-- fpm.auto-import: fifthtry.github.io/roboto as roboto
 
 -- fpm.app: Todos for Family
 mount-point: /todos/

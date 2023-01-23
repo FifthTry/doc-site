@@ -3,11 +3,13 @@
 -- import: fifthtry.github.io/app-switcher as apps-switcher
 -- import: fpm
 -- import: fpm/processors as pr
+;; -- import: fifthtry.github.io/roboto/assets as roboto-assets
 
 
-;;-- fpm.font-copy: $mono.fonts.Roboto
-;;-- fpm.font-code: $mono.fonts.Roboto
-;;-- fpm.font-display: $mono.fonts.Roboto
+
+;;-- fpm.font-copy: $roboto-assets.fonts.Roboto
+;;-- fpm.font-code: $roboto-assets.fonts.Roboto
+;;-- fpm.font-display: $roboto-assets.fonts.Roboto
 ;;-- fpm.font-copy: $mono.fonts.Roboto
 
 
