@@ -10,9 +10,16 @@ $sidebar: true
 
 -- ds.page.extra-headers:
 
--- ds.h2: Heading 2 title
+-- ds.h2: Heading in sidebar
 
-Some heading 2 body here...
+You can call any component inside sidebar
+
+-- ds.code: Code block in sidebar
+lang: ftd
+
+\-- ftd.text: Some title here...
+role: $inherited.types.copy-large
+color: $inherited.colors.text
 
 -- end: ds.page.extra-headers
 
@@ -25,28 +32,24 @@ your page component.
 
 To use this feature follow below instructions:
 
-
--- ds.h2: Heading 2 title
-
-Some heading 2 body here...
-
--- ds.code: Example code for right-sidebar:
+-- ds.code: How to use sidebar
 lang: ftd
 
-\-- ds.h2: Heading 2 title
+\-- ds.page: Using right-sidebar feature
+$sidebar: true
 
-Some heading 2 body here...
+\-- ds.page.body:
 
+add some page body here.
 
--- ds.h2: Heading 2 title
+\-- ds.page.extra-headers:
 
-Some heading 2 body here...
+\-- ds.h2: Heading in sidebar
 
--- ds.code: Example code for right-sidebar:
-lang: ftd
+You can call any component inside sidebar
 
-\-- ds.h2: Heading 2 title
+\-- end: ds.page.extra-headers
 
-Some heading 2 body here...
+\-- end: ds.page
 
 -- end: ds.page
