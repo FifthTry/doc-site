@@ -217,6 +217,8 @@ Feel free to check [our documentation](https://fpm.dev/) or jump into our [Fifth
 -- component page:
 optional caption title: 
 optional body body: 
+ftd.image-src $site-logo: $site-logo
+string $site-url: $site-url
 optional string site-name: $site-name
 pr.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
@@ -242,7 +244,7 @@ string edit-text-url: /
 boolean $sidebar: false
 children wrapper: 
 ftd.ui list extra-headers:
-boolean widthfill: false
+boolean $widthfill: false
 
 -- ftd.column:
 width: fill-container
@@ -283,6 +285,8 @@ widthfill: $page.widthfill
 right-sidebar: $page.sidebar
 extra-headers: $page.extra-headers
 site-name: $page.site-name 
+site-logo: $page.site-logo
+site-url: $page.site-url
 apps: $page.apps
 
 -- doc-page-mobile: $page.title
@@ -300,6 +304,8 @@ current-page: $page.current-page
 sub-sections: $page.sub-sections
 body: $page.body
 site-name: $page.site-name 
+site-logo: $page.site-logo
+site-url: $page.site-url
 right-sidebar: $page.sidebar
 apps: $page.apps
 extra-headers: $page.extra-headers
@@ -478,6 +484,8 @@ optional caption title:
 optional body body:
 pr.toc-item list toc: 
 optional string site-name: 
+ftd.image-src site-logo: 
+string site-url: 
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
 fpm.app-ui apps:
@@ -517,8 +525,8 @@ current-section: $doc-page-desktop.current-section
 current-subsection: $doc-page-desktop.current-subsection
 current-page: $doc-page-desktop.current-page
 toc: $doc-page-desktop.toc
-site-logo: $site-logo
-site-url: $site-url
+site-logo: $doc-page-desktop.site-logo
+site-url: $doc-page-desktop.site-url
 site-name: $doc-page-desktop.site-name
 logo-height: 38
 current-url: /
@@ -535,12 +543,13 @@ if: { !is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
-width.fixed.percent: 70
-max-width.fixed.px if { is_empty(doc-page-desktop.toc) }: 800
+width.fixed.percent: 60
+width if {doc-page-desktop.widthfill}: fill-container
+max-width.fixed.px if { is_empty(doc-page-desktop.toc) && !doc-page-desktop.widthfill}: 800
 max-width if {doc-page-desktop.widthfill}: fill-container
-max-width.fixed.px: 800
 align-content: top-left
-min-height.fixed.calc: 100vh
+min-height.fixed.calc if { !is_empty(doc-page-desktop.toc) }: 100vh
+min-height.fixed.calc: 100vh-128px
 padding-horizontal.px if { !doc-page-desktop.widthfill }: 34
 padding-vertical.px if { !doc-page-desktop.widthfill }: 25
 padding-top.px if { doc-page-desktop.widthfill }: 9
@@ -577,6 +586,8 @@ width.fixed.percent: 100
 -- end: ftd.column
 
 -- ftd.column:
+width.fixed.percent: 20
+min-width.fixed.percent: 20
 height.fixed.percent: 100
 if: {doc-page-desktop.right-sidebar}
 
@@ -608,6 +619,8 @@ footer-toc: $doc-page-desktop.footer-toc
 optional caption title:
 optional body body:
 optional string site-name:
+ftd.image-src site-logo: 
+string site-url:
 pr.toc-item list toc: $toc
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
@@ -642,8 +655,8 @@ toc: $doc-page-mobile.toc
 current-section: $doc-page-mobile.current-section
 current-subsection: $doc-page-mobile.current-subsection
 current-page: $doc-page-mobile.current-page
-site-logo: $site-logo
-site-url: $site-url
+site-logo: $doc-page-mobile.site-logo
+site-url: $doc-page-mobile.site-url
 brand-site-url: $brand-site-url
 brand-site-logo: $brand-site-logo
 brand-site-name: $brand-site-name
@@ -934,7 +947,6 @@ width: auto
 link: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.label-small
-min-width: hug-content
 margin-bottom.px: 16
 color: $inherited.colors.text
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
@@ -1005,7 +1017,6 @@ width: auto
 link: $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.label-small
-min-width: hug-content
 margin-bottom.px: 16
 color: $inherited.colors.text
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
@@ -1058,11 +1069,11 @@ pr.toc-item list toc-obj:
 ;; sticky: true
 top.px: 0
 left.px: 24
-min-width.fixed.px: 320
+min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 0px
 height.fixed.calc: 100% - 52px
 overflow-y: auto
-width.fixed.px: $toc-sidebar-width
+width.fixed.percent: 20
 align-content: top-left
 background.solid: $inherited.colors.background.overlay
 border-radius.px: 8
@@ -2497,11 +2508,10 @@ ftd.ui list extra-headers:
 
 -- ftd.column:
 children: $right-sidebar.extra-headers
-width.fixed.px: $toc-sidebar-width
-;;z-index: 999
+min-width.fixed.percent: 100
+width.fixed.percent: 100
+z-index: 999
 background.solid: $inherited.colors.background.overlay
-;;anchor: parent
-;;sticky: true
 top.px: 0
 right.px: 0
 min-height.fixed.calc: 100vh - 0px
