@@ -549,7 +549,7 @@ max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.
 max-width if {doc-page-desktop.widthfill}: fill-container
 align-content: top-left
 min-height.fixed.calc if { !ftd.is_empty(doc-page-desktop.toc) }: 100vh
-min-height.fixed.calc: 100vh-128px
+min-height.fixed.calc: 100vh - 135px
 padding-horizontal.px if { !doc-page-desktop.widthfill }: 34
 padding-vertical.px if { !doc-page-desktop.widthfill }: 25
 padding-top.px if { doc-page-desktop.widthfill }: 9
