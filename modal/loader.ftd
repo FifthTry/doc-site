@@ -1,5 +1,10 @@
+-- boolean $open: true
+
+
+
 -- loader:
-show-loader: true
+$show-loader: $open
+$on-click$: $ftd.set-bool($a = $open, v = false)
 
 
 
@@ -11,16 +16,14 @@ show-loader: true
 
 
 -- component loader:
-boolean show-loader: false
-
+boolean $show-loader: false
 
 -- ftd.column:
+if: { $loader.show-loader }
 width: fill-container
 height: fill-container
 
-
 -- ftd.column:
-if: { loader.show-loader }
 width: fill-container
 height: fill-container
 anchor: window
