@@ -6,9 +6,9 @@
 ;Do not remove below configurations.
 
 -- ftd.text green-link: text
-color: $fpm.color.main.cta-primary.base
+color: $fastn.color.main.cta-primary.base
 style: bold
-background-color: $fpm.color.main.cta-secondary.text
+background-color: $fastn.color.main.cta-secondary.text
 
 ;**** Configuration Ends **** 
 
@@ -29,10 +29,10 @@ with your own web projects.
 
 -- ds.h2: Creating your first FTD web-site
 
-Please, refer [this documentation](https://fpm.dev/author/create-on-github/) 
+Please, refer [this documentation](https://fastn.dev/author/create-on-github/) 
 to understand how to create FTD website repository on GitHub.
 
-Once you are done [these steps](https://fpm.dev/author/create-on-github/) follow
+Once you are done [these steps](https://fastn.dev/author/create-on-github/) follow
 below steps.
 
 
@@ -85,8 +85,8 @@ width.fixed.px: 500
 
 -- ds.markdown:
 
-`FPM` auto deployment job will run and `index.ftd` file will be deployed on live 
-automatically by our `FPM` builder.
+`FASTN` auto deployment job will run and `index.ftd` file will be deployed on live 
+automatically by our `FASTN` builder.
 
 To cross-check  if `pages build and deployment` workflow ran successfully. Click 
 on `Actions` tab.
@@ -164,8 +164,8 @@ width.fixed.px: 750
 Once you click on `Commit new file` button. `GitHub` will add your `post.ftd` file
 into your repository.
 
-`FPM` auto deployment job will run and your first `post.ftd` file will be deployed
-on live automatically by our `FPM` builder.
+`FASTN` auto deployment job will run and your first `post.ftd` file will be deployed
+on live automatically by our `FASTN` builder.
 
 To cross-check  if `pages build and deployment` workflow ran successfully. Click 
 on `Actions` tab.
@@ -190,12 +190,12 @@ To see it live add `post` into your website url. e.g. https://gsalunke.github.io
 Default value of `ds.site-name` variable is `LOGO`. Let's change it with your 
 blog name. e.g. here we will change `LOGO` `site-name` with `My FTD Blog`.
 
-To change default value of `site-name` you need to add `config.ftd` file into `FPM`
+To change default value of `site-name` you need to add `config.ftd` file into `FASTN`
 folder.
 
-To create `config.ftd` file follow same steps we mentioned in [How to create a new page into `FTD` website?](author-docs/#how-to-create-new-ftd-file) to `Create new file`. As mentioned above `config.ftd` should be created inside `FPM` folder. So to create new folder
+To create `config.ftd` file follow same steps we mentioned in [How to create a new page into `FTD` website?](author-docs/#how-to-create-new-ftd-file) to `Create new file`. As mentioned above `config.ftd` should be created inside `FASTN` folder. So to create new folder
 simply type folder-name into `Name your file...` input box followed by `/` `GitHub`
-will consider `FPM/` as folder and it will create folder named `FPM` into route
+will consider `FASTN/` as folder and it will create folder named `FASTN` into route
 directory of your `FTD` repository.
 
 Now provide file name as `config.ftd` and add below code into `config.ftd` file
@@ -205,47 +205,47 @@ using `GitHub` live editor.
 -- ds.code: Creating `config.ftd` file into `My FTD Blog`
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 \-- import: ds
 
 \-- ds.site-name: My FTD Blog
 
 
--- ds.image: Creating `FPM/config.ftd` file
-src: $assets.files.static.docs.adding-config-ftd-into-FPM-folder.png
+-- ds.image: Creating `FASTN/config.ftd` file
+src: $assets.files.static.docs.adding-config-ftd-into-FASTN-folder.png
 width.fixed.px: 750
 
 
 -- ds.markdown:
 
-Once you commit `FPM/config.ftd` file, `FPM` builder will start building newly added
+Once you commit `FASTN/config.ftd` file, `FASTN` builder will start building newly added
 files.
 
-Let `FPM` build finish up [pages-build-and-deployment](author-docs/#pages-build-and-deployment-1) build
+Let `FASTN` build finish up [pages-build-and-deployment](author-docs/#pages-build-and-deployment-1) build
 process. 
 
 Once you see {ds.greenmarker:green} tick on `pages build and deployment`, it means your `config.ftd`
 file is successfully deployed on live website.
 
 
--- ds.h2: Udating `config.ftd` into `FPM.ftd` file
+-- ds.h2: Udating `config.ftd` into `FASTN.ftd` file
 
-Our newly created `FTD` configuration file should be added into `FPM.ftd` file,
-otherwise the configurations we mentioned `FPM/config.ftd` file won't work.
+Our newly created `FTD` configuration file should be added into `FASTN.ftd` file,
+otherwise the configurations we mentioned `FASTN/config.ftd` file won't work.
 
-To refer `config.ftd` file inside `FPM.ftd` click on `FPM.ftd` file. `GitHub` will
+To refer `config.ftd` file inside `FASTN.ftd` click on `FASTN.ftd` file. `GitHub` will
 open this file as non-editable. 
 
-To edit `FPM.ftd` file click on edit icon. Once you click on edit icon `FPM.ftd` file
+To edit `FASTN.ftd` file click on edit icon. Once you click on edit icon `FASTN.ftd` file
 will be opned for editing into `GitHub` live editor.
 
-Add below code into your `FPM.ftd` file.
+Add below code into your `FASTN.ftd` file.
 
 
--- ds.code: Updating `FPM.ftd` file with `config.ftd`
+-- ds.code: Updating `FASTN.ftd` file with `config.ftd`
 lang: ftd
 
-\-- fpm.auto-import: gsalunke.github.io/my-ftd-blog/FPM/config
+\-- fastn.auto-import: gsalunke.github.io/my-ftd-blog/FASTN/config
 
 
 -- ds.markdown:
@@ -255,21 +255,21 @@ In above example code we have added `config.ftd` file into `gsalunke.github.io/m
 So, while linking we should provide full path of `config.ftd` file, as mentioned in above
 example.
 
-Follow same steps [commiting-my-first-post-ftd](author-docs/#commiting-my-first-post-ftd) to `commit` `FPM.ftd` file. 
+Follow same steps [commiting-my-first-post-ftd](author-docs/#commiting-my-first-post-ftd) to `commit` `FASTN.ftd` file. 
 
 
--- ds.image: Importing `FPM/config.ftd` into `FPM.ftd` file
-src: $assets.files.static.docs.referring-config-ftd-into-FPM-ftd-file.png
+-- ds.image: Importing `FASTN/config.ftd` into `FASTN.ftd` file
+src: $assets.files.static.docs.referring-config-ftd-into-FASTN-ftd-file.png
 width.fixed.px: 750
 
-Once you click on `Commit changes` button, `FPM` builder will start building these
+Once you click on `Commit changes` button, `FASTN` builder will start building these
 changes and deploy them on live. Ref. [pages-build-and-deployment](author-docs/#pages-build-and-deployment)
 
 
 Visit your `FTD` website, newly added `site-name` `My FTD Blog` will appear instead of
 default `LOGO` site name.
 
--- ds.image: `My FTD Blog` site name from `FPM/config.ftd`
+-- ds.image: `My FTD Blog` site name from `FASTN/config.ftd`
 src: $assets.files.static.docs.site-name-and-first-blog-post.png
 width.fixed.px: 750
 
@@ -280,19 +280,19 @@ width.fixed.px: 750
 create new pages](author-docs/#how-to-create-new-ftd-file). 
 
 
--- ds.h2: Using `fpm.sitemap` feature for sections in header
+-- ds.h2: Using `fastn.sitemap` feature for sections in header
 
 
-FifthTry have developed `fpm.sitemap` for you. Using `fpm.sitemap` feature you 
+FifthTry have developed `fastn.sitemap` for you. Using `fastn.sitemap` feature you 
 can add sections and sub-sections into header.
 
-To use `fpm.sitemap` feature, we need to [edit your `FPM.ftd`](author-docs/#updating-fpm-ftd-file) file and add sections, sub-sections into it.
+To use `fastn.sitemap` feature, we need to [edit your `FASTN.ftd`](author-docs/#updating-fastn-ftd-file) file and add sections, sub-sections into it.
 
 
--- ds.code: Using `fpm.sitemap` example code:
+-- ds.code: Using `fastn.sitemap` example code:
 lang: ftd
 
-\-- fpm.sitemap:
+\-- fastn.sitemap:
 
 # Home: index.html
 
@@ -306,7 +306,7 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you add sitemap links into your `FPM.ftd` file and commit it. `FPM` will auto generate 
+Once you add sitemap links into your `FASTN.ftd` file and commit it. `FASTN` will auto generate 
 `sitemap` for your `FTD` website. 
 
 
@@ -336,29 +336,29 @@ Each section or sub-section link will be shown in {green-link: green} color when
 
 {ds.redmarker:***RULE:*** }
 
-Whilte adding links to `fpm.sitemap` `/link-url/` should be a `.ftd` file. e.g. if
+Whilte adding links to `fastn.sitemap` `/link-url/` should be a `.ftd` file. e.g. if
 you are adding link as `/my-link/` then in your route folder `my-link.ftd` file 
 should be present. Similarly if you are adding a link from folder e.g. `/directory/folder-link`
 then folder named `directory` should be present in route directory. And inside 
 `directory` folder `folder-link.ftd` file should be present.
 
-For example refer our [fpm.dev](https://fpm.dev/) or [ftd.dev](https://ftd.dev/)
+For example refer our [fastn.dev](https://fastn.dev/) or [ftd.dev](https://ftd.dev/)
 websites to learn more about sitemap linking.
 
 
--- ds.image: Updating `FPM.ftd` file with `fpm.sitemap` feature
-src: $assets.files.static.docs.updating-fpm-ftd-with-sitemap-feature.png
+-- ds.image: Updating `FASTN.ftd` file with `fastn.sitemap` feature
+src: $assets.files.static.docs.updating-fastn-ftd-with-sitemap-feature.png
 width.fixed.px: 750
 
 
 -- ds.markdown:
 
-Once you click on `Commit changes` button, `FPM` builder will start building these
+Once you click on `Commit changes` button, `FASTN` builder will start building these
 changes and deploy them on live. Ref. [pages-build-and-deployment](author-docs/#pages-build-and-deployment)
 
 
--- ds.image: `fpm.sitemap` feature implemented 👍
-src: $assets.files.static.docs.fpm-sitemap-feature-output-homepage.png
+-- ds.image: `fastn.sitemap` feature implemented 👍
+src: $assets.files.static.docs.fastn-sitemap-feature-output-homepage.png
 width.fixed.px: 750
 
 
@@ -367,18 +367,18 @@ width.fixed.px: 750
 FifthTry has designed many `FTD` components for authors. By following simple 
 and easy steps you can use these components into your `FTD` projects.
 
-According to your need you can use these components. [Click here](https://fpm.dev/all)
+According to your need you can use these components. [Click here](https://fastn.dev/all)
 
 For example you want to use our [`bling`](https://fifthtry.github.io/bling/) components. 
-To use `bling` library you need to add `-- fpm.dependency: fifthtry.github.io/bling` into 
-`FPM.ftd` file.
+To use `bling` library you need to add `-- fastn.dependency: fifthtry.github.io/bling` into 
+`FASTN.ftd` file.
 
 
 Since `bling` library comes with many components. Visit [bling library demo](https://fifthtry.github.io/bling/index.html) and choose component you are looking for.
 
 Lets say if you are looking for an [`sidenote` component](https://fifthtry.github.io/bling/sidenote/). Which highlights important part of content inside your page.
 
-Watch below video which explains - how to add `FPM` dependencies?
+Watch below video which explains - how to add `FASTN` dependencies?
 
 
 
@@ -390,19 +390,19 @@ v: 8fu8BtKVq9s
 
 [Click here](https://fifthtry.github.io/bling/sidenote/) to visit `sidenote` documentation.
 
-Its very easy to add any `FTD` dependency in `FPM.ftd` file. Use below code snippet
-to add `sidenote` dependency in `FPM.ftd` file.
+Its very easy to add any `FTD` dependency in `FASTN.ftd` file. Use below code snippet
+to add `sidenote` dependency in `FASTN.ftd` file.
 
--- ds.code: Adding `sidenote` as dependency inside `FPM.ftd`
+-- ds.code: Adding `sidenote` as dependency inside `FASTN.ftd`
 lang: ftd
 
-\-- fpm.dependency: fifthtry.github.io/bling
-\-- fpm.auto-import: fifthtry.github.io/bling/sidenote
+\-- fastn.dependency: fifthtry.github.io/bling
+\-- fastn.auto-import: fifthtry.github.io/bling/sidenote
 
 
 -- ds.markdown:
 
-With `fpm.auto-import` `sidenote` will be auto imported into all `.ftd` files 
+With `fastn.auto-import` `sidenote` will be auto imported into all `.ftd` files 
 inside your `FTD` web project. Just add below code snippent and change its 
 default content with your content for a sidenote.
 

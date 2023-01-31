@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/roboto/assets as roboto-assets
--- import: fpm
--- fpm.font-copy: $roboto-assets.fonts.Roboto
+-- import: fastn
+-- fastn.font-copy: $roboto-assets.fonts.Roboto
 
--- fpm.font-display: $roboto-assets.fonts.Roboto
+-- fastn.font-display: $roboto-assets.fonts.Roboto
 
--- fpm.font-code: $roboto-assets.fonts.Roboto
+-- fastn.font-code: $roboto-assets.fonts.Roboto
