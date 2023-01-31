@@ -417,7 +417,7 @@ src: $assets.files.static.avatar.svg
 
 -- ftd.text: $floater.github-text
 link: $floater.github-text-url
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
 max-width.fixed.px: 127
 
@@ -438,7 +438,7 @@ padding-horizontal.px: 16
 spacing.fixed.px: 8
 
 -- ftd.text: powered by
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
 
 -- ftd.row:
@@ -1190,7 +1190,7 @@ align-content: center
 -- ftd.text: LOGIN
 link: $login-url
 text-align: center
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 padding-vertical.px: 12
 padding-horizontal.px: 24
 color: $inherited.colors.text-strong
@@ -1265,7 +1265,7 @@ margin-bottom.px: 16
 margin-top.px: 16
 
 -- ftd.text: $article-card.author.title
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 width: fill-container
 color: $inherited.colors.cta-primary.border
 link: $article-card.author.bio-url
@@ -1274,12 +1274,12 @@ link: $article-card.author.bio-url
 spacing.fixed.px: 12
 
 -- ftd.text: posted on:
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 white-space: nowrap
 color: $inherited.colors.cta-primary.border
 
 -- ftd.text: $article-card.timestamp
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 white-space: nowrap
 color: $inherited.colors.cta-primary.border
 
@@ -1430,7 +1430,7 @@ color: $inherited.colors.cta-primary.border
 
 -- ftd.text:
 text: $image-first-card.body
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $image-first-card.url
 
@@ -1565,7 +1565,7 @@ link: $image-in-between-card.url
 
 -- ftd.text:
 text: $image-in-between-card.body
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $image-in-between-card.url
 
@@ -1686,7 +1686,7 @@ color: $inherited.colors.cta-primary.border
 
 -- ftd.text:
 text: $without-image-card.body
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $without-image-card.url
 
@@ -1835,11 +1835,11 @@ color: $inherited.colors.text-strong
 margin-bottom.px: 16
 
 -- ftd.text: $author-bio-desktop.profile
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 margin-bottom.px: 4
 
 -- ftd.text: $author-bio-desktop.company
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 
 -- end: ftd.column
 
@@ -1847,7 +1847,7 @@ role: $inherited.types.blockquote
 
 -- ftd.text:
 text: $author-bio-desktop.body
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 
 
 
@@ -1892,10 +1892,10 @@ role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 
 -- ftd.text: $author-bio-mobile.profile
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 
 -- ftd.text: $author-bio-mobile.company
-role: $inherited.types.blockquote
+role: $inherited.types.copy-small
 
 -- end: ftd.column
 
@@ -2127,7 +2127,7 @@ spacing.fixed.px: 12
 -- ftd.text:
 if: {featured-post-meta-desktop.body != NULL}
 text: $featured-post-meta-desktop.body
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 width: fill-container
 
@@ -2198,7 +2198,7 @@ height: auto
 
 -- ftd.text:
 text: $featured-post-meta-mobile.body
-role: $inherited.types.copy-small
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 width: fill-container
 
