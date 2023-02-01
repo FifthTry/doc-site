@@ -13,7 +13,7 @@
 -- ftd.text: click me
 color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
-role: $inherited.types.copy-relaxed
+role: $inherited.types.copy-regular
 padding-horizontal.px: 12
 padding-vertical.px: 12
 $on-click$: $ftd.toggle($a = $pop-up-status)
