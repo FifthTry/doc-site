@@ -52,8 +52,8 @@ sit aspernatur aut odit aut f.
 lang: ftd
 
 \-- ftd.text: Title of the text
-role: $fpm.type.fine-print
-color: $fpm.color.main.text-strong
+role: $fastn.type.fine-print
+color: $fastn.color.main.text-strong
 
 -- ds.h1: Some title of the level 1 heading
 

@@ -14,7 +14,7 @@ By following our simple blog documentation you can create you own. We have
 developed featured article list, blog article & authors bio pages. Lets 
 understand how to use them.
 
-Make sure you have done [these steps](https://fpm.dev/author/create-on-github/) 
+Make sure you have done [these steps](https://fastn.dev/author/create-on-github/) 
 and created your [FTD](https://ftd.dev/) website repository on GitHub.
 
 -- ds.h1: Adding author details
@@ -37,7 +37,7 @@ company: FifthTry Pvt. Ltd.
 Completed my masters from National Institute of Technology. Working as
 Sr. Software Developer at FifthTry Private Ltd. a Banglore based start-up company.
 
-Currently working full time with FifthTry and building FTD and FPM day and night.
+Currently working full time with FifthTry and building FTD and FASTN day and night.
 
 
 -- ds.h3: Let's understand above code snippet:

@@ -1,16 +1,16 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/package-doc/typography as tf
 -- import: fifthtry.github.io/app-switcher as apps-switcher
--- import: fpm
--- import: fpm/processors as pr
+-- import: fastn
+-- import: fastn/processors as pr
 ;; -- import: fifthtry.github.io/roboto/assets as roboto-assets
 
 
 
-;;-- fpm.font-copy: $roboto-assets.fonts.Roboto
-;;-- fpm.font-code: $roboto-assets.fonts.Roboto
-;;-- fpm.font-display: $roboto-assets.fonts.Roboto
-;;-- fpm.font-copy: $mono.fonts.Roboto
+;;-- fastn.font-copy: $roboto-assets.fonts.Roboto
+;;-- fastn.font-code: $roboto-assets.fonts.Roboto
+;;-- fastn.font-display: $roboto-assets.fonts.Roboto
+;;-- fastn.font-copy: $mono.fonts.Roboto
 
 
 -- boolean login-button: false
@@ -60,10 +60,10 @@ dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.s
 -- pr.toc-item list footer-toc:
 
 -- pr.sitemap-data sitemap:
-$processor$: fpm.sitemap
+$processor$: fastn.sitemap
 
--- fpm.app-ui apps:
-$processor$: pr.fpm-apps
+-- fastn.app-ui apps:
+$processor$: pr.fastn-apps
 
 
 
@@ -174,7 +174,7 @@ lang: text
 ├── static/
 │   └── All images and static assets included in doc-site
 │
-├── FPM.ftd
+├── FASTN.ftd
 ├── index.ftd
 ├── featured-posts.ftd
 ├── floater.ftd
@@ -193,15 +193,15 @@ lang: text
 =======================================================================
 | Command                | Action                                     |
 | :--------------------- | :----------------------------------------- |
-| fpm build              | FPM builder installs all `FPM` dependencies|
-| fpm serve              | Starts local dev server at available port  |
+| fastn build              | FASTN builder installs all `FASTN` dependencies|
+| fastn serve              | Starts local dev server at available port  |
 |                        | `localhost:8000`                           |
 =======================================================================
 
 
 -- h2: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Feel free to check [our documentation](https://fastn.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 -- end: page
 
@@ -223,7 +223,7 @@ optional string site-name: $site-name
 pr.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
 boolean pricing-cta: $pricing-cta
-fpm.app-ui apps: $apps
+fastn.app-ui apps: $apps
 boolean $open-right-sidebar-info: false
 pr.toc-item list sections: $sitemap.sections
 pr.toc-item list sub-sections: $sitemap.subsections
@@ -488,7 +488,7 @@ ftd.image-src site-logo:
 string site-url: 
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
-fpm.app-ui apps:
+fastn.app-ui apps:
 ftd.ui list extra-headers:
 boolean $open-right-sidebar-info: 
 pr.toc-item list footer-toc:
@@ -625,7 +625,7 @@ pr.toc-item list toc: $toc
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
 pr.toc-item list extra:
-fpm.app-ui apps:
+fastn.app-ui apps:
 ftd.ui list extra-headers:
 boolean $open-right-sidebar-info: false
 pr.toc-item list footer-toc: $footer-toc
