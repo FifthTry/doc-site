@@ -1,8 +1,1 @@
--- import: fifthtry.github.io/roboto/assets as roboto-assets
 -- import: fastn
-
--- $ftd.font-copy: $roboto-assets.fonts.Roboto
-
--- $ftd.font-display: $roboto-assets.fonts.Roboto
-
--- $ftd.font-code: $roboto-assets.fonts.Roboto
