@@ -44,13 +44,13 @@ readers: fastn-fans
 
 
 - Using doc-site for FTD web projects: /docs/
-icon: /static/primary-favorites.svg
+icon: /-/fifthtry.github.io/doc-site/static/primary-favorites.svg
 
 - How to use blog: /docs/blog/
-icon: /static/primary-favorites.svg
+icon: /-/fifthtry.github.io/doc-site/static/primary-favorites.svg
 
 - Right-sidebar example: /docs/right-sidebar/
-icon: static/primary-favorites.svg
+icon: /-/fifthtry.github.io/doc-site/static/primary-favorites.svg
 
 # Blog: /featured-posts/
 
