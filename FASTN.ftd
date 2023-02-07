@@ -17,8 +17,6 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/app-switcher 
 
--- fastn.dependency: fifthtry.github.io/roboto
-
 -- fastn.dependency: fifthtry.github.io/header
 
 
