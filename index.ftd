@@ -3,14 +3,8 @@
 -- import: fifthtry.github.io/app-switcher as apps-switcher
 -- import: fastn
 -- import: fastn/processors as pr
-;; -- import: fifthtry.github.io/roboto/assets as roboto-assets
+-- import: typo
 
-
-
-;;-- fastn.font-copy: $roboto-assets.fonts.Roboto
-;;-- fastn.font-code: $roboto-assets.fonts.Roboto
-;;-- fastn.font-display: $roboto-assets.fonts.Roboto
-;;-- fastn.font-copy: $mono.fonts.Roboto
 
 
 -- boolean login-button: false
@@ -245,6 +239,7 @@ boolean $sidebar: false
 children wrapper: 
 ftd.ui list extra-headers:
 boolean $widthfill: false
+ftd.type-data types: $typo.types
 
 -- ftd.column:
 width: fill-container
