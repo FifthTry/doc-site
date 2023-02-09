@@ -664,7 +664,7 @@ text-decoration: none;
 .ft_md code {
 padding: 0.1rem 0.25rem;
 border-radius: 4px;
-background-color: #ffffff1f;
+background-color: #0000000d;
 }
 
 .ft_md blockquote {
@@ -679,6 +679,13 @@ margin: 0;
 
 body.fpm-dark .ft_md a {
 text-decoration: none;
+}
+
+
+body.fpm-dark .ft_md code {
+padding: 0.1rem 0.25rem;
+border-radius: 4px;
+background-color: #ffffff1f;
 }
 
 
@@ -1978,9 +1985,9 @@ set_data_value(data, "ftd#dark-mode" + "." + remaining, new_value);
 set_data_value(data, "ftd#dark-mode", new_value);
 }
 
-if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-color"]){window.node_change_main["0,0:main__background-color"](data);
-}
 if(!!window["node_change_main"] && !!window.node_change_main["0,0,0:main__src"]){window.node_change_main["0,0,0:main__src"](data);
+}
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-color"]){window.node_change_main["0,0:main__background-color"](data);
 }
 };
 
