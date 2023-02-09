@@ -597,6 +597,8 @@ extra-headers: $doc-page-desktop.extra-headers
 if: { !ftd.is_empty(doc-page-desktop.footer-toc) }
 footer-toc: $doc-page-desktop.footer-toc
 
+-- dark-mode-switcher-float:
+
 -- end: ftd.column
 
 -- end: doc-page-desktop
@@ -769,6 +771,7 @@ children: $doc-page-mobile.extra-headers
 -- footer:
 if: {!ftd.is_empty(footer-toc)}
 footer-toc: $doc-page-mobile.footer-toc
+
 
 -- end: ftd.column
 
@@ -2540,3 +2543,55 @@ dark: #262626
 -- ftd.color light-green:
 light: #0DCEAB
 dark: #0DCEAB
+
+
+-- component dark-mode-switcher-float:
+
+-- ftd.row:
+anchor: window
+right.px: 50
+bottom.px: 50
+padding.px: 10
+background.solid: $inherited.colors.background.base
+border-width.px: 1
+border-color: $inherited.colors.border
+border-radius.px: 4
+z-index: 99999999999999
+
+-- ftd.row:
+if: { ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-light-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/system-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-dark-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/light-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+
+-- ftd.row:
+if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-system-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/dark-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: dark-mode-switcher-float
