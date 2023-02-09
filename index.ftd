@@ -943,7 +943,7 @@ link: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.label-small
 margin-bottom.px: 16
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
@@ -964,7 +964,7 @@ text: $toc-instance.toc.title
 role: $inherited.types.label-small
 min-width: hug-content
 margin-bottom.px: 16
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
@@ -1013,7 +1013,7 @@ link: $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.label-small
 margin-bottom.px: 16
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
@@ -1034,7 +1034,7 @@ text: $childrens.toc.title
 role: $inherited.types.label-small
 min-width: hug-content
 margin-bottom.px: 16
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
@@ -1070,7 +1070,7 @@ height.fixed.calc: 100% - 52px
 overflow-y: auto
 width.fixed.percent: 20
 align-content: top-left
-background.solid: $inherited.colors.background.overlay
+background.solid: $inherited.colors.background.step-1
 border-radius.px: 8
 padding-left.px: 24
 padding-top.px: 16
