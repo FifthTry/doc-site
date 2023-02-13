@@ -31,8 +31,8 @@
 -- optional string $site-name: 
 
 -- ftd.image-src $site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
-dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+light: $assets.files.static.logo-fifthtry.svg
+dark: $assets.files.static.logo-fifthtry.svg
 
 -- ftd.image-src $brand-site-logo:
 light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg

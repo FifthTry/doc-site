@@ -12,8 +12,10 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 ;; -- fastn.dependency: fifthtry.github.io/toc
 
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
--- fastn.dependency: fifthtry.github.io/color-doc as colordoc
+
 -- fastn.dependency: fifthtry.github.io/typography
+
+-- fastn.dependency: fifthtry.github.io/saturated-sunset-cs as sunsetcs
 
 -- fastn.dependency: fifthtry.github.io/app-switcher 
 
