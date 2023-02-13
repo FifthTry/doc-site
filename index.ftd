@@ -4,6 +4,7 @@
 -- import: fastn
 -- import: fastn/processors as pr
 -- import: typo
+-- import: colordoc
 
 
 
@@ -240,6 +241,7 @@ children wrapper:
 ftd.ui list extra-headers:
 boolean $widthfill: false
 ftd.type-data types: $typo.types
+ftd.color-scheme color: $inherited.colors
 
 -- ftd.column:
 width: fill-container
