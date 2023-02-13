@@ -7,6 +7,7 @@
 
 
 
+
 -- boolean login-button: false
 
 -- boolean pricing-cta: false
@@ -119,6 +120,7 @@ author-meta author:
 
 
 -- page: Introduction to doc-site
+
 
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
 language `doc-site` is designed for you to create FTD web-sites.
@@ -239,7 +241,8 @@ boolean $sidebar: false
 children wrapper: 
 ftd.ui list extra-headers:
 boolean $widthfill: false
-ftd.type-data types: $typo.types
+ftd.type-data types: $ftd.default-types
+ftd.color-scheme colors: $ftd.default-colors
 
 -- ftd.column:
 width: fill-container
