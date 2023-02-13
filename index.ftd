@@ -121,7 +121,6 @@ author-meta author:
 
 -- page: Introduction to doc-site
 
-
 We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
 language `doc-site` is designed for you to create FTD web-sites.
 
@@ -241,7 +240,7 @@ boolean $sidebar: false
 children wrapper: 
 ftd.ui list extra-headers:
 boolean $widthfill: false
-ftd.type-data types: $ftd.default-types
+ftd.type-data types: $typo.types
 ftd.color-scheme colors: $ftd.default-colors
 
 -- ftd.column:
@@ -2569,8 +2568,9 @@ $on-click$: $ftd.enable-light-mode()
 
 -- ftd.image:
 src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/system-mode-active-dark.png
-height.fixed.px: 18
+height.fixed.px: 19
 align-self: center
+width.fixed.px: 19
 
 -- end: ftd.row
 
@@ -2580,8 +2580,9 @@ $on-click$: $ftd.enable-dark-mode()
 
 -- ftd.image:
 src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/light-mode-active-dark.png
-height.fixed.px: 18
+height.fixed.px: 19
 align-self: center
+width.fixed.px: 19
 
 -- end: ftd.row
 
@@ -2592,8 +2593,9 @@ $on-click$: $ftd.enable-system-mode()
 
 -- ftd.image:
 src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/dark-mode-active-dark.png
-height.fixed.px: 18
+height.fixed.px: 19
 align-self: center
+width.fixed.px: 19
 
 -- end: ftd.row
 
