@@ -2567,7 +2567,7 @@ if: { ftd.follow-system-dark-mode }
 $on-click$: $ftd.enable-light-mode()
 
 -- ftd.image:
-src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/system-mode-active-dark.png
+src: $assets.files.static.system-mode-active-dark.png
 height.fixed.px: 19
 align-self: center
 width.fixed.px: 19
@@ -2579,7 +2579,7 @@ if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
 $on-click$: $ftd.enable-dark-mode()
 
 -- ftd.image:
-src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/light-mode-active-dark.png
+src: $assets.files.static.light-mode-active-dark.png
 height.fixed.px: 19
 align-self: center
 width.fixed.px: 19
@@ -2592,7 +2592,7 @@ if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
 $on-click$: $ftd.enable-system-mode()
 
 -- ftd.image:
-src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/dark-mode-active-dark.png
+src: $assets.files.static.dark-mode-active-dark.png
 height.fixed.px: 19
 align-self: center
 width.fixed.px: 19
