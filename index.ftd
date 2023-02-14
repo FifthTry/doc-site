@@ -7,6 +7,7 @@
 
 
 
+
 -- boolean login-button: false
 
 -- boolean pricing-cta: false
@@ -240,6 +241,7 @@ children wrapper:
 ftd.ui list extra-headers:
 boolean $widthfill: false
 ftd.type-data types: $typo.types
+ftd.color-scheme colors: $ftd.default-colors
 
 -- ftd.column:
 width: fill-container
@@ -2566,8 +2568,9 @@ $on-click$: $ftd.enable-light-mode()
 
 -- ftd.image:
 src: $assets.files.static.system-mode-active-dark.png
-height.fixed.px: 18
+height.fixed.px: 19
 align-self: center
+width.fixed.px: 19
 
 -- end: ftd.row
 
@@ -2577,8 +2580,9 @@ $on-click$: $ftd.enable-dark-mode()
 
 -- ftd.image:
 src: $assets.files.static.light-mode-active-dark.png
-height.fixed.px: 18
+height.fixed.px: 19
 align-self: center
+width.fixed.px: 19
 
 -- end: ftd.row
 
@@ -2589,8 +2593,9 @@ $on-click$: $ftd.enable-system-mode()
 
 -- ftd.image:
 src: $assets.files.static.dark-mode-active-dark.png
-height.fixed.px: 18
+height.fixed.px: 19
 align-self: center
+width.fixed.px: 19
 
 -- end: ftd.row
 

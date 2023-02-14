@@ -13,8 +13,6 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
 
--- fastn.dependency: fifthtry.github.io/typography
-
 -- fastn.dependency: fifthtry.github.io/app-switcher 
 
 -- fastn.dependency: fifthtry.github.io/header
@@ -22,7 +20,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 
 -- fastn.auto-import: fastn
--- fastn.auto-import: fifthtry.github.io/typography as tf
+
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/header as h
 ;; -- fastn.auto-import: fifthtry.github.io/toc as tt
