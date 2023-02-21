@@ -7,6 +7,7 @@
 
 
 
+-- integer max-width: 1440
 
 -- boolean login-button: false
 
@@ -242,10 +243,14 @@ ftd.ui list extra-headers:
 boolean $widthfill: false
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $ftd.default-colors
+optional integer max-width: $max-width
+optional boolean show-sections: true
+optional ftd.color headerbg: $inherited.colors.background.base
 
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
+
 
 -- ftd.column:
 
@@ -285,6 +290,9 @@ site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url
 apps: $page.apps
+max-width: $page.max-width
+show-sections: $page.show-sections
+headerbg: $page.headerbg
 
 -- doc-page-mobile: $page.title
 if: {ftd.device == "mobile"}
@@ -306,6 +314,7 @@ site-url: $page.site-url
 right-sidebar: $page.sidebar
 apps: $page.apps
 extra-headers: $page.extra-headers
+show-sections: $page.show-sections
 
 -- dark-mode-switcher-float:
 
@@ -501,10 +510,13 @@ boolean widthfill:
 boolean login-button:
 boolean right-sidebar: false
 children wrapper:
-
+optional integer max-width: 
+optional boolean show-sections: true
+optional ftd.color headerbg: 
 
 -- ftd.column:
 width: fill-container
+align-content: center
 
 -- ftd.column:
 
@@ -530,19 +542,24 @@ site-name: $doc-page-desktop.site-name
 logo-height: 38
 current-url: /
 menu-icon: $assets.files.static.header.hamburger-dark.svg
+max-width: $doc-page-desktop.max-width
+show-sections: $doc-page-desktop.show-sections
+background: $doc-page-desktop.headerbg
 
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 48
-padding-horizontal.px: 25
-align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
+;;padding-horizontal.px: 25
+align-content: center
+max-width.fixed.px: $doc-page-desktop.max-width
 
 -- render-toc:
 if: { !ftd.is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
-width.fixed.percent: 60
+width.fixed.percent if { doc-page-desktop.right-sidebar }: 60
+width.fixed.percent if { !doc-page-desktop.right-sidebar }: 80
 width if {doc-page-desktop.widthfill}: fill-container
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.widthfill}: 800
 max-width if {doc-page-desktop.widthfill}: fill-container
@@ -635,6 +652,7 @@ boolean right-sidebar: false
 children wrapper:
 boolean pricing-cta:
 boolean login-button:
+optional boolean show-sections: false
 
 -- ftd.column:
 width: fill-container
