@@ -7,7 +7,7 @@
 
 
 
--- integer max-width: 1440
+-- integer max-width: 1400
 
 -- boolean login-button: false
 
@@ -559,7 +559,8 @@ toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
 width.fixed.percent if { doc-page-desktop.right-sidebar }: 60
-width.fixed.percent if { !doc-page-desktop.right-sidebar }: 80
+width.fixed.percent if { !doc-page-desktop.right-sidebar && !ftd.is_empty(doc-page-desktop.toc) }: 80
+width.fixed.percent if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.right-sidebar }: 100
 width if {doc-page-desktop.widthfill}: fill-container
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.widthfill}: 800
 max-width if {doc-page-desktop.widthfill}: fill-container
@@ -2603,7 +2604,6 @@ align-self: center
 width.fixed.px: 19
 
 -- end: ftd.row
-
 
 -- ftd.row:
 if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
