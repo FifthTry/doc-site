@@ -69,6 +69,8 @@ icon: /-/fifthtry.github.io/doc-site/static/primary-favorites.svg
 - Arpita Jaiswal: /blog-authors/arpita/
 - Ganesh S Salunke: /blog-authors/ganesh/
 
-# GitHub: https://github.com/FifthTry/doc-site/
+# GitHub
+url: https://github.com/FifthTry/doc-site/
 
-# Use this template: https://github.com/FifthTry/doc-site/generate/
+# Use this template
+url: https://github.com/fastn-stack/fastn-template/generate
