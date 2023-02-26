@@ -31,11 +31,11 @@
 -- optional string $site-name: 
 
 -- ftd.image-src $site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry.svg
 dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 
 -- ftd.image-src $brand-site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry.svg
 dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 
 -- string $brand-site-name: FifthTry
