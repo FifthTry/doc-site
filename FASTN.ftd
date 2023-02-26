@@ -17,6 +17,8 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/header
 
+-- fastn.dependency: fifthtry.github.io/dark-mode-switcher
+
 
 
 -- fastn.auto-import: fastn
