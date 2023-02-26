@@ -2233,7 +2233,7 @@ color: $inherited.colors.cta-primary.border
 
 
 -- component markdown:
-body body:
+caption or body body:
 
 -- tf.markdown:
 
