@@ -4,7 +4,7 @@
 -- import: fastn
 -- import: fastn/processors as pr
 -- import: typo
-
+-- import: fifthtry.github.io/dark-mode-switcher as dms
 
 
 
@@ -28,7 +28,7 @@
 
 -- string github: NA
 
--- optional string $site-name: 
+-- optional string $site-name:
 
 -- ftd.image-src $site-logo:
 light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry.svg
@@ -127,7 +127,7 @@ language `doc-site` is designed for you to create FTD web-sites.
 
 
 
-Check out our simple and easy [documentation](docs/) to learn more about 
+Check out our simple and easy [documentation](docs/) to learn more about
 `doc-site`.
 
 -- h2: 🚀 Project Structure
@@ -210,8 +210,8 @@ Feel free to check [our documentation](https://fastn.dev/) or jump into our [Fif
 
 
 -- component page:
-optional caption title: 
-optional body body: 
+optional caption title:
+optional body body:
 ftd.image-src site-logo: $site-logo
 string $site-url: $site-url
 optional string site-name: $site-name
@@ -237,7 +237,7 @@ string edit-text: Edit This Page
 string edit-text-url: /
 ;;item list itemlist: $itemlist
 boolean $sidebar: false
-children wrapper: 
+children wrapper:
 ftd.ui list extra-headers:
 boolean $widthfill: false
 ftd.type-data types: $typo.types
@@ -264,7 +264,7 @@ github-text: $page.github-text
 
 -- end: ftd.column
 
--- doc-page-desktop: $page.title 
+-- doc-page-desktop: $page.title
 if: {ftd.device != "mobile"}
 toc: $page.toc
 wrapper: $page.wrapper
@@ -281,7 +281,7 @@ body: $page.body
 widthfill: $page.widthfill
 right-sidebar: $page.sidebar
 extra-headers: $page.extra-headers
-site-name: $page.site-name 
+site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url
 apps: $page.apps
@@ -300,14 +300,14 @@ current-subsection: $page.current-subsection
 current-page: $page.current-page
 sub-sections: $page.sub-sections
 body: $page.body
-site-name: $page.site-name 
+site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url
 right-sidebar: $page.sidebar
 apps: $page.apps
 extra-headers: $page.extra-headers
 
--- dark-mode-switcher-float:
+-- dms.dark-mode-switcher-float:
 
 -- end: ftd.column
 
@@ -2322,14 +2322,10 @@ $h3.body
 optional caption caption:
 body body:
 string lang:
-optional integer max-height:
-optional integer max-width:
 
 -- cb.code:
 caption: $code.caption
 lang: $code.lang
-max-width: $code.max-width
-max-height: $code.max-height
 
 $code.body
 
@@ -2549,60 +2545,3 @@ dark: #262626
 -- ftd.color light-green:
 light: #0DCEAB
 dark: #0DCEAB
-
-
--- component dark-mode-switcher-float:
-
--- ftd.row:
-anchor: window
-right.px: 50
-right.px if { ftd.device == "mobile" }: 25
-bottom.px: 50
-bottom.px if { ftd.device == "mobile" }: 25
-padding.px: 10
-background.solid: $inherited.colors.background.base
-border-width.px: 1
-border-color: $inherited.colors.border
-border-radius.px: 4
-z-index: 99999999999999
-
--- ftd.row:
-if: { ftd.follow-system-dark-mode }
-$on-click$: $ftd.enable-light-mode()
-
--- ftd.image:
-src: $assets.files.static.system-mode-active-dark.png
-height.fixed.px: 19
-align-self: center
-width.fixed.px: 19
-
--- end: ftd.row
-
--- ftd.row:
-if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
-$on-click$: $ftd.enable-dark-mode()
-
--- ftd.image:
-src: $assets.files.static.light-mode-active-dark.png
-height.fixed.px: 19
-align-self: center
-width.fixed.px: 19
-
--- end: ftd.row
-
-
--- ftd.row:
-if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
-$on-click$: $ftd.enable-system-mode()
-
--- ftd.image:
-src: $assets.files.static.dark-mode-active-dark.png
-height.fixed.px: 19
-align-self: center
-width.fixed.px: 19
-
--- end: ftd.row
-
--- end: ftd.row
-
--- end: dark-mode-switcher-float
