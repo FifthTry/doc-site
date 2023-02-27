@@ -2322,10 +2322,14 @@ $h3.body
 optional caption caption:
 body body:
 string lang:
+optional integer max-height:
+optional integer max-width:
 
 -- cb.code:
 caption: $code.caption
 lang: $code.lang
+max-height: $code.max-height
+max-width: $code.max-width
 
 $code.body
 
