@@ -2515,7 +2515,7 @@ children: $right-sidebar.extra-headers
 min-width.fixed.percent: 100
 width.fixed.percent: 100
 z-index: 999
-background.solid: $inherited.colors.background.overlay
+background.solid: $inherited.colors.background.step-2
 top.px: 0
 right.px: 0
 min-height.fixed.calc: 100vh - 0px
