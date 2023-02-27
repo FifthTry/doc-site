@@ -725,14 +725,15 @@ top.px: 0
 bottom.px: 0
 left.px: 0
 right.px: 0
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.overlay
 z-index: 1
 width: fill-container
+height.fixed.calc: 100% - 0px
 $on-click$: $ftd.set-bool($a = $doc-page-mobile.open-right-sidebar-info, v = false)
 
 
 -- ftd.image:
-src: $assets.files.static.cross.svg
+src: $assets.files.static.cross-dark.svg
 height.fixed.px: 16
 width: auto
 margin-top.px: 30
@@ -745,7 +746,7 @@ $on-click$: $ftd.toggle($a = $doc-page-mobile.open-right-sidebar-info)
 -- ftd.column:
 if: { doc-page-mobile.open-right-sidebar-info }
 width.fixed.calc: 100% - 48px
-height.fixed.calc: 100vh - 0px
+height.fixed.calc: 100% - 0px
 overflow-y: auto
 align-content: top-right
 anchor: parent
