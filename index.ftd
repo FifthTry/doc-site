@@ -689,7 +689,7 @@ padding-top.px: 8
 -- ftd.image:
 src: $assets.files.static.info-icon.svg
 width.fixed.px: 36
-$on-click$: $ftd.toggle($a=$doc-page-mobile.open-right-sidebar-info)
+$on-click$: $ftd.toggle($a = $doc-page-mobile.open-right-sidebar-info)
 
 -- end: ftd.column
 
@@ -719,19 +719,17 @@ width.fixed.percent: 100
 -- end: ftd.column
 
 -- ftd.column:
-if: {doc-page-mobile.open-right-sidebar-info}
+if: { doc-page-mobile.open-right-sidebar-info }
 anchor: parent
 top.px: 0
 bottom.px: 0
 left.px: 0
 right.px: 0
-background.solid: $inherited.colors.background.overlay
+background.solid: $inherited.colors.background.step-1
 z-index: 1
 width: fill-container
 $on-click$: $ftd.set-bool($a = $doc-page-mobile.open-right-sidebar-info, v = false)
 
---  ftd.column:
-width: fill-container
 
 -- ftd.image:
 src: $assets.files.static.cross.svg
@@ -739,14 +737,13 @@ height.fixed.px: 16
 width: auto
 margin-top.px: 30
 margin-left.px: 16
-$on-click$: $ftd.toggle($a=$doc-page-mobile.open-right-sidebar-info)
+$on-click$: $ftd.toggle($a = $doc-page-mobile.open-right-sidebar-info)
 
--- end: ftd.column
 
 -- end: ftd.column
 
 -- ftd.column:
-if: {doc-page-mobile.open-right-sidebar-info}
+if: { doc-page-mobile.open-right-sidebar-info }
 width.fixed.calc: 100% - 48px
 height.fixed.calc: 100vh - 0px
 overflow-y: auto
@@ -754,24 +751,17 @@ align-content: top-right
 anchor: parent
 right.px: 0
 top.px: 0
-background.solid:$inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-1
 z-index: 1
-
-
--- ftd.column:
 padding-horizontal.px: 24
-width: fill-container
 children: $doc-page-mobile.extra-headers
-
--- end: ftd.column
-
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- footer:
-if: {!ftd.is_empty(footer-toc)}
+if: { !ftd.is_empty(footer-toc) }
 footer-toc: $doc-page-mobile.footer-toc
 
 
