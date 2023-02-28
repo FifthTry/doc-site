@@ -1371,7 +1371,7 @@ border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
 max-width.fixed.px if {ftd.device != "mobile"}: 344
-max-height.fixed.px: 500
+max-height.fixed.px if {ftd.device != "mobile"}: 500
 padding-horizontal.px: 24
 color: $inherited.colors.text
 margin-top.px : 12
@@ -1394,7 +1394,7 @@ color: $inherited.colors.text-strong
 margin-top.px if {image-first-card.image != NULL}: 12
 
 -- ftd.row:
-if: {ftd.device != NULL}
+if: { ftd.device != "mobile" }
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1428,7 +1428,7 @@ link: $image-first-card.url
 -- end: ftd.column
 
 -- ftd.column:
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 ;;id:time-container-2
 width: fill-container
 spacing.fixed.px: 8
@@ -1505,13 +1505,13 @@ border-width.px: 1
 border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
-max-width.fixed.px if {ftd.device != NULL}: 344
-max-height.fixed.px: 500
+max-width.fixed.px if { ftd.device != "mobile" }: 344
+max-height.fixed.px if { ftd.device != "mobile" }: 500
 padding-horizontal.px:24
 color: $inherited.colors.text
 margin-top.px: 12
 margin-bottom.px: 12
-margin-left.px if {ftd.device !=NULL}: 12
+margin-left.px if {ftd.device != "mobile"}: 12
 spacing.fixed.px: 8
 border-radius.px: 8
 
@@ -1521,13 +1521,14 @@ color: $inherited.colors.text-strong
 link: $image-in-between-card.url
 
 -- ftd.row:
-if: {ftd.device != NULL}
+if: { ftd.device != "mobile" }
 ;;id:time-container-3
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
 
 -- ftd.row:
+width: fill-container
 spacing.fixed.px: 2
 
 -- ftd.text: $image-in-between-card.author.title
@@ -1539,11 +1540,12 @@ link: $image-in-between-card.author.bio-url
 role: $inherited.types.fine-print
 color: $inherited.colors.cta-primary.border
 
--- end: ftd.row
-
 -- ftd.text: $image-in-between-card.timestamp
 role: $inherited.types.fine-print
 color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
 
 -- end: ftd.row
 
@@ -1754,10 +1756,7 @@ body body:
 width: fill-container
 color: $inherited.colors.text
 spacing.fixed.px: 24
-margin-top.px: 12
-margin-bottom.px: 12
-margin-left.px: 12
-margin-right.px: 12
+margin.px if { ftd.device != "mobile" }: 12
 
 -- author-bio-desktop: $author-bio-card.title
 if: { ftd.device != "mobile"}
@@ -1867,6 +1866,7 @@ color: $inherited.colors.text
 spacing.fixed.px: 16
 margin-top.px: 12
 margin-bottom.px: 12
+align-content: center
 
 -- ftd.image:
 src: $author-bio-mobile.avatar
