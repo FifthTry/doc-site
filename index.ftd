@@ -1371,7 +1371,7 @@ border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
 max-width.fixed.px if {ftd.device != "mobile"}: 344
-max-height.fixed.px if {ftd.device != "mobile"}: 500
+max-height.fixed.px if {ftd.device != "mobile"}: 550
 padding-horizontal.px: 24
 color: $inherited.colors.text
 margin-top.px : 12
@@ -1505,9 +1505,9 @@ border-width.px: 1
 border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
-max-width.fixed.px if { ftd.device != "mobile" }: 344
-max-height.fixed.px if { ftd.device != "mobile" }: 500
-padding-horizontal.px:24
+max-width.fixed.px if { ftd.device != "mobile" }: 360
+max-height.fixed.px if { ftd.device != "mobile" }: 550
+padding-horizontal.px: 24
 color: $inherited.colors.text
 margin-top.px: 12
 margin-bottom.px: 12
@@ -2082,7 +2082,6 @@ border-width.px: 1
 border-color: $inherited.colors.border
 margin-top.px: 8
 margin-bottom.px: 12
-margin-left.px: 12
 margin-right.px: 12
 border-radius.px: 8
 
