@@ -31,12 +31,12 @@
 -- optional string $site-name:
 
 -- ftd.image-src $site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry.svg
-dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+light: -/fifthtry.github.io/doc-site/static/header/site-logo.png
+dark: -/fifthtry.github.io/doc-site/static/header/site-logo.png
 
 -- ftd.image-src $brand-site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry.svg
-dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+light: -/fifthtry.github.io/doc-site/static/header/site-logo.png
+dark: -/fifthtry.github.io/doc-site/static/header/site-logo.png
 
 -- string $brand-site-name: FifthTry
 
