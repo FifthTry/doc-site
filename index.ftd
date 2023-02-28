@@ -2313,14 +2313,18 @@ $h3.body
 optional caption caption:
 body body:
 string lang:
+boolean copy: true
 optional integer max-height:
 optional integer max-width:
+optional string download:
 
 -- cb.code:
 caption: $code.caption
 lang: $code.lang
 max-height: $code.max-height
 max-width: $code.max-width
+copy: $code.copy
+download: $code.download
 
 $code.body
 
