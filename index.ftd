@@ -185,13 +185,13 @@ All commands are run from the root of the project, from a terminal:
 -- code:
 lang: text
 
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fastn build              | FASTN builder installs all `FASTN` dependencies|
-| fastn serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
+========================================================================
+| Command            | Action                                          |
+|:-------------------|:------------------------------------------------|
+| fastn build        | FASTN builder installs all `FASTN` dependencies |
+| fastn serve        | Starts local dev server at available port       |
+|                    | `localhost:8000`                                |
+========================================================================
 
 
 -- h2: 👀 Want to learn more?
