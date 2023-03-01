@@ -1104,28 +1104,30 @@ optional ftd.resizing height:
 -- ftd.column:
 width: fill-container
 align-content: center
+height: $image.height
 
 -- ftd.image:
 src: $image.src
 width: auto
+width if { image.width != NULL }: $image.width
 max-width: fill-container
 height: auto
 align-self: center
 
 -- ftd.text:
-if: {image.caption != NULL}
+if: { image.caption != NULL }
 text: $image.caption
 color: $inherited.colors.text
 role: $inherited.types.label-large
 border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
-background.solid:$inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 8
 padding-horizontal.px: 20
 text-align: center
 
 -- ftd.column:
-if: {image.body != NULL}
+if: { image.body != NULL }
 margin-top.px: 20
 align-self: start
 
