@@ -1096,31 +1096,26 @@ toc: $obj
 optional caption caption:
 optional body body:
 optional string link:
+ftd.image-src src:
 optional ftd.align alignment: center
 optional ftd.resizing width:
 optional ftd.resizing height:
-ftd.image-src src:
 
 -- ftd.column:
-width if {image.width != NULL}: auto
-width: auto
-max-width.fixed.px: 800
-height: auto
-align-content if {image.width == NULL}: center
+width: fill-container
+align-content: center
 
 -- ftd.image:
 src: $image.src
-width: $image.width
-height: $image.height
-max-width.fixed.px: 800
-;;align-content: $image.alignment
+width: auto
+max-width: fill-container
+height: auto
+align-self: center
 
 -- ftd.text:
 if: {image.caption != NULL}
 text: $image.caption
 color: $inherited.colors.text
-;;width if {image.width != NULL}: $width
-width if {image.width == NULL}: fill-container
 role: $inherited.types.label-large
 border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
@@ -1132,6 +1127,7 @@ text-align: center
 -- ftd.column:
 if: {image.body != NULL}
 margin-top.px: 20
+align-self: start
 
 -- tf.markdown:
 body: $image.body
@@ -1141,6 +1137,7 @@ body: $image.body
 -- end: ftd.column
 
 -- end: image
+
 
 
 
