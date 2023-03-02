@@ -7,9 +7,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/code-block
 
--- fastn.dependency: fifthtry.github.io/package-doc as pd
-
-;; -- fastn.dependency: fifthtry.github.io/toc
+-- fastn.dependency: fifthtry.github.io/typography
 
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
 
@@ -25,8 +23,8 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/header as h
-;; -- fastn.auto-import: fifthtry.github.io/toc as tt
--- fastn.auto-import: fifthtry.github.io/roboto-font as roboto
+-- fastn.auto-import: fifthtry.github.io/typography as tf
+
 
 /-- fastn.app: Todos for Family
 mount-point: /todos/
