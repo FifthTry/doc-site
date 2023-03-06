@@ -936,8 +936,8 @@ width: auto
 -- ftd.text:
 link: $toc-instance.toc.url
 text: $toc-instance.toc.title
-role: $inherited.types.label-small
-margin-bottom.px: 16
+role: $inherited.types.copy-small
+margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
@@ -956,9 +956,9 @@ width: auto
 
 -- ftd.text:
 text: $toc-instance.toc.title
-role: $inherited.types.label-small
+role: $inherited.types.copy-small
 min-width: hug-content
-margin-bottom.px: 16
+margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
@@ -1006,8 +1006,8 @@ width: auto
 -- ftd.text:
 link: $childrens.toc.url
 text: $childrens.toc.title
-role: $inherited.types.label-small
-margin-bottom.px: 16
+role: $inherited.types.copy-small
+margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
 
@@ -1026,9 +1026,9 @@ width: fill-container
 
 -- ftd.text:
 text: $childrens.toc.title
-role: $inherited.types.label-small
+role: $inherited.types.copy-small
 min-width: hug-content
-margin-bottom.px: 16
+margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
 
