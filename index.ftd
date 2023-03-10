@@ -2,7 +2,7 @@
 -- import: fifthtry.github.io/app-switcher as apps-switcher
 -- import: fastn
 -- import: fastn/processors as pr
--- import: typo
+-- import: fifthtry.github.io/doc-site-typography as typo
 -- import: fifthtry.github.io/dark-mode-switcher as dms
 
 
@@ -2326,6 +2326,42 @@ download: $code.download
 $code.body
 
 -- end: code
+
+
+
+
+
+
+
+
+
+
+
+-- component rendered:
+optional string download:
+body input:
+boolean copy: true
+string $copy-text: null
+boolean $copy-mouse-in: false
+boolean $download-mouse-in: false
+boolean $mouse-in: false
+optional integer max-height:
+optional integer max-width:
+ftd.ui list output:
+
+-- cb.rendered:
+download: $rendered.download
+input: $rendered.input
+copy: $rendered.copy
+$copy-text: $rendered.copy-text
+$copy-mouse-in: $rendered.copy-mouse-in
+$download-mouse-in: $rendered.download-mouse-in
+$mouse-in: $rendered.mouse-in
+max-height: $rendered.max-height
+max-width: $rendered.max-width
+output: $rendered.output
+
+-- end: rendered
 
 
 
