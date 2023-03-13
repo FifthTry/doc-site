@@ -124,8 +124,6 @@ We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD
 language `doc-site` is designed for you to create FTD web-sites.
 
 
-
-
 Check out our simple and easy [documentation](docs/) to learn more about
 `doc-site`.
 
@@ -241,10 +239,22 @@ ftd.ui list extra-headers:
 boolean $widthfill: false
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $ftd.default-colors
+boolean show-banner: false
+ftd.ui list banner:
+boolean show-footer: false
+ftd.ui list footer:
 
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
+
+-- ftd.column:
+if: { page.show-banner}
+width: fill-container
+children: $page.banner
+align-content: center
+
+-- end: ftd.column
 
 -- ftd.column:
 
@@ -307,6 +317,14 @@ apps: $page.apps
 extra-headers: $page.extra-headers
 
 -- dms.dark-mode-switcher-float:
+
+-- ftd.column:
+if: { page.show-footer}
+width: fill-container
+children: $page.footer
+align-content: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
