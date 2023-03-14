@@ -2357,6 +2357,7 @@ $code.body
 
 -- component rendered:
 optional string download:
+optional caption title:
 body input:
 boolean copy: true
 string $copy-text: null
@@ -2369,6 +2370,7 @@ ftd.ui list output:
 
 -- cb.rendered:
 download: $rendered.download
+title: $rendered.title
 input: $rendered.input
 copy: $rendered.copy
 $copy-text: $rendered.copy-text
