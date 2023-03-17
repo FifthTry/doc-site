@@ -575,7 +575,7 @@ if: { is-reader }
 -- ftd.column:
 if: { !is-reader }
 width: fill-container
-spacing.fixed.px: 24
+spacing.fixed.em: 0.8
 
 -- tf.markdown:
 if: { doc-page-desktop.body != NULL }
