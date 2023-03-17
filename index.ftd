@@ -523,12 +523,8 @@ children wrapper:
 -- ftd.column:
 width: fill-container
 
--- ftd.column:
-
 -- apps-switcher.app-switcher:
 apps: $apps
-
--- end: ftd.column
 
 -- h.header:
 login-button: $doc-page-desktop.login-button
@@ -550,7 +546,7 @@ menu-icon: $assets.files.static.header.hamburger-dark.svg
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 48
+spacing.fixed.px: 10
 padding-horizontal.px: 25
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 
@@ -560,9 +556,9 @@ toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
 width.fixed.percent: 60
-width if {doc-page-desktop.widthfill}: fill-container
+width if { doc-page-desktop.widthfill }: fill-container
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.widthfill}: 800
-max-width if {doc-page-desktop.widthfill}: fill-container
+max-width if { doc-page-desktop.widthfill }: fill-container
 align-content: top-left
 min-height.fixed.calc if { !ftd.is_empty(doc-page-desktop.toc) }: 100vh
 min-height.fixed.calc: 100vh - 135px
@@ -570,20 +566,16 @@ padding-horizontal.px if { !doc-page-desktop.widthfill }: 34
 padding-vertical.px if { !doc-page-desktop.widthfill }: 25
 padding-top.px if { doc-page-desktop.widthfill }: 9
 
--- ftd.column:
-width: fill-container
-
 -- tf.h0: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 
 -- wall-box:
 if: { is-reader }
 
--- end: ftd.column
-
 -- ftd.column:
 if: { !is-reader }
 width: fill-container
+spacing.fixed.px: 24
 
 -- tf.markdown:
 if: { doc-page-desktop.body != NULL }
@@ -592,7 +584,7 @@ $doc-page-desktop.body
 
 -- ftd.column:
 children: $doc-page-desktop.wrapper
-spacing.fixed.px: 32
+spacing.fixed.px: 24
 width.fixed.percent: 100
 
 -- end: ftd.column
