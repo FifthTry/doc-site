@@ -584,7 +584,7 @@ $doc-page-desktop.body
 
 -- ftd.column:
 children: $doc-page-desktop.wrapper
-spacing.fixed.px: 24
+spacing.fixed.em: 0.8
 width.fixed.percent: 100
 
 -- end: ftd.column
