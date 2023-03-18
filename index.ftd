@@ -227,7 +227,7 @@ string github-text: {green: Sign in} to access Editing Tools
 string github-text-url: /
 ftd.image-src side-logo: $assets.files.static.editor-icon.svg
 ftd.image-src sidebar-brand-logo: $assets.files.static.brand-logo.svg
-ftd.image-src cross-icon:$assets.files.static.cross.svg
+ftd.image-src cross-icon: $assets.files.static.cross.svg
 string about-text: About this page
 string about-text-url: /
 string edit-text: Edit This Page
@@ -705,7 +705,7 @@ $on-click$: $ftd.toggle($a = $doc-page-mobile.open-right-sidebar-info)
 -- end: ftd.row
 
 -- wall-box:
-if: {is-reader}
+if: { is-reader }
 
 -- end: ftd.column
 
@@ -929,46 +929,40 @@ footer-toc: $obj
 
 -- component toc-instance:
 pr.toc-item toc:
+pr.toc-item $toc-clone: *$toc-instance.toc
 
 -- ftd.column:
 
 -- ftd.row:
-if: {toc-instance.toc.url != NULL}
 width: fill-container
 spacing.fixed.px: 8
+margin-bottom.px: 10
+$on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
 -- ftd.image:
-if: {toc-instance.toc.font-icon != NULL}
+if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
+src: $assets.files.static.open.svg
+height.fixed.px: 14
+width: auto
+align-self: center
+
+-- ftd.image:
+if: { !ftd.is_empty(toc-instance.toc.children) && !toc-instance.toc-clone.is-open}
+src: $assets.files.static.close.svg
+height.fixed.px: 14
+width: auto
+align-self: center
+
+-- ftd.image:
+if: { toc-instance.toc.font-icon != NULL }
 src: $toc-instance.toc.font-icon
 height.fixed.px: 14
 width: auto
 
 -- ftd.text:
-link: $toc-instance.toc.url
+link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.copy-small
-margin-bottom.px: 10
-color: $inherited.colors.text-strong
-color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
-
--- end: ftd.row
-
--- ftd.row:
-if: {toc-instance.toc.url == NULL}
-width: fill-container
-spacing.fixed.px: 8
-
--- ftd.image:
-if: {toc-instance.toc.font-icon != NULL}
-src: $toc-instance.toc.font-icon
-height.fixed.px: 14
-width: auto
-
--- ftd.text:
-text: $toc-instance.toc.title
-role: $inherited.types.copy-small
-min-width: hug-content
-margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
@@ -976,9 +970,14 @@ color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
 
 -- ftd.column:
 margin-left.px: 12
+padding-left.px: 10
+border-left-width.px: 1
+border-color: $inherited.colors.border
+margin-top.rem: 0.5
+margin-bottom.rem: 1.25
+if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
 
 -- childrens:
-if: {!ftd.is_empty(toc-instance.toc.children)}
 $loop$: $toc-instance.toc.children as $obj
 toc: $obj
 
@@ -1003,7 +1002,6 @@ pr.toc-item toc:
 -- ftd.column:
 
 -- ftd.row:
-if: {childrens.toc.url != NULL}
 width: fill-container
 spacing.fixed.px: 8
 
@@ -1014,30 +1012,9 @@ height.fixed.px: 14
 width: auto
 
 -- ftd.text:
-link: $childrens.toc.url
+link if {childrens.toc.url != NULL} : $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.copy-small
-margin-bottom.px: 10
-color: $inherited.colors.text-strong
-color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
-
--- end: ftd.row
-
--- ftd.row:
-if: {childrens.toc.url == NULL}
-width: fill-container
-spacing.fixed.px: 8
-
--- ftd.image:
-if: {childrens.toc.font-icon != NULL}
-src: $childrens.toc.font-icon
-height.fixed.px: 14
-width: fill-container
-
--- ftd.text:
-text: $childrens.toc.title
-role: $inherited.types.copy-small
-min-width: hug-content
 margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base

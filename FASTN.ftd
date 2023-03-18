@@ -5,15 +5,10 @@ zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/code-block
-
 -- fastn.dependency: fifthtry.github.io/typography
-
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
-
--- fastn.dependency: fifthtry.github.io/app-switcher 
-
+-- fastn.dependency: fifthtry.github.io/app-switcher
 -- fastn.dependency: fifthtry.github.io/header
-
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
 
