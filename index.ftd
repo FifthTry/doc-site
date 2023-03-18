@@ -687,7 +687,7 @@ width: fill-container
 -- ftd.row:
 width: fill-container
 
--- tf.h1: $doc-page-mobile.title
+-- tf.h0: $doc-page-mobile.title
 if: { doc-page-mobile.title != NULL }
 
 -- ftd.column:
