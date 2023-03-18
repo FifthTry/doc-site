@@ -936,7 +936,7 @@ pr.toc-item $toc-clone: *$toc-instance.toc
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 8
-margin-bottom.px: 10
+margin-bottom.rem: 1
 $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
 -- ftd.image:
@@ -1004,6 +1004,7 @@ pr.toc-item toc:
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 8
+margin-bottom.em: 0.5
 
 -- ftd.image:
 if: {childrens.toc.font-icon != NULL}
@@ -1015,7 +1016,6 @@ width: auto
 link if {childrens.toc.url != NULL} : $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.copy-small
-margin-bottom.px: 10
 color: $inherited.colors.text-strong
 color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
 
