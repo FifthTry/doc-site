@@ -940,6 +940,19 @@ margin-bottom.rem: 1
 $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
 -- ftd.image:
+if: { toc-instance.toc.font-icon != NULL }
+src: $toc-instance.toc.font-icon
+height.fixed.px: 14
+width: auto
+
+-- ftd.text:
+link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
+text: $toc-instance.toc.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
+
+-- ftd.image:
 if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
 src: $assets.files.static.open.svg
 height.fixed.px: 14
@@ -952,19 +965,6 @@ src: $assets.files.static.close.svg
 height.fixed.px: 14
 width: auto
 align-self: center
-
--- ftd.image:
-if: { toc-instance.toc.font-icon != NULL }
-src: $toc-instance.toc.font-icon
-height.fixed.px: 14
-width: auto
-
--- ftd.text:
-link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
-text: $toc-instance.toc.title
-role: $inherited.types.copy-small
-color: $inherited.colors.text-strong
-color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
