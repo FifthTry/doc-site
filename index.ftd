@@ -964,7 +964,7 @@ link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 text: $toc-instance.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
-color if {toc-instance.toc.is-active}: $inherited.colors.cta-primary.base
+color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
@@ -975,7 +975,7 @@ border-left-width.px: 1
 border-color: $inherited.colors.border
 margin-top.rem: 0.5
 margin-bottom.rem: 1.25
-if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
+if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open }
 
 -- childrens:
 $loop$: $toc-instance.toc.children as $obj
@@ -1013,16 +1013,16 @@ height.fixed.px: 14
 width: auto
 
 -- ftd.text:
-link if {childrens.toc.url != NULL} : $childrens.toc.url
+link if { childrens.toc.url != NULL } : $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
-color if {childrens.toc.is-active}: $inherited.colors.cta-primary.base
+color if { childrens.toc.is-active }: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
 -- childrens:
-if: {!ftd.is_empty(childrens.toc.children)}
+if: {!ftd.is_empty(childrens.toc.children) }
 $loop$: $childrens.toc.children as $obj
 toc: $obj
 
@@ -1043,12 +1043,12 @@ toc: $obj
 pr.toc-item list toc-obj:
 
 -- ftd.column:
-;; sticky: true
+sticky: true
 top.px: 0
 left.px: 24
 min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 0px
-height.fixed.calc: 100% - 52px
+height.fixed.vh: 100
 overflow-y: auto
 width.fixed.percent: 20
 align-content: top-left
@@ -2529,14 +2529,14 @@ ftd.ui list extra-headers:
 
 -- ftd.column:
 children: $right-sidebar.extra-headers
-min-width.fixed.percent: 100
-width.fixed.percent: 100
+min-width: fill-container
+width: fill-container
 z-index: 999
 background.solid: $inherited.colors.background.step-2
 top.px: 0
 right.px: 0
 min-height.fixed.calc: 100vh - 0px
-height.fixed.calc: 100%
+height.fixed.vh: 100
 overflow-y: auto
 align-content: top-right
 margin-right.px: 12
@@ -2547,6 +2547,7 @@ padding-bottom.px: 32
 margin-top.px: 25
 margin-bottom.px: 25
 border-radius.px: 8
+sticky: true
 
 -- end: ftd.column
 
