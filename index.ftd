@@ -244,6 +244,9 @@ ftd.ui list banner:
 boolean show-footer: false
 ftd.ui list footer:
 
+-- ftd.document:
+title: $page.title
+
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
@@ -327,6 +330,8 @@ align-content: center
 -- end: ftd.column
 
 -- end: ftd.column
+
+-- end: ftd.document
 
 -- end: page
 
