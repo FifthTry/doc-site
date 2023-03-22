@@ -2594,6 +2594,7 @@ align-content: center
 background.solid: $inherited.colors.background.base
 spacing.fixed.px: 32
 height: fill-container
+padding-horizontal.px if {ftd.device == "mobile"}: 24
 
 -- ftd.text: $not-found-1.type
 role: $inherited.types.heading-hero
@@ -2606,6 +2607,7 @@ color: $inherited.colors.text-strong
 -- ftd.text: 
 role: $inherited.types.copy-large
 color: $inherited.colors.text
+text-align: center
 
 $not-found-1.body
 
@@ -2644,6 +2646,7 @@ align-content: center
 spacing.fixed.px: 32
 height: fill-container
 background.solid: #f7f7f7
+padding-horizontal.px if {ftd.device == "mobile"}: 24
 
 -- ftd.text: $not-found-2.type
 role: $inherited.types.heading-hero
@@ -2656,6 +2659,7 @@ color: $inherited.colors.text
 -- ftd.text: 
 role: $inherited.types.copy-large
 color: $inherited.colors.text
+text-align: center
 
 $not-found-2.body
 
