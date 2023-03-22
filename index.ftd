@@ -2572,3 +2572,102 @@ dark: #262626
 -- ftd.color light-green:
 light: #0DCEAB
 dark: #0DCEAB
+
+
+
+
+
+
+
+
+
+-- component not-found-1:
+caption title:
+string type: 404
+optional string cta-text: 
+optional string cta-link:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.base
+spacing.fixed.px: 32
+height: fill-container
+
+-- ftd.text: $not-found-1.type
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- ftd.text: $not-found-1.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+$not-found-1.body
+
+-- ftd.text: $not-found-1.cta-text
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-tertiary.base
+padding-horizontal.px: 50
+padding-vertical.px: 16
+link: $not-found-1.cta-link
+border-radius.px: 30
+
+-- end: ftd.column
+
+-- end: not-found-1
+
+
+
+
+
+
+
+
+
+
+-- component not-found-2:
+caption title:
+string type: 404
+optional string cta-text: 
+optional string cta-link:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 32
+height: fill-container
+background.solid: #f7f7f7
+
+-- ftd.text: $not-found-2.type
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+
+-- ftd.text: $not-found-2.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+$not-found-2.body
+
+-- ftd.text: $not-found-2.cta-text
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.custom.one
+padding-horizontal.px: 50
+padding-vertical.px: 16
+link: $not-found-2.cta-link
+border-radius.px: 30
+
+-- end: ftd.column
+
+-- end: not-found-2
