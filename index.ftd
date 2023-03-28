@@ -7,6 +7,8 @@
 
 
 
+-- boolean $push-left: false
+
 -- boolean login-button: false
 
 -- boolean pricing-cta: false
@@ -524,7 +526,6 @@ boolean login-button:
 boolean right-sidebar: false
 children wrapper:
 
-
 -- ftd.column:
 width: fill-container
 
@@ -562,6 +563,7 @@ toc-obj: $doc-page-desktop.toc
 -- ftd.column:
 width.fixed.percent: 60
 width if { doc-page-desktop.widthfill }: fill-container
+width if { $push-left }: fill-container
 max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.widthfill}: 800
 max-width if { doc-page-desktop.widthfill }: fill-container
 align-content: top-left
@@ -1048,27 +1050,57 @@ toc: $obj
 pr.toc-item list toc-obj:
 
 -- ftd.column:
-sticky: true
-top.px: 0
-left.px: 24
-min-width.fixed.percent: 20
+min-width.fixed.percent if { !$push-left }: 20
 min-height.fixed.calc: 100vh - 0px
 height.fixed.vh: 100
 overflow-y: auto
-width.fixed.percent: 20
+width.fixed.percent if { !$push-left }: 20
+width.fixed.percent if { $push-left }: 1
 align-content: top-left
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 8
 padding-left.px: 24
-padding-top.px: 16
+padding-top.px: 36
 padding-right.px: 16
 padding-bottom.px: 32
 margin-top.px: 25
 margin-bottom.px: 25
 
+-- ftd.column:
+if: { !$push-left }
+width: fill-container
+
 -- toc-instance:
 $loop$: $render-toc.toc-obj as $obj
 toc: $obj
+
+-- ftd.image:
+src: $assets.files.static.push-left.svg
+width.fixed.px: 24
+height.fixed.px: 24
+anchor: parent
+right.px: -16
+top.px: -30
+z-index: 99999
+$on-click$: $ftd.set-bool($a = $push-left, v = true)
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { $push-left }
+width: fill-container
+
+-- ftd.image:
+src: $assets.files.static.push-right.svg
+width.fixed.px: 24
+height.fixed.px: 24
+anchor: parent
+right.px: -7
+top.px: -30
+z-index: 99999
+$on-click$: $ftd.set-bool($a = $push-left, v = false)
+
+-- end: ftd.column
 
 -- end: ftd.column
 
