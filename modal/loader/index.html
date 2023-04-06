@@ -4,7 +4,7 @@
 <meta charset="UTF-8"><base href="/doc-site/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <title></title>
-<link rel="shortcut icon" href="fifthtry.github.io/doc-site/fifthtry.github.io/doc-site/assets/static/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="fifthtry.github.io/doc-site/assets/static/favicon.ico" type="image/x-icon">
 <script type="ftd" id="ftd-data">
 {
 "fifthtry.github.io/doc-site/modal/loader/#open": true,
@@ -567,13 +567,14 @@ width: 100%;
 body {
 height: 100%;
 width: 100%;
-word-wrap: break-word;
 }
+
 input, code {
 vertical-align: middle;
 }
 pre {
 white-space: break-spaces;
+word-wrap: break-word;
 }
 html {
 -webkit-font-smoothing: antialiased;
@@ -697,7 +698,7 @@ background-color: #ffffff1f;
 }
 
 
-.markdown p {
+p {
 margin-block-end: 1em;
 }
 
@@ -1109,11 +1110,13 @@ change_value(function_arguments, ftd_data[id], id);
 }
 }
 exports.handle_event = function (evt, id, event, obj) {
+window.ftd.utils.reset_full_height();
 console_log(id, event);
 let actions = JSON.parse(event);
 for (const action in actions) {
 handle_event(evt, id, actions[action], obj);
 }
+window.ftd.utils.set_full_height();
 };
 exports.handle_function = function (evt, id, event, obj) {
 console_log(id, event);
@@ -1396,6 +1399,54 @@ data[argument] = eval(component.getAttribute(argument));
 }
 return data;
 };
+exports.call_mutable_value_changes = function (key, id) {
+if (!window.ftd[`mutable_value_${id}`]) {
+return;
+}
+if (!!window.ftd[`mutable_value_${id}`][key]) {
+let changes = window.ftd[`mutable_value_${id}`][key].changes;
+for (let i in changes) {
+changes[i]();
+}
+}
+const pattern = new RegExp(`^${key}\\..+`);
+const result = Object.keys(window.ftd[`mutable_value_${id}`])
+.filter(key => pattern.test(key))
+.reduce((acc, key) => {
+acc[key] = window.ftd[`mutable_value_${id}`][key];
+return acc;
+}, {});
+for (let i in result) {
+let changes = result[i].changes;
+for (let i in changes) {
+changes[i]();
+}
+}
+};
+exports.call_immutable_value_changes = function (key, id) {
+if (!window.ftd[`immutable_value_${id}`]) {
+return;
+}
+if (!!window.ftd[`immutable_value_${id}`][key]) {
+let changes = window.ftd[`immutable_value_${id}`][key].changes;
+for (let i in changes) {
+changes[i]();
+}
+}
+const pattern = new RegExp(`^${key}\\..+`);
+const result = Object.keys(window.ftd[`immutable_value_${id}`])
+.filter(key => pattern.test(key))
+.reduce((acc, key) => {
+acc[key] = window.ftd[`immutable_value_${id}`][key];
+return acc;
+}, {});
+for (let i in result) {
+let changes = result[i].changes;
+for (let i in changes) {
+changes[i]();
+}
+}
+};
 return exports;
 })();
 window.ftd.post_init = function () {
@@ -1412,10 +1463,6 @@ const MOBILE_CLASS = "ftd-mobile";
 const XL_CLASS = "ftd-xl";
 const FTD_DEVICE = "ftd#device";
 const FTD_BREAKPOINT_WIDTH = "ftd#breakpoint-width";
-const FTD_THEME_COLOR = "ftd#theme-color";
-const THEME_COLOR_META = "theme-color";
-const MARKDOWN_COLOR = "ftd#markdown-color";
-const MARKDOWN_BACKGROUND_COLOR = "ftd#markdown-background-color";
 let last_device;
 function initialise_device() {
 last_device = get_device();
@@ -1575,7 +1622,6 @@ window.ftd.set_bool_for_all(FOLLOW_SYSTEM_DARK_MODE, false);
 window.ftd.set_bool_for_all(SYSTEM_DARK_MODE, system_dark_mode());
 document.body.classList.add(DARK_MODE_CLASS);
 set_cookie(DARK_MODE_COOKIE, COOKIE_DARK_MODE);
-update_theme_color();
 };
 window.enable_light_mode = function () {
 // TODO: coalesce the two set_bool-s into one so there is only one DOM
@@ -1587,7 +1633,6 @@ if (document.body.classList.contains(DARK_MODE_CLASS)) {
 document.body.classList.remove(DARK_MODE_CLASS);
 }
 set_cookie(DARK_MODE_COOKIE, COOKIE_LIGHT_MODE);
-update_theme_color();
 };
 window.enable_system_mode = function () {
 // TODO: coalesce the two set_bool-s into one so there is only one DOM
@@ -1606,37 +1651,7 @@ document.body.classList.remove(DARK_MODE_CLASS);
 }
 set_cookie(DARK_MODE_COOKIE, COOKIE_SYSTEM_LIGHT);
 }
-update_theme_color();
 };
-function update_theme_color() {
-let theme_color = window.ftd.get_value("main", FTD_THEME_COLOR);
-if (!!theme_color) {
-document.body.style.backgroundColor = FTD_THEME_COLOR;
-set_meta(THEME_COLOR_META, theme_color);
-}
-else {
-document.body.style.backgroundColor = FTD_THEME_COLOR;
-delete_meta(THEME_COLOR_META);
-}
-}
-function set_meta(name, value) {
-let meta = document.querySelector("meta[name=" + name + "]");
-if (!!meta) {
-meta.content = value;
-}
-else {
-meta = document.createElement('meta');
-meta.name = name;
-meta.content = value;
-document.getElementsByTagName('head')[0].appendChild(meta);
-}
-}
-function delete_meta(name) {
-let meta = document.querySelector("meta[name=" + name + "]");
-if (!!meta) {
-meta.remove();
-}
-}
 function set_cookie(name, value) {
 document.cookie = name + "=" + value + "; path=/";
 }
@@ -1675,6 +1690,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", upd
 }
 initialise_dark_mode();
 initialise_device();
+window.ftd.utils.set_full_height();
 // update_markdown_colors();
 };
 function console_log(...message) {
@@ -1851,6 +1867,13 @@ console.error('Fallback: Oops, unable to copy', err);
 }
 document.body.removeChild(textArea);
 }
+window.ftd.utils = {};
+window.ftd.utils.set_full_height = function () {
+document.body.style.height = `max(${document.documentElement.scrollHeight}px, 100%)`;
+};
+window.ftd.utils.reset_full_height = function () {
+document.body.style.height = `100%`;
+};
 (function () {
 document.addEventListener('keypress', (event) => {
 let key = event.key;
@@ -2038,14 +2061,8 @@ set_data_value(data, "fifthtry.github.io/doc-site/modal/loader/#open" + "." + re
 set_data_value(data, "fifthtry.github.io/doc-site/modal/loader/#open", new_value);
 }
 
-if (!!window.ftd.mutable_value_main && !!window.ftd.mutable_value_main["fifthtry.github.io/doc-site/modal/loader/#open"]) {
-let changes = window.ftd.mutable_value_main["fifthtry.github.io/doc-site/modal/loader/#open"].changes;
-for(let i in changes) { changes[i](); }
-}
-if (!!window.ftd.immutable_value_main && !!window.ftd.immutable_value_main["fifthtry.github.io/doc-site/modal/loader/#open"]) {
-let changes = window.ftd.immutable_value_main["fifthtry.github.io/doc-site/modal/loader/#open"].changes;
-for(let i in changes) { changes[i](); }
-}
+window.ftd.call_mutable_value_changes("fifthtry.github.io/doc-site/modal/loader/#open", "main");
+window.ftd.call_immutable_value_changes("fifthtry.github.io/doc-site/modal/loader/#open", "main");
 if(!!window["node_change_main"] && !!window.node_change_main["0:main__display"]){window.node_change_main["0:main__display"](data);
 }
 };
@@ -2057,19 +2074,19 @@ set_data_value(data, "ftd#dark-mode" + "." + remaining, new_value);
 set_data_value(data, "ftd#dark-mode", new_value);
 }
 
-if (!!window.ftd.mutable_value_main && !!window.ftd.mutable_value_main["ftd#dark-mode"]) {
-let changes = window.ftd.mutable_value_main["ftd#dark-mode"].changes;
-for(let i in changes) { changes[i](); }
+window.ftd.call_mutable_value_changes("ftd#dark-mode", "main");
+window.ftd.call_immutable_value_changes("ftd#dark-mode", "main");
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-color"]){window.node_change_main["0,0:main__background-color"](data);
 }
-if (!!window.ftd.immutable_value_main && !!window.ftd.immutable_value_main["ftd#dark-mode"]) {
-let changes = window.ftd.immutable_value_main["ftd#dark-mode"].changes;
-for(let i in changes) { changes[i](); }
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-size"]){window.node_change_main["0,0:main__background-size"](data);
 }
 if(!!window["node_change_main"] && !!window.node_change_main["0,0,0:main__src"]){window.node_change_main["0,0,0:main__src"](data);
 }
-if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-color"]){window.node_change_main["0,0:main__background-color"](data);
-}
 if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-image"]){window.node_change_main["0,0:main__background-image"](data);
+}
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-position"]){window.node_change_main["0,0:main__background-position"](data);
+}
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-repeat"]){window.node_change_main["0,0:main__background-repeat"](data);
 }
 };
 
