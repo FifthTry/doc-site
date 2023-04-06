@@ -2248,8 +2248,10 @@ $h0.body
 -- component h1:
 caption title:
 optional body body:
+optional string id:
 
 -- tf.h1: $h1.title
+id: $h1.id
 
 $h1.body
 
@@ -2266,8 +2268,10 @@ $h1.body
 -- component h2:
 caption title:
 optional body body:
+optional string id:
 
 -- tf.h2: $h2.title
+id: $h2.id
 
 $h2.body
 
@@ -2283,8 +2287,10 @@ $h2.body
 -- component h3:
 caption title:
 optional body body:
+optional string id:
 
 -- tf.h3: $h3.title
+id: $h3.id
 
 $h3.body
 
