@@ -210,7 +210,7 @@ Feel free to check [our documentation](https://fastn.dev/) or jump into our [Fif
 optional caption title:
 optional string document-title:
 optional string document-description:
-optional ftd.image-src document-image:
+optional ftd.raw-image-src document-image:
 optional body body:
 ftd.image-src site-logo: $site-logo
 string $site-url: $site-url
@@ -254,7 +254,6 @@ og-title if { page.document-title != NULL }: $page.document-title
 og-title: $page.title
 description: $page.document-description
 og-image: $page.document-image
-
 
 -- ftd.column:
 width: fill-container
