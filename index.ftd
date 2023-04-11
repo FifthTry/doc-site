@@ -2618,7 +2618,8 @@ color: $inherited.colors.text
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
--- ftd.text: 
+-- ftd.text:
+if: { not-found-1.body != NULL }
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 text-align: center
@@ -2626,6 +2627,7 @@ text-align: center
 $not-found-1.body
 
 -- ftd.text: $not-found-1.cta-text
+if: { not-found-1.cta-text != NULL }
 role: $inherited.types.button-large
 color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-tertiary.base
