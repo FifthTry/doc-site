@@ -5,7 +5,7 @@
 
 -- ds.not-found-1: Page not found
 cta-text: Back to home
-cta-link: index.html
+cta-link: /doc-site/
 
 Oops! The page you are looking for does not exist. It might have been moved or
 deleted.
