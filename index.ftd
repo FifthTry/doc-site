@@ -2354,7 +2354,7 @@ boolean $download-mouse-in: false
 boolean $mouse-in: false
 optional ftd.resizing max-height:
 optional ftd.resizing max-width:
-ftd.ui list output:
+children output:
 
 -- cb.rendered:
 download: $rendered.download
