@@ -593,6 +593,34 @@ display: block;
 padding: 10px !important;
 }
 
+/* Common styles  */
+.ft_common{
+text-decoration: none;
+box-sizing: border-box;
+border-top-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-right-width: 0px;
+border-style: solid;
+height: auto;
+width: auto;
+}
+
+/* Common container attributes */
+.ft_row, .ft_column {
+display: flex;
+align-items: start;
+justify-content: start
+}
+
+.ft_row {
+flex-direction: row;
+}
+
+.ft_column {
+flex-direction: column;
+}
+
 .ft_md ul,
 .ft_md ol{
 margin: 10px 0;
@@ -708,7 +736,7 @@ margin-block-end: 1em;
 </head>
 <body style="height: 100%; margin: 0;">
 
-<div data-id="main" style="align-items: start; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; border-style: solid; border-top-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; height: 100%; justify-content: start; text-decoration: none; width: 100%" ><div data-id="0:main" onclick="window.ftd.handle_event(event, 'main', '[{&quot;name&quot;:&quot;ftd__set_bool___main&quot;,&quot;values&quot;:[[&quot;a&quot;,{&quot;mutable&quot;:true,&quot;reference&quot;:&quot;fifthtry.github.io/doc-site/modal/loader/#open&quot;}],[&quot;v&quot;,false]]}]', this)" style="align-items: start; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; border-style: solid; border-top-width: 0px; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; height: 100%; justify-content: start; text-decoration: none; width: 100%" ><div data-id="0,0:main" style="align-items: center; background-color: rgba(0,0,0,1); border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; border-style: solid; border-top-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; height: 100%; justify-content: center; left: 0px; position: fixed; text-decoration: none; top: 0px; width: 100%" ><img data-id="0,0,0:main" src="https://i.giphy.com/media/6036p0cTnjUrNFpAlr/giphy.webp" style="align-self: center; border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; border-style: solid; border-top-width: 0px; box-sizing: border-box; height: 100px; text-decoration: none; width: 100px" ></img></div></div></div><style>
+<div data-id="main" style="height: 100%; width: 100%" class="ft_common ft_column"><div data-id="0:main" onclick="window.ftd.handle_event(event, 'main', '[{&quot;name&quot;:&quot;ftd__set_bool___main&quot;,&quot;values&quot;:[[&quot;a&quot;,{&quot;mutable&quot;:true,&quot;reference&quot;:&quot;fifthtry.github.io/doc-site/modal/loader/#open&quot;}],[&quot;v&quot;,false]]}]', this)" style="cursor: pointer; height: 100%; width: 100%" class="ft_common ft_column"><div data-id="0,0:main" style="align-items: center; background-color: rgba(0,0,0,1); height: 100%; justify-content: center; left: 0px; position: fixed; top: 0px; width: 100%" class="ft_common ft_column"><img data-id="0,0,0:main" src="https://i.giphy.com/media/6036p0cTnjUrNFpAlr/giphy.webp" style="align-self: center; height: 100px; width: 100px" class="ft_common"></img></div></div></div><style>
 
 
 
@@ -1390,6 +1418,60 @@ console.log('Async: Copying to clipboard was successful!');
 console.error('Async: Could not copy text: ', err);
 });
 };
+exports.set_rive_boolean = function (canva_id, input, value, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+const stateMachineName = window[rive_const].stateMachineNames[0];
+const inputs = window[rive_const].stateMachineInputs(stateMachineName);
+// @ts-ignore
+const bumpTrigger = inputs.find(i => i.name === input);
+bumpTrigger.value = value;
+};
+exports.toggle_rive_boolean = function (canva_id, input, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+const stateMachineName = window[rive_const].stateMachineNames[0];
+const inputs = window[rive_const].stateMachineInputs(stateMachineName);
+// @ts-ignore
+const trigger = inputs.find(i => i.name === input);
+trigger.value = !trigger.value;
+};
+exports.set_rive_integer = function (canva_id, input, value, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+const stateMachineName = window[rive_const].stateMachineNames[0];
+const inputs = window[rive_const].stateMachineInputs(stateMachineName);
+// @ts-ignore
+const bumpTrigger = inputs.find(i => i.name === input);
+bumpTrigger.value = value;
+};
+exports.fire_rive = function (canva_id, input, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+const stateMachineName = window[rive_const].stateMachineNames[0];
+const inputs = window[rive_const].stateMachineInputs(stateMachineName);
+// @ts-ignore
+const bumpTrigger = inputs.find(i => i.name === input);
+bumpTrigger.fire();
+};
+exports.play_rive = function (canva_id, input, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+window[rive_const].play(input);
+};
+exports.pause_rive = function (canva_id, input, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+window[rive_const].pause(input);
+};
+exports.toggle_play_rive = function (canva_id, input, args, data, id) {
+let canva_with_id = canva_id + ":" + id;
+let rive_const = window.ftd.utils.function_name_to_js_function(canva_with_id);
+let r = window[rive_const];
+r.playingAnimationNames.includes(input)
+? r.pause(input)
+: r.play(input);
+};
 exports.component_data = function (component) {
 let data = {};
 for (let idx in component.getAttributeNames()) {
@@ -1706,7 +1788,7 @@ var parser = new DOMParser();
 var doc = parser.parseFromString(str, 'text/html');
 return doc.body;
 }
-;
+
 function get_name_and_remaining(name) {
 let part1 = "";
 let pattern_to_split_at = name;
@@ -1874,6 +1956,20 @@ document.body.style.height = `max(${document.documentElement.scrollHeight}px, 10
 window.ftd.utils.reset_full_height = function () {
 document.body.style.height = `100%`;
 };
+window.ftd.utils.function_name_to_js_function = function (s) {
+let new_string = s;
+let startsWithDigit = /^\d/.test(s);
+if (startsWithDigit) {
+new_string = "_" + s;
+}
+new_string = new_string.replace('#', "__").replace('-', "_")
+.replace(':', "___")
+.replace(',', "$")
+.replace("\\\\", "/")
+.replace('\\', "/")
+.replace('/', "_").replace('.', "_");
+return new_string;
+};
 (function () {
 document.addEventListener('keypress', (event) => {
 let key = event.key;
@@ -2009,6 +2105,12 @@ return (enable_system_mode(args,data,id));
 
 
 
+function ftd__fire_rive___main(rive,input,args,data,id){
+return (ftd.fire_rive(rive,input,args,data,id));
+}
+
+
+
 function ftd__increment___main(a,args,data,id){
 return (a.value += 1);
 }
@@ -2017,6 +2119,18 @@ return (a.value += 1);
 
 function ftd__increment_by___main(a,v,args,data,id){
 return (a.value += v);
+}
+
+
+
+function ftd__pause_rive___main(rive,input,args,data,id){
+return (ftd.pause_rive(rive,input,args,data,id));
+}
+
+
+
+function ftd__play_rive___main(rive,input,args,data,id){
+return (ftd.play_rive(rive,input,args,data,id));
 }
 
 
@@ -2033,6 +2147,18 @@ a.value = v
 
 
 
+function ftd__set_rive_boolean___main(rive,input,value,args,data,id){
+return (ftd.set_rive_boolean(rive,input,value,args,data,id));
+}
+
+
+
+function ftd__set_rive_integer___main(rive,input,value,args,data,id){
+return (ftd.set_rive_integer(rive,input,value,args,data,id));
+}
+
+
+
 function ftd__set_string___main(a,v,args,data,id){
 a.value = v
 }
@@ -2041,6 +2167,18 @@ a.value = v
 
 function ftd__toggle___main(a,args,data,id){
 a.value = !a.value
+}
+
+
+
+function ftd__toggle_play_rive___main(rive,input,args,data,id){
+return (ftd.toggle_play_rive(rive,input,args,data,id));
+}
+
+
+
+function ftd__toggle_rive_boolean___main(rive,input,args,data,id){
+return (ftd.toggle_rive_boolean(rive,input,args,data,id));
 }
 
 
@@ -2076,17 +2214,17 @@ set_data_value(data, "ftd#dark-mode", new_value);
 
 window.ftd.call_mutable_value_changes("ftd#dark-mode", "main");
 window.ftd.call_immutable_value_changes("ftd#dark-mode", "main");
-if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-size"]){window.node_change_main["0,0:main__background-size"](data);
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-color"]){window.node_change_main["0,0:main__background-color"](data);
 }
 if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-repeat"]){window.node_change_main["0,0:main__background-repeat"](data);
 }
-if(!!window["node_change_main"] && !!window.node_change_main["0,0,0:main__src"]){window.node_change_main["0,0,0:main__src"](data);
-}
-if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-color"]){window.node_change_main["0,0:main__background-color"](data);
-}
-if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-image"]){window.node_change_main["0,0:main__background-image"](data);
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-size"]){window.node_change_main["0,0:main__background-size"](data);
 }
 if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-position"]){window.node_change_main["0,0:main__background-position"](data);
+}
+if(!!window["node_change_main"] && !!window.node_change_main["0,0,0:main__src"]){window.node_change_main["0,0,0:main__src"](data);
+}
+if(!!window["node_change_main"] && !!window.node_change_main["0,0:main__background-image"]){window.node_change_main["0,0:main__background-image"](data);
 }
 };
 
