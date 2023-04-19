@@ -561,6 +561,7 @@ menu-icon: $assets.files.static.header.hamburger-dark.svg
 width: fill-container
 spacing.fixed.px: 10
 padding-horizontal.px if { !doc-page-desktop.widthfill } : 25
+padding-horizontal.px if { doc-page-desktop.widthfill && !ftd.is_empty(doc-page-desktop.toc) } : 25
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 
 -- render-toc:
