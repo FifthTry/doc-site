@@ -9,7 +9,6 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
 -- fastn.dependency: fifthtry.github.io/app-switcher
 -- fastn.dependency: fifthtry.github.io/header
--- fastn.dependency: fifthtry.github.io/bling
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
 
