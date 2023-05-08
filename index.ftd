@@ -119,61 +119,23 @@ author-meta author:
 
 
 
--- page: Introduction
+-- page: Introduction to doc-site
 
-⚡️ fastn will help you create a beautiful documentation site in no time.
+⚡️ `doc-site` will help you create a beautiful documentation site in no time.
 
-🧐 [fastn](https://fastn.com/) is a static-site generation framework. It builds a
-static site application with fast client-side navigation, leveraging the full
-power of fastn to make your site interactive. 
+🧐 It helps your to build a static documentation site application with fast
+client-side navigation, leveraging the full power of fastn to make your site
+interactive. 
 
 It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, product, blog, marketing landing pages, etc).
-
-💸 Building a custom tech stack is expensive. Instead, focus on your content and
-just write fastn files.
+kind of site(personal website, blog, etc).
 
 -- h2: Fast Track ⏱️
 
-
--- chat.message-left: 🤔 Are you not a GitHub user?
-
--- markdown: 
-
-[Click here](https://docs.github.com/en/get-started/quickstart/hello-world) to
-learn GitHub.
-
--- end: chat.message-left
-
--- chat.message-right:  😃 Already a GitHub user?
-
--- markdown:
-
-Create your first fastn project in 5 minutes by playing!
+Create your first `doc-site` project in 5 minutes by playing!
 
 🚀 [Click here](https://github.com/fastn-stack/fastn-template/) to create your
 fastn web site.
-
--- end: chat.message-right
-
-
--- markdown:
-
-✈️ Grab your seat! 🤩 Want to become a `fastn-developer`?
-
-Along with [building frontends](https://fastn.com/frontend/) fastn can be used
-for building dynamic websites as well. With features already built and planned
-fastn aspires to be a full stack framework.
-
-Install [fastn](https://fastn.com/install/) and create a new fastn site.
-
-[Click here](https://fastn.com/install/), to know how to install fastn.
-
-💡 Create a new fastn site and follow the very short embedded tutorial.
-
--- youtube:
-v: EKeCM75zrkY
-
 
 -- h2: 👀 Want to learn more?
 
