@@ -4,6 +4,7 @@
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/doc-site-typography as typo
 -- import: fifthtry.github.io/dark-mode-switcher as dms
+-- import: fifthtry.github.io/bling/chat
 
 
 
@@ -118,82 +119,66 @@ author-meta author:
 
 
 
--- page: Introduction to doc-site
+-- page: Introduction
 
-We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
-language `doc-site` is designed for you to create FTD web-sites.
+⚡️ fastn will help you create a beautiful documentation site in no time.
 
+🧐 [fastn](https://fastn.com/) is a static-site generation framework. It builds a
+static site application with fast client-side navigation, leveraging the full
+power of fastn to make your site interactive. 
 
-Check out our simple and easy [documentation](docs/) to learn more about
-`doc-site`.
+It provides out-of-the-box documentation features but can be used to create any
+kind of site(personal website, product, blog, marketing landing pages, etc).
 
--- h2: 🚀 Project Structure
+💸 Building a custom tech stack is expensive. Instead, focus on your content and
+just write fastn files.
 
-Inside of your `doc-site` project, you'll see the following folders and files:
-
--- code:
-lang: text
-
-\
-├── .build/
-│   └── index.html
-│
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│
-├── blog-articles/
-│	├── category-1/
-│   │	├── index.ftd
-│   │   ├── sample-post-1.ftd
-│   │   └── sample-post-2.ftd
-│   │
-│   └── category-2/
-│   	├── index.ftd
-│       ├── sample-post-3.ftd
-│       └── sample-post-4.ftd
-│
-├── blog-authors/
-│   ├── abrar.ftd
-│   ├── amitu.ftd
-│   ├── arpita.ftd
-│   └── ganesh.ftd
-│
-├── documentation/
-│   ├── blog-docs.ftd
-│   └── docs.ftd
-│
-├── static/
-│   └── All images and static assets included in doc-site
-│
-├── FASTN.ftd
-├── index.ftd
-├── featured-posts.ftd
-├── floater.ftd
-├── image.ftd
-├── LICENSE
-└── README.md
+-- h2: Fast Track ⏱️
 
 
--- h2: 🧞 Commands
+-- chat.message-left: 🤔 Are you not a GitHub user?
 
-All commands are run from the root of the project, from a terminal:
+-- markdown: 
 
--- code:
-lang: text
+[Click here](https://docs.github.com/en/get-started/quickstart/hello-world) to
+learn GitHub.
 
-========================================================================
-| Command            | Action                                          |
-|:-------------------|:------------------------------------------------|
-| fastn build        | FASTN builder installs all `FASTN` dependencies |
-| fastn serve        | Starts local dev server at available port       |
-|                    | `localhost:8000`                                |
-========================================================================
+-- end: chat.message-left
+
+-- chat.message-right:  😃 Already a GitHub user?
+
+-- markdown:
+
+Create your first fastn project in 5 minutes by playing!
+
+🚀 [Click here](https://github.com/fastn-stack/fastn-template/) to create your
+fastn web site.
+
+-- end: chat.message-right
+
+
+-- markdown:
+
+✈️ Grab your seat! 🤩 Want to become a `fastn-developer`?
+
+Along with [building frontends](https://fastn.com/frontend/) fastn can be used
+for building dynamic websites as well. With features already built and planned
+fastn aspires to be a full stack framework.
+
+Install [fastn](https://fastn.com/install/) and create a new fastn site.
+
+[Click here](https://fastn.com/install/), to know how to install fastn.
+
+💡 Create a new fastn site and follow the very short embedded tutorial.
+
+-- youtube:
+v: EKeCM75zrkY
 
 
 -- h2: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fastn.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Feel free to check [our expander course](https://fastn.com/expander/) or jump
+into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 -- end: page
 
