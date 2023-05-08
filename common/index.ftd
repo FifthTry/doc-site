@@ -1,4 +1,3 @@
--- import: fastn
 -- import: fastn/processors as pr
 
 -- boolean login-button: false
