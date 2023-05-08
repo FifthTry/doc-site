@@ -1,194 +1,35 @@
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 -- import: fifthtry.github.io/app-switcher as apps-switcher
--- import: fastn
--- import: fastn/processors as pr
 -- import: fifthtry.github.io/doc-site-typography as typo
 -- import: fifthtry.github.io/dark-mode-switcher as dms
+-- import: fastn/processors as pr
+-- import: fifthtry.github.io/footer
 
 
 
--- boolean login-button: false
 
--- boolean pricing-cta: false
 
--- boolean parent-brand: true
 
--- boolean $show-floater: false
 
--- string wall-message: Please, login via clicking on below button
 
--- string login-url: /
 
--- boolean is-reader: false
 
--- integer toc-sidebar-width: 320
 
--- boolean $sidebar: false
 
--- string github: NA
 
--- optional string $site-name:
+-- page: Introduction
 
--- ftd.image-src $site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
-dark: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
+⚡️ fastn will help you create a beautiful documentation site in no time.
 
--- ftd.image-src $brand-site-logo:
-light: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
-dark: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
+🧐 [fastn](https://fastn.com/) is a static-site generation framework. It builds a
+static site application with fast client-side navigation, leveraging the full
+power of fastn to make your site interactive. 
 
--- string $brand-site-name: FifthTry
+It provides out-of-the-box documentation features but can be used to create any
+kind of site(personal website, product, blog, marketing landing pages, etc).
 
--- string $brand-caption: FifthTry
 
--- string $brand-site-url: /
-
--- string $site-url: index.html
-
--- pr.toc-item list sections:
-
--- pr.toc-item list sub-sections:
-
--- pr.toc-item list toc:
-
--- pr.toc-item list footer-toc:
-
--- pr.sitemap-data sitemap:
-$processor$: fastn.sitemap
-
--- fastn.app-ui apps:
-$processor$: pr.fastn-apps
-
-
-
-
-
--- record item:
-caption title:
-optional string url:
-boolean is-last: false
-
--- item list itemlist:
-
--- item: About
-url: https://github.com/FifthTry
-
--- item: Terms
-url: https://fifthtry.com/terms/
-
--- item: Privacy
-url: https://fifthtry.com/privacy/
-
--- item: Blog
-url: https://fifthtry.com/blog/
-is-last: true
-
--- end: itemlist
-
-
-
-
-
--- record author-meta:
-caption title:
-string profile:
-string company:
-string bio-url:
-optional ftd.image-src image:
-body body:
-
-
-
-
-
--- record post-meta:
-caption title:
-string published-on:
-optional ftd.image-src post-image:
-optional body body:
-string post-url:
-author-meta author:
-
-
-
-
-
-
-
-
-
-
--- page: Introduction to doc-site
-
-We at FifthTry designed and developed `FTD` langauge for you. Using our own `FTD`
-language `doc-site` is designed for you to create FTD web-sites.
-
-
-Check out our simple and easy [documentation](docs/) to learn more about
-`doc-site`.
-
--- h2: 🚀 Project Structure
-
-Inside of your `doc-site` project, you'll see the following folders and files:
-
--- code:
-lang: text
-
-\
-├── .build/
-│   └── index.html
-│
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│
-├── blog-articles/
-│	├── category-1/
-│   │	├── index.ftd
-│   │   ├── sample-post-1.ftd
-│   │   └── sample-post-2.ftd
-│   │
-│   └── category-2/
-│   	├── index.ftd
-│       ├── sample-post-3.ftd
-│       └── sample-post-4.ftd
-│
-├── blog-authors/
-│   ├── abrar.ftd
-│   ├── amitu.ftd
-│   ├── arpita.ftd
-│   └── ganesh.ftd
-│
-├── documentation/
-│   ├── blog-docs.ftd
-│   └── docs.ftd
-│
-├── static/
-│   └── All images and static assets included in doc-site
-│
-├── FASTN.ftd
-├── index.ftd
-├── featured-posts.ftd
-├── floater.ftd
-├── image.ftd
-├── LICENSE
-└── README.md
-
-
--- h2: 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
--- code:
-lang: text
-
-========================================================================
-| Command            | Action                                          |
-|:-------------------|:------------------------------------------------|
-| fastn build        | FASTN builder installs all `FASTN` dependencies |
-| fastn serve        | Starts local dev server at available port       |
-|                    | `localhost:8000`                                |
-========================================================================
 
 
 -- h2: 👀 Want to learn more?
@@ -212,20 +53,20 @@ optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image:
 optional body body:
-ftd.image-src site-logo: $site-logo
-string $site-url: $site-url
-optional string site-name: $site-name
-pr.toc-item list toc: $sitemap.toc
-boolean login-button: $login-button
-boolean pricing-cta: $pricing-cta
-fastn.app-ui apps: $apps
+ftd.image-src site-logo: $common.site-logo
+string $site-url: $common.site-url
+optional string site-name: $common.site-name
+pr.toc-item list toc: $common.sitemap.toc
+boolean login-button: $common.login-button
+boolean pricing-cta: $common.pricing-cta
+fastn.app-ui apps: $common.apps
 boolean $open-right-sidebar-info: false
-pr.toc-item list sections: $sitemap.sections
-pr.toc-item list sub-sections: $sitemap.subsections
-optional pr.toc-item current-section: $sitemap.current-section
-optional pr.toc-item current-subsection: $sitemap.current-subsection
-optional pr.toc-item current-page: $sitemap.current-page
-pr.toc-item list footer-toc: $footer-toc
+pr.toc-item list sections: $common.sitemap.sections
+pr.toc-item list sub-sections: $common.sitemap.subsections
+optional pr.toc-item current-section: $common.sitemap.current-section
+optional pr.toc-item current-subsection: $common.sitemap.current-subsection
+optional pr.toc-item current-page: $common.sitemap.current-page
+pr.toc-item list footer-toc: $common.sections
 string github-text: {green: Sign in} to access Editing Tools
 string github-text-url: /
 ftd.image-src side-logo: $assets.files.static.editor-icon.svg
@@ -235,7 +76,7 @@ string about-text: About this page
 string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
-;;item list itemlist: $itemlist
+common.item list itemlist: $common.itemlist
 boolean $sidebar: false
 children wrapper:
 ftd.ui list extra-headers:
@@ -244,8 +85,7 @@ ftd.type-data types: $typo.types
 ftd.color-scheme colors: $ftd.default-colors
 boolean show-banner: false
 ftd.ui list banner:
-boolean show-footer: false
-ftd.ui list footer:
+boolean show-footer: $common.show-footer
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -270,7 +110,7 @@ align-content: center
 -- ftd.column:
 
 -- floater:
-if: {show-floater}
+if: {common.show-floater}
 sidebar-brand-logo: $page.sidebar-brand-logo
 cross-icon: $page.cross-icon
 side-logo: $page.side-logo
@@ -278,7 +118,7 @@ about-text-url: $page.about-text-url
 about-text: $page.about-text
 edit-text: $page.edit-text
 edit-text-url: $page.edit-text-url
-;;itemlist: $page.itemlist
+itemlist: $page.itemlist
 github-text-url: $page.github-text-url
 github-text: $page.github-text
 
@@ -332,8 +172,13 @@ extra-headers: $page.extra-headers
 -- ftd.column:
 if: { page.show-footer}
 width: fill-container
-children: $page.footer
 align-content: center
+
+-- footer.fastn-footer:
+copyright: Copyright © 2023 - [FifthTry](https://www.fifthtry.com/)
+site-logo: https://fastn.io/-/fastn.io/images/fastn.svg
+powered-by-text: Powered by
+powered-by-link: https://fastn.io/
 
 -- end: ftd.column
 
@@ -363,7 +208,7 @@ string edit-text-url:
 string github-text:
 boolean $open: false
 string github-text-url:
-;;item list itemlist:
+common.item list itemlist:
 
 -- ftd.column:
 anchor: window
@@ -483,7 +328,7 @@ height.fixed.px: 32
 width: fill-container
 spacing.fixed.px: 8
 
-/-- footer-list:
+-- footer-list:
 title: $obj.title
 url: $obj.url
 is-last: $obj.is-last
@@ -537,7 +382,7 @@ children wrapper:
 width: fill-container
 
 -- apps-switcher.app-switcher:
-apps: $apps
+apps: $doc-page-desktop.apps
 
 -- h.header:
 login-button: $doc-page-desktop.login-button
@@ -584,10 +429,10 @@ padding-top.px if { doc-page-desktop.widthfill }: 9
 if: { doc-page-desktop.title != NULL }
 
 -- wall-box:
-if: { is-reader }
+if: { common.is-reader }
 
 -- ftd.column:
-if: { !is-reader }
+if: { !common.is-reader }
 width: fill-container
 spacing.fixed.em: 0.8
 
@@ -643,14 +488,14 @@ optional body body:
 optional string site-name:
 ftd.image-src site-logo:
 string site-url:
-pr.toc-item list toc: $toc
+pr.toc-item list toc: 
 pr.toc-item list sections:
 pr.toc-item list sub-sections:
 pr.toc-item list extra:
 fastn.app-ui apps:
 ftd.ui list extra-headers:
 boolean $open-right-sidebar-info: false
-pr.toc-item list footer-toc: $footer-toc
+pr.toc-item list footer-toc: 
 optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
@@ -666,7 +511,7 @@ background.solid:$inherited.colors.background.base
 -- ftd.column:
 
 -- apps-switcher.app-switcher:
-apps: $apps
+apps: $doc-page-mobile.apps
 
 -- end: ftd.column
 
@@ -679,15 +524,15 @@ current-subsection: $doc-page-mobile.current-subsection
 current-page: $doc-page-mobile.current-page
 site-logo: $doc-page-mobile.site-logo
 site-url: $doc-page-mobile.site-url
-brand-site-url: $brand-site-url
-brand-site-logo: $brand-site-logo
-brand-site-name: $brand-site-name
-brand-caption: $brand-caption
+brand-site-url: $common.brand-site-url
+brand-site-logo: $common.brand-site-logo
+brand-site-name: $common.brand-site-name
+brand-caption: $common.brand-caption
 site-name: $doc-page-mobile.site-name
 logo-height: 38
 current-url: /
 menu-icon: $assets.files.static.header.hamburger.svg
-parent-brand: $parent-brand
+parent-brand: $common.parent-brand
 
 -- ftd.column:
 width: fill-container
@@ -719,12 +564,12 @@ $on-click$: $ftd.toggle($a = $doc-page-mobile.open-right-sidebar-info)
 -- end: ftd.row
 
 -- wall-box:
-if: { is-reader }
+if: { common.is-reader }
 
 -- end: ftd.column
 
 -- ftd.column:
-if: { !is-reader }
+if: { !common.is-reader }
 width: fill-container
 
 -- tf.markdown:
@@ -785,7 +630,7 @@ children: $doc-page-mobile.extra-headers
 -- end: ftd.column
 
 -- footer:
-if: { !ftd.is_empty(footer-toc) }
+if: { !ftd.is_empty(doc-page-mobile.footer-toc) }
 footer-toc: $doc-page-mobile.footer-toc
 
 
@@ -1167,7 +1012,7 @@ border-top-width.px: 3
 border-radius.px: 8
 border-color: $inherited.colors.border
 
--- ftd.text: $wall-message
+-- ftd.text: $common.wall-message
 text-align: center
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
@@ -1178,7 +1023,7 @@ padding-bottom.px: 64
 align-content: center
 
 -- ftd.text: LOGIN
-link: $login-url
+link: $common.login-url
 text-align: center
 role: $inherited.types.copy-small
 padding-vertical.px: 12
@@ -1203,7 +1048,7 @@ border-radius.px:8
 
 
 -- component post:
-post-meta meta:
+common.post-meta meta:
 children atictles-container:
 
 -- ftd.column:
@@ -1237,7 +1082,7 @@ children: $post.atictles-container
 -- component article-card:
 caption title:
 optional ftd.image-src image:
-author-meta author:
+common.author-meta author:
 string timestamp:
 optional body body:
 
@@ -1332,7 +1177,7 @@ spacing.fixed.px: 16
 
 
 -- component image-first:
-post-meta post-data:
+common.post-meta post-data:
 
 -- ftd.column:
 
@@ -1361,7 +1206,7 @@ optional ftd.image-src image:
 string url:
 string timestamp:
 caption title:
-author-meta author:
+common.author-meta author:
 body body:
 
 -- ftd.column:
@@ -1467,7 +1312,7 @@ color: $inherited.colors.cta-primary.border
 
 
 -- component image-in-between:
-post-meta post-data:
+common.post-meta post-data:
 
 -- ftd.column:
 
@@ -1496,7 +1341,7 @@ optional ftd.image-src image:
 string url:
 string timestamp:
 caption title:
-author-meta author:
+common.author-meta author:
 body body:
 
 -- ftd.column:
@@ -1601,7 +1446,7 @@ color: $inherited.colors.cta-primary.border
 
 
 -- component without-image:
-post-meta post-data:
+common.post-meta post-data:
 
 -- ftd.column:
 
@@ -1628,7 +1473,7 @@ body: $without-image.post-data.body
 string url:
 string timestamp:
 caption title:
-author-meta author:
+common.author-meta author:
 body body:
 
 -- ftd.column:
@@ -1720,7 +1565,7 @@ color: $inherited.colors.cta-primary.border
 
 
 -- component author-bio:
-author-meta author:
+common.author-meta author:
 
 -- ftd.column:
 
@@ -2001,7 +1846,7 @@ margin-right.px: 4
 
 
 -- component featured-post:
-post-meta post-data:
+common.post-meta post-data:
 
 -- ftd.column:
 
@@ -2028,7 +1873,7 @@ body: $featured-post.post-data.body
 -- component featured-post-card:
 caption title:
 string timestamp:
-author-meta author:
+common.author-meta author:
 ftd.image-src image:
 string url:
 optional body body:
@@ -2068,7 +1913,7 @@ body: $featured-post-card.body
 -- component featured-post-meta-desktop:
 caption title:
 string timestamp:
-author-meta author:
+common.author-meta author:
 ftd.image-src image:
 string url:
 optional body body:
@@ -2155,7 +2000,7 @@ width: fill-container
 -- component featured-post-meta-mobile:
 caption title:
 string timestamp:
-author-meta author:
+common.author-meta author:
 ftd.image-src image:
 string url:
 optional body body:

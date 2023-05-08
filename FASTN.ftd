@@ -9,6 +9,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
 -- fastn.dependency: fifthtry.github.io/app-switcher
 -- fastn.dependency: fifthtry.github.io/header
+-- fastn.dependency: fifthtry.github.io/footer
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
 
@@ -30,47 +31,85 @@ readers: fastn-fans
 
 -- fastn.sitemap:
 
-# Home: /index.html
+# Introduction: /index.html
 
+- Getting Started 🚧: /docs/
+  - Installation 🚧: /docs/installation/
+  - Configuration 🚧: /docs/configuration/
+  - Play Ground 🚧: /docs/play-ground/
+  - Markup Support 🚧: /docs/markup-support/
 
-- Using doc-site for FTD web projects: /docs/
-icon: -/fifthtry.github.io/doc-site/static/primary-favorites.svg
+- Guides 🚧: /docs/guides/
+  - Page 🚧: /docs/page/
+  - Navnar 🚧: /docs/navbar/
+  - TOC Sidebar 🚧: /docs/toc-sidebar/
+  - Right Sidebar: /docs/right-sidebar/
+  - Footer: /docs/footer/
 
-- How to use blog: /docs/blog/
-icon: -/fifthtry.github.io/doc-site/static/primary-favorites.svg
+- Blog 🚧: /docs/blog/
+  - Blog Post 🚧: /docs/blog-post/
+  - Post List 🚧: /docs/post-list/
+  - Featured Post 🚧: /docs/featured-post/
+  - Featured Page 🚧: /docs/featured-page/
+  - Author 🚧: /docs/author/
 
-- Right-sidebar example: /docs/right-sidebar/
-icon: -/fifthtry.github.io/doc-site/static/primary-favorites.svg
+- Static Assets 🚧: /docs/static-assets/
 
-- 404 `ds.not-found-1`: 404/
-icon: -/fifthtry.github.io/doc-site/static/primary-favorites.svg
+- Color Scheme 🚧: /docs/color-scheme/
 
-- 404 `ds.not-found-2`: 404/not-found-2/
-icon: -/fifthtry.github.io/doc-site/static/primary-favorites.svg
+- Typography 🚧: /docs/typography/
 
-# Blog: /featured-posts/
+- SEO 🚧: /docs/seo/
 
-## Posts: featured-posts/
+- Deployment 🚧: /docs/deployment/
 
-- News & Culture: /blog-articles/category-1/
+- Translation 🚧: /docs/translations/
 
-  - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
-  - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
+- Advanced Guide 🚧: /docs/advanced-guide/
+  - Using CSS 🚧: /docs/using-css/
+  - Using AJAX 🚧: /docs/using-ajax/
+  - API Call 🚧: /docs/api-call/
 
-- Technology & Learning: /blog-articles/category-2/
-
-  - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
-  - What rust gives us?: /blog-articles/category-2/sample-post-4/
-
-## Authors: blog-authors/amitu/
-
-- Amit Upadhyay: /blog-authors/amitu/
-- Abrar Khan: /blog-authors/abrar/
-- Arpita Jaiswal: /blog-authors/arpita/
-- Ganesh S Salunke: /blog-authors/ganesh/
+- Error Pages 🚧: /docs/error-pages/
+  - Page Not Found Ex. - 1: docs/page-not-found-1/
+  - Page Not Found Ex. - 2: docs/page-not-found-2/
+  - Error Pages Configuration 🚧: /docs/config-error-pages/
 
 # GitHub
 url: https://github.com/FifthTry/doc-site/
 
 # Use this template
 url: https://github.com/fastn-stack/fastn-template/
+
+
+
+
+;; - How to use blog: /docs/blog/
+;; 
+;; - Right-sidebar example: /docs/right-sidebar/
+;; 
+;; - 404 `ds.not-found-1`: 404/
+;; 
+;; - 404 `ds.not-found-2`: 404/not-found-2/
+;; 
+;; # Blog: /featured-posts/
+;; 
+;; ## Posts: featured-posts/
+;; 
+;; - News & Culture: /blog-articles/category-1/
+;; 
+;;   - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
+;;   - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
+;; 
+;; - Technology & Learning: /blog-articles/category-2/
+;; 
+;;   - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
+;;   - What rust gives us?: /blog-articles/category-2/sample-post-4/
+;; 
+;; ## Authors: blog-authors/amitu/
+;; 
+;; - Amit Upadhyay: /blog-authors/amitu/
+;; - Abrar Khan: /blog-authors/abrar/
+;; - Arpita Jaiswal: /blog-authors/arpita/
+;; - Ganesh S Salunke: /blog-authors/ganesh/
+
