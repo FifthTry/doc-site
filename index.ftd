@@ -127,7 +127,7 @@ author-meta author:
 static site application with fast client-side navigation, leveraging the full
 power of fastn to make your site interactive. 
 
-It provides out-of-the-box documentation features but can be used to create any
+It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, product, blog, marketing landing pages, etc).
 
 💸 Building a custom tech stack is expensive. Instead, focus on your content and
