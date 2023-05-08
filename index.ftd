@@ -5,6 +5,7 @@
 -- import: fifthtry.github.io/dark-mode-switcher as dms
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/footer
+-- import: fifthtry.github.io/bling/chat
 
 
 
@@ -27,19 +28,31 @@ just write fastn files.
 
 -- h2: Fast Track ⏱️
 
-🤔 Are you a GitHub user?
+
+-- chat.message-left: 🤔 Are you not a GitHub user?
+
+-- markdown: 
 
 [Click here](https://docs.github.com/en/get-started/quickstart/hello-world) to
 learn GitHub.
 
-😃 Already a GitHub user?
+-- end: chat.message-left
+
+-- chat.message-right:  😃 Already a GitHub user?
+
+-- markdown:
 
 Create your first fastn project in 5 minutes by playing!
 
 🚀 [Click here](https://github.com/fastn-stack/fastn-template/) to create your
 fastn web site.
 
-⚒️ Want to become a `fastn-developer`?
+-- end: chat.message-right
+
+
+-- markdown:
+
+✈️ Grab your seat! 🤩 Want to become a `fastn-developer`?
 
 Along with [building frontends](https://fastn.com/frontend/) fastn can be used
 for building dynamic websites as well. With features already built and planned
@@ -49,8 +62,7 @@ Install [fastn](https://fastn.com/install/) and create a new fastn site.
 
 [Click here](https://fastn.com/install/), to know how to install fastn.
 
-Create a new fastn site and follow the very short embedded tutorial.
-
+💡 Create a new fastn site and follow the very short embedded tutorial.
 
 -- youtube:
 v: EKeCM75zrkY

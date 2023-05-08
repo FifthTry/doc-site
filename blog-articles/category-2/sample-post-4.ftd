@@ -1,11 +1,12 @@
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/blog-authors/arpita as author
 
 
 ; Change below details for your new blog post
 
--- ds.post-meta meta: What rust gives us?
+-- common.post-meta meta: What rust gives us?
 published-on: July 22, 2014 at 10:02 pm
 post-url: blog-articles/category-2/sample-post-4/
 author: $author.arpita

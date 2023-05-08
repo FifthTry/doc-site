@@ -1,12 +1,12 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 
 
 
 
 
-
--- ds.author-meta ganesh: Ganesh S Salunke
+-- common.author-meta ganesh: Ganesh S Salunke
 profile: Sr. Manager Frontend
 bio-url:  blog-authors/ganeshs/
 image: $assets.files.static.authors.ganeshs.jpg

@@ -9,6 +9,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
 -- fastn.dependency: fifthtry.github.io/app-switcher
 -- fastn.dependency: fifthtry.github.io/header
+-- fastn.dependency: fifthtry.github.io/bling
 -- fastn.dependency: fifthtry.github.io/footer
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
@@ -34,46 +35,77 @@ readers: fastn-fans
 # Introduction: /index.html
 
 - Getting Started 🚧: /docs/
+skip: true
   - Installation 🚧: /docs/installation/
+  skip: true
   - Configuration 🚧: /docs/configuration/
+  skip: true
   - Play Ground 🚧: /docs/play-ground/
+  skip: true
   - Markup Support 🚧: /docs/markup-support/
+  skip: true
 
 - Guides 🚧: /docs/guides/
+skip: true
   - Page 🚧: /docs/page/
+  skip: true
   - Navnar 🚧: /docs/navbar/
+  skip: true
   - TOC Sidebar 🚧: /docs/toc-sidebar/
+  skip: true
   - Right Sidebar: /docs/right-sidebar/
+  skip: true
   - Footer: /docs/footer/
+  skip: true
 
 - Blog 🚧: /docs/blog/
+skip: true
   - Blog Post 🚧: /docs/blog-post/
+  skip: true
   - Post List 🚧: /docs/post-list/
+  skip: true
   - Featured Post 🚧: /docs/featured-post/
+  skip: true
   - Featured Page 🚧: /docs/featured-page/
+  skip: true
   - Author 🚧: /docs/author/
+  skip: true
 
 - Static Assets 🚧: /docs/static-assets/
+skip: true
 
 - Color Scheme 🚧: /docs/color-scheme/
+skip: true
 
 - Typography 🚧: /docs/typography/
+skip: true
 
 - SEO 🚧: /docs/seo/
+skip: true
 
 - Deployment 🚧: /docs/deployment/
+skip: true
 
 - Translation 🚧: /docs/translations/
+skip: true
 
 - Advanced Guide 🚧: /docs/advanced-guide/
+skip: true
   - Using CSS 🚧: /docs/using-css/
+  skip: true
   - Using AJAX 🚧: /docs/using-ajax/
+  skip: true
   - API Call 🚧: /docs/api-call/
+  skip: true
 
 - Error Pages 🚧: /docs/error-pages/
+skip: true
   - Page Not Found Ex. - 1: docs/page-not-found-1/
+  skip: true
   - Page Not Found Ex. - 2: docs/page-not-found-2/
+  skip: true
   - Error Pages Configuration 🚧: /docs/config-error-pages/
+  skip: true
 
 # GitHub
 url: https://github.com/FifthTry/doc-site/
@@ -85,29 +117,19 @@ url: https://github.com/fastn-stack/fastn-template/
 
 
 ;; - How to use blog: /docs/blog/
-;; 
 ;; - Right-sidebar example: /docs/right-sidebar/
-;; 
 ;; - 404 `ds.not-found-1`: 404/
-;; 
 ;; - 404 `ds.not-found-2`: 404/not-found-2/
-;; 
 ;; # Blog: /featured-posts/
-;; 
 ;; ## Posts: featured-posts/
-;; 
 ;; - News & Culture: /blog-articles/category-1/
-;; 
-;;   - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
-;;   - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
-;; 
+
+;; - A day in a city of dreams: /blog-articles/category-1/sample-post-1/
+;; - Understanding process of start-up funding: /blog-articles/category-1/sample-post-2/
 ;; - Technology & Learning: /blog-articles/category-2/
-;; 
-;;   - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
-;;   - What rust gives us?: /blog-articles/category-2/sample-post-4/
-;; 
+;; - What are front-end technologies we have?: /blog-articles/category-2/sample-post-3/
+;; - What rust gives us?: /blog-articles/category-2/sample-post-4/
 ;; ## Authors: blog-authors/amitu/
-;; 
 ;; - Amit Upadhyay: /blog-authors/amitu/
 ;; - Abrar Khan: /blog-authors/abrar/
 ;; - Arpita Jaiswal: /blog-authors/arpita/

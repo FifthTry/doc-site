@@ -1,4 +1,5 @@
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/blog-authors/ganesh as author
 
@@ -6,7 +7,7 @@
 
 ; Change below details for your new blog post
 
--- ds.post-meta meta: What are front-end technologies we have?
+-- common.post-meta meta: What are front-end technologies we have?
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
 post-url: blog-articles/category-2/sample-post-3/

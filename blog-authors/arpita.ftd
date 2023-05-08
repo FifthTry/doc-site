@@ -1,11 +1,11 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 
 
 
 
-
--- ds.author-meta arpita: Arpita Jaiswal
+-- common.author-meta arpita: Arpita Jaiswal
 profile: Software Developer
 bio-url:  blog-authors/arpita/
 image: $assets.files.static.authors.arpita.jpg

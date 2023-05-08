@@ -1,5 +1,6 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 
 
 
@@ -7,7 +8,7 @@
 
 
 
--- ds.author-meta abrar: Abrar Khan
+-- common.author-meta abrar: Abrar Khan
 profile: Sr. Software Developer
 bio-url: blog-authors/abrar/
 image: $assets.files.static.authors.abrar-k.jpg

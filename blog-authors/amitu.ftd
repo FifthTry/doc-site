@@ -1,13 +1,13 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/doc-site/common
 
 
 
 
 
 
-
--- ds.author-meta amitu: Amit Upadhyay
+-- common.author-meta amitu: Amit Upadhyay
 profile: CEO
 bio-url: blog-authors/amitu/
 image: $assets.files.static.authors.amitu.jpg

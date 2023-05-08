@@ -1,12 +1,13 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/common
 -- import: fifthtry.github.io/doc-site/blog-authors/amitu as author
 
 
 
 ; Change below details for your new blog post
 
--- ds.post-meta meta: Understanding process of statup-up funding
+-- common.post-meta meta: Understanding process of statup-up funding
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
 post-url: blog-articles/category-1/sample-post-2/
