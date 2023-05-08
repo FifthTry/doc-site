@@ -122,19 +122,19 @@ author-meta author:
 
 ⚡️ `doc-site` will help you create a beautiful documentation site in no time.
 
-🧐 It helps your to build a static documentation site application with fast
-client-side navigation, leveraging the full power of fastn to make your site
+🧐 It helps you to build a static documentation with fast client-side
+navigation, leveraging the full power of fastn to make your documentation site
 interactive. 
 
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
 
--- h2: Fast Track ⏱️
+-- h2: Fast Track 🚀
 
-Create your first `doc-site` project in 5 minutes by playing!
+Create your first `doc-site` project in just 5 minutes!
 
-🚀 [Click here](https://github.com/fastn-stack/fastn-template/) to create your
-fastn web site.
+ [Click here](https://github.com/fastn-stack/fastn-template/) to use `doc-site`
+for your fastn project.
 
 -- h2: 👀 Want to learn more?
 
