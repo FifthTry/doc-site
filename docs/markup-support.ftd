@@ -62,7 +62,7 @@ incididunt.
 
 -- ds.markdown:
 
-Please, refer this [markup cheat-sheet]
-(https://www.markdownguide.org/cheat-sheet/) for more markup syntax.
+Please, refer this [markup cheat-sheet](https://www.markdownguide.org/cheat-sheet/) 
+for more markup syntax.
 
 -- end: my-ds.page
