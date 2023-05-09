@@ -1,8 +1,26 @@
 -- import: fifthtry.github.io/doc-site as ds
 
 
--- ds.page: TOC Sidebar
+-- my-ds.page: 👈🏻 TOC Sidebar
 
-Coming Soon...
+Like `navbar` `sidebar` is also inbuilt component of `doc-site`.  Just using
+`page` sidebar will appear on your page.
 
--- end: ds.page
+👈🏻 TOC Sidebar uses `fastn.sitemap` which can be added insite your `FASTN.ftd`
+file. 
+
+To learn more how to implement `fast.sitemap` go through this 
+[video tutorial](https://fastn.com/clean-urls/-/build/).
+
+⭐ Creating a sidebar is useful to:
+
+- Group multiple **related pages**
+- **Display a sidebar** on each page
+
+
+
+
+
+
+
+-- end: my-ds.page

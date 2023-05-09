@@ -20,6 +20,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/header as h
 -- fastn.auto-import: fifthtry.github.io/typography as tf
+-- fastn.auto-import: fifthtry.github.io/doc-site/FASTN/config as my-ds
 
 
 /-- fastn.app: Todos for Family
@@ -37,14 +38,10 @@ readers: fastn-fans
 - Getting Started: /docs/
   - Markup Support: /docs/markup-support/
   - Page: /docs/page/
-  - Navnar 🚧: /docs/navbar/
-  skip: true
+  - Navbar 🚧: /docs/navbar/
   - TOC Sidebar 🚧: /docs/toc-sidebar/
-  skip: true
   - Right Sidebar: /docs/right-sidebar/
-  skip: true
   - Footer: /docs/footer/
-  skip: true
 
 - Blog 🚧: /docs/blog/
   - Blog Post 🚧: /docs/blog-post/

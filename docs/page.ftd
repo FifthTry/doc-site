@@ -1,8 +1,58 @@
 -- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/bling/note
 
 
--- ds.page: Page
+-- my-ds.page: Page
 
-Coming Soon...
+In this section, we will learn about creating pages in `doc-site`.
 
--- end: ds.page
+The `page` component empowers you to create **one-off standalone pages**. You can
+use other fastn components, or markdown.
+
+
+-- note.note: NOTE
+
+Page component have toc sidebar(if page is added inside `fastn.sitemap` component of your `FASTN.ftd` file),
+navbar, right sidebar (optional) and body content area.
+
+
+
+-- ds.h3: 💡 Invocation:
+
+Create a new `.ftd` file into your `fastn` project. Add `page` component inside
+`.ftd` file as shown below.
+
+Click on download icon of below code-block. `sample.ftd` file will be
+downloaded. Add this file inside your `fastn` project and deploy or run `fastn
+serve` on your localhost. Access your localhost in browser
+e.g.`http://127.0.0.1:8000/sample/` you will see below page output.
+
+-- ds.code: 
+lang: ftd
+download: sample.ftd
+
+\-- ds.page: This is page title
+
+This is body area. It contains multiple paragraphs.
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+excepturi sint occaecati cupiditate non provident.
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+\-- ds.h1: This is heading level 1
+
+This is heading level 1 optional body content.
+
+\-- ds.h1: This is heading level 2
+
+This is heading level 2 optional body content.
+
+\-- ds.h1: This is heading level 3
+
+This is heading level 3 optional body content.
+
+-- end: my-ds.page

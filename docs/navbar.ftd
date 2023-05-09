@@ -1,8 +1,28 @@
 -- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/bling/sidenote
+
+-- my-ds.page: Navbar
+
+`doc-site` page component has inbuilt navbar. Just using `page` navbar will
+appear on your page.
+
+Navbar is built using [header](https://fifthtry.github.io/header/) component.
+Navbar uses `fastn.sitemap` which can be added insite your `FASTN.ftd` file. 
+
+To learn more how to implement `fast.sitemap` go through this 
+[video tutorial](https://fastn.com/clean-urls/-/build/).
+
+-- ds.h3: How to create clean URL using sitemap
 
 
--- ds.page: Navbar
+-- ds.youtube:
+v: 4ke75MpOEks
 
-Coming Soon...
 
--- end: ds.page
+-- sidenote.sidenote: 
+
+Read our `header` component [documentation](https://fifthtry.github.io/header/) 
+to learn more how doc-site navbar is built.
+
+
+-- end: my-ds.page

@@ -1,16 +1,17 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/doc-site/assets
+-- import: fifthtry.github.io/bling/note
 
 
 
 
 
--- ds.page: Using right-sidebar feature
-$sidebar: true
+-- my-ds.page: Right Sidebar 👉🏻
+sidebar: true
 
--- ds.page.extra-headers:
+-- my-ds.page.extra-headers:
 
--- ds.h2: Heading in sidebar
+-- ds.h3: Heading in sidebar
 
 You can call any component inside sidebar
 
@@ -21,19 +22,27 @@ lang: ftd
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 
--- end: ds.page.extra-headers
+-- end: my-ds.page.extra-headers
 
 
--- ds.page.body:
+-- my-ds.page.body:
 
-We have made provision of adding `right-sidebar` for additional components to
-be shown on right-side of `page` component. Add `sidebar: true` attribute to 
+`doc-site` have inbuilt provision of adding `right-sidebar` for additional
+components to be shown on right-side of `page` component. 
+
+Add `sidebar: true` attribute to your `page` component.
+
+-- note.note: NOTE
+
+Click on download icon of below code-block. `right-sidebar.ftd` file will be
+downloaded. Add this file inside your `fastn` project and deploy or run `fastn
+serve` on your localhost. Access your localhost in browser
+e.g.`http://127.0.0.1:8000/right-sidebar/` you will see right-sidebar inside
 your page component.
 
-To use this feature follow below instructions:
-
--- ds.code: How to use sidebar
+-- ds.code: Example of `right-sidebar` inside `extra-headers` as child
 lang: ftd
+download: right-sidebar.ftd
 
 \-- ds.page: Using right-sidebar feature
 $sidebar: true
@@ -44,12 +53,136 @@ add some page body here.
 
 \-- ds.page.extra-headers:
 
-\-- ds.h2: Heading in sidebar
+\-- ds.h3: Heading in sidebar
 
 You can call any component inside sidebar
+
+\-- ds.code: Code block in sidebar
+lang: ftd
+
+\-- ftd.text: Some title here...
+role: $inherited.types.copy-large
+color: $inherited.colors.text
 
 \-- end: ds.page.extra-headers
 
 \-- end: ds.page
 
--- end: ds.page
+
+-- ds.h3: 💡 Advanced usage:
+id: advanced-usage
+
+You can create a module inside your `fastn` package and create your custom
+right-sidebar.
+
+Create a new module, let’s say `my-ds.ftd`. Then you import `my-ds` module and
+then create a new page using it.
+
+Here’s what your my-ds.ftd module and FASTN.ftd import would look like:
+
+-- cb.code: my-ds.ftd module
+lang: ftd
+download: my-ds.ftd
+
+\-- import: fifthtry.github.io/doc-site as ds
+
+\-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+boolean sidebar: true
+
+\-- ds.page: $page.title
+site-logo: $fastn-assets.files.images.fastn.svg
+body: $page.body
+$sidebar: *$page.sidebar
+
+\-- end: ds.page.banner
+
+\-- ds.page.extra-headers:
+
+\-- ds.h3: Heading in sidebar
+
+You can call any component inside sidebar
+
+\-- ds.code: Code block in sidebar
+lang: ftd
+
+\-- ftd.text: Some title here...
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+\-- end: ds.page.extra-headers
+
+\-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+\-- end: ftd.column
+
+\-- end: ds.page
+
+\-- end: page
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `my-ds.ftd` file will be
+downloaded. Import this file inside your new `.ftd` file.
+
+-- ds.code:
+lang: ftd
+
+\-- import: <your fastn package name>/my-ds
+
+-- ds.markdown:
+
+Then use `my-ds` component to create a new page using it.
+
+
+-- ds.code:
+lang: ftd
+download: right-sidebar.ftd
+
+\-- my-ds.page: This is page title
+
+This is body area. It contains multiple paragraphs.
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+excepturi sint occaecati cupiditate non provident.
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+\-- ds.h1: This is heading level 1
+
+This is heading level 1 optional body content.
+
+\-- ds.h1: This is heading level 2
+
+This is heading level 2 optional body content.
+
+\-- ds.h1: This is heading level 3
+
+This is heading level 3 optional body content.
+
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `right-sidebar.ftd` file will be
+downloaded.
+
+Add this file inside your `fastn` project and deploy or run `fastn serve` on
+your localhost. Access your localhost in browser
+e.g.`http://127.0.0.1:8000/right-sidebar/` you will see advanced page with
+inbuilt sidebar.
+
+-- note.note: NOTE
+
+This is advanced right-sidebar which will show same content you added in
+`my-ds.ftd` inside `ds.page.extra-headers` on all pages where you import
+`my-ds`.
+
+-- end: my-ds.page

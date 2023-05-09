@@ -84,6 +84,7 @@ ftd.color-scheme colors: $ftd.default-colors
 boolean show-banner: false
 ftd.ui list banner:
 boolean show-footer: $common.show-footer
+ftd.ui list footer:
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -176,13 +177,8 @@ extra-headers: $page.extra-headers
 -- ftd.column:
 if: { page.show-footer}
 width: fill-container
+children: $page.footer
 align-content: center
-
--- footer.fastn-footer:
-copyright: Copyright © 2023 - [FifthTry](https://www.fifthtry.com/)
-site-logo: https://fastn.io/-/fastn.io/images/fastn.svg
-powered-by-text: Powered by
-powered-by-link: https://fastn.io/
 
 -- end: ftd.column
 
@@ -931,6 +927,7 @@ padding-right.px: 16
 padding-bottom.px: 32
 margin-top.px: 25
 margin-bottom.px: 25
+spacing.fixed.rem: 0.5
 
 -- toc-instance:
 $loop$: $render-toc.toc-obj as $obj

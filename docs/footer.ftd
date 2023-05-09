@@ -1,8 +1,71 @@
 -- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/bling/note
 
 
--- ds.page: Footer
+-- my-ds.page: Footer
 
-Coming Soon...
+In this section, we will learn about adding footer into your pages in
+`doc-site`.
 
--- end: ds.page
+`page` component has `show-footer` boolean type property. You can add different
+footers using `show-footer: true` property.
+
+We have created few footer components for you. Please, [visit our footer
+ package](https://fifthtry.github.io/footer/), you can choose footer of your 
+ choice from there. 
+
+In below example we are using `basic-footer` from [footer 
+package](https://fifthtry.github.io/footer/).
+
+Add footer dependency inside your `FASTN.ftd` file.
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/footer
+
+-- ds.markdown:
+
+Now import `fifthtry.github.io/footer` inside your `.ftd` file and apply it to
+your `page` component. 
+
+-- ds.code:
+lang: ftd
+download: footer.ftd
+
+\-- import: fifthtry.github.io/footer
+
+\-- ds.page: Title of the page
+show-footer: true
+
+\-- ds.page.footer:
+
+\-- footer.basic-footer:
+footer-list: $sitemap.sections
+site-logo: https://fastn.com/-/fastn.io/images/fastn.svg
+site-url: /
+copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
+
+\-- end: ds.page.footer
+
+\-- ds.page.body:
+Some page body components and content here
+
+\-- end: ds.page
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `footer.ftd` file will be
+downloaded.
+
+Add this file inside your `fastn` project and deploy or run `fastn serve` on
+your localhost. Access your localhost in browser
+e.g.`http://127.0.0.1:8000/footer/` you will see page with footer.
+
+-- note.note: NOTE
+
+We recommond you to go through [footer 
+documentation](https://fifthtry.github.io/footer/) to learn more about 
+different properties of footer.
+
+-- end: my-ds.page

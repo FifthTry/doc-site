@@ -1,1 +1,37 @@
--- import: fastn
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/footer
+
+-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+boolean sidebar: false
+ftd.ui list extra-headers:
+
+-- ds.page: $page.title
+site-name: Doc Site
+body: $page.body
+show-footer: true
+extra-headers: $page.extra-headers
+$sidebar: *$page.sidebar
+
+-- ds.page.footer:
+
+-- footer.fastn-footer:
+copyright: Copyright © 2023 - [FifthTry](https://www.fifthtry.com/)
+site-logo: https://fastn.io/-/fastn.io/images/fastn.svg
+powered-by-text: Powered by
+powered-by-link: https://fastn.io/
+
+-- end: ds.page.footer
+
+-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+-- end: ftd.column
+
+-- end: ds.page
+
+-- end: page

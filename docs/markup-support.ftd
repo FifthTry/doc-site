@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/doc-site as ds
 
 
--- ds.page: Markup support
+-- my-ds.page: Markup support
 
 `fastn` supports markup syntax. If you want to use it you can use markup syntax
 for inline anchor links etc.
@@ -65,4 +65,4 @@ incididunt.
 Please, refer this [markup cheat-sheet]
 (https://www.markdownguide.org/cheat-sheet/) for more markup syntax.
 
--- end: ds.page
+-- end: my-ds.page

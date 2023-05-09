@@ -2,7 +2,8 @@
 -- import: fifthtry.github.io/doc-site/assets
 
 
--- ds.page: Getting Started
+-- my-ds.page: Getting Started
+sidebar: false
 
 You can create your documentation web-sites using `doc-site`. `doc-site` also
 helps authors, entrepreneurs, corporate groups and bloggers to create their own
@@ -14,11 +15,17 @@ web projects.
 We recommend using our [`fastn-template`]()
 
 
-
 -- ds.h2: 🌟 Creating fastn web-site using `doc-site`
 
 Please, refer [this documentation](https://fastn.com/github-pages/) to
 understand how to create fastn website repository on GitHub.
+
+-- ds.h3: How to publish a package?
+
+Watch this quick video tutorial to learn how to publish a package.
+
+-- ds.youtube:
+v: XNsTZ1s5KL8
 
 
 -- ds.h2: `doc-site` components
@@ -40,4 +47,4 @@ navigation.
 
 ✨ [Click here](/docs/static-assets/) to know about Static Assets.
 
--- end: ds.page
+-- end: my-ds.page
