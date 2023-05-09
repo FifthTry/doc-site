@@ -230,8 +230,8 @@ github-text: $page.github-text
 
 -- end: ftd.column
 
+-- ftd.desktop:
 -- doc-page-desktop: $page.title
-if: {ftd.device != "mobile"}
 toc: $page.toc
 wrapper: $page.wrapper
 login-button: $page.login-button
@@ -252,8 +252,12 @@ site-logo: $page.site-logo
 site-url: $page.site-url
 apps: $page.apps
 
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
 -- doc-page-mobile: $page.title
-if: {ftd.device == "mobile"}
 wrapper: $page.wrapper
 toc: $page.toc
 $open-right-sidebar-info: $page.open-right-sidebar-info
@@ -272,6 +276,8 @@ site-url: $page.site-url
 right-sidebar: $page.sidebar
 apps: $page.apps
 extra-headers: $page.extra-headers
+
+-- end: ftd.mobile
 
 -- dms.dark-mode-switcher-float:
 
@@ -813,13 +819,20 @@ pr.toc-item list footer-toc:
 -- ftd.column:
 width: fill-container
 
+-- ftd.desktop:
+
 -- footer-desktop:
-if: {ftd.device != "mobile"}
 footer-toc: $footer.footer-toc
 
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
 -- footer-mobile:
-if: {ftd.device == "mobile"}
 footer-toc: $footer.footer-toc
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1101,14 +1114,10 @@ body: $image.body
 -- ftd.column:
 background.solid:$inherited.colors.background.base
 width.fixed.px: 614
-width if {ftd.device == "mobile"}: fill-container
+width if { ftd.device == "mobile" }: fill-container
 border-width.px: 1
 padding-vertical.px: 35
 padding-horizontal.px: 32
-;;shadow-offset-x: 3
-;;shadow-offset-y: 4
-;;shadow-size: 1
-;;shadow-blur: 4
 border-top-width.px: 3
 border-radius.px: 8
 border-color: $inherited.colors.border
@@ -1247,21 +1256,25 @@ children container:
 
 -- ftd.column:
 
+-- ftd.desktop:
 -- ftd.row:
 children: $posts.container
-if: {ftd.device != "mobile"}
 wrap: true
 spacing.fixed.px: 16
 
 -- end: ftd.row
 
+-- end: ftd.desktop
 
+
+-- ftd.mobile:
 -- ftd.column:
 children: $posts.container
-if: {ftd.device == "mobile"}
 spacing.fixed.px: 16
 
 -- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1315,8 +1328,8 @@ border-width.px: 1
 border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
-max-width.fixed.px if {ftd.device != "mobile"}: 344
-max-height.fixed.px if {ftd.device != "mobile"}: 550
+max-width.fixed.px if { ftd.device != "mobile" }: 344
+max-height.fixed.px if { ftd.device != "mobile" }: 550
 padding-horizontal.px: 24
 color: $inherited.colors.text
 margin-top.px : 12
@@ -1338,8 +1351,9 @@ role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 margin-top.px if {image-first-card.image != NULL}: 12
 
+-- ftd.desktop:
+
 -- ftd.row:
-if: { ftd.device != "mobile" }
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1364,6 +1378,9 @@ color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
+-- end: ftd.desktop
+
+
 -- ftd.text:
 text: $image-first-card.body
 role: $inherited.types.copy-regular
@@ -1372,9 +1389,8 @@ link: $image-first-card.url
 
 -- end: ftd.column
 
+-- ftd.mobile:
 -- ftd.column:
-if: { ftd.device == "mobile" }
-;;id:time-container-2
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1398,6 +1414,8 @@ role: $inherited.types.fine-print
 color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1456,7 +1474,7 @@ padding-horizontal.px: 24
 color: $inherited.colors.text
 margin-top.px: 12
 margin-bottom.px: 12
-margin-left.px if {ftd.device != "mobile"}: 12
+margin-left.px if { ftd.device != "mobile" }: 12
 spacing.fixed.px: 8
 border-radius.px: 8
 
@@ -1465,9 +1483,9 @@ role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 link: $image-in-between-card.url
 
+-- ftd.desktop:
+
 -- ftd.row:
-if: { ftd.device != "mobile" }
-;;id:time-container-3
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1491,8 +1509,9 @@ color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
 
-
 -- end: ftd.row
+
+-- end: ftd.desktop
 
 -- ftd.image:
 src: $image-in-between-card.image
@@ -1507,9 +1526,9 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $image-in-between-card.url
 
+-- ftd.mobile:
+
 -- ftd.column:
-if: {ftd.device == "mobile"}
-;;id:time-container-4
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1533,6 +1552,8 @@ role: $inherited.types.fine-print
 color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1582,13 +1603,13 @@ border-width.px: 1
 border-color: $inherited.colors.border
 padding-vertical.px: 24
 width: fill-container
-max-width.fixed.px if {ftd.device != "mobile"}: 344
+max-width.fixed.px if { ftd.device != "mobile" }: 344
 max-height.fixed.px: 500
 padding-horizontal.px:24
 color: $inherited.colors.text
 margin-top.px: 12
 margin-bottom.px: 12
-margin-right.px if {ftd.device != "mobile"}: 12
+margin-right.px if { ftd.device != "mobile" }: 12
 spacing.fixed.px: 12
 border-radius.px: 8
 
@@ -1597,8 +1618,9 @@ role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 link: $without-image-card.url
 
+-- ftd.desktop:
+
 -- ftd.row:
-if: {ftd.device != "mobile"}
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1621,6 +1643,7 @@ role: $inherited.types.fine-print
 color: $inherited.colors.cta-primary.border
 
 -- end: ftd.row
+-- end: ftd.desktop
 
 -- ftd.text:
 text: $without-image-card.body
@@ -1628,8 +1651,9 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 link: $without-image-card.url
 
+-- ftd.mobile:
+
 -- ftd.column:
-if: {ftd.device == "mobile"}
 width: fill-container
 spacing.fixed.px: 8
 margin-top.px: 8
@@ -1652,6 +1676,8 @@ role: $inherited.types.fine-print
 color: $inherited.colors.cta-primary.border
 
 -- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1703,19 +1729,25 @@ color: $inherited.colors.text
 spacing.fixed.px: 24
 margin.px if { ftd.device != "mobile" }: 12
 
+-- ftd.desktop:
+
 -- author-bio-desktop: $author-bio-card.title
-if: { ftd.device != "mobile"}
 profile: $author-bio-card.profile
 company: $author-bio-card.company
 avatar: $author-bio-card.avatar
 body: $author-bio-card.body
 
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
 -- author-bio-mobile: $author-bio-card.title
-if: { ftd.device == "mobile"}
 profile: $author-bio-card.profile
 company: $author-bio-card.company
 avatar: $author-bio-card.avatar
 body: $author-bio-card.body
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1982,21 +2014,27 @@ optional body body:
 -- ftd.column:
 width: fill-container
 
+-- ftd.desktop:
+
 -- featured-post-meta-desktop: $featured-post-card.title
-if:{ftd.device != "mobile"}
 timestamp: $featured-post-card.timestamp
 author: $featured-post-card.author
 image: $featured-post-card.image
 url: $featured-post-card.url
 body: $featured-post-card.body
 
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
 -- featured-post-meta-mobile: $featured-post-card.title
-if: {ftd.device=="mobile"}
 timestamp: $featured-post-card.timestamp
 author: $featured-post-card.author
 image: $featured-post-card.image
 url: $featured-post-card.url
 body: $featured-post-card.body
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -2555,7 +2593,7 @@ align-content: center
 background.solid: $inherited.colors.background.base
 spacing.fixed.px: 32
 height: fill-container
-padding-horizontal.px if {ftd.device == "mobile"}: 24
+padding-horizontal.px if { ftd.device == "mobile" }: 24
 
 -- ftd.text: $not-found-1.type
 role: $inherited.types.heading-hero
@@ -2609,7 +2647,7 @@ align-content: center
 spacing.fixed.px: 32
 height: fill-container
 background.solid: #f7f7f7
-padding-horizontal.px if {ftd.device == "mobile"}: 24
+padding-horizontal.px if { ftd.device == "mobile" }: 24
 
 -- ftd.text: $not-found-2.type
 role: $inherited.types.heading-hero
