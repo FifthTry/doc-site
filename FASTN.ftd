@@ -35,16 +35,7 @@ readers: fastn-fans
 # Introduction: /index.html
 
 - Getting Started 🚧: /docs/
-skip: true
-  - Installation 🚧: /docs/installation/
-  skip: true
-  - Configuration 🚧: /docs/configuration/
-  skip: true
-  - Play Ground 🚧: /docs/play-ground/
-  skip: true
   - Markup Support 🚧: /docs/markup-support/
-  skip: true
-
 - Guides 🚧: /docs/guides/
 skip: true
   - Page 🚧: /docs/page/

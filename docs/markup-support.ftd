@@ -1,1 +1,69 @@
-markup-support.ftd
+-- import: fifthtry.github.io/doc-site as ds
+
+
+-- ds.page: Markup support
+
+`fastn` supports markup syntax. If you want to use it you can use markup syntax
+for inline anchor links etc.
+
+All markup syntax is supported into `fastn`
+
+`doc-site` comes with inbuit `-- ds.markdown` component.
+
+-- ds.code: `-- ds.markdown`
+lang: ftd
+
+\-- ds.markdown:
+
+Add your content here. `fastn` supports markup syntax. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt.
+
+-- ds.rendered: Inline links
+
+-- ds.rendered.input:
+
+\-- ds.markdown:
+
+Lorem ipsum [dolor sit](/docs/markup-support/) amet, consectetur adipiscing
+elit, sed do eiusmod tempor incididunt.
+
+-- ds.rendered.output:
+
+-- ds.markdown:
+
+Lorem ipsum [dolor sit](/docs/markup-support/) amet, consectetur adipiscing
+elit, sed do eiusmod tempor incididunt.
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+-- ds.rendered: Inline styles
+
+-- ds.rendered.input:
+
+\-- ds.markdown:
+
+Lorem ipsum dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod tempor
+incididunt.
+
+-- ds.rendered.output:
+
+-- ds.markdown:
+
+Lorem ipsum dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod tempor
+incididunt.
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ds.markdown:
+
+Please, refer this [markup cheat-sheet]
+(https://www.markdownguide.org/cheat-sheet/) for more markup syntax.
+
+-- end: ds.page
