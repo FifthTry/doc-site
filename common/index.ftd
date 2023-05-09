@@ -8,7 +8,7 @@
 
 -- boolean $show-floater: false
 
--- boolean show-footer: false
+-- boolean show-footer: true
 
 -- string wall-message: Please, login via clicking on below button
 
@@ -16,7 +16,7 @@
 
 -- boolean is-reader: false
 
--- optional string $site-name:
+-- string $site-name: Doc Site
 
 -- ftd.image-src $site-logo:
 light: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png

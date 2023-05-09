@@ -10,8 +10,7 @@ All markup syntax is supported into `fastn`
 
 `doc-site` comes with inbuit `-- ds.markdown` component.
 
--- ds.code: `-- ds.markdown`
-lang: ftd
+-- ds.rendered: -- ds.markdown
 
 \-- ds.markdown:
 

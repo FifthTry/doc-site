@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/doc-site/assets
 -- import: fifthtry.github.io/doc-site/common
 -- import: fifthtry.github.io/app-switcher as apps-switcher
--- import: fifthtry.github.io/doc-site-typography as typo
+-- import: fastn-community.github.io/roboto-typography as typo
 -- import: fifthtry.github.io/dark-mode-switcher as dms
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/footer
@@ -123,6 +123,7 @@ github-text: $page.github-text
 -- end: ftd.column
 
 -- ftd.desktop:
+
 -- doc-page-desktop: $page.title
 toc: $page.toc
 wrapper: $page.wrapper
@@ -145,7 +146,6 @@ site-url: $page.site-url
 apps: $page.apps
 
 -- end: ftd.desktop
-
 
 -- ftd.mobile:
 
@@ -802,17 +802,18 @@ pr.toc-item toc:
 pr.toc-item $toc-clone: *$toc-instance.toc
 
 -- ftd.column:
+width: fill-container
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 8
-margin-bottom.rem: 1
+spacing.fixed.px: 24
+margin-bottom.rem: 0.5
 $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
 -- ftd.image:
 if: { toc-instance.toc.font-icon != NULL }
 src: $toc-instance.toc.font-icon
-height.fixed.px: 14
+height.fixed.px: 24
 width: auto
 
 -- ftd.text:
@@ -821,18 +822,19 @@ text: $toc-instance.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
 color if { toc-instance.toc.is-active }: $inherited.colors.cta-primary.base
+width: fill-container
 
 -- ftd.image:
 if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open}
 src: $assets.files.static.open.svg
-height.fixed.px: 14
+height.fixed.px: 24
 width: auto
 align-self: center
 
 -- ftd.image:
 if: { !ftd.is_empty(toc-instance.toc.children) && !toc-instance.toc-clone.is-open}
 src: $assets.files.static.close.svg
-height.fixed.px: 14
+height.fixed.px: 24
 width: auto
 align-self: center
 
@@ -841,10 +843,10 @@ align-self: center
 -- ftd.column:
 margin-left.px: 12
 padding-left.px: 10
-border-left-width.px: 1
-border-color: $inherited.colors.border
 margin-top.rem: 0.5
+padding-top.rem: 0
 margin-bottom.rem: 1.25
+spacing.fixed.rem: 1
 if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open }
 
 -- childrens:
@@ -874,7 +876,6 @@ pr.toc-item toc:
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 8
-margin-bottom.em: 0.5
 
 -- ftd.image:
 if: {childrens.toc.font-icon != NULL}

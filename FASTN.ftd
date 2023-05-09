@@ -6,7 +6,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/code-block
 -- fastn.dependency: fifthtry.github.io/typography
--- fastn.dependency: fifthtry.github.io/doc-site-typography as typo
+-- fastn.dependency: fastn-community.github.io/roboto-typography as typo
 -- fastn.dependency: fifthtry.github.io/app-switcher
 -- fastn.dependency: fifthtry.github.io/header
 -- fastn.dependency: fifthtry.github.io/bling
@@ -34,12 +34,9 @@ readers: fastn-fans
 
 # Introduction: /index.html
 
-- Getting Started 🚧: /docs/
-  - Markup Support 🚧: /docs/markup-support/
-- Guides 🚧: /docs/guides/
-skip: true
-  - Page 🚧: /docs/page/
-  skip: true
+- Getting Started: /docs/
+  - Markup Support: /docs/markup-support/
+  - Page: /docs/page/
   - Navnar 🚧: /docs/navbar/
   skip: true
   - TOC Sidebar 🚧: /docs/toc-sidebar/
@@ -50,11 +47,8 @@ skip: true
   skip: true
 
 - Blog 🚧: /docs/blog/
-skip: true
   - Blog Post 🚧: /docs/blog-post/
-  skip: true
   - Post List 🚧: /docs/post-list/
-  skip: true
   - Featured Post 🚧: /docs/featured-post/
   skip: true
   - Featured Page 🚧: /docs/featured-page/
