@@ -9,8 +9,6 @@
 
 -- boolean login-button: false
 
--- boolean pricing-cta: false
-
 -- boolean parent-brand: true
 
 -- boolean $show-floater: false
@@ -163,7 +161,6 @@ string $site-url: $site-url
 optional string site-name: $site-name
 pr.toc-item list toc: $sitemap.toc
 boolean login-button: $login-button
-boolean pricing-cta: $pricing-cta
 fastn.app-ui apps: $apps
 boolean $open-right-sidebar-info: false
 pr.toc-item list sections: $sitemap.sections
@@ -237,7 +234,6 @@ wrapper: $page.wrapper
 login-button: $page.login-button
 footer-toc: $page.footer-toc
 $open-right-sidebar-info: $page.open-right-sidebar-info
-pricing-cta: $page.pricing-cta
 sections: $page.sections
 current-section: $page.current-section
 current-subsection: $page.current-subsection
@@ -263,7 +259,6 @@ toc: $page.toc
 $open-right-sidebar-info: $page.open-right-sidebar-info
 login-button: $page.login-button
 footer-toc: $page.footer-toc
-pricing-cta: $page.pricing-cta
 sections: $page.sections
 current-section: $page.current-section
 current-subsection: $page.current-subsection
@@ -477,8 +472,6 @@ optional pr.toc-item current-section:
 optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
 optional string login-btn-txt: Login
-boolean pricing-cta:
-optional string sign-in-txt:
 boolean widthfill:
 boolean login-button:
 boolean right-sidebar: false
@@ -493,9 +486,7 @@ apps: $apps
 
 -- h.header:
 login-button: $doc-page-desktop.login-button
-pricing-cta: $doc-page-desktop.pricing-cta
 login-btn-txt: $doc-page-desktop.login-btn-txt
-sign-in-txt: $doc-page-desktop.sign-in-txt
 sections: $doc-page-desktop.sections
 sub-sections: $doc-page-desktop.sub-sections
 current-section: $doc-page-desktop.current-section
@@ -608,7 +599,6 @@ optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
 boolean right-sidebar: false
 children wrapper:
-boolean pricing-cta:
 boolean login-button:
 
 -- ftd.column:
