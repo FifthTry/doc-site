@@ -1,0 +1,80 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/assets
+
+
+
+
+-- ds.page: Post
+
+In this section, we will learn about creating blog post in `doc-site`.
+
+-- ds.h1: Writing a post 
+
+Writing a post/article you can add your post meta and post details. Below code
+snippet shows how to write post meta and create your post. 
+
+[see sample post](blog-articles/category-1/sample-post-1/)
+
+
+-- ds.code: Example of how to create blog post 
+lang: ftd
+
+\-- import: fifthtry.github.io/doc-site as ds
+\-- import: fifthtry.github.io/doc-site/assets
+\-- import: fifthtry.github.io/doc-site/blog-authors/amitu as author
+
+\-- ds.post-meta meta: A day in a city of dreams
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.static.image-placeholder.png
+post-url: blog-articles/category-1/sample-post-1/
+author: $author.amitu
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+
+-- ds.h3: Let's understand above code snippet:
+
+✨ `-- import: fifthtry.github.io/doc-site as ds` : imports doc-site and all its
+components into your `FTD` page. 
+
+✨ `-- import: fifthtry.github.io/doc-site/assets` : helps to import assets from
+`doc-site`. For ex. this assets import helps you to add images into your `FTD`
+pages.
+
+✨ `-- import: fifthtry.github.io/doc-site/blog-authors/amitu as author` :
+imports author meta data. You can add author details into `blog-authors/`. 
+
+In above example we have added `amitu` which links to `amitu.ftd` file from 
+`blog-authors/` folder.
+
+✨ `-- ds.post-meta meta` : helps you to add details of your blog post. 
+
+✨ Using `published-on` property you can add your post timestamp. 
+
+✨ FTD uses a specific format to add image assets you see in above `post-image` 
+property. `$assets.files.static.image-placeholder.png` in this `$assets.files.`
+is default.
+
+FTD format to add a asset. `static` is a folder name, which you can see in your
+`doc-site` folder structure. `image-placeholder.png` image file name, in this 
+case we have added `png` format image. 
+
+You can add any image format in it. e.g. `image-placeholder.jpg` or 
+`image-placeholder.jpeg` or `image-placeholder.gif` etc.
+
+✨ `post-url` property will help you to add your `post.ftd` file. In this case 
+`/blog-articles/category-1/sample-post-1/` is this path of our sample post FTD
+file `sample-post-1.ftd` which is stored inside `/blog-articles/` is folder and
+`category-1` is a category folder. You can rename it with your desired name.
+
+✨ `author` attribute helps to add author details. `$author.amitu` in this
+`$author` is imported via `-- import:
+fifthtry.github.io/doc-site/blog-authors/amitu as author` line into your blog
+post. `amitu` is a record type inside `amitu.ftd` file which contains author
+details.
+
+✨ At the last of above code snippet you can add few lines from your post. This
+is called as body of the post in FTD. These lines will be added as featured
+text inside `featured-post` page.
+
+-- end: ds.page

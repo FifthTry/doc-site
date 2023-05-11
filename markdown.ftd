@@ -1,12 +1,10 @@
 -- import: fifthtry.github.io/doc-site as ds
 
 
--- my-ds.page: Markup support
+-- my-ds.page: Markdown Primer
 
-`fastn` supports markup syntax. If you want to use it you can use markup syntax
-for inline anchor links etc.
-
-All markup syntax is supported into `fastn`
+`doc-site` supports markdown. If you want to use it you can use `--
+ds.mardkdown` for inline anchor links etc.
 
 `doc-site` comes with inbuit `-- ds.markdown` component.
 
@@ -46,23 +44,18 @@ elit, sed do eiusmod tempor incididunt.
 
 \-- ds.markdown:
 
-Lorem ipsum dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod tempor
-incididunt.
+**Lorem ipsum** dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod
+  tempor incididunt.
 
 -- ds.rendered.output:
 
 -- ds.markdown:
 
-Lorem ipsum dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod tempor
-incididunt.
+**Lorem ipsum** dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod
+  tempor incididunt.
 
 -- end: ds.rendered.output
 
 -- end: ds.rendered
-
--- ds.markdown:
-
-Please, refer this [markup cheat-sheet](https://www.markdownguide.org/cheat-sheet/) 
-for more markup syntax.
 
 -- end: my-ds.page

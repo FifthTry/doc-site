@@ -1,8 +1,7 @@
 -- import: fifthtry.github.io/doc-site as ds
--- import: fifthtry.github.io/bling/note
 
 
--- my-ds.page: Page
+-- my-ds.page: Creating A Page
 
 In this section, we will learn about creating pages in `doc-site`.
 
@@ -10,14 +9,7 @@ The `page` component empowers you to create **one-off standalone pages**. You ca
 use other fastn components, or markdown.
 
 
--- note.note: NOTE
-
-Page component have toc sidebar(if page is added inside `fastn.sitemap` component of your `FASTN.ftd` file),
-navbar, right sidebar (optional) and body content area.
-
-
-
--- ds.h3: 💡 Invocation:
+-- ds.h3: 💡 How to create a new page?
 
 Create a new `.ftd` file into your `fastn` project. Add `page` component inside
 `.ftd` file as shown below.

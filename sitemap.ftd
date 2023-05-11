@@ -1,0 +1,21 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/bling/sidenote
+
+-- my-ds.page: Understanding Sitemap
+
+`doc-site` page component has inbuilt header. Just using `page` header will
+appear on your page.
+
+Header is built using [header](https://fifthtry.github.io/header/) component.
+Header uses `fastn.sitemap` which can be added insite your `FASTN.ftd` file. 
+
+To learn more how to implement `fast.sitemap` go through this 
+[video tutorial](https://fastn.com/clean-urls/-/build/).
+
+-- ds.h3: How to create clean URL using sitemap
+
+
+-- ds.youtube:
+v: 4ke75MpOEks
+
+-- end: my-ds.page

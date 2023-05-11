@@ -1,0 +1,44 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/doc-site/common
+
+
+-- ds.page: Adding Author Details
+
+In this section, we will learn about adding author details.
+
+As a blog author you can add your details using our author feature. 
+
+Lets understand how to add author details.
+
+-- ds.code: Example how to add author meta
+lang: ftd
+
+\-- common.author-meta amitu: Amit Upadhyay
+profile: CEO
+bio-url: blog-authors/amitu/
+image: $assets.files.static.authors.amitu.jpg
+company: FifthTry Pvt. Ltd.
+
+Founder CEO of FifthTry Private Limited. FifthTry is backed by Y Combinators. 
+A Banglore based start-up having development center at 91Springboard, JP Nagar,
+Banglore.
+
+-- ds.h3: Let's understand above code snippet:
+
+In `doc-site` we have added `blog-authors` folder. Here you can create your name
+FTD file. e.g. `amitu.ftd` file.
+
+✨ `-- ds.author-meta amitu: Amit Upadhyay` : in this FTD component author name
+as a title. You can change `Amit Upadhyay` with your name.
+
+✨ `profile:` helps add author desination
+
+✨ `bio-url:` add author FTD file and folder details.
+
+✨ `image:` author image 
+
+✨ `company:` author company details
+
+✨ At the last of above code snippet you can add author bio as a body. 
+
+-- end: ds.page

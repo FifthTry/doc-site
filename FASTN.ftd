@@ -33,25 +33,20 @@ readers: fastn-fans
 
 -- fastn.sitemap:
 
-# Introduction: /index.html
+# Home: /index.html
 
-- Getting Started: /docs/
-  - Markup Support: /docs/markup-support/
-  - Page: /docs/page/
-  - Navbar 🚧: /docs/navbar/
-  - TOC Sidebar 🚧: /docs/toc-sidebar/
-  - Right Sidebar: /docs/right-sidebar/
-  - Footer: /docs/footer/
+- Overview: index.html
+- Getting Started: /getting-started/
+- Creating A Page: /page/
+- Markdown Primer: /markdown/
+- Understanding Sitemap: /sitemap/
+- Adding Right Sidebar: /right-sidebar/
+- Adding Footer: /footer/
 
-- Blog 🚧: /docs/blog/
-  - Blog Post 🚧: /docs/blog-post/
-  - Post List 🚧: /docs/post-list/
-  - Featured Post 🚧: /docs/featured-post/
-  skip: true
-  - Featured Page 🚧: /docs/featured-page/
-  skip: true
-  - Author 🚧: /docs/author/
-  skip: true
+- Blog 🚧: /blog/
+  - Adding a new blog post 🚧: /post/
+  - Post List 🚧: /post-list/
+  - Adding Author Details 🚧: /author/
 
 - Static Assets 🚧: /docs/static-assets/
 skip: true
