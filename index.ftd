@@ -493,7 +493,6 @@ apps: $apps
 
 -- h.header:
 login-button: $doc-page-desktop.login-button
-pricing-cta: $doc-page-desktop.pricing-cta
 login-btn-txt: $doc-page-desktop.login-btn-txt
 sign-in-txt: $doc-page-desktop.sign-in-txt
 sections: $doc-page-desktop.sections
