@@ -18,6 +18,7 @@ favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/header as h
 -- fastn.auto-import: fifthtry.github.io/typography as tf
+exposing: h0, h1, h2, h3, markdown
 
 
 /-- fastn.app: Todos for Family

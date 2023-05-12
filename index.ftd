@@ -5,6 +5,11 @@
 -- import: fifthtry.github.io/doc-site-typography as typo
 -- import: fifthtry.github.io/dark-mode-switcher as dms
 
+-- import: fifthtry.github.io/typography as tf
+export: h0, h1, h2, h3, markdown
+
+-- import: fifthtry.github.io/code-block as cb
+export: code, rendered
 
 
 -- boolean login-button: false
@@ -122,7 +127,7 @@ author-meta author:
 
 🧐 It helps you to build a static documentation with fast client-side
 navigation, leveraging the full power of fastn to make your documentation site
-interactive. 
+interactive.
 
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
@@ -178,7 +183,6 @@ string about-text: About this page
 string about-text-url: /
 string edit-text: Edit This Page
 string edit-text-url: /
-;;item list itemlist: $itemlist
 boolean $sidebar: false
 children wrapper:
 ftd.ui list extra-headers:
@@ -203,7 +207,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 
 -- ftd.column:
-if: { page.show-banner}
+if: { page.show-banner }
 width: fill-container
 children: $page.banner
 align-content: center
@@ -213,7 +217,7 @@ align-content: center
 -- ftd.column:
 
 -- floater:
-if: {show-floater}
+if: { show-floater }
 sidebar-brand-logo: $page.sidebar-brand-logo
 cross-icon: $page.cross-icon
 side-logo: $page.side-logo
@@ -2185,166 +2189,6 @@ color: $inherited.colors.cta-primary.border
 -- end: ftd.column
 
 -- end: featured-post-meta-mobile
-
-
-
-
-
-
-
-
-
-
--- component markdown:
-caption or body body:
-
--- tf.markdown:
-
-$markdown.body
-
-
--- end: markdown
-
-
-
-
-
-
--- component h0:
-caption title:
-optional body body:
-
--- tf.h0: $h0.title
-
-$h0.body
-
--- end: h0
-
-
-
-
-
-
-
-
-
--- component h1:
-caption title:
-optional body body:
-optional string id:
-
--- tf.h1: $h1.title
-id: $h1.id
-
-$h1.body
-
--- end: h1
-
-
-
-
-
-
-
-
-
--- component h2:
-caption title:
-optional body body:
-optional string id:
-
--- tf.h2: $h2.title
-id: $h2.id
-
-$h2.body
-
--- end: h2
-
-
-
-
-
-
-
-
--- component h3:
-caption title:
-optional body body:
-optional string id:
-
--- tf.h3: $h3.title
-id: $h3.id
-
-$h3.body
-
--- end: h3
-
-
-
-
-
-
-
-
-
--- component code:
-optional caption caption:
-body body:
-string lang:
-boolean copy: true
-optional ftd.resizing max-height:
-optional ftd.resizing max-width:
-optional string download:
-
--- cb.code:
-caption: $code.caption
-lang: $code.lang
-max-height: $code.max-height
-max-width: $code.max-width
-copy: $code.copy
-download: $code.download
-
-$code.body
-
--- end: code
-
-
-
-
-
-
-
-
-
-
-
--- component rendered:
-optional string download:
-optional caption title:
-body input:
-boolean copy: true
-string $copy-text: null
-boolean $copy-mouse-in: false
-boolean $download-mouse-in: false
-boolean $mouse-in: false
-optional ftd.resizing max-height:
-optional ftd.resizing max-width:
-children output:
-
--- cb.rendered:
-download: $rendered.download
-title: $rendered.title
-input: $rendered.input
-copy: $rendered.copy
-$copy-text: $rendered.copy-text
-$copy-mouse-in: $rendered.copy-mouse-in
-$download-mouse-in: $rendered.download-mouse-in
-$mouse-in: $rendered.mouse-in
-max-height: $rendered.max-height
-max-width: $rendered.max-width
-output: $rendered.output
-
--- end: rendered
 
 
 
