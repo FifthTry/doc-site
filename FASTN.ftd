@@ -1,7 +1,6 @@
 -- import: fastn
 
 -- fastn.package: fifthtry.github.io/doc-site
-zip: github.com/fifthtry/doc-site/archive/refs/heads/main.zip
 favicon: fifthtry.github.io/doc-site/assets/static/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/code-block
