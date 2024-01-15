@@ -18,6 +18,8 @@ $on-click$: $ftd.set-bool($a = $open, v = false)
 -- component loader:
 boolean $show-loader: false
 
+-- ftd.container:
+
 -- ftd.column:
 if: { $loader.show-loader }
 width: fill-container
@@ -43,5 +45,6 @@ align-self: center
 
 -- end: ftd.column
 
+-- end: ftd.container
 
 -- end: loader
